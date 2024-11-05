@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta charset="utf-8" name="viewport"
+		content="width=device-width, initial-scale=1"
+		http-equiv="X-UA-Conpatible" />
+	<h:outputStylesheet library="css" name="bootstrap.min.css" />
+	<h:outputStylesheet library="css" name="app.css" />
+	<h:outputStylesheet library="css" name="paginator.css" />
+	<script name="jquery/jquery.js" library="primefaces">
+		
+	</script>
+	<title>Phân quyền sử dụng</title>
+
+</h:head>
+
+<h:body>
+	<p:growl id="growl" showDetail="true" />
+	<p:confirmDialog global="true" showEffect="fade" hideEffect="fade"
+		closable="false">
+		<p:commandButton value="Đồng ý" type="button"
+			styleClass="ui-confirmdialog-yes" icon="pi pi-check" />
+		<p:commandButton value="Hủy" type="button"
+			styleClass="ui-confirmdialog-no ui-button-secondary" icon="pi pi-times" />
+	</p:confirmDialog>
+	<ui:include src="componentHeader.xhtml"></ui:include>
+	<div class="">
+		<div class="col-12 layout_custom">
+			<h:form id="form">
+
+				<div class="row">
+					<div class="col col-lg-3">
+						<div class="class_com_pad5"
+							style="margin-left: 10px; margin-top: 5px;">
+							<h4>Danh sách nhóm quyền</h4>
+						</div>
+					</div>
+					<div class="col">
+						<div class="input-group"></div>
+					</div>
+					<div class="col col-lg-2">
+						<div class="class_com_pad5"
+							style="margin-top: 1px; text-align: right">
+							<p:commandButton
+								rendered="#{sessionController.isAllow('ROLE_MANAGER','CREATE')}"
+								id="btnCreate" value="Thêm mới" icon="pi pi-plus"
+								update="frmDetail" immediate="true"
+								action="#{roleManagerController.goToCreatePage(null)}"
+								oncomplete="PF('dlgDetailVar').show();" />
+
+						</div>
+					</div>
+				</div>
+				<p:dataTable id="tblData" styleClass="tbl_custom_bt" var="item"
+					value="#{roleManagerController.dataModel}" selectionMode="single"
+					selection="#{roleManagerController.selectedItem}"
+					rowKey="#{item.id}" first="0" widgetVar="tblDataVar"
+					paginator="false" paginatorPosition="bottom"
+					resizableColumns="true" dblClickSelect="true" resizeMode="fit"
+					emptyMessage="Không có dữ liệu..."
+					currentPageReportTemplate="({totalRecords} bản ghi, {currentPage} / {totalPages})"
+					rowSelectMode="single" rowIndexVar="rowIndex">
+
+					<p:column width="25" resizable="false" exportable="false">
+						<f:facet name="header">
+							<h:outputText value="#" />
+						</f:facet>
+						<div style="padding: 0px; background: transparent;">
+							<div align="center" style="width: 100%">
+								<h:outputText escape="true" value="#{rowIndex + 1}" />
+							</div>
+						</div>
+					</p:column>
+					<p:column width="150" resizable="false" filterable="false">
+						<f:facet name="header">
+							<h:outputText value="Mã nhóm quyền" />
+						</f:facet>
+						<h:outputText style="width: 100%" value="#{item.name}" />
+					</p:column>
+					<p:column width="150" styleClass="ui-datatable break-word"
+						resizable="true">
+						<f:facet name="header">
+							<h:outputText value="Tên nhóm quyền" />
+						</f:facet>
+						<h:outputText style="width: 100%" value="#{item.description}" />
+					</p:column>
+					<p:column width="100" styleClass="ui-datatable break-word"
+						resizable="true">
+						<f:facet name="header">
+							<h:outputText value="Duyệt" />
+						</f:facet>
+						<div align="center">
+							<h:outputText rendered="#{item.approveable}"
+								class="badge badge-primary" style="width: 80px; padding: 5px;"
+								value="Có" />
+							<h:outputText rendered="#{!item.approveable}"
+								class="badge badge-secondary" style="width: 80px; padding: 5px;"
+								value="Không" />
+						</div>
+					</p:column>
+
+					<p:column width="120" resizable="false" exportable="false"
+						style="text-align: center;">
+						<f:facet name="header">
+							<h:outputText value="Hành động" />
+						</f:facet>
+						<p:commandLink ajax="true"
+							action="#{roleManagerController.changeMode(item)}"
+							update="frmDetail" process="@this"
+							oncomplete="PF('dlgDetailVar').show();" value="Chi tiết">
+							<span title="chi tiết" class="pi pi-eye" />
+						</p:commandLink>
+						<h:outputText value="&#160; " />
+						<h:outputText value="&#160; " />
+						<p:commandLink
+							rendered="#{sessionController.isAllow('ROLE_MANAGER','DELETE')}"
+							ajax="true" action="#{roleManagerController.delete(item)}"
+							update="tblData growl" process="@this" value="Xóa">
+							<span title="xóa" class="pi pi-trash" style="color: red;" />
+							<p:confirm header="Xác nhận"
+								message='Bạn có chắc chắn muốn xóa "[#{item.name}] #{item.description}" hay không ?'
+								icon="ui-icon-warning" />
+						</p:commandLink>
+					</p:column>
+				</p:dataTable>
+
+			</h:form>
+
+			<p:dialog header="Thông tin nhóm quyền" id="dlgDetail" styleClass="dlg_custom"
+				widgetVar="dlgDetailVar" resizable="false" width="650" modal="true"
+				closeOnEscape="true" closable="false">
+				<h:form id="frmDetail">
+					<p:fieldset style="margin-bottom:1px">
+						<div class="ui-g ui-g-nopad">
+							<div class="ui-g-12">
+								<div class="ui-g-4 ui-g-nopad lable_margin-top_10">
+									Mã nhóm quyền <span style="color: red;">*</span>
+								</div>
+								<div class="ui-g-8 ui-g-nopad" style="background: transparent;">
+									<p:inputText id="txtName" required="true" maxlength="20"
+										requiredMessage="Thông tin nhập chưa đầy đủ. Vui lòng nhập lại !" style="width: 100%;"
+										value="#{roleManagerController.selectedItem.name}">
+										<f:validator validatorId="roleValidator"/>
+									</p:inputText>
+									<p:message styleClass="field_message" for="txtName" />
+								</div>
+							</div>
+
+							<div class="ui-g-12">
+								<div class="ui-g-4 ui-g-nopad lable_margin-top_10">
+									Tên nhóm quyền <span style="color: red;">*</span>
+								</div>
+								<div class="ui-g-8 ui-g-nopad" style="background: transparent;">
+									<p:inputText id="txtDescription" required="true" maxlength="50"
+										requiredMessage="Thông tin nhập chưa đầy đủ. Vui lòng nhập lại !" style="width: 100%;"
+										value="#{roleManagerController.selectedItem.description}" />
+									<p:message styleClass="field_message" for="txtDescription" showSummary="false"/>
+								</div>
+							</div>
+
+							<div class="ui-g-12">
+								<div class="ui-g-4 ui-g-nopad">Duyệt</div>
+								<div class="ui-g-8 ui-g-nopad" style="background: transparent;">
+									<p:selectBooleanCheckbox
+										value="#{roleManagerController.selectedItem.approveable}"
+										itemLabel="" />
+								</div>
+							</div>
+						</div>
+						<div>
+							<p:messages id="msgs" showDetail="true" autoUpdate="true" globalOnly="true" />
+						</div>
+					</p:fieldset>
+					<div class="ui-g-12" align="right">
+						<p:commandButton id="btnCancel" styleClass="ui-button-secondary"
+										 oncomplete="PF('dlgDetailVar').hide();" value="Đóng"
+										 icon="pi pi-reply" immediate="true">
+						</p:commandButton>
+						<h:outputText value="&#160; " />
+						<p:commandButton
+							id="btnExecuteAdd"
+							rendered="#{!roleManagerController.updateMode and (sessionController.isAllow('ROLE_MANAGER','CREATE'))}" value="Lưu"
+							icon="pi pi-check" action="#{roleManagerController.add()}"
+							title="Lưu thông tin" update="frmDetail :form:tblData"
+							validateClient="true">
+						</p:commandButton>
+						<p:commandButton
+							id="btnExecuteUpdate"
+							rendered="#{roleManagerController.updateMode and (sessionController.isAllow('ROLE_MANAGER','UPDATE'))}" value="Cập nhật"
+							icon="pi pi-check" action="#{roleManagerController.update()}"
+							title="Cập nhật thông tin" update="frmDetail :form:tblData"
+							validateClient="true">
+							<p:confirm header="Xác nhận"
+								message="Bạn có chắc chắn muốn cập nhật hay không ?"
+								icon="ui-icon-warning" />
+						</p:commandButton>
+					</div>
+				</h:form>
+			</p:dialog>
+
+		</div>
+	</div>
+</h:body>
+</html>

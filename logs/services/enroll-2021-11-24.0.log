@@ -1,0 +1,3102 @@
+2021-11-24 06:34:25 INFO ? The Class-Path manifest attribute in /home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2021-11-24 06:34:25 INFO ? Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-11-24 06:34:25 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e0d7214a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 06:34:25 INFO ? Fetching config from server at : http://apiintsit.ztech.com.vn/ztech-config/v1
+2021-11-24 06:34:28 WARN ? Could not locate PropertySource: label not found
+2021-11-24 06:34:28 INFO ? The following profiles are active: ztech
+2021-11-24 06:34:29 INFO ? Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-24 06:34:29 INFO ? Finished Spring Data repository scanning in 183ms. Found 26 JPA repository interfaces.
+2021-11-24 06:34:30 INFO ? BeanFactory id=fefabccd-42e4-37ee-8536-b75e76b5d2da
+2021-11-24 06:34:30 INFO ? Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$6954e34c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 06:34:30 INFO ? Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-11-24 06:34:30 INFO ? Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 06:34:30 INFO ? Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 06:34:30 INFO ? Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 06:34:30 INFO ? Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@48edd222' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 06:34:30 INFO ? Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 06:34:30 INFO ? Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 06:34:30 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e0d7214a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 06:34:31 INFO ? Tomcat initialized with port(s): 9976 (http)
+2021-11-24 06:34:31 INFO ? Initializing ProtocolHandler ["http-nio-9976"]
+2021-11-24 06:34:31 INFO ? Starting service [Tomcat]
+2021-11-24 06:34:31 INFO ? Starting Servlet engine: [Apache Tomcat/9.0.30]
+2021-11-24 06:34:31 INFO ? Initializing Spring embedded WebApplicationContext
+2021-11-24 06:34:31 INFO ? Root WebApplicationContext: initialization completed in 3005 ms
+2021-11-24 06:34:31 INFO ? HikariPool-1 - Starting...
+2021-11-24 06:34:32 INFO ? HikariPool-1 - Start completed.
+2021-11-24 06:34:32 INFO ? HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-24 06:34:32 INFO ? HHH000412: Hibernate Core {5.4.10.Final}
+2021-11-24 06:34:32 INFO ? HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-11-24 06:34:33 INFO ? HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+2021-11-24 06:34:34 INFO ? HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-24 06:34:34 INFO ? Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-24 06:34:35 WARN ? spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-24 06:34:36 DEBUG ? 
+    select
+        apparam0_.autoid as autoid1_2_,
+        apparam0_.description as descript2_2_,
+        apparam0_.gr as gr3_2_,
+        apparam0_.name as name4_2_,
+        apparam0_.value as value5_2_ 
+    from
+        ap_param apparam0_
+2021-11-24 06:34:37 INFO ? ==>loadCache params [ApParam(autoid=1, group=ERROR_DEFINE, name='group_id' cannot be null, value=GROUPID IS NULL, description=Mã nhóm nhân viên không được để trống), ApParam(autoid=2, group=ERROR_DEFINE, name=fk_people, value=people_id does not exited., description=Mã nhân không tồn tại), ApParam(autoid=3, group=ERROR_DEFINE, name=fk_shift_id, value=shift_id, description=Mã ca làm việc không tồn tại.), ApParam(autoid=4, group=APPROVAL_TYPE, name=OT_APPROVAL, value=OT_APPROVAL, description=Loại duyệt OT), ApParam(autoid=5, group=APPROVAL_TYPE, name=KEEPING_APPROVAL, value=KEEPING_APPROVAL, description=Loại duyệt chấm công), ApParam(autoid=6, group=APPROVER, name=GROUP_LEADER, value=GROUP_LEADER, description=Lãnh đạo khối), ApParam(autoid=7, group=APPROVER, name=DEP_LEADER, value=DEP_LEADER, description=Lãnh đạo phòng), ApParam(autoid=8, group=APPROVER, name=ADMIN, value=ADMIN, description=Quản trị viên), ApParam(autoid=9, group=ERROR_DEFINE, name=approval_flow_unq1, value=trung ban ghi, description=Trùng bản ghi)]
+2021-11-24 06:34:37 INFO ? Clearing Cache
+2021-11-24 06:34:37 INFO ? Clear Done
+2021-11-24 06:34:37 INFO ? INIT Cache Done
+2021-11-24 06:34:40 INFO ? Initializing EhCache CacheManager
+2021-11-24 06:34:40 INFO ? 
+
+Using generated security password: 790aba55-863f-48b6-9c17-e8cc2fbe7195
+
+2021-11-24 06:34:40 INFO ? Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2021-11-24 06:34:40 INFO ? Creating filter chain: Ant [pattern='/h2-console/**'], []
+2021-11-24 06:34:40 INFO ? Creating filter chain: Ant [pattern='/swagger-ui/index.html'], []
+2021-11-24 06:34:40 INFO ? Creating filter chain: Ant [pattern='/test/**'], []
+2021-11-24 06:34:40 INFO ? Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4036ac3c, org.springframework.security.web.context.SecurityContextPersistenceFilter@6de3b360, org.springframework.security.web.header.HeaderWriterFilter@48e160b6, org.springframework.security.web.authentication.logout.LogoutFilter@3bc2c8a8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@77b7a994, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@98c01aa, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7874d70b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7dd56b06, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c6ac249, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42f8e279, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@55d8e5c2, org.springframework.security.web.session.SessionManagementFilter@5486c75, org.springframework.security.web.access.ExceptionTranslationFilter@6b951a01, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6321aa3d]
+2021-11-24 06:34:40 INFO ? Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-11-24 06:34:40 INFO ? Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-24 06:34:40 INFO ? LiveReload server is running on port 35729
+2021-11-24 06:34:41 INFO ? Context refreshed
+2021-11-24 06:34:41 INFO ? Found 1 custom documentation plugin(s)
+2021-11-24 06:34:41 INFO ? Scanning for api listing references
+2021-11-24 06:34:41 INFO ? Generating unique operation named: deleteUsingDELETE_1
+2021-11-24 06:34:41 INFO ? Generating unique operation named: getUsingGET_1
+2021-11-24 06:34:41 INFO ? Generating unique operation named: saveUsingPOST_1
+2021-11-24 06:34:41 INFO ? Generating unique operation named: searchUsingGET_1
+2021-11-24 06:34:41 INFO ? Generating unique operation named: updateUsingPUT_1
+2021-11-24 06:34:41 INFO ? Generating unique operation named: getUsingGET_2
+2021-11-24 06:34:41 INFO ? Generating unique operation named: deleteUsingDELETE_2
+2021-11-24 06:34:41 INFO ? Generating unique operation named: getUsingGET_3
+2021-11-24 06:34:41 INFO ? Generating unique operation named: saveUsingPOST_2
+2021-11-24 06:34:41 INFO ? Generating unique operation named: searchUsingGET_2
+2021-11-24 06:34:41 INFO ? Generating unique operation named: updateUsingPUT_2
+2021-11-24 06:34:41 INFO ? Generating unique operation named: deleteUsingDELETE_3
+2021-11-24 06:34:41 INFO ? Generating unique operation named: getUsingGET_4
+2021-11-24 06:34:41 INFO ? Generating unique operation named: searchUsingGET_3
+2021-11-24 06:34:41 INFO ? Generating unique operation named: updateUsingPUT_3
+2021-11-24 06:34:41 INFO ? Generating unique operation named: deleteUsingDELETE_4
+2021-11-24 06:34:41 INFO ? Generating unique operation named: getUsingGET_5
+2021-11-24 06:34:41 INFO ? Generating unique operation named: saveUsingPOST_3
+2021-11-24 06:34:41 INFO ? Generating unique operation named: searchUsingGET_4
+2021-11-24 06:34:41 INFO ? Generating unique operation named: updateUsingPUT_4
+2021-11-24 06:34:41 INFO ? Generating unique operation named: deleteUsingDELETE_5
+2021-11-24 06:34:41 INFO ? Generating unique operation named: searchUsingGET_5
+2021-11-24 06:34:41 INFO ? Generating unique operation named: deleteUsingDELETE_6
+2021-11-24 06:34:41 INFO ? Generating unique operation named: getUsingGET_6
+2021-11-24 06:34:41 INFO ? Generating unique operation named: saveUsingPOST_4
+2021-11-24 06:34:41 INFO ? Generating unique operation named: searchUsingGET_6
+2021-11-24 06:34:41 INFO ? Generating unique operation named: updateUsingPUT_5
+2021-11-24 06:34:41 INFO ? Generating unique operation named: getUsingGET_7
+2021-11-24 06:34:41 INFO ? Generating unique operation named: searchUsingGET_7
+2021-11-24 06:34:41 INFO ? Generating unique operation named: deleteUsingDELETE_7
+2021-11-24 06:34:41 INFO ? Generating unique operation named: getUsingGET_8
+2021-11-24 06:34:41 INFO ? Generating unique operation named: saveUsingPOST_5
+2021-11-24 06:34:41 INFO ? Generating unique operation named: searchUsingGET_8
+2021-11-24 06:34:41 INFO ? Generating unique operation named: updateUsingPUT_6
+2021-11-24 06:34:41 INFO ? Generating unique operation named: deleteUsingDELETE_8
+2021-11-24 06:34:41 INFO ? Generating unique operation named: getUsingGET_9
+2021-11-24 06:34:41 INFO ? Generating unique operation named: saveUsingPOST_6
+2021-11-24 06:34:41 INFO ? Generating unique operation named: searchUsingGET_9
+2021-11-24 06:34:41 INFO ? Generating unique operation named: updateUsingPUT_7
+2021-11-24 06:34:41 INFO ? Generating unique operation named: deleteUsingDELETE_9
+2021-11-24 06:34:41 INFO ? Generating unique operation named: getUsingGET_10
+2021-11-24 06:34:41 INFO ? Generating unique operation named: saveUsingPOST_7
+2021-11-24 06:34:41 INFO ? Generating unique operation named: searchUsingGET_10
+2021-11-24 06:34:41 INFO ? Generating unique operation named: updateUsingPUT_8
+2021-11-24 06:34:41 INFO ? Generating unique operation named: deleteUsingDELETE_10
+2021-11-24 06:34:41 INFO ? Generating unique operation named: getUsingGET_11
+2021-11-24 06:34:41 INFO ? Generating unique operation named: saveUsingPOST_8
+2021-11-24 06:34:41 INFO ? Generating unique operation named: saveAllUsingPOST_1
+2021-11-24 06:34:41 INFO ? Generating unique operation named: searchUsingGET_11
+2021-11-24 06:34:41 INFO ? Generating unique operation named: updateUsingPUT_9
+2021-11-24 06:34:41 INFO ? Generating unique operation named: deleteUsingDELETE_11
+2021-11-24 06:34:41 INFO ? Generating unique operation named: getUsingGET_12
+2021-11-24 06:34:41 INFO ? Generating unique operation named: importExcelUsingPOST_1
+2021-11-24 06:34:41 INFO ? Generating unique operation named: saveUsingPOST_9
+2021-11-24 06:34:41 INFO ? Generating unique operation named: searchUsingGET_12
+2021-11-24 06:34:41 INFO ? Generating unique operation named: updateUsingPUT_10
+2021-11-24 06:34:41 INFO ? Generating unique operation named: approvalUsingPOST_1
+2021-11-24 06:34:41 INFO ? Generating unique operation named: deleteUsingDELETE_12
+2021-11-24 06:34:41 INFO ? Generating unique operation named: getUsingGET_13
+2021-11-24 06:34:41 INFO ? Generating unique operation named: importExcelUsingPOST_2
+2021-11-24 06:34:41 INFO ? Generating unique operation named: saveUsingPOST_10
+2021-11-24 06:34:41 INFO ? Generating unique operation named: searchUsingGET_13
+2021-11-24 06:34:41 INFO ? Generating unique operation named: updateUsingPUT_11
+2021-11-24 06:34:41 INFO ? Generating unique operation named: deleteUsingDELETE_13
+2021-11-24 06:34:41 INFO ? Generating unique operation named: deleteUsingDELETE_14
+2021-11-24 06:34:41 INFO ? Generating unique operation named: getUsingGET_14
+2021-11-24 06:34:41 INFO ? Generating unique operation named: saveUsingPOST_11
+2021-11-24 06:34:41 INFO ? Generating unique operation named: searchUsingGET_14
+2021-11-24 06:34:41 INFO ? Generating unique operation named: updateUsingPUT_12
+2021-11-24 06:34:41 INFO ? Starting ProtocolHandler ["http-nio-9976"]
+2021-11-24 06:34:41 INFO ? Tomcat started on port(s): 9976 (http) with context path ''
+2021-11-24 06:34:41 INFO ? Started ZtechApplication in 17.302 seconds (JVM running for 19.602)
+2021-11-24 06:36:13 INFO ? Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-24 06:36:13 INFO ? Initializing Servlet 'dispatcherServlet'
+2021-11-24 06:36:13 INFO ? Completed initialization in 12 ms
+2021-11-24 06:36:13 INFO ? >>> [permissions] user permissions request  <<< [clientIp] = 127.0.0.1
+2021-11-24 06:36:13 DEBUG ? 
+    select
+        ROW_NUMBER() OVER (
+    ORDER BY
+        role_id asc) rownum ,
+        r.id as role_id,
+        r.name as role_code ,
+        m.id as module_id,
+        m.code as module_code,
+        m.url as module_url ,
+        amp.app_module_action_id as module_action_id,
+        ama.code as module_action_code ,
+        amp.allow 
+    from
+        roles r 
+    inner join
+        app_role_permissions amp 
+            on amp.role_id = r.id 
+    inner join
+        app_module_actions ama 
+            on ama.id = amp.app_module_action_id 
+    inner join
+        app_modules m 
+            on m.id = ama.app_module_id 
+    where
+        r.id in (
+            select
+                r.id 
+            from
+                roles r 
+            where
+                r.id in (
+                    select
+                        ur.role_id 
+                    from
+                        user_role ur 
+                    where
+                        ur.user_id in (
+                            select
+                                u.id 
+                            from
+                                users u 
+                            where
+                                u.username = ?
+                        )
+                    )
+            ) 
+        order by
+            m.ord asc 
+2021-11-24 06:36:13 TRACE ? binding parameter [1] as [VARCHAR] - [KB1]
+2021-11-24 06:36:13 INFO ? >>> [permissions] user permissions response <<< [clientIp] = 127.0.0.1
+2021-11-24 06:36:18 INFO ? >>> [getApprovalPeoples] START <<< [clientIp] = 127.0.0.1
+2021-11-24 06:36:18 DEBUG ? 
+    select
+        people0_.id as id1_14_,
+        people0_.customer_type as customer2_14_,
+        people0_.date_of_birth as date_of_3_14_,
+        people0_.email as email4_14_,
+        people0_.full_name as full_nam5_14_,
+        people0_.gender as gender6_14_,
+        people0_.group_id as group_id7_14_,
+        people0_.image_path as image_pa8_14_,
+        people0_.last_checkin_time as last_che9_14_,
+        people0_.mobile_phone as mobile_10_14_,
+        people0_.people_id as people_11_14_,
+        people0_.status as status12_14_ 
+    from
+        people people0_ 
+    where
+        people0_.people_id=?
+2021-11-24 06:36:18 TRACE ? binding parameter [1] as [VARCHAR] - [KB1]
+2021-11-24 06:36:18 DEBUG ? 
+    select
+        ap.* 
+    from
+        ( select
+            g.group_id,
+            g.parent_id dep_id,
+            u.username 
+        from
+            people p 
+        inner join
+            groups g 
+                on p.group_id = g.group_id 
+        inner join
+            users u 
+                on p.people_id= u.people_id ) a 
+    inner join
+        approval_flow ap 
+            on a.dep_id = ap.dep_id 
+    where
+        a.username=? 
+        and ap.approval_type=?
+2021-11-24 06:36:18 TRACE ? binding parameter [1] as [VARCHAR] - [KB1]
+2021-11-24 06:36:18 TRACE ? binding parameter [2] as [VARCHAR] - [KEEPING_APPROVAL]
+2021-11-24 06:36:18 DEBUG ? 
+    SELECT
+        p.* 
+    FROM
+        people p 
+    INNER JOIN
+        GROUPS g 
+            ON p.group_id= g.group_id 
+    INNER JOIN
+        users u 
+            ON p.people_id= u.people_id 
+    INNER JOIN
+        user_role ur 
+            ON u.id = ur.user_id 
+    INNER JOIN
+        roles rl 
+            ON ur.role_id = rl.id 
+    WHERE
+        g.parent_id in (
+            select
+                parent_id 
+            from
+                groups a 
+            where
+                a.group_id =?
+        ) 
+        and  rl.name =?
+2021-11-24 06:36:18 TRACE ? binding parameter [1] as [VARCHAR] - [25]
+2021-11-24 06:36:18 TRACE ? binding parameter [2] as [VARCHAR] - [DEP_LEADER]
+2021-11-24 06:36:18 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-11-24 06:36:18 DEBUG ? 
+    select
+        ts.import_id,
+        ts.autoid,
+        ts.people_id,
+        ts.description,
+        DATE_FORMAT(ts.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.created_by,
+        ts.time_keeping_image,
+        ts.state,
+        ts.approved_by,
+        DATE_FORMAT(ts.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.date_type,
+        DATE_FORMAT(ts.keeping_date,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.approval_level,
+        ts.approval_by_level2,
+        ts.approval_at_level2,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and p.people_id =  'KB1'  limit ?
+2021-11-24 06:36:18 DEBUG ? 
+    select
+        count(*)  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and p.people_id =  'KB1' 
+2021-11-24 06:36:19 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-24 06:36:19 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-24 06:36:19 TRACE ? binding parameter [1] as [BIGINT] - [366]
+2021-11-24 06:36:19 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-24 06:36:19 TRACE ? binding parameter [1] as [BIGINT] - [366]
+2021-11-24 06:36:19 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-24 06:36:19 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-24 06:36:19 TRACE ? binding parameter [1] as [BIGINT] - [367]
+2021-11-24 06:36:19 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-24 06:36:19 TRACE ? binding parameter [1] as [BIGINT] - [367]
+2021-11-24 06:36:19 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-24 06:36:19 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-24 06:36:19 TRACE ? binding parameter [1] as [BIGINT] - [368]
+2021-11-24 06:36:19 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-24 06:36:19 TRACE ? binding parameter [1] as [BIGINT] - [368]
+2021-11-24 06:38:50 INFO ? >>> [permissions] user permissions request  <<< [clientIp] = 127.0.0.1
+2021-11-24 06:38:50 DEBUG ? 
+    select
+        ROW_NUMBER() OVER (
+    ORDER BY
+        role_id asc) rownum ,
+        r.id as role_id,
+        r.name as role_code ,
+        m.id as module_id,
+        m.code as module_code,
+        m.url as module_url ,
+        amp.app_module_action_id as module_action_id,
+        ama.code as module_action_code ,
+        amp.allow 
+    from
+        roles r 
+    inner join
+        app_role_permissions amp 
+            on amp.role_id = r.id 
+    inner join
+        app_module_actions ama 
+            on ama.id = amp.app_module_action_id 
+    inner join
+        app_modules m 
+            on m.id = ama.app_module_id 
+    where
+        r.id in (
+            select
+                r.id 
+            from
+                roles r 
+            where
+                r.id in (
+                    select
+                        ur.role_id 
+                    from
+                        user_role ur 
+                    where
+                        ur.user_id in (
+                            select
+                                u.id 
+                            from
+                                users u 
+                            where
+                                u.username = ?
+                        )
+                    )
+            ) 
+        order by
+            m.ord asc 
+2021-11-24 06:38:50 TRACE ? binding parameter [1] as [VARCHAR] - [LDKSP2]
+2021-11-24 06:38:51 INFO ? >>> [permissions] user permissions response <<< [clientIp] = 127.0.0.1
+2021-11-24 06:39:33 INFO ? >>> [permissions] user permissions request  <<< [clientIp] = 127.0.0.1
+2021-11-24 06:39:33 DEBUG ? 
+    select
+        ROW_NUMBER() OVER (
+    ORDER BY
+        role_id asc) rownum ,
+        r.id as role_id,
+        r.name as role_code ,
+        m.id as module_id,
+        m.code as module_code,
+        m.url as module_url ,
+        amp.app_module_action_id as module_action_id,
+        ama.code as module_action_code ,
+        amp.allow 
+    from
+        roles r 
+    inner join
+        app_role_permissions amp 
+            on amp.role_id = r.id 
+    inner join
+        app_module_actions ama 
+            on ama.id = amp.app_module_action_id 
+    inner join
+        app_modules m 
+            on m.id = ama.app_module_id 
+    where
+        r.id in (
+            select
+                r.id 
+            from
+                roles r 
+            where
+                r.id in (
+                    select
+                        ur.role_id 
+                    from
+                        user_role ur 
+                    where
+                        ur.user_id in (
+                            select
+                                u.id 
+                            from
+                                users u 
+                            where
+                                u.username = ?
+                        )
+                    )
+            ) 
+        order by
+            m.ord asc 
+2021-11-24 06:39:33 TRACE ? binding parameter [1] as [VARCHAR] - [LDKSP2]
+2021-11-24 06:39:33 INFO ? >>> [permissions] user permissions response <<< [clientIp] = 127.0.0.1
+2021-11-24 06:44:14 INFO ? >>> [permissions] user permissions request  <<< [clientIp] = 127.0.0.1
+2021-11-24 06:44:14 DEBUG ? 
+    select
+        ROW_NUMBER() OVER (
+    ORDER BY
+        role_id asc) rownum ,
+        r.id as role_id,
+        r.name as role_code ,
+        m.id as module_id,
+        m.code as module_code,
+        m.url as module_url ,
+        amp.app_module_action_id as module_action_id,
+        ama.code as module_action_code ,
+        amp.allow 
+    from
+        roles r 
+    inner join
+        app_role_permissions amp 
+            on amp.role_id = r.id 
+    inner join
+        app_module_actions ama 
+            on ama.id = amp.app_module_action_id 
+    inner join
+        app_modules m 
+            on m.id = ama.app_module_id 
+    where
+        r.id in (
+            select
+                r.id 
+            from
+                roles r 
+            where
+                r.id in (
+                    select
+                        ur.role_id 
+                    from
+                        user_role ur 
+                    where
+                        ur.user_id in (
+                            select
+                                u.id 
+                            from
+                                users u 
+                            where
+                                u.username = ?
+                        )
+                    )
+            ) 
+        order by
+            m.ord asc 
+2021-11-24 06:44:14 TRACE ? binding parameter [1] as [VARCHAR] - [LDKSP2]
+2021-11-24 06:44:14 INFO ? >>> [permissions] user permissions response <<< [clientIp] = 127.0.0.1
+2021-11-24 06:44:25 INFO ? >>> [getApprovalPeoples] START <<< [clientIp] = 127.0.0.1
+2021-11-24 06:44:25 DEBUG ? 
+    select
+        people0_.id as id1_14_,
+        people0_.customer_type as customer2_14_,
+        people0_.date_of_birth as date_of_3_14_,
+        people0_.email as email4_14_,
+        people0_.full_name as full_nam5_14_,
+        people0_.gender as gender6_14_,
+        people0_.group_id as group_id7_14_,
+        people0_.image_path as image_pa8_14_,
+        people0_.last_checkin_time as last_che9_14_,
+        people0_.mobile_phone as mobile_10_14_,
+        people0_.people_id as people_11_14_,
+        people0_.status as status12_14_ 
+    from
+        people people0_ 
+    where
+        people0_.people_id=?
+2021-11-24 06:44:25 TRACE ? binding parameter [1] as [VARCHAR] - [LDKSP2]
+2021-11-24 06:44:25 DEBUG ? 
+    select
+        ap.* 
+    from
+        ( select
+            g.group_id,
+            g.parent_id dep_id,
+            u.username 
+        from
+            people p 
+        inner join
+            groups g 
+                on p.group_id = g.group_id 
+        inner join
+            users u 
+                on p.people_id= u.people_id ) a 
+    inner join
+        approval_flow ap 
+            on a.dep_id = ap.dep_id 
+    where
+        a.username=? 
+        and ap.approval_type=?
+2021-11-24 06:44:25 TRACE ? binding parameter [1] as [VARCHAR] - [LDKSP2]
+2021-11-24 06:44:25 TRACE ? binding parameter [2] as [VARCHAR] - [KEEPING_APPROVAL]
+2021-11-24 06:44:25 DEBUG ? 
+    SELECT
+        p.* 
+    FROM
+        people p 
+    INNER JOIN
+        GROUPS g 
+            ON p.group_id= g.group_id 
+    INNER JOIN
+        users u 
+            ON p.people_id= u.people_id 
+    INNER JOIN
+        user_role ur 
+            ON u.id = ur.user_id 
+    INNER JOIN
+        roles rl 
+            ON ur.role_id = rl.id 
+    WHERE
+        g.parent_id in (
+            select
+                parent_id 
+            from
+                groups a 
+            where
+                a.group_id =?
+        ) 
+        and  rl.name =?
+2021-11-24 06:44:25 TRACE ? binding parameter [1] as [VARCHAR] - [19]
+2021-11-24 06:44:25 TRACE ? binding parameter [2] as [VARCHAR] - [DEP_LEADER]
+2021-11-24 06:44:26 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-11-24 06:44:26 DEBUG ? 
+    select
+        ts.import_id,
+        ts.autoid,
+        ts.people_id,
+        ts.description,
+        DATE_FORMAT(ts.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.created_by,
+        ts.time_keeping_image,
+        ts.state,
+        ts.approved_by,
+        DATE_FORMAT(ts.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.date_type,
+        DATE_FORMAT(ts.keeping_date,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.approval_level,
+        ts.approval_by_level2,
+        ts.approval_at_level2,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and ts.approved_by= 'LDKSP2'  limit ?
+2021-11-24 06:44:26 DEBUG ? 
+    select
+        count(*)  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and ts.approved_by= 'LDKSP2' 
+2021-11-24 06:50:16 INFO ? Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-24 06:50:16 INFO ? Shutting down EhCache CacheManager
+2021-11-24 06:50:16 INFO ? Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-24 06:50:16 INFO ? HikariPool-1 - Shutdown initiated...
+2021-11-24 06:50:16 INFO ? HikariPool-1 - Shutdown completed.
+2021-11-24 06:50:22 INFO ? The Class-Path manifest attribute in /home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2021-11-24 06:50:22 INFO ? Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-11-24 06:50:22 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f4b944c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 06:50:23 INFO ? Fetching config from server at : http://apiintsit.ztech.com.vn/ztech-config/v1
+2021-11-24 06:50:26 WARN ? Could not locate PropertySource: label not found
+2021-11-24 06:50:26 INFO ? The following profiles are active: ztech
+2021-11-24 06:50:27 INFO ? Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-24 06:50:28 INFO ? Finished Spring Data repository scanning in 139ms. Found 26 JPA repository interfaces.
+2021-11-24 06:50:28 INFO ? BeanFactory id=fefabccd-42e4-37ee-8536-b75e76b5d2da
+2021-11-24 06:50:28 INFO ? Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$97c9564e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 06:50:28 INFO ? Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-11-24 06:50:28 INFO ? Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 06:50:28 INFO ? Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 06:50:28 INFO ? Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 06:50:28 INFO ? Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@70cbbda0' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 06:50:28 INFO ? Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 06:50:28 INFO ? Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 06:50:28 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f4b944c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 06:50:29 INFO ? Tomcat initialized with port(s): 9976 (http)
+2021-11-24 06:50:29 INFO ? Initializing ProtocolHandler ["http-nio-9976"]
+2021-11-24 06:50:29 INFO ? Starting service [Tomcat]
+2021-11-24 06:50:29 INFO ? Starting Servlet engine: [Apache Tomcat/9.0.30]
+2021-11-24 06:50:29 INFO ? Initializing Spring embedded WebApplicationContext
+2021-11-24 06:50:29 INFO ? Root WebApplicationContext: initialization completed in 2721 ms
+2021-11-24 06:50:29 INFO ? HikariPool-1 - Starting...
+2021-11-24 06:50:30 INFO ? HikariPool-1 - Start completed.
+2021-11-24 06:50:30 INFO ? HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-24 06:50:30 INFO ? HHH000412: Hibernate Core {5.4.10.Final}
+2021-11-24 06:50:30 INFO ? HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-11-24 06:50:30 INFO ? HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+2021-11-24 06:50:32 INFO ? HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-24 06:50:32 INFO ? Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-24 06:50:32 WARN ? spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-24 06:50:33 DEBUG ? 
+    select
+        apparam0_.autoid as autoid1_2_,
+        apparam0_.description as descript2_2_,
+        apparam0_.gr as gr3_2_,
+        apparam0_.name as name4_2_,
+        apparam0_.value as value5_2_ 
+    from
+        ap_param apparam0_
+2021-11-24 06:50:33 INFO ? ==>loadCache params [ApParam(autoid=1, group=ERROR_DEFINE, name='group_id' cannot be null, value=GROUPID IS NULL, description=Mã nhóm nhân viên không được để trống), ApParam(autoid=2, group=ERROR_DEFINE, name=fk_people, value=people_id does not exited., description=Mã nhân không tồn tại), ApParam(autoid=3, group=ERROR_DEFINE, name=fk_shift_id, value=shift_id, description=Mã ca làm việc không tồn tại.), ApParam(autoid=4, group=APPROVAL_TYPE, name=OT_APPROVAL, value=OT_APPROVAL, description=Loại duyệt OT), ApParam(autoid=5, group=APPROVAL_TYPE, name=KEEPING_APPROVAL, value=KEEPING_APPROVAL, description=Loại duyệt chấm công), ApParam(autoid=6, group=APPROVER, name=GROUP_LEADER, value=GROUP_LEADER, description=Lãnh đạo khối), ApParam(autoid=7, group=APPROVER, name=DEP_LEADER, value=DEP_LEADER, description=Lãnh đạo phòng), ApParam(autoid=8, group=APPROVER, name=ADMIN, value=ADMIN, description=Quản trị viên), ApParam(autoid=9, group=ERROR_DEFINE, name=approval_flow_unq1, value=trung ban ghi, description=Trùng bản ghi)]
+2021-11-24 06:50:33 INFO ? Clearing Cache
+2021-11-24 06:50:34 INFO ? Clear Done
+2021-11-24 06:50:34 INFO ? INIT Cache Done
+2021-11-24 06:50:36 INFO ? Initializing EhCache CacheManager
+2021-11-24 06:50:36 INFO ? 
+
+Using generated security password: a37baa3b-8ac1-4d79-831d-b575afe0b604
+
+2021-11-24 06:50:36 INFO ? Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2021-11-24 06:50:36 INFO ? Creating filter chain: Ant [pattern='/h2-console/**'], []
+2021-11-24 06:50:36 INFO ? Creating filter chain: Ant [pattern='/swagger-ui/index.html'], []
+2021-11-24 06:50:36 INFO ? Creating filter chain: Ant [pattern='/test/**'], []
+2021-11-24 06:50:36 INFO ? Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6c6d5801, org.springframework.security.web.context.SecurityContextPersistenceFilter@3509dea5, org.springframework.security.web.header.HeaderWriterFilter@49b38ff1, org.springframework.security.web.authentication.logout.LogoutFilter@6a6e4a4c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6e43610d, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6bd4b67c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@23543dd1, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1c31aa08, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3d9f13f9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@149020a3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7901561, org.springframework.security.web.session.SessionManagementFilter@45b019c, org.springframework.security.web.access.ExceptionTranslationFilter@2bd28770, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@45e2804f]
+2021-11-24 06:50:36 INFO ? Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-11-24 06:50:36 INFO ? Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-24 06:50:36 INFO ? LiveReload server is running on port 35729
+2021-11-24 06:50:37 INFO ? Context refreshed
+2021-11-24 06:50:37 INFO ? Found 1 custom documentation plugin(s)
+2021-11-24 06:50:37 INFO ? Scanning for api listing references
+2021-11-24 06:50:37 INFO ? Generating unique operation named: deleteUsingDELETE_1
+2021-11-24 06:50:37 INFO ? Generating unique operation named: getUsingGET_1
+2021-11-24 06:50:37 INFO ? Generating unique operation named: saveUsingPOST_1
+2021-11-24 06:50:37 INFO ? Generating unique operation named: searchUsingGET_1
+2021-11-24 06:50:37 INFO ? Generating unique operation named: updateUsingPUT_1
+2021-11-24 06:50:37 INFO ? Generating unique operation named: getUsingGET_2
+2021-11-24 06:50:37 INFO ? Generating unique operation named: deleteUsingDELETE_2
+2021-11-24 06:50:37 INFO ? Generating unique operation named: getUsingGET_3
+2021-11-24 06:50:37 INFO ? Generating unique operation named: saveUsingPOST_2
+2021-11-24 06:50:37 INFO ? Generating unique operation named: searchUsingGET_2
+2021-11-24 06:50:37 INFO ? Generating unique operation named: updateUsingPUT_2
+2021-11-24 06:50:37 INFO ? Generating unique operation named: deleteUsingDELETE_3
+2021-11-24 06:50:37 INFO ? Generating unique operation named: getUsingGET_4
+2021-11-24 06:50:37 INFO ? Generating unique operation named: searchUsingGET_3
+2021-11-24 06:50:37 INFO ? Generating unique operation named: updateUsingPUT_3
+2021-11-24 06:50:37 INFO ? Generating unique operation named: deleteUsingDELETE_4
+2021-11-24 06:50:37 INFO ? Generating unique operation named: getUsingGET_5
+2021-11-24 06:50:37 INFO ? Generating unique operation named: saveUsingPOST_3
+2021-11-24 06:50:37 INFO ? Generating unique operation named: searchUsingGET_4
+2021-11-24 06:50:37 INFO ? Generating unique operation named: updateUsingPUT_4
+2021-11-24 06:50:37 INFO ? Generating unique operation named: deleteUsingDELETE_5
+2021-11-24 06:50:37 INFO ? Generating unique operation named: searchUsingGET_5
+2021-11-24 06:50:37 INFO ? Generating unique operation named: deleteUsingDELETE_6
+2021-11-24 06:50:37 INFO ? Generating unique operation named: getUsingGET_6
+2021-11-24 06:50:37 INFO ? Generating unique operation named: saveUsingPOST_4
+2021-11-24 06:50:37 INFO ? Generating unique operation named: searchUsingGET_6
+2021-11-24 06:50:37 INFO ? Generating unique operation named: updateUsingPUT_5
+2021-11-24 06:50:37 INFO ? Generating unique operation named: getUsingGET_7
+2021-11-24 06:50:37 INFO ? Generating unique operation named: searchUsingGET_7
+2021-11-24 06:50:37 INFO ? Generating unique operation named: deleteUsingDELETE_7
+2021-11-24 06:50:37 INFO ? Generating unique operation named: getUsingGET_8
+2021-11-24 06:50:37 INFO ? Generating unique operation named: saveUsingPOST_5
+2021-11-24 06:50:37 INFO ? Generating unique operation named: searchUsingGET_8
+2021-11-24 06:50:37 INFO ? Generating unique operation named: updateUsingPUT_6
+2021-11-24 06:50:37 INFO ? Generating unique operation named: deleteUsingDELETE_8
+2021-11-24 06:50:37 INFO ? Generating unique operation named: getUsingGET_9
+2021-11-24 06:50:37 INFO ? Generating unique operation named: saveUsingPOST_6
+2021-11-24 06:50:37 INFO ? Generating unique operation named: searchUsingGET_9
+2021-11-24 06:50:37 INFO ? Generating unique operation named: updateUsingPUT_7
+2021-11-24 06:50:37 INFO ? Generating unique operation named: deleteUsingDELETE_9
+2021-11-24 06:50:37 INFO ? Generating unique operation named: getUsingGET_10
+2021-11-24 06:50:37 INFO ? Generating unique operation named: saveUsingPOST_7
+2021-11-24 06:50:37 INFO ? Generating unique operation named: searchUsingGET_10
+2021-11-24 06:50:37 INFO ? Generating unique operation named: updateUsingPUT_8
+2021-11-24 06:50:37 INFO ? Generating unique operation named: deleteUsingDELETE_10
+2021-11-24 06:50:37 INFO ? Generating unique operation named: getUsingGET_11
+2021-11-24 06:50:37 INFO ? Generating unique operation named: saveUsingPOST_8
+2021-11-24 06:50:37 INFO ? Generating unique operation named: saveAllUsingPOST_1
+2021-11-24 06:50:37 INFO ? Generating unique operation named: searchUsingGET_11
+2021-11-24 06:50:37 INFO ? Generating unique operation named: updateUsingPUT_9
+2021-11-24 06:50:37 INFO ? Generating unique operation named: deleteUsingDELETE_11
+2021-11-24 06:50:37 INFO ? Generating unique operation named: getUsingGET_12
+2021-11-24 06:50:37 INFO ? Generating unique operation named: importExcelUsingPOST_1
+2021-11-24 06:50:37 INFO ? Generating unique operation named: saveUsingPOST_9
+2021-11-24 06:50:37 INFO ? Generating unique operation named: searchUsingGET_12
+2021-11-24 06:50:37 INFO ? Generating unique operation named: updateUsingPUT_10
+2021-11-24 06:50:37 INFO ? Generating unique operation named: approvalUsingPOST_1
+2021-11-24 06:50:37 INFO ? Generating unique operation named: deleteUsingDELETE_12
+2021-11-24 06:50:37 INFO ? Generating unique operation named: getUsingGET_13
+2021-11-24 06:50:38 INFO ? Generating unique operation named: importExcelUsingPOST_2
+2021-11-24 06:50:38 INFO ? Generating unique operation named: saveUsingPOST_10
+2021-11-24 06:50:38 INFO ? Generating unique operation named: searchUsingGET_13
+2021-11-24 06:50:38 INFO ? Generating unique operation named: updateUsingPUT_11
+2021-11-24 06:50:38 INFO ? Generating unique operation named: deleteUsingDELETE_13
+2021-11-24 06:50:38 INFO ? Generating unique operation named: deleteUsingDELETE_14
+2021-11-24 06:50:38 INFO ? Generating unique operation named: getUsingGET_14
+2021-11-24 06:50:38 INFO ? Generating unique operation named: saveUsingPOST_11
+2021-11-24 06:50:38 INFO ? Generating unique operation named: searchUsingGET_14
+2021-11-24 06:50:38 INFO ? Generating unique operation named: updateUsingPUT_12
+2021-11-24 06:50:38 INFO ? Starting ProtocolHandler ["http-nio-9976"]
+2021-11-24 06:50:38 INFO ? Tomcat started on port(s): 9976 (http) with context path ''
+2021-11-24 06:50:38 INFO ? Started ZtechApplication in 16.19 seconds (JVM running for 17.385)
+2021-11-24 06:50:51 INFO ? Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-24 06:50:51 INFO ? Shutting down EhCache CacheManager
+2021-11-24 06:50:51 INFO ? Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-24 06:50:51 INFO ? HikariPool-1 - Shutdown initiated...
+2021-11-24 06:50:51 INFO ? HikariPool-1 - Shutdown completed.
+2021-11-24 06:50:56 INFO ? The Class-Path manifest attribute in /home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2021-11-24 06:50:56 INFO ? Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-11-24 06:50:57 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$2312daaa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 06:50:57 INFO ? Fetching config from server at : http://apiintsit.ztech.com.vn/ztech-config/v1
+2021-11-24 06:51:00 WARN ? Could not locate PropertySource: label not found
+2021-11-24 06:51:00 INFO ? The following profiles are active: ztech
+2021-11-24 06:51:01 INFO ? Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-24 06:51:01 INFO ? Finished Spring Data repository scanning in 146ms. Found 26 JPA repository interfaces.
+2021-11-24 06:51:02 INFO ? BeanFactory id=fefabccd-42e4-37ee-8536-b75e76b5d2da
+2021-11-24 06:51:02 INFO ? Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$ab909cac] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 06:51:02 INFO ? Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-11-24 06:51:02 INFO ? Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 06:51:02 INFO ? Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 06:51:02 INFO ? Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 06:51:02 INFO ? Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@560a4c4' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 06:51:02 INFO ? Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 06:51:02 INFO ? Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 06:51:02 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$2312daaa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 06:51:03 INFO ? Tomcat initialized with port(s): 9976 (http)
+2021-11-24 06:51:03 INFO ? Initializing ProtocolHandler ["http-nio-9976"]
+2021-11-24 06:51:03 INFO ? Starting service [Tomcat]
+2021-11-24 06:51:03 INFO ? Starting Servlet engine: [Apache Tomcat/9.0.30]
+2021-11-24 06:51:03 INFO ? Initializing Spring embedded WebApplicationContext
+2021-11-24 06:51:03 INFO ? Root WebApplicationContext: initialization completed in 2463 ms
+2021-11-24 06:51:03 INFO ? HikariPool-1 - Starting...
+2021-11-24 06:51:04 INFO ? HikariPool-1 - Start completed.
+2021-11-24 06:51:04 INFO ? HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-24 06:51:04 INFO ? HHH000412: Hibernate Core {5.4.10.Final}
+2021-11-24 06:51:04 INFO ? HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-11-24 06:51:04 INFO ? HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+2021-11-24 06:51:06 INFO ? HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-24 06:51:06 INFO ? Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-24 06:51:07 WARN ? spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-24 06:51:08 DEBUG ? 
+    select
+        apparam0_.autoid as autoid1_2_,
+        apparam0_.description as descript2_2_,
+        apparam0_.gr as gr3_2_,
+        apparam0_.name as name4_2_,
+        apparam0_.value as value5_2_ 
+    from
+        ap_param apparam0_
+2021-11-24 06:51:08 INFO ? ==>loadCache params [ApParam(autoid=1, group=ERROR_DEFINE, name='group_id' cannot be null, value=GROUPID IS NULL, description=Mã nhóm nhân viên không được để trống), ApParam(autoid=2, group=ERROR_DEFINE, name=fk_people, value=people_id does not exited., description=Mã nhân không tồn tại), ApParam(autoid=3, group=ERROR_DEFINE, name=fk_shift_id, value=shift_id, description=Mã ca làm việc không tồn tại.), ApParam(autoid=4, group=APPROVAL_TYPE, name=OT_APPROVAL, value=OT_APPROVAL, description=Loại duyệt OT), ApParam(autoid=5, group=APPROVAL_TYPE, name=KEEPING_APPROVAL, value=KEEPING_APPROVAL, description=Loại duyệt chấm công), ApParam(autoid=6, group=APPROVER, name=GROUP_LEADER, value=GROUP_LEADER, description=Lãnh đạo khối), ApParam(autoid=7, group=APPROVER, name=DEP_LEADER, value=DEP_LEADER, description=Lãnh đạo phòng), ApParam(autoid=8, group=APPROVER, name=ADMIN, value=ADMIN, description=Quản trị viên), ApParam(autoid=9, group=ERROR_DEFINE, name=approval_flow_unq1, value=trung ban ghi, description=Trùng bản ghi)]
+2021-11-24 06:51:08 INFO ? Clearing Cache
+2021-11-24 06:51:08 INFO ? Clear Done
+2021-11-24 06:51:08 INFO ? INIT Cache Done
+2021-11-24 06:51:11 INFO ? Initializing EhCache CacheManager
+2021-11-24 06:51:11 INFO ? 
+
+Using generated security password: fcfd962a-62a6-497d-ab14-57ccc145651f
+
+2021-11-24 06:51:11 INFO ? Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2021-11-24 06:51:11 INFO ? Creating filter chain: Ant [pattern='/h2-console/**'], []
+2021-11-24 06:51:11 INFO ? Creating filter chain: Ant [pattern='/swagger-ui/index.html'], []
+2021-11-24 06:51:11 INFO ? Creating filter chain: Ant [pattern='/test/**'], []
+2021-11-24 06:51:11 INFO ? Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4e7baeab, org.springframework.security.web.context.SecurityContextPersistenceFilter@8c7ccc5, org.springframework.security.web.header.HeaderWriterFilter@76377728, org.springframework.security.web.authentication.logout.LogoutFilter@3168261a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1eb5d747, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@45708b57, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@64f18e90, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2ff1c89a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@33830400, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@217a2d45, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@603fe059, org.springframework.security.web.session.SessionManagementFilter@52fd4785, org.springframework.security.web.access.ExceptionTranslationFilter@6c6d7daf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@9d81bb6]
+2021-11-24 06:51:11 INFO ? Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-11-24 06:51:11 INFO ? Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-24 06:51:11 INFO ? LiveReload server is running on port 35729
+2021-11-24 06:51:12 INFO ? Context refreshed
+2021-11-24 06:51:12 INFO ? Found 1 custom documentation plugin(s)
+2021-11-24 06:51:12 INFO ? Scanning for api listing references
+2021-11-24 06:51:12 INFO ? Generating unique operation named: deleteUsingDELETE_1
+2021-11-24 06:51:12 INFO ? Generating unique operation named: getUsingGET_1
+2021-11-24 06:51:12 INFO ? Generating unique operation named: saveUsingPOST_1
+2021-11-24 06:51:12 INFO ? Generating unique operation named: searchUsingGET_1
+2021-11-24 06:51:12 INFO ? Generating unique operation named: updateUsingPUT_1
+2021-11-24 06:51:12 INFO ? Generating unique operation named: getUsingGET_2
+2021-11-24 06:51:12 INFO ? Generating unique operation named: deleteUsingDELETE_2
+2021-11-24 06:51:12 INFO ? Generating unique operation named: getUsingGET_3
+2021-11-24 06:51:12 INFO ? Generating unique operation named: saveUsingPOST_2
+2021-11-24 06:51:12 INFO ? Generating unique operation named: searchUsingGET_2
+2021-11-24 06:51:12 INFO ? Generating unique operation named: updateUsingPUT_2
+2021-11-24 06:51:12 INFO ? Generating unique operation named: deleteUsingDELETE_3
+2021-11-24 06:51:12 INFO ? Generating unique operation named: getUsingGET_4
+2021-11-24 06:51:12 INFO ? Generating unique operation named: searchUsingGET_3
+2021-11-24 06:51:12 INFO ? Generating unique operation named: updateUsingPUT_3
+2021-11-24 06:51:12 INFO ? Generating unique operation named: deleteUsingDELETE_4
+2021-11-24 06:51:12 INFO ? Generating unique operation named: getUsingGET_5
+2021-11-24 06:51:12 INFO ? Generating unique operation named: saveUsingPOST_3
+2021-11-24 06:51:12 INFO ? Generating unique operation named: searchUsingGET_4
+2021-11-24 06:51:12 INFO ? Generating unique operation named: updateUsingPUT_4
+2021-11-24 06:51:12 INFO ? Generating unique operation named: deleteUsingDELETE_5
+2021-11-24 06:51:12 INFO ? Generating unique operation named: searchUsingGET_5
+2021-11-24 06:51:12 INFO ? Generating unique operation named: deleteUsingDELETE_6
+2021-11-24 06:51:12 INFO ? Generating unique operation named: getUsingGET_6
+2021-11-24 06:51:12 INFO ? Generating unique operation named: saveUsingPOST_4
+2021-11-24 06:51:12 INFO ? Generating unique operation named: searchUsingGET_6
+2021-11-24 06:51:12 INFO ? Generating unique operation named: updateUsingPUT_5
+2021-11-24 06:51:12 INFO ? Generating unique operation named: getUsingGET_7
+2021-11-24 06:51:12 INFO ? Generating unique operation named: searchUsingGET_7
+2021-11-24 06:51:12 INFO ? Generating unique operation named: deleteUsingDELETE_7
+2021-11-24 06:51:12 INFO ? Generating unique operation named: getUsingGET_8
+2021-11-24 06:51:12 INFO ? Generating unique operation named: saveUsingPOST_5
+2021-11-24 06:51:12 INFO ? Generating unique operation named: searchUsingGET_8
+2021-11-24 06:51:12 INFO ? Generating unique operation named: updateUsingPUT_6
+2021-11-24 06:51:12 INFO ? Generating unique operation named: deleteUsingDELETE_8
+2021-11-24 06:51:12 INFO ? Generating unique operation named: getUsingGET_9
+2021-11-24 06:51:12 INFO ? Generating unique operation named: saveUsingPOST_6
+2021-11-24 06:51:12 INFO ? Generating unique operation named: searchUsingGET_9
+2021-11-24 06:51:12 INFO ? Generating unique operation named: updateUsingPUT_7
+2021-11-24 06:51:12 INFO ? Generating unique operation named: deleteUsingDELETE_9
+2021-11-24 06:51:12 INFO ? Generating unique operation named: getUsingGET_10
+2021-11-24 06:51:12 INFO ? Generating unique operation named: saveUsingPOST_7
+2021-11-24 06:51:12 INFO ? Generating unique operation named: searchUsingGET_10
+2021-11-24 06:51:12 INFO ? Generating unique operation named: updateUsingPUT_8
+2021-11-24 06:51:12 INFO ? Generating unique operation named: deleteUsingDELETE_10
+2021-11-24 06:51:12 INFO ? Generating unique operation named: getUsingGET_11
+2021-11-24 06:51:12 INFO ? Generating unique operation named: saveUsingPOST_8
+2021-11-24 06:51:12 INFO ? Generating unique operation named: saveAllUsingPOST_1
+2021-11-24 06:51:12 INFO ? Generating unique operation named: searchUsingGET_11
+2021-11-24 06:51:12 INFO ? Generating unique operation named: updateUsingPUT_9
+2021-11-24 06:51:12 INFO ? Generating unique operation named: deleteUsingDELETE_11
+2021-11-24 06:51:12 INFO ? Generating unique operation named: getUsingGET_12
+2021-11-24 06:51:12 INFO ? Generating unique operation named: importExcelUsingPOST_1
+2021-11-24 06:51:12 INFO ? Generating unique operation named: saveUsingPOST_9
+2021-11-24 06:51:12 INFO ? Generating unique operation named: searchUsingGET_12
+2021-11-24 06:51:12 INFO ? Generating unique operation named: updateUsingPUT_10
+2021-11-24 06:51:12 INFO ? Generating unique operation named: approvalUsingPOST_1
+2021-11-24 06:51:12 INFO ? Generating unique operation named: deleteUsingDELETE_12
+2021-11-24 06:51:12 INFO ? Generating unique operation named: getUsingGET_13
+2021-11-24 06:51:12 INFO ? Generating unique operation named: importExcelUsingPOST_2
+2021-11-24 06:51:12 INFO ? Generating unique operation named: saveUsingPOST_10
+2021-11-24 06:51:12 INFO ? Generating unique operation named: searchUsingGET_13
+2021-11-24 06:51:12 INFO ? Generating unique operation named: updateUsingPUT_11
+2021-11-24 06:51:12 INFO ? Generating unique operation named: deleteUsingDELETE_13
+2021-11-24 06:51:12 INFO ? Generating unique operation named: deleteUsingDELETE_14
+2021-11-24 06:51:12 INFO ? Generating unique operation named: getUsingGET_14
+2021-11-24 06:51:12 INFO ? Generating unique operation named: saveUsingPOST_11
+2021-11-24 06:51:12 INFO ? Generating unique operation named: searchUsingGET_14
+2021-11-24 06:51:12 INFO ? Generating unique operation named: updateUsingPUT_12
+2021-11-24 06:51:13 INFO ? Starting ProtocolHandler ["http-nio-9976"]
+2021-11-24 06:51:13 INFO ? Tomcat started on port(s): 9976 (http) with context path ''
+2021-11-24 06:51:13 INFO ? Started ZtechApplication in 16.899 seconds (JVM running for 17.932)
+2021-11-24 07:06:08 INFO ? Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-24 07:06:08 INFO ? Shutting down EhCache CacheManager
+2021-11-24 07:06:08 INFO ? Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-24 07:06:08 INFO ? HikariPool-1 - Shutdown initiated...
+2021-11-24 07:06:08 INFO ? HikariPool-1 - Shutdown completed.
+2021-11-24 07:06:13 INFO ? The Class-Path manifest attribute in /home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2021-11-24 07:06:13 INFO ? Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-11-24 07:06:13 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$72067e2a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 07:06:13 INFO ? Fetching config from server at : http://apiintsit.ztech.com.vn/ztech-config/v1
+2021-11-24 07:06:18 WARN ? Could not locate PropertySource: label not found
+2021-11-24 07:06:18 INFO ? The following profiles are active: ztech
+2021-11-24 07:06:18 INFO ? Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-24 07:06:19 INFO ? Finished Spring Data repository scanning in 144ms. Found 26 JPA repository interfaces.
+2021-11-24 07:06:19 INFO ? BeanFactory id=fefabccd-42e4-37ee-8536-b75e76b5d2da
+2021-11-24 07:06:19 INFO ? Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$fa84402c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 07:06:19 INFO ? Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-11-24 07:06:19 INFO ? Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 07:06:19 INFO ? Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 07:06:19 INFO ? Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 07:06:19 INFO ? Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1489a43e' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 07:06:19 INFO ? Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 07:06:19 INFO ? Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 07:06:19 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$72067e2a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 07:06:20 INFO ? Tomcat initialized with port(s): 9976 (http)
+2021-11-24 07:06:20 INFO ? Initializing ProtocolHandler ["http-nio-9976"]
+2021-11-24 07:06:20 INFO ? Starting service [Tomcat]
+2021-11-24 07:06:20 INFO ? Starting Servlet engine: [Apache Tomcat/9.0.30]
+2021-11-24 07:06:20 INFO ? Initializing Spring embedded WebApplicationContext
+2021-11-24 07:06:20 INFO ? Root WebApplicationContext: initialization completed in 2389 ms
+2021-11-24 07:06:20 INFO ? HikariPool-1 - Starting...
+2021-11-24 07:06:21 INFO ? HikariPool-1 - Start completed.
+2021-11-24 07:06:21 INFO ? HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-24 07:06:21 INFO ? HHH000412: Hibernate Core {5.4.10.Final}
+2021-11-24 07:06:21 INFO ? HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-11-24 07:06:21 INFO ? HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+2021-11-24 07:06:23 INFO ? HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-24 07:06:23 INFO ? Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-24 07:06:23 WARN ? spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-24 07:06:24 DEBUG ? 
+    select
+        apparam0_.autoid as autoid1_2_,
+        apparam0_.description as descript2_2_,
+        apparam0_.gr as gr3_2_,
+        apparam0_.name as name4_2_,
+        apparam0_.value as value5_2_ 
+    from
+        ap_param apparam0_
+2021-11-24 07:06:25 INFO ? ==>loadCache params [ApParam(autoid=1, group=ERROR_DEFINE, name='group_id' cannot be null, value=GROUPID IS NULL, description=Mã nhóm nhân viên không được để trống), ApParam(autoid=2, group=ERROR_DEFINE, name=fk_people, value=people_id does not exited., description=Mã nhân không tồn tại), ApParam(autoid=3, group=ERROR_DEFINE, name=fk_shift_id, value=shift_id, description=Mã ca làm việc không tồn tại.), ApParam(autoid=4, group=APPROVAL_TYPE, name=OT_APPROVAL, value=OT_APPROVAL, description=Loại duyệt OT), ApParam(autoid=5, group=APPROVAL_TYPE, name=KEEPING_APPROVAL, value=KEEPING_APPROVAL, description=Loại duyệt chấm công), ApParam(autoid=6, group=APPROVER, name=GROUP_LEADER, value=GROUP_LEADER, description=Lãnh đạo khối), ApParam(autoid=7, group=APPROVER, name=DEP_LEADER, value=DEP_LEADER, description=Lãnh đạo phòng), ApParam(autoid=8, group=APPROVER, name=ADMIN, value=ADMIN, description=Quản trị viên), ApParam(autoid=9, group=ERROR_DEFINE, name=approval_flow_unq1, value=trung ban ghi, description=Trùng bản ghi)]
+2021-11-24 07:06:25 INFO ? Clearing Cache
+2021-11-24 07:06:25 INFO ? Clear Done
+2021-11-24 07:06:25 INFO ? INIT Cache Done
+2021-11-24 07:06:27 INFO ? Initializing EhCache CacheManager
+2021-11-24 07:06:27 INFO ? 
+
+Using generated security password: 064615d8-163f-49fa-a936-f10a0d98b444
+
+2021-11-24 07:06:27 INFO ? Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2021-11-24 07:06:27 INFO ? Creating filter chain: Ant [pattern='/h2-console/**'], []
+2021-11-24 07:06:27 INFO ? Creating filter chain: Ant [pattern='/swagger-ui/index.html'], []
+2021-11-24 07:06:27 INFO ? Creating filter chain: Ant [pattern='/test/**'], []
+2021-11-24 07:06:28 INFO ? Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@449cf8f8, org.springframework.security.web.context.SecurityContextPersistenceFilter@2d877f1b, org.springframework.security.web.header.HeaderWriterFilter@6b544df2, org.springframework.security.web.authentication.logout.LogoutFilter@6c9f7642, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7b325e97, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3fa71b2c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@23e4bafe, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@701f898a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c6adbe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@244053bd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a014d5e, org.springframework.security.web.session.SessionManagementFilter@7fecf758, org.springframework.security.web.access.ExceptionTranslationFilter@25908c00, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@53014375]
+2021-11-24 07:06:28 INFO ? Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-11-24 07:06:28 INFO ? Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-24 07:06:28 INFO ? LiveReload server is running on port 35729
+2021-11-24 07:06:29 INFO ? Context refreshed
+2021-11-24 07:06:29 INFO ? Found 1 custom documentation plugin(s)
+2021-11-24 07:06:29 INFO ? Scanning for api listing references
+2021-11-24 07:06:29 INFO ? Generating unique operation named: deleteUsingDELETE_1
+2021-11-24 07:06:29 INFO ? Generating unique operation named: getUsingGET_1
+2021-11-24 07:06:29 INFO ? Generating unique operation named: saveUsingPOST_1
+2021-11-24 07:06:29 INFO ? Generating unique operation named: searchUsingGET_1
+2021-11-24 07:06:29 INFO ? Generating unique operation named: updateUsingPUT_1
+2021-11-24 07:06:29 INFO ? Generating unique operation named: getUsingGET_2
+2021-11-24 07:06:29 INFO ? Generating unique operation named: deleteUsingDELETE_2
+2021-11-24 07:06:29 INFO ? Generating unique operation named: getUsingGET_3
+2021-11-24 07:06:29 INFO ? Generating unique operation named: saveUsingPOST_2
+2021-11-24 07:06:29 INFO ? Generating unique operation named: searchUsingGET_2
+2021-11-24 07:06:29 INFO ? Generating unique operation named: updateUsingPUT_2
+2021-11-24 07:06:29 INFO ? Generating unique operation named: deleteUsingDELETE_3
+2021-11-24 07:06:29 INFO ? Generating unique operation named: getUsingGET_4
+2021-11-24 07:06:29 INFO ? Generating unique operation named: searchUsingGET_3
+2021-11-24 07:06:29 INFO ? Generating unique operation named: updateUsingPUT_3
+2021-11-24 07:06:29 INFO ? Generating unique operation named: deleteUsingDELETE_4
+2021-11-24 07:06:29 INFO ? Generating unique operation named: getUsingGET_5
+2021-11-24 07:06:29 INFO ? Generating unique operation named: saveUsingPOST_3
+2021-11-24 07:06:29 INFO ? Generating unique operation named: searchUsingGET_4
+2021-11-24 07:06:29 INFO ? Generating unique operation named: updateUsingPUT_4
+2021-11-24 07:06:29 INFO ? Generating unique operation named: deleteUsingDELETE_5
+2021-11-24 07:06:29 INFO ? Generating unique operation named: searchUsingGET_5
+2021-11-24 07:06:29 INFO ? Generating unique operation named: deleteUsingDELETE_6
+2021-11-24 07:06:29 INFO ? Generating unique operation named: getUsingGET_6
+2021-11-24 07:06:29 INFO ? Generating unique operation named: saveUsingPOST_4
+2021-11-24 07:06:29 INFO ? Generating unique operation named: searchUsingGET_6
+2021-11-24 07:06:29 INFO ? Generating unique operation named: updateUsingPUT_5
+2021-11-24 07:06:29 INFO ? Generating unique operation named: getUsingGET_7
+2021-11-24 07:06:29 INFO ? Generating unique operation named: searchUsingGET_7
+2021-11-24 07:06:29 INFO ? Generating unique operation named: deleteUsingDELETE_7
+2021-11-24 07:06:29 INFO ? Generating unique operation named: getUsingGET_8
+2021-11-24 07:06:29 INFO ? Generating unique operation named: saveUsingPOST_5
+2021-11-24 07:06:29 INFO ? Generating unique operation named: searchUsingGET_8
+2021-11-24 07:06:29 INFO ? Generating unique operation named: updateUsingPUT_6
+2021-11-24 07:06:29 INFO ? Generating unique operation named: deleteUsingDELETE_8
+2021-11-24 07:06:29 INFO ? Generating unique operation named: getUsingGET_9
+2021-11-24 07:06:29 INFO ? Generating unique operation named: saveUsingPOST_6
+2021-11-24 07:06:29 INFO ? Generating unique operation named: searchUsingGET_9
+2021-11-24 07:06:29 INFO ? Generating unique operation named: updateUsingPUT_7
+2021-11-24 07:06:29 INFO ? Generating unique operation named: deleteUsingDELETE_9
+2021-11-24 07:06:29 INFO ? Generating unique operation named: getUsingGET_10
+2021-11-24 07:06:29 INFO ? Generating unique operation named: saveUsingPOST_7
+2021-11-24 07:06:29 INFO ? Generating unique operation named: searchUsingGET_10
+2021-11-24 07:06:29 INFO ? Generating unique operation named: updateUsingPUT_8
+2021-11-24 07:06:29 INFO ? Generating unique operation named: deleteUsingDELETE_10
+2021-11-24 07:06:29 INFO ? Generating unique operation named: getUsingGET_11
+2021-11-24 07:06:29 INFO ? Generating unique operation named: saveUsingPOST_8
+2021-11-24 07:06:29 INFO ? Generating unique operation named: saveAllUsingPOST_1
+2021-11-24 07:06:29 INFO ? Generating unique operation named: searchUsingGET_11
+2021-11-24 07:06:29 INFO ? Generating unique operation named: updateUsingPUT_9
+2021-11-24 07:06:29 INFO ? Generating unique operation named: deleteUsingDELETE_11
+2021-11-24 07:06:29 INFO ? Generating unique operation named: getUsingGET_12
+2021-11-24 07:06:29 INFO ? Generating unique operation named: importExcelUsingPOST_1
+2021-11-24 07:06:29 INFO ? Generating unique operation named: saveUsingPOST_9
+2021-11-24 07:06:29 INFO ? Generating unique operation named: searchUsingGET_12
+2021-11-24 07:06:29 INFO ? Generating unique operation named: updateUsingPUT_10
+2021-11-24 07:06:29 INFO ? Generating unique operation named: approvalUsingPOST_1
+2021-11-24 07:06:29 INFO ? Generating unique operation named: deleteUsingDELETE_12
+2021-11-24 07:06:29 INFO ? Generating unique operation named: getUsingGET_13
+2021-11-24 07:06:29 INFO ? Generating unique operation named: importExcelUsingPOST_2
+2021-11-24 07:06:29 INFO ? Generating unique operation named: saveUsingPOST_10
+2021-11-24 07:06:29 INFO ? Generating unique operation named: searchUsingGET_13
+2021-11-24 07:06:29 INFO ? Generating unique operation named: updateUsingPUT_11
+2021-11-24 07:06:29 INFO ? Generating unique operation named: deleteUsingDELETE_13
+2021-11-24 07:06:29 INFO ? Generating unique operation named: deleteUsingDELETE_14
+2021-11-24 07:06:29 INFO ? Generating unique operation named: getUsingGET_14
+2021-11-24 07:06:29 INFO ? Generating unique operation named: saveUsingPOST_11
+2021-11-24 07:06:29 INFO ? Generating unique operation named: searchUsingGET_14
+2021-11-24 07:06:29 INFO ? Generating unique operation named: updateUsingPUT_12
+2021-11-24 07:06:29 INFO ? Starting ProtocolHandler ["http-nio-9976"]
+2021-11-24 07:06:29 INFO ? Tomcat started on port(s): 9976 (http) with context path ''
+2021-11-24 07:06:29 INFO ? Started ZtechApplication in 17.121 seconds (JVM running for 18.113)
+2021-11-24 07:11:53 INFO ? Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-24 07:11:53 INFO ? Initializing Servlet 'dispatcherServlet'
+2021-11-24 07:11:53 INFO ? Completed initialization in 14 ms
+2021-11-24 07:11:53 INFO ? >>> [permissions] user permissions request  <<< [clientIp] = 127.0.0.1
+2021-11-24 07:11:53 DEBUG ? 
+    select
+        ROW_NUMBER() OVER (
+    ORDER BY
+        role_id asc) rownum ,
+        r.id as role_id,
+        r.name as role_code ,
+        m.id as module_id,
+        m.code as module_code,
+        m.url as module_url ,
+        amp.app_module_action_id as module_action_id,
+        ama.code as module_action_code ,
+        amp.allow 
+    from
+        roles r 
+    inner join
+        app_role_permissions amp 
+            on amp.role_id = r.id 
+    inner join
+        app_module_actions ama 
+            on ama.id = amp.app_module_action_id 
+    inner join
+        app_modules m 
+            on m.id = ama.app_module_id 
+    where
+        r.id in (
+            select
+                r.id 
+            from
+                roles r 
+            where
+                r.id in (
+                    select
+                        ur.role_id 
+                    from
+                        user_role ur 
+                    where
+                        ur.user_id in (
+                            select
+                                u.id 
+                            from
+                                users u 
+                            where
+                                u.username = ?
+                        )
+                    )
+            ) 
+        order by
+            m.ord asc 
+2021-11-24 07:11:53 TRACE ? binding parameter [1] as [VARCHAR] - [LDKSP2]
+2021-11-24 07:11:53 INFO ? >>> [permissions] user permissions response <<< [clientIp] = 127.0.0.1
+2021-11-24 07:12:22 INFO ? >>> [getApprovalPeoples] START <<< [clientIp] = 127.0.0.1
+2021-11-24 07:12:22 DEBUG ? 
+    select
+        people0_.id as id1_14_,
+        people0_.customer_type as customer2_14_,
+        people0_.date_of_birth as date_of_3_14_,
+        people0_.email as email4_14_,
+        people0_.full_name as full_nam5_14_,
+        people0_.gender as gender6_14_,
+        people0_.group_id as group_id7_14_,
+        people0_.image_path as image_pa8_14_,
+        people0_.last_checkin_time as last_che9_14_,
+        people0_.mobile_phone as mobile_10_14_,
+        people0_.people_id as people_11_14_,
+        people0_.status as status12_14_ 
+    from
+        people people0_ 
+    where
+        people0_.people_id=?
+2021-11-24 07:12:22 TRACE ? binding parameter [1] as [VARCHAR] - [LDKSP2]
+2021-11-24 07:12:23 DEBUG ? 
+    select
+        ap.* 
+    from
+        ( select
+            g.group_id,
+            g.parent_id dep_id,
+            u.username 
+        from
+            people p 
+        inner join
+            groups g 
+                on p.group_id = g.group_id 
+        inner join
+            users u 
+                on p.people_id= u.people_id ) a 
+    inner join
+        approval_flow ap 
+            on a.dep_id = ap.dep_id 
+    where
+        a.username=? 
+        and ap.approval_type=?
+2021-11-24 07:12:23 TRACE ? binding parameter [1] as [VARCHAR] - [LDKSP2]
+2021-11-24 07:12:23 TRACE ? binding parameter [2] as [VARCHAR] - [KEEPING_APPROVAL]
+2021-11-24 07:12:23 DEBUG ? 
+    SELECT
+        p.* 
+    FROM
+        people p 
+    INNER JOIN
+        GROUPS g 
+            ON p.group_id= g.group_id 
+    INNER JOIN
+        users u 
+            ON p.people_id= u.people_id 
+    INNER JOIN
+        user_role ur 
+            ON u.id = ur.user_id 
+    INNER JOIN
+        roles rl 
+            ON ur.role_id = rl.id 
+    WHERE
+        g.parent_id in (
+            select
+                parent_id 
+            from
+                groups a 
+            where
+                a.group_id =?
+        ) 
+        and  rl.name =?
+2021-11-24 07:12:23 TRACE ? binding parameter [1] as [VARCHAR] - [19]
+2021-11-24 07:12:23 TRACE ? binding parameter [2] as [VARCHAR] - [DEP_LEADER]
+2021-11-24 07:12:23 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-11-24 07:12:23 DEBUG ? 
+    select
+        ts.import_id,
+        ts.autoid,
+        ts.people_id,
+        ts.description,
+        DATE_FORMAT(ts.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.created_by,
+        ts.time_keeping_image,
+        ts.state,
+        ts.approved_by,
+        DATE_FORMAT(ts.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.date_type,
+        DATE_FORMAT(ts.keeping_date,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.approval_level,
+        ts.approval_by_level2,
+        ts.approval_at_level2,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        )  limit ?
+2021-11-24 07:12:23 DEBUG ? 
+    select
+        count(*)  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        ) 
+2021-11-24 07:12:47 INFO ? >>> [permissions] user permissions request  <<< [clientIp] = 127.0.0.1
+2021-11-24 07:12:47 DEBUG ? 
+    select
+        ROW_NUMBER() OVER (
+    ORDER BY
+        role_id asc) rownum ,
+        r.id as role_id,
+        r.name as role_code ,
+        m.id as module_id,
+        m.code as module_code,
+        m.url as module_url ,
+        amp.app_module_action_id as module_action_id,
+        ama.code as module_action_code ,
+        amp.allow 
+    from
+        roles r 
+    inner join
+        app_role_permissions amp 
+            on amp.role_id = r.id 
+    inner join
+        app_module_actions ama 
+            on ama.id = amp.app_module_action_id 
+    inner join
+        app_modules m 
+            on m.id = ama.app_module_id 
+    where
+        r.id in (
+            select
+                r.id 
+            from
+                roles r 
+            where
+                r.id in (
+                    select
+                        ur.role_id 
+                    from
+                        user_role ur 
+                    where
+                        ur.user_id in (
+                            select
+                                u.id 
+                            from
+                                users u 
+                            where
+                                u.username = ?
+                        )
+                    )
+            ) 
+        order by
+            m.ord asc 
+2021-11-24 07:12:47 TRACE ? binding parameter [1] as [VARCHAR] - [LDKSP2]
+2021-11-24 07:12:47 INFO ? >>> [permissions] user permissions response <<< [clientIp] = 127.0.0.1
+2021-11-24 07:13:50 INFO ? >>> [getApprovalPeoples] START <<< [clientIp] = 127.0.0.1
+2021-11-24 07:13:51 DEBUG ? 
+    select
+        people0_.id as id1_14_,
+        people0_.customer_type as customer2_14_,
+        people0_.date_of_birth as date_of_3_14_,
+        people0_.email as email4_14_,
+        people0_.full_name as full_nam5_14_,
+        people0_.gender as gender6_14_,
+        people0_.group_id as group_id7_14_,
+        people0_.image_path as image_pa8_14_,
+        people0_.last_checkin_time as last_che9_14_,
+        people0_.mobile_phone as mobile_10_14_,
+        people0_.people_id as people_11_14_,
+        people0_.status as status12_14_ 
+    from
+        people people0_ 
+    where
+        people0_.people_id=?
+2021-11-24 07:13:51 TRACE ? binding parameter [1] as [VARCHAR] - [LDKSP2]
+2021-11-24 07:13:51 DEBUG ? 
+    select
+        ap.* 
+    from
+        ( select
+            g.group_id,
+            g.parent_id dep_id,
+            u.username 
+        from
+            people p 
+        inner join
+            groups g 
+                on p.group_id = g.group_id 
+        inner join
+            users u 
+                on p.people_id= u.people_id ) a 
+    inner join
+        approval_flow ap 
+            on a.dep_id = ap.dep_id 
+    where
+        a.username=? 
+        and ap.approval_type=?
+2021-11-24 07:13:51 TRACE ? binding parameter [1] as [VARCHAR] - [LDKSP2]
+2021-11-24 07:13:51 TRACE ? binding parameter [2] as [VARCHAR] - [KEEPING_APPROVAL]
+2021-11-24 07:13:51 DEBUG ? 
+    SELECT
+        p.* 
+    FROM
+        people p 
+    INNER JOIN
+        GROUPS g 
+            ON p.group_id= g.group_id 
+    INNER JOIN
+        users u 
+            ON p.people_id= u.people_id 
+    INNER JOIN
+        user_role ur 
+            ON u.id = ur.user_id 
+    INNER JOIN
+        roles rl 
+            ON ur.role_id = rl.id 
+    WHERE
+        g.parent_id in (
+            select
+                parent_id 
+            from
+                groups a 
+            where
+                a.group_id =?
+        ) 
+        and  rl.name =?
+2021-11-24 07:13:51 TRACE ? binding parameter [1] as [VARCHAR] - [19]
+2021-11-24 07:13:51 TRACE ? binding parameter [2] as [VARCHAR] - [DEP_LEADER]
+2021-11-24 07:13:51 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-11-24 07:17:48 WARN ? HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m22s361ms614µs849ns).
+2021-11-24 07:17:48 DEBUG ? 
+    select
+        ts.import_id,
+        ts.autoid,
+        ts.people_id,
+        ts.description,
+        DATE_FORMAT(ts.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.created_by,
+        ts.time_keeping_image,
+        ts.state,
+        ts.approved_by,
+        DATE_FORMAT(ts.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.date_type,
+        DATE_FORMAT(ts.keeping_date,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.approval_level,
+        ts.approval_by_level2,
+        ts.approval_at_level2,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        )  limit ?
+2021-11-24 07:17:48 DEBUG ? 
+    select
+        count(*)  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        ) 
+2021-11-24 07:17:55 INFO ? >>> [permissions] user permissions request  <<< [clientIp] = 127.0.0.1
+2021-11-24 07:17:55 DEBUG ? 
+    select
+        ROW_NUMBER() OVER (
+    ORDER BY
+        role_id asc) rownum ,
+        r.id as role_id,
+        r.name as role_code ,
+        m.id as module_id,
+        m.code as module_code,
+        m.url as module_url ,
+        amp.app_module_action_id as module_action_id,
+        ama.code as module_action_code ,
+        amp.allow 
+    from
+        roles r 
+    inner join
+        app_role_permissions amp 
+            on amp.role_id = r.id 
+    inner join
+        app_module_actions ama 
+            on ama.id = amp.app_module_action_id 
+    inner join
+        app_modules m 
+            on m.id = ama.app_module_id 
+    where
+        r.id in (
+            select
+                r.id 
+            from
+                roles r 
+            where
+                r.id in (
+                    select
+                        ur.role_id 
+                    from
+                        user_role ur 
+                    where
+                        ur.user_id in (
+                            select
+                                u.id 
+                            from
+                                users u 
+                            where
+                                u.username = ?
+                        )
+                    )
+            ) 
+        order by
+            m.ord asc 
+2021-11-24 07:17:55 TRACE ? binding parameter [1] as [VARCHAR] - [ngandt01]
+2021-11-24 07:17:55 INFO ? >>> [permissions] user permissions response <<< [clientIp] = 127.0.0.1
+2021-11-24 07:18:01 INFO ? >>> [getApprovalPeoples] START <<< [clientIp] = 127.0.0.1
+2021-11-24 07:18:01 DEBUG ? 
+    select
+        people0_.id as id1_14_,
+        people0_.customer_type as customer2_14_,
+        people0_.date_of_birth as date_of_3_14_,
+        people0_.email as email4_14_,
+        people0_.full_name as full_nam5_14_,
+        people0_.gender as gender6_14_,
+        people0_.group_id as group_id7_14_,
+        people0_.image_path as image_pa8_14_,
+        people0_.last_checkin_time as last_che9_14_,
+        people0_.mobile_phone as mobile_10_14_,
+        people0_.people_id as people_11_14_,
+        people0_.status as status12_14_ 
+    from
+        people people0_ 
+    where
+        people0_.people_id=?
+2021-11-24 07:18:01 TRACE ? binding parameter [1] as [VARCHAR] - [ngandt03]
+2021-11-24 07:18:02 DEBUG ? 
+    select
+        ap.* 
+    from
+        ( select
+            g.group_id,
+            g.parent_id dep_id,
+            u.username 
+        from
+            people p 
+        inner join
+            groups g 
+                on p.group_id = g.group_id 
+        inner join
+            users u 
+                on p.people_id= u.people_id ) a 
+    inner join
+        approval_flow ap 
+            on a.dep_id = ap.dep_id 
+    where
+        a.username=? 
+        and ap.approval_type=?
+2021-11-24 07:18:02 TRACE ? binding parameter [1] as [VARCHAR] - [ngandt01]
+2021-11-24 07:18:02 TRACE ? binding parameter [2] as [VARCHAR] - [KEEPING_APPROVAL]
+2021-11-24 07:18:02 DEBUG ? 
+    SELECT
+        p.* 
+    FROM
+        people p 
+    INNER JOIN
+        GROUPS g 
+            ON p.group_id= g.group_id 
+    INNER JOIN
+        users u 
+            ON p.people_id= u.people_id 
+    INNER JOIN
+        user_role ur 
+            ON u.id = ur.user_id 
+    INNER JOIN
+        roles rl 
+            ON ur.role_id = rl.id 
+    WHERE
+        g.parent_id in (
+            select
+                parent_id 
+            from
+                groups a 
+            where
+                a.group_id =?
+        ) 
+        and  rl.name =?
+2021-11-24 07:18:02 TRACE ? binding parameter [1] as [VARCHAR] - [19]
+2021-11-24 07:18:02 TRACE ? binding parameter [2] as [VARCHAR] - [GROUP_LEADER]
+2021-11-24 07:18:02 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-11-24 07:18:07 DEBUG ? 
+    select
+        ts.import_id,
+        ts.autoid,
+        ts.people_id,
+        ts.description,
+        DATE_FORMAT(ts.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.created_by,
+        ts.time_keeping_image,
+        ts.state,
+        ts.approved_by,
+        DATE_FORMAT(ts.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.date_type,
+        DATE_FORMAT(ts.keeping_date,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.approval_level,
+        ts.approval_by_level2,
+        ts.approval_at_level2,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and p.people_id =  'ngandt03'  limit ?
+2021-11-24 07:18:07 DEBUG ? 
+    select
+        count(*)  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and p.people_id =  'ngandt03' 
+2021-11-24 07:18:41 INFO ? >>> [save] START <<< [clientIp] = 127.0.0.1
+2021-11-24 07:18:41 DEBUG ? 
+    select
+        count(*) 
+    from
+        timekeeping_sheet 
+    where
+        people_id=? 
+        and DATE_FORMAT(keeping_date, '%d/%m/%Y') = DATE_FORMAT(?, '%d/%m/%Y') 
+2021-11-24 07:18:41 TRACE ? binding parameter [1] as [VARCHAR] - [ngandt03]
+2021-11-24 07:18:41 TRACE ? binding parameter [2] as [TIMESTAMP] - [Tue Nov 02 00:00:00 GMT+07:00 2021]
+2021-11-24 07:18:42 DEBUG ? 
+    insert 
+    into
+        timekeeping_sheet
+        (approval_at_level2, approval_by_level2, approval_level, approved_at, approved_by, created_at, created_by, date_type, description, import_id, keeping_date, people_id, role_level1, role_level2, rule_id, state, supervisor, time_keeping_image) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2021-11-24 07:18:42 TRACE ? binding parameter [1] as [TIMESTAMP] - [null]
+2021-11-24 07:18:42 TRACE ? binding parameter [2] as [VARCHAR] - [null]
+2021-11-24 07:18:42 TRACE ? binding parameter [3] as [TINYINT] - [2]
+2021-11-24 07:18:42 TRACE ? binding parameter [4] as [TIMESTAMP] - [null]
+2021-11-24 07:18:42 TRACE ? binding parameter [5] as [VARCHAR] - [LDKSP2]
+2021-11-24 07:18:42 TRACE ? binding parameter [6] as [TIMESTAMP] - [Wed Nov 24 07:18:41 GMT+07:00 2021]
+2021-11-24 07:18:42 TRACE ? binding parameter [7] as [VARCHAR] - [null]
+2021-11-24 07:18:42 TRACE ? binding parameter [8] as [VARCHAR] - [null]
+2021-11-24 07:18:42 TRACE ? binding parameter [9] as [VARCHAR] - [test ]
+2021-11-24 07:18:42 TRACE ? binding parameter [10] as [VARCHAR] - [null]
+2021-11-24 07:18:42 TRACE ? binding parameter [11] as [TIMESTAMP] - [Tue Nov 02 00:00:00 GMT+07:00 2021]
+2021-11-24 07:18:42 TRACE ? binding parameter [12] as [VARCHAR] - [ngandt03]
+2021-11-24 07:18:42 TRACE ? binding parameter [13] as [VARCHAR] - [GROUP_LEADER]
+2021-11-24 07:18:42 TRACE ? binding parameter [14] as [VARCHAR] - [DEP_LEADER]
+2021-11-24 07:18:42 TRACE ? binding parameter [15] as [BIGINT] - [41]
+2021-11-24 07:18:42 TRACE ? binding parameter [16] as [VARCHAR] - [0]
+2021-11-24 07:18:42 TRACE ? binding parameter [17] as [VARCHAR] - [LVTest 1B]
+2021-11-24 07:18:42 TRACE ? binding parameter [18] as [VARCHAR] - [http://14.225.254.219:8080/images/uploadedImage_1637713121179.png]
+2021-11-24 07:18:42 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_20_,
+        timekeepin0_.date as date2_20_ 
+    from
+        timekeeping_date timekeepin0_ 
+    where
+        timekeepin0_.date=?
+2021-11-24 07:18:42 TRACE ? binding parameter [1] as [VARCHAR] - [Quên check giữa ca]
+2021-11-24 07:18:43 DEBUG ? 
+    select
+        timekeepin0_.date_id as date_id1_22_0_,
+        timekeepin0_.sheet_id as sheet_id2_22_0_,
+        timekeepin0_.reason as reason3_22_0_ 
+    from
+        timekeeping_sheet_date timekeepin0_ 
+    where
+        timekeepin0_.date_id=? 
+        and timekeepin0_.sheet_id=?
+2021-11-24 07:18:43 TRACE ? binding parameter [1] as [BIGINT] - [2]
+2021-11-24 07:18:43 TRACE ? binding parameter [2] as [BIGINT] - [370]
+2021-11-24 07:18:43 DEBUG ? 
+    insert 
+    into
+        timekeeping_sheet_date
+        (reason, date_id, sheet_id) 
+    values
+        (?, ?, ?)
+2021-11-24 07:18:43 TRACE ? binding parameter [1] as [VARCHAR] - [null]
+2021-11-24 07:18:43 TRACE ? binding parameter [2] as [BIGINT] - [2]
+2021-11-24 07:18:43 TRACE ? binding parameter [3] as [BIGINT] - [370]
+2021-11-24 07:18:44 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-11-24 07:18:47 DEBUG ? 
+    select
+        ts.import_id,
+        ts.autoid,
+        ts.people_id,
+        ts.description,
+        DATE_FORMAT(ts.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.created_by,
+        ts.time_keeping_image,
+        ts.state,
+        ts.approved_by,
+        DATE_FORMAT(ts.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.date_type,
+        DATE_FORMAT(ts.keeping_date,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.approval_level,
+        ts.approval_by_level2,
+        ts.approval_at_level2,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and p.people_id =  'ngandt03'  limit ?
+2021-11-24 07:18:47 DEBUG ? 
+    select
+        count(*)  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and p.people_id =  'ngandt03' 
+2021-11-24 07:18:48 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-24 07:18:48 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-24 07:18:48 TRACE ? binding parameter [1] as [BIGINT] - [370]
+2021-11-24 07:18:49 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-24 07:18:49 TRACE ? binding parameter [1] as [BIGINT] - [370]
+2021-11-24 07:19:57 INFO ? >>> [permissions] user permissions request  <<< [clientIp] = 127.0.0.1
+2021-11-24 07:19:57 DEBUG ? 
+    select
+        ROW_NUMBER() OVER (
+    ORDER BY
+        role_id asc) rownum ,
+        r.id as role_id,
+        r.name as role_code ,
+        m.id as module_id,
+        m.code as module_code,
+        m.url as module_url ,
+        amp.app_module_action_id as module_action_id,
+        ama.code as module_action_code ,
+        amp.allow 
+    from
+        roles r 
+    inner join
+        app_role_permissions amp 
+            on amp.role_id = r.id 
+    inner join
+        app_module_actions ama 
+            on ama.id = amp.app_module_action_id 
+    inner join
+        app_modules m 
+            on m.id = ama.app_module_id 
+    where
+        r.id in (
+            select
+                r.id 
+            from
+                roles r 
+            where
+                r.id in (
+                    select
+                        ur.role_id 
+                    from
+                        user_role ur 
+                    where
+                        ur.user_id in (
+                            select
+                                u.id 
+                            from
+                                users u 
+                            where
+                                u.username = ?
+                        )
+                    )
+            ) 
+        order by
+            m.ord asc 
+2021-11-24 07:19:57 TRACE ? binding parameter [1] as [VARCHAR] - [LDKSP2]
+2021-11-24 07:19:57 INFO ? >>> [permissions] user permissions response <<< [clientIp] = 127.0.0.1
+2021-11-24 07:20:03 INFO ? >>> [getApprovalPeoples] START <<< [clientIp] = 127.0.0.1
+2021-11-24 07:20:03 DEBUG ? 
+    select
+        people0_.id as id1_14_,
+        people0_.customer_type as customer2_14_,
+        people0_.date_of_birth as date_of_3_14_,
+        people0_.email as email4_14_,
+        people0_.full_name as full_nam5_14_,
+        people0_.gender as gender6_14_,
+        people0_.group_id as group_id7_14_,
+        people0_.image_path as image_pa8_14_,
+        people0_.last_checkin_time as last_che9_14_,
+        people0_.mobile_phone as mobile_10_14_,
+        people0_.people_id as people_11_14_,
+        people0_.status as status12_14_ 
+    from
+        people people0_ 
+    where
+        people0_.people_id=?
+2021-11-24 07:20:03 TRACE ? binding parameter [1] as [VARCHAR] - [LDKSP2]
+2021-11-24 07:20:04 DEBUG ? 
+    select
+        ap.* 
+    from
+        ( select
+            g.group_id,
+            g.parent_id dep_id,
+            u.username 
+        from
+            people p 
+        inner join
+            groups g 
+                on p.group_id = g.group_id 
+        inner join
+            users u 
+                on p.people_id= u.people_id ) a 
+    inner join
+        approval_flow ap 
+            on a.dep_id = ap.dep_id 
+    where
+        a.username=? 
+        and ap.approval_type=?
+2021-11-24 07:20:04 TRACE ? binding parameter [1] as [VARCHAR] - [LDKSP2]
+2021-11-24 07:20:04 TRACE ? binding parameter [2] as [VARCHAR] - [KEEPING_APPROVAL]
+2021-11-24 07:20:04 DEBUG ? 
+    SELECT
+        p.* 
+    FROM
+        people p 
+    INNER JOIN
+        GROUPS g 
+            ON p.group_id= g.group_id 
+    INNER JOIN
+        users u 
+            ON p.people_id= u.people_id 
+    INNER JOIN
+        user_role ur 
+            ON u.id = ur.user_id 
+    INNER JOIN
+        roles rl 
+            ON ur.role_id = rl.id 
+    WHERE
+        g.parent_id in (
+            select
+                parent_id 
+            from
+                groups a 
+            where
+                a.group_id =?
+        ) 
+        and  rl.name =?
+2021-11-24 07:20:04 TRACE ? binding parameter [1] as [VARCHAR] - [19]
+2021-11-24 07:20:04 TRACE ? binding parameter [2] as [VARCHAR] - [DEP_LEADER]
+2021-11-24 07:20:04 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-11-24 07:20:04 DEBUG ? 
+    select
+        ts.import_id,
+        ts.autoid,
+        ts.people_id,
+        ts.description,
+        DATE_FORMAT(ts.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.created_by,
+        ts.time_keeping_image,
+        ts.state,
+        ts.approved_by,
+        DATE_FORMAT(ts.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.date_type,
+        DATE_FORMAT(ts.keeping_date,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.approval_level,
+        ts.approval_by_level2,
+        ts.approval_at_level2,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        )  limit ?
+2021-11-24 07:20:04 DEBUG ? 
+    select
+        count(*)  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        ) 
+2021-11-24 07:20:04 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-24 07:20:04 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-24 07:20:04 TRACE ? binding parameter [1] as [BIGINT] - [370]
+2021-11-24 07:20:05 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-24 07:20:05 TRACE ? binding parameter [1] as [BIGINT] - [370]
+2021-11-24 07:20:28 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-24 07:20:28 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-24 07:20:28 TRACE ? binding parameter [1] as [BIGINT] - [370]
+2021-11-24 07:20:29 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-24 07:20:29 TRACE ? binding parameter [1] as [BIGINT] - [370]
+2021-11-24 07:20:36 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-24 07:20:36 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-24 07:20:36 TRACE ? binding parameter [1] as [BIGINT] - [370]
+2021-11-24 07:20:37 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-24 07:20:37 TRACE ? binding parameter [1] as [BIGINT] - [370]
+2021-11-24 07:24:54 INFO ? Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-24 07:24:54 INFO ? Shutting down EhCache CacheManager
+2021-11-24 07:24:54 INFO ? Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-24 07:24:54 INFO ? HikariPool-1 - Shutdown initiated...
+2021-11-24 07:24:54 INFO ? HikariPool-1 - Shutdown completed.
+2021-11-24 07:24:59 INFO ? The Class-Path manifest attribute in /home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2021-11-24 07:24:59 INFO ? Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-11-24 07:24:59 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$1c7f8c3f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 07:24:59 INFO ? Fetching config from server at : http://apiintsit.ztech.com.vn/ztech-config/v1
+2021-11-24 07:25:01 WARN ? Could not locate PropertySource: label not found
+2021-11-24 07:25:01 INFO ? The following profiles are active: ztech
+2021-11-24 07:25:02 INFO ? Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-24 07:25:02 INFO ? Finished Spring Data repository scanning in 137ms. Found 26 JPA repository interfaces.
+2021-11-24 07:25:02 INFO ? BeanFactory id=fefabccd-42e4-37ee-8536-b75e76b5d2da
+2021-11-24 07:25:02 INFO ? Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$a4fd4e41] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 07:25:02 INFO ? Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-11-24 07:25:02 INFO ? Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 07:25:02 INFO ? Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 07:25:02 INFO ? Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 07:25:02 INFO ? Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@7ee7ff4' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 07:25:02 INFO ? Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 07:25:02 INFO ? Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 07:25:02 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$1c7f8c3f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 07:25:03 INFO ? Tomcat initialized with port(s): 9976 (http)
+2021-11-24 07:25:03 INFO ? Initializing ProtocolHandler ["http-nio-9976"]
+2021-11-24 07:25:03 INFO ? Starting service [Tomcat]
+2021-11-24 07:25:03 INFO ? Starting Servlet engine: [Apache Tomcat/9.0.30]
+2021-11-24 07:25:03 INFO ? Initializing Spring embedded WebApplicationContext
+2021-11-24 07:25:03 INFO ? Root WebApplicationContext: initialization completed in 2253 ms
+2021-11-24 07:25:03 INFO ? HikariPool-1 - Starting...
+2021-11-24 07:25:04 INFO ? HikariPool-1 - Start completed.
+2021-11-24 07:25:04 INFO ? HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-24 07:25:04 INFO ? HHH000412: Hibernate Core {5.4.10.Final}
+2021-11-24 07:25:04 INFO ? HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-11-24 07:25:04 INFO ? HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+2021-11-24 07:25:05 INFO ? HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-24 07:25:05 INFO ? Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-24 07:25:06 WARN ? spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-24 07:25:07 DEBUG ? 
+    select
+        apparam0_.autoid as autoid1_2_,
+        apparam0_.description as descript2_2_,
+        apparam0_.gr as gr3_2_,
+        apparam0_.name as name4_2_,
+        apparam0_.value as value5_2_ 
+    from
+        ap_param apparam0_
+2021-11-24 07:25:07 INFO ? ==>loadCache params [ApParam(autoid=1, group=ERROR_DEFINE, name='group_id' cannot be null, value=GROUPID IS NULL, description=Mã nhóm nhân viên không được để trống), ApParam(autoid=2, group=ERROR_DEFINE, name=fk_people, value=people_id does not exited., description=Mã nhân không tồn tại), ApParam(autoid=3, group=ERROR_DEFINE, name=fk_shift_id, value=shift_id, description=Mã ca làm việc không tồn tại.), ApParam(autoid=4, group=APPROVAL_TYPE, name=OT_APPROVAL, value=OT_APPROVAL, description=Loại duyệt OT), ApParam(autoid=5, group=APPROVAL_TYPE, name=KEEPING_APPROVAL, value=KEEPING_APPROVAL, description=Loại duyệt chấm công), ApParam(autoid=6, group=APPROVER, name=GROUP_LEADER, value=GROUP_LEADER, description=Lãnh đạo khối), ApParam(autoid=7, group=APPROVER, name=DEP_LEADER, value=DEP_LEADER, description=Lãnh đạo phòng), ApParam(autoid=8, group=APPROVER, name=ADMIN, value=ADMIN, description=Quản trị viên), ApParam(autoid=9, group=ERROR_DEFINE, name=approval_flow_unq1, value=trung ban ghi, description=Trùng bản ghi)]
+2021-11-24 07:25:07 INFO ? Clearing Cache
+2021-11-24 07:25:07 INFO ? Clear Done
+2021-11-24 07:25:07 INFO ? INIT Cache Done
+2021-11-24 07:25:09 INFO ? Initializing EhCache CacheManager
+2021-11-24 07:25:09 INFO ? 
+
+Using generated security password: 24aa0fb5-6868-4b46-b6a1-dea294a4a621
+
+2021-11-24 07:25:09 INFO ? Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2021-11-24 07:25:09 INFO ? Creating filter chain: Ant [pattern='/h2-console/**'], []
+2021-11-24 07:25:09 INFO ? Creating filter chain: Ant [pattern='/swagger-ui/index.html'], []
+2021-11-24 07:25:09 INFO ? Creating filter chain: Ant [pattern='/test/**'], []
+2021-11-24 07:25:09 INFO ? Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1bdc39ac, org.springframework.security.web.context.SecurityContextPersistenceFilter@157ab0e, org.springframework.security.web.header.HeaderWriterFilter@4eeae372, org.springframework.security.web.authentication.logout.LogoutFilter@7ce1d9df, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@8b5c049, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5c330586, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@72c65766, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@24663ad1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2aab44bb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c604be2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@430e4e36, org.springframework.security.web.session.SessionManagementFilter@603fc9e1, org.springframework.security.web.access.ExceptionTranslationFilter@a39b21, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4b574ae3]
+2021-11-24 07:25:09 INFO ? Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-11-24 07:25:09 INFO ? Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-24 07:25:09 INFO ? LiveReload server is running on port 35729
+2021-11-24 07:25:10 INFO ? Context refreshed
+2021-11-24 07:25:10 INFO ? Found 1 custom documentation plugin(s)
+2021-11-24 07:25:10 INFO ? Scanning for api listing references
+2021-11-24 07:25:10 INFO ? Generating unique operation named: deleteUsingDELETE_1
+2021-11-24 07:25:10 INFO ? Generating unique operation named: getUsingGET_1
+2021-11-24 07:25:10 INFO ? Generating unique operation named: saveUsingPOST_1
+2021-11-24 07:25:10 INFO ? Generating unique operation named: searchUsingGET_1
+2021-11-24 07:25:10 INFO ? Generating unique operation named: updateUsingPUT_1
+2021-11-24 07:25:10 INFO ? Generating unique operation named: getUsingGET_2
+2021-11-24 07:25:10 INFO ? Generating unique operation named: deleteUsingDELETE_2
+2021-11-24 07:25:10 INFO ? Generating unique operation named: getUsingGET_3
+2021-11-24 07:25:10 INFO ? Generating unique operation named: saveUsingPOST_2
+2021-11-24 07:25:10 INFO ? Generating unique operation named: searchUsingGET_2
+2021-11-24 07:25:10 INFO ? Generating unique operation named: updateUsingPUT_2
+2021-11-24 07:25:10 INFO ? Generating unique operation named: deleteUsingDELETE_3
+2021-11-24 07:25:10 INFO ? Generating unique operation named: getUsingGET_4
+2021-11-24 07:25:10 INFO ? Generating unique operation named: searchUsingGET_3
+2021-11-24 07:25:10 INFO ? Generating unique operation named: updateUsingPUT_3
+2021-11-24 07:25:10 INFO ? Generating unique operation named: deleteUsingDELETE_4
+2021-11-24 07:25:10 INFO ? Generating unique operation named: getUsingGET_5
+2021-11-24 07:25:10 INFO ? Generating unique operation named: saveUsingPOST_3
+2021-11-24 07:25:10 INFO ? Generating unique operation named: searchUsingGET_4
+2021-11-24 07:25:10 INFO ? Generating unique operation named: updateUsingPUT_4
+2021-11-24 07:25:10 INFO ? Generating unique operation named: deleteUsingDELETE_5
+2021-11-24 07:25:10 INFO ? Generating unique operation named: searchUsingGET_5
+2021-11-24 07:25:10 INFO ? Generating unique operation named: deleteUsingDELETE_6
+2021-11-24 07:25:10 INFO ? Generating unique operation named: getUsingGET_6
+2021-11-24 07:25:10 INFO ? Generating unique operation named: saveUsingPOST_4
+2021-11-24 07:25:10 INFO ? Generating unique operation named: searchUsingGET_6
+2021-11-24 07:25:10 INFO ? Generating unique operation named: updateUsingPUT_5
+2021-11-24 07:25:10 INFO ? Generating unique operation named: getUsingGET_7
+2021-11-24 07:25:10 INFO ? Generating unique operation named: searchUsingGET_7
+2021-11-24 07:25:10 INFO ? Generating unique operation named: deleteUsingDELETE_7
+2021-11-24 07:25:10 INFO ? Generating unique operation named: getUsingGET_8
+2021-11-24 07:25:10 INFO ? Generating unique operation named: saveUsingPOST_5
+2021-11-24 07:25:10 INFO ? Generating unique operation named: searchUsingGET_8
+2021-11-24 07:25:10 INFO ? Generating unique operation named: updateUsingPUT_6
+2021-11-24 07:25:10 INFO ? Generating unique operation named: deleteUsingDELETE_8
+2021-11-24 07:25:10 INFO ? Generating unique operation named: getUsingGET_9
+2021-11-24 07:25:10 INFO ? Generating unique operation named: saveUsingPOST_6
+2021-11-24 07:25:10 INFO ? Generating unique operation named: searchUsingGET_9
+2021-11-24 07:25:10 INFO ? Generating unique operation named: updateUsingPUT_7
+2021-11-24 07:25:10 INFO ? Generating unique operation named: deleteUsingDELETE_9
+2021-11-24 07:25:10 INFO ? Generating unique operation named: getUsingGET_10
+2021-11-24 07:25:10 INFO ? Generating unique operation named: saveUsingPOST_7
+2021-11-24 07:25:10 INFO ? Generating unique operation named: searchUsingGET_10
+2021-11-24 07:25:10 INFO ? Generating unique operation named: updateUsingPUT_8
+2021-11-24 07:25:10 INFO ? Generating unique operation named: deleteUsingDELETE_10
+2021-11-24 07:25:10 INFO ? Generating unique operation named: getUsingGET_11
+2021-11-24 07:25:10 INFO ? Generating unique operation named: saveUsingPOST_8
+2021-11-24 07:25:10 INFO ? Generating unique operation named: saveAllUsingPOST_1
+2021-11-24 07:25:10 INFO ? Generating unique operation named: searchUsingGET_11
+2021-11-24 07:25:10 INFO ? Generating unique operation named: updateUsingPUT_9
+2021-11-24 07:25:10 INFO ? Generating unique operation named: deleteUsingDELETE_11
+2021-11-24 07:25:10 INFO ? Generating unique operation named: getUsingGET_12
+2021-11-24 07:25:10 INFO ? Generating unique operation named: importExcelUsingPOST_1
+2021-11-24 07:25:10 INFO ? Generating unique operation named: saveUsingPOST_9
+2021-11-24 07:25:10 INFO ? Generating unique operation named: searchUsingGET_12
+2021-11-24 07:25:10 INFO ? Generating unique operation named: updateUsingPUT_10
+2021-11-24 07:25:10 INFO ? Generating unique operation named: approvalUsingPOST_1
+2021-11-24 07:25:10 INFO ? Generating unique operation named: deleteUsingDELETE_12
+2021-11-24 07:25:10 INFO ? Generating unique operation named: getUsingGET_13
+2021-11-24 07:25:10 INFO ? Generating unique operation named: importExcelUsingPOST_2
+2021-11-24 07:25:10 INFO ? Generating unique operation named: saveUsingPOST_10
+2021-11-24 07:25:10 INFO ? Generating unique operation named: searchUsingGET_13
+2021-11-24 07:25:10 INFO ? Generating unique operation named: updateUsingPUT_11
+2021-11-24 07:25:10 INFO ? Generating unique operation named: deleteUsingDELETE_13
+2021-11-24 07:25:10 INFO ? Generating unique operation named: deleteUsingDELETE_14
+2021-11-24 07:25:10 INFO ? Generating unique operation named: getUsingGET_14
+2021-11-24 07:25:10 INFO ? Generating unique operation named: saveUsingPOST_11
+2021-11-24 07:25:10 INFO ? Generating unique operation named: searchUsingGET_14
+2021-11-24 07:25:10 INFO ? Generating unique operation named: updateUsingPUT_12
+2021-11-24 07:25:10 INFO ? Starting ProtocolHandler ["http-nio-9976"]
+2021-11-24 07:25:10 INFO ? Tomcat started on port(s): 9976 (http) with context path ''
+2021-11-24 07:25:10 INFO ? Started ZtechApplication in 12.076 seconds (JVM running for 12.897)
+2021-11-24 07:32:23 INFO ? Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-24 07:32:23 INFO ? Initializing Servlet 'dispatcherServlet'
+2021-11-24 07:32:23 INFO ? Completed initialization in 9 ms
+2021-11-24 07:32:23 INFO ? >>> [permissions] user permissions request  <<< [clientIp] = 127.0.0.1
+2021-11-24 07:32:23 DEBUG ? 
+    select
+        ROW_NUMBER() OVER (
+    ORDER BY
+        role_id asc) rownum ,
+        r.id as role_id,
+        r.name as role_code ,
+        m.id as module_id,
+        m.code as module_code,
+        m.url as module_url ,
+        amp.app_module_action_id as module_action_id,
+        ama.code as module_action_code ,
+        amp.allow 
+    from
+        roles r 
+    inner join
+        app_role_permissions amp 
+            on amp.role_id = r.id 
+    inner join
+        app_module_actions ama 
+            on ama.id = amp.app_module_action_id 
+    inner join
+        app_modules m 
+            on m.id = ama.app_module_id 
+    where
+        r.id in (
+            select
+                r.id 
+            from
+                roles r 
+            where
+                r.id in (
+                    select
+                        ur.role_id 
+                    from
+                        user_role ur 
+                    where
+                        ur.user_id in (
+                            select
+                                u.id 
+                            from
+                                users u 
+                            where
+                                u.username = ?
+                        )
+                    )
+            ) 
+        order by
+            m.ord asc 
+2021-11-24 07:32:23 TRACE ? binding parameter [1] as [VARCHAR] - [LDKSP2]
+2021-11-24 07:32:24 INFO ? >>> [permissions] user permissions response <<< [clientIp] = 127.0.0.1
+2021-11-24 07:32:30 INFO ? >>> [getApprovalPeoples] START <<< [clientIp] = 127.0.0.1
+2021-11-24 07:32:30 DEBUG ? 
+    select
+        people0_.id as id1_14_,
+        people0_.customer_type as customer2_14_,
+        people0_.date_of_birth as date_of_3_14_,
+        people0_.email as email4_14_,
+        people0_.full_name as full_nam5_14_,
+        people0_.gender as gender6_14_,
+        people0_.group_id as group_id7_14_,
+        people0_.image_path as image_pa8_14_,
+        people0_.last_checkin_time as last_che9_14_,
+        people0_.mobile_phone as mobile_10_14_,
+        people0_.people_id as people_11_14_,
+        people0_.status as status12_14_ 
+    from
+        people people0_ 
+    where
+        people0_.people_id=?
+2021-11-24 07:32:30 TRACE ? binding parameter [1] as [VARCHAR] - [LDKSP2]
+2021-11-24 07:32:31 DEBUG ? 
+    select
+        ap.* 
+    from
+        ( select
+            g.group_id,
+            g.parent_id dep_id,
+            u.username 
+        from
+            people p 
+        inner join
+            groups g 
+                on p.group_id = g.group_id 
+        inner join
+            users u 
+                on p.people_id= u.people_id ) a 
+    inner join
+        approval_flow ap 
+            on a.dep_id = ap.dep_id 
+    where
+        a.username=? 
+        and ap.approval_type=?
+2021-11-24 07:32:31 TRACE ? binding parameter [1] as [VARCHAR] - [LDKSP2]
+2021-11-24 07:32:31 TRACE ? binding parameter [2] as [VARCHAR] - [KEEPING_APPROVAL]
+2021-11-24 07:32:31 DEBUG ? 
+    SELECT
+        p.* 
+    FROM
+        people p 
+    INNER JOIN
+        GROUPS g 
+            ON p.group_id= g.group_id 
+    INNER JOIN
+        users u 
+            ON p.people_id= u.people_id 
+    INNER JOIN
+        user_role ur 
+            ON u.id = ur.user_id 
+    INNER JOIN
+        roles rl 
+            ON ur.role_id = rl.id 
+    WHERE
+        g.parent_id in (
+            select
+                parent_id 
+            from
+                groups a 
+            where
+                a.group_id =?
+        ) 
+        and  rl.name =?
+2021-11-24 07:32:31 TRACE ? binding parameter [1] as [VARCHAR] - [19]
+2021-11-24 07:32:31 TRACE ? binding parameter [2] as [VARCHAR] - [DEP_LEADER]
+2021-11-24 07:32:31 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-11-24 07:32:31 DEBUG ? 
+    select
+        ts.import_id,
+        ts.autoid,
+        ts.people_id,
+        ts.description,
+        DATE_FORMAT(ts.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.created_by,
+        ts.time_keeping_image,
+        ts.state,
+        ts.approved_by,
+        DATE_FORMAT(ts.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.date_type,
+        DATE_FORMAT(ts.keeping_date,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.approval_level,
+        ts.approval_by_level2,
+        ts.approval_at_level2,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name,
+        p.full_name  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        )  limit ?
+2021-11-24 07:32:31 DEBUG ? 
+    select
+        count(*)  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        ) 
+2021-11-24 07:32:31 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-24 07:32:31 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-24 07:32:31 TRACE ? binding parameter [1] as [BIGINT] - [370]
+2021-11-24 07:32:32 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-24 07:32:32 TRACE ? binding parameter [1] as [BIGINT] - [370]
+2021-11-24 07:32:35 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-24 07:32:35 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-24 07:32:35 TRACE ? binding parameter [1] as [BIGINT] - [370]
+2021-11-24 07:32:35 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-24 07:32:35 TRACE ? binding parameter [1] as [BIGINT] - [370]
+2021-11-24 07:32:57 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-11-24 07:32:57 DEBUG ? 
+    select
+        ts.import_id,
+        ts.autoid,
+        ts.people_id,
+        ts.description,
+        DATE_FORMAT(ts.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.created_by,
+        ts.time_keeping_image,
+        ts.state,
+        ts.approved_by,
+        DATE_FORMAT(ts.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.date_type,
+        DATE_FORMAT(ts.keeping_date,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.approval_level,
+        ts.approval_by_level2,
+        ts.approval_at_level2,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name,
+        p.full_name  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and STR_TO_DATE(DATE_FORMAT(ts.keeping_date,'%d/%m/%Y'),'%d/%m/%Y') >= STR_TO_DATE('01/11/2021','%d/%m/%Y')  
+        and STR_TO_DATE(DATE_FORMAT(ts.keeping_date,'%d/%m/%Y'),'%d/%m/%Y') <= STR_TO_DATE('01/11/2021','%d/%m/%Y')  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        )  limit ?
+2021-11-24 07:32:57 DEBUG ? 
+    select
+        count(*)  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and STR_TO_DATE(DATE_FORMAT(ts.keeping_date,'%d/%m/%Y'),'%d/%m/%Y') >= STR_TO_DATE('01/11/2021','%d/%m/%Y')  
+        and STR_TO_DATE(DATE_FORMAT(ts.keeping_date,'%d/%m/%Y'),'%d/%m/%Y') <= STR_TO_DATE('01/11/2021','%d/%m/%Y')  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        ) 
+2021-11-24 07:32:58 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-11-24 07:32:58 DEBUG ? 
+    select
+        ts.import_id,
+        ts.autoid,
+        ts.people_id,
+        ts.description,
+        DATE_FORMAT(ts.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.created_by,
+        ts.time_keeping_image,
+        ts.state,
+        ts.approved_by,
+        DATE_FORMAT(ts.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.date_type,
+        DATE_FORMAT(ts.keeping_date,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.approval_level,
+        ts.approval_by_level2,
+        ts.approval_at_level2,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name,
+        p.full_name  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and STR_TO_DATE(DATE_FORMAT(ts.keeping_date,'%d/%m/%Y'),'%d/%m/%Y') >= STR_TO_DATE('01/11/2021','%d/%m/%Y')  
+        and STR_TO_DATE(DATE_FORMAT(ts.keeping_date,'%d/%m/%Y'),'%d/%m/%Y') <= STR_TO_DATE('01/11/2021','%d/%m/%Y')  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        )  limit ?
+2021-11-24 07:32:58 DEBUG ? 
+    select
+        count(*)  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and STR_TO_DATE(DATE_FORMAT(ts.keeping_date,'%d/%m/%Y'),'%d/%m/%Y') >= STR_TO_DATE('01/11/2021','%d/%m/%Y')  
+        and STR_TO_DATE(DATE_FORMAT(ts.keeping_date,'%d/%m/%Y'),'%d/%m/%Y') <= STR_TO_DATE('01/11/2021','%d/%m/%Y')  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        ) 
+2021-11-24 07:33:00 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-11-24 07:33:00 DEBUG ? 
+    select
+        ts.import_id,
+        ts.autoid,
+        ts.people_id,
+        ts.description,
+        DATE_FORMAT(ts.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.created_by,
+        ts.time_keeping_image,
+        ts.state,
+        ts.approved_by,
+        DATE_FORMAT(ts.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.date_type,
+        DATE_FORMAT(ts.keeping_date,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.approval_level,
+        ts.approval_by_level2,
+        ts.approval_at_level2,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name,
+        p.full_name  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and STR_TO_DATE(DATE_FORMAT(ts.keeping_date,'%d/%m/%Y'),'%d/%m/%Y') >= STR_TO_DATE('01/11/2021','%d/%m/%Y')  
+        and STR_TO_DATE(DATE_FORMAT(ts.keeping_date,'%d/%m/%Y'),'%d/%m/%Y') <= STR_TO_DATE('01/11/2021','%d/%m/%Y')  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        )  limit ?
+2021-11-24 07:33:00 DEBUG ? 
+    select
+        count(*)  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and STR_TO_DATE(DATE_FORMAT(ts.keeping_date,'%d/%m/%Y'),'%d/%m/%Y') >= STR_TO_DATE('01/11/2021','%d/%m/%Y')  
+        and STR_TO_DATE(DATE_FORMAT(ts.keeping_date,'%d/%m/%Y'),'%d/%m/%Y') <= STR_TO_DATE('01/11/2021','%d/%m/%Y')  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        ) 
+2021-11-24 07:33:13 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-11-24 07:33:13 DEBUG ? 
+    select
+        ts.import_id,
+        ts.autoid,
+        ts.people_id,
+        ts.description,
+        DATE_FORMAT(ts.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.created_by,
+        ts.time_keeping_image,
+        ts.state,
+        ts.approved_by,
+        DATE_FORMAT(ts.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.date_type,
+        DATE_FORMAT(ts.keeping_date,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.approval_level,
+        ts.approval_by_level2,
+        ts.approval_at_level2,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name,
+        p.full_name  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        )  limit ?
+2021-11-24 07:33:13 DEBUG ? 
+    select
+        count(*)  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        ) 
+2021-11-24 07:33:13 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-24 07:33:13 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-24 07:33:13 TRACE ? binding parameter [1] as [BIGINT] - [370]
+2021-11-24 07:33:13 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-24 07:33:13 TRACE ? binding parameter [1] as [BIGINT] - [370]
+2021-11-24 07:34:04 INFO ? Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-24 07:34:04 INFO ? Shutting down EhCache CacheManager
+2021-11-24 07:34:04 INFO ? Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-24 07:34:04 INFO ? HikariPool-1 - Shutdown initiated...
+2021-11-24 07:34:04 INFO ? HikariPool-1 - Shutdown completed.
+2021-11-24 10:13:07 INFO ? The Class-Path manifest attribute in /home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2021-11-24 10:13:07 INFO ? Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-11-24 10:13:07 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$5798a53e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 10:13:07 INFO ? Fetching config from server at : http://apiintsit.ztech.com.vn/ztech-config/v1
+2021-11-24 10:13:09 WARN ? Could not locate PropertySource: label not found
+2021-11-24 10:13:09 INFO ? The following profiles are active: ztech
+2021-11-24 10:13:09 INFO ? Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-24 10:13:10 INFO ? Finished Spring Data repository scanning in 113ms. Found 26 JPA repository interfaces.
+2021-11-24 10:13:10 INFO ? BeanFactory id=fefabccd-42e4-37ee-8536-b75e76b5d2da
+2021-11-24 10:13:10 INFO ? Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$e0166740] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 10:13:10 INFO ? Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-11-24 10:13:10 INFO ? Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 10:13:10 INFO ? Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 10:13:10 INFO ? Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 10:13:10 INFO ? Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3602d2b1' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 10:13:10 INFO ? Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 10:13:10 INFO ? Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 10:13:10 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$5798a53e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-24 10:13:10 INFO ? Tomcat initialized with port(s): 9976 (http)
+2021-11-24 10:13:10 INFO ? Initializing ProtocolHandler ["http-nio-9976"]
+2021-11-24 10:13:10 INFO ? Starting service [Tomcat]
+2021-11-24 10:13:10 INFO ? Starting Servlet engine: [Apache Tomcat/9.0.30]
+2021-11-24 10:13:11 INFO ? Initializing Spring embedded WebApplicationContext
+2021-11-24 10:13:11 INFO ? Root WebApplicationContext: initialization completed in 1688 ms
+2021-11-24 10:13:11 INFO ? HikariPool-1 - Starting...
+2021-11-24 10:13:12 INFO ? HikariPool-1 - Start completed.
+2021-11-24 10:13:12 INFO ? HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-24 10:13:12 INFO ? HHH000412: Hibernate Core {5.4.10.Final}
+2021-11-24 10:13:12 INFO ? HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-11-24 10:13:12 INFO ? HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+2021-11-24 10:13:13 INFO ? HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-24 10:13:13 INFO ? Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-24 10:13:14 WARN ? spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-24 10:13:15 DEBUG ? 
+    select
+        apparam0_.autoid as autoid1_2_,
+        apparam0_.description as descript2_2_,
+        apparam0_.gr as gr3_2_,
+        apparam0_.name as name4_2_,
+        apparam0_.value as value5_2_ 
+    from
+        ap_param apparam0_
+2021-11-24 10:13:15 INFO ? ==>loadCache params [ApParam(autoid=1, group=ERROR_DEFINE, name='group_id' cannot be null, value=GROUPID IS NULL, description=Mã nhóm nhân viên không được để trống), ApParam(autoid=2, group=ERROR_DEFINE, name=fk_people, value=people_id does not exited., description=Mã nhân không tồn tại), ApParam(autoid=3, group=ERROR_DEFINE, name=fk_shift_id, value=shift_id, description=Mã ca làm việc không tồn tại.), ApParam(autoid=4, group=APPROVAL_TYPE, name=OT_APPROVAL, value=OT_APPROVAL, description=Loại duyệt OT), ApParam(autoid=5, group=APPROVAL_TYPE, name=KEEPING_APPROVAL, value=KEEPING_APPROVAL, description=Loại duyệt chấm công), ApParam(autoid=6, group=APPROVER, name=GROUP_LEADER, value=GROUP_LEADER, description=Lãnh đạo khối), ApParam(autoid=7, group=APPROVER, name=DEP_LEADER, value=DEP_LEADER, description=Lãnh đạo phòng), ApParam(autoid=8, group=APPROVER, name=ADMIN, value=ADMIN, description=Quản trị viên), ApParam(autoid=9, group=ERROR_DEFINE, name=approval_flow_unq1, value=trung ban ghi, description=Trùng bản ghi)]
+2021-11-24 10:13:15 INFO ? Clearing Cache
+2021-11-24 10:13:16 INFO ? Clear Done
+2021-11-24 10:13:16 INFO ? INIT Cache Done
+2021-11-24 10:13:17 INFO ? Initializing EhCache CacheManager
+2021-11-24 10:13:17 INFO ? 
+
+Using generated security password: 5eda2c47-d220-4504-af75-cab914690d91
+
+2021-11-24 10:13:17 INFO ? Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2021-11-24 10:13:17 INFO ? Creating filter chain: Ant [pattern='/h2-console/**'], []
+2021-11-24 10:13:17 INFO ? Creating filter chain: Ant [pattern='/swagger-ui/index.html'], []
+2021-11-24 10:13:17 INFO ? Creating filter chain: Ant [pattern='/test/**'], []
+2021-11-24 10:13:17 INFO ? Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5f5ad9d, org.springframework.security.web.context.SecurityContextPersistenceFilter@4d1a6af8, org.springframework.security.web.header.HeaderWriterFilter@7c7cc7de, org.springframework.security.web.authentication.logout.LogoutFilter@68814b6f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5bead702, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@bf8f9c6, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2e33facf, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@79427970, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2c471731, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@45519a1d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@54727ec, org.springframework.security.web.session.SessionManagementFilter@44176c2d, org.springframework.security.web.access.ExceptionTranslationFilter@1ad13583, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7990bafb]
+2021-11-24 10:13:17 INFO ? Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-11-24 10:13:17 INFO ? Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-24 10:13:17 INFO ? LiveReload server is running on port 35729
+2021-11-24 10:13:18 INFO ? Context refreshed
+2021-11-24 10:13:18 INFO ? Found 1 custom documentation plugin(s)
+2021-11-24 10:13:18 INFO ? Scanning for api listing references
+2021-11-24 10:13:18 INFO ? Generating unique operation named: deleteUsingDELETE_1
+2021-11-24 10:13:18 INFO ? Generating unique operation named: getUsingGET_1
+2021-11-24 10:13:18 INFO ? Generating unique operation named: saveUsingPOST_1
+2021-11-24 10:13:18 INFO ? Generating unique operation named: searchUsingGET_1
+2021-11-24 10:13:18 INFO ? Generating unique operation named: updateUsingPUT_1
+2021-11-24 10:13:19 INFO ? Generating unique operation named: getUsingGET_2
+2021-11-24 10:13:19 INFO ? Generating unique operation named: deleteUsingDELETE_2
+2021-11-24 10:13:19 INFO ? Generating unique operation named: getUsingGET_3
+2021-11-24 10:13:19 INFO ? Generating unique operation named: saveUsingPOST_2
+2021-11-24 10:13:19 INFO ? Generating unique operation named: searchUsingGET_2
+2021-11-24 10:13:19 INFO ? Generating unique operation named: updateUsingPUT_2
+2021-11-24 10:13:19 INFO ? Generating unique operation named: deleteUsingDELETE_3
+2021-11-24 10:13:19 INFO ? Generating unique operation named: getUsingGET_4
+2021-11-24 10:13:19 INFO ? Generating unique operation named: searchUsingGET_3
+2021-11-24 10:13:19 INFO ? Generating unique operation named: updateUsingPUT_3
+2021-11-24 10:13:19 INFO ? Generating unique operation named: deleteUsingDELETE_4
+2021-11-24 10:13:19 INFO ? Generating unique operation named: getUsingGET_5
+2021-11-24 10:13:19 INFO ? Generating unique operation named: saveUsingPOST_3
+2021-11-24 10:13:19 INFO ? Generating unique operation named: searchUsingGET_4
+2021-11-24 10:13:19 INFO ? Generating unique operation named: updateUsingPUT_4
+2021-11-24 10:13:19 INFO ? Generating unique operation named: deleteUsingDELETE_5
+2021-11-24 10:13:19 INFO ? Generating unique operation named: searchUsingGET_5
+2021-11-24 10:13:19 INFO ? Generating unique operation named: deleteUsingDELETE_6
+2021-11-24 10:13:19 INFO ? Generating unique operation named: getUsingGET_6
+2021-11-24 10:13:19 INFO ? Generating unique operation named: saveUsingPOST_4
+2021-11-24 10:13:19 INFO ? Generating unique operation named: searchUsingGET_6
+2021-11-24 10:13:19 INFO ? Generating unique operation named: updateUsingPUT_5
+2021-11-24 10:13:19 INFO ? Generating unique operation named: getUsingGET_7
+2021-11-24 10:13:19 INFO ? Generating unique operation named: searchUsingGET_7
+2021-11-24 10:13:19 INFO ? Generating unique operation named: deleteUsingDELETE_7
+2021-11-24 10:13:19 INFO ? Generating unique operation named: getUsingGET_8
+2021-11-24 10:13:19 INFO ? Generating unique operation named: saveUsingPOST_5
+2021-11-24 10:13:19 INFO ? Generating unique operation named: searchUsingGET_8
+2021-11-24 10:13:19 INFO ? Generating unique operation named: updateUsingPUT_6
+2021-11-24 10:13:19 INFO ? Generating unique operation named: deleteUsingDELETE_8
+2021-11-24 10:13:19 INFO ? Generating unique operation named: getUsingGET_9
+2021-11-24 10:13:19 INFO ? Generating unique operation named: saveUsingPOST_6
+2021-11-24 10:13:19 INFO ? Generating unique operation named: searchUsingGET_9
+2021-11-24 10:13:19 INFO ? Generating unique operation named: updateUsingPUT_7
+2021-11-24 10:13:19 INFO ? Generating unique operation named: deleteUsingDELETE_9
+2021-11-24 10:13:19 INFO ? Generating unique operation named: getUsingGET_10
+2021-11-24 10:13:19 INFO ? Generating unique operation named: saveUsingPOST_7
+2021-11-24 10:13:19 INFO ? Generating unique operation named: searchUsingGET_10
+2021-11-24 10:13:19 INFO ? Generating unique operation named: updateUsingPUT_8
+2021-11-24 10:13:19 INFO ? Generating unique operation named: deleteUsingDELETE_10
+2021-11-24 10:13:19 INFO ? Generating unique operation named: getUsingGET_11
+2021-11-24 10:13:19 INFO ? Generating unique operation named: saveUsingPOST_8
+2021-11-24 10:13:19 INFO ? Generating unique operation named: saveAllUsingPOST_1
+2021-11-24 10:13:19 INFO ? Generating unique operation named: searchUsingGET_11
+2021-11-24 10:13:19 INFO ? Generating unique operation named: updateUsingPUT_9
+2021-11-24 10:13:19 INFO ? Generating unique operation named: deleteUsingDELETE_11
+2021-11-24 10:13:19 INFO ? Generating unique operation named: getUsingGET_12
+2021-11-24 10:13:19 INFO ? Generating unique operation named: importExcelUsingPOST_1
+2021-11-24 10:13:19 INFO ? Generating unique operation named: saveUsingPOST_9
+2021-11-24 10:13:19 INFO ? Generating unique operation named: searchUsingGET_12
+2021-11-24 10:13:19 INFO ? Generating unique operation named: updateUsingPUT_10
+2021-11-24 10:13:19 INFO ? Generating unique operation named: approvalUsingPOST_1
+2021-11-24 10:13:19 INFO ? Generating unique operation named: deleteUsingDELETE_12
+2021-11-24 10:13:19 INFO ? Generating unique operation named: getUsingGET_13
+2021-11-24 10:13:19 INFO ? Generating unique operation named: importExcelUsingPOST_2
+2021-11-24 10:13:19 INFO ? Generating unique operation named: saveUsingPOST_10
+2021-11-24 10:13:19 INFO ? Generating unique operation named: searchUsingGET_13
+2021-11-24 10:13:19 INFO ? Generating unique operation named: updateUsingPUT_11
+2021-11-24 10:13:19 INFO ? Generating unique operation named: deleteUsingDELETE_13
+2021-11-24 10:13:19 INFO ? Generating unique operation named: deleteUsingDELETE_14
+2021-11-24 10:13:19 INFO ? Generating unique operation named: getUsingGET_14
+2021-11-24 10:13:19 INFO ? Generating unique operation named: saveUsingPOST_11
+2021-11-24 10:13:19 INFO ? Generating unique operation named: searchUsingGET_14
+2021-11-24 10:13:19 INFO ? Generating unique operation named: updateUsingPUT_12
+2021-11-24 10:13:19 INFO ? Starting ProtocolHandler ["http-nio-9976"]
+2021-11-24 10:13:19 INFO ? Tomcat started on port(s): 9976 (http) with context path ''
+2021-11-24 10:13:19 INFO ? Started ZtechApplication in 12.404 seconds (JVM running for 13.246)

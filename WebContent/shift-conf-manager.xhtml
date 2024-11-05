@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:pe="http://primefaces.org/ui/extensions">
+
+<h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8" name="viewport"
+          content="width=device-width, initial-scale=1"
+          http-equiv="X-UA-Conpatible"/>
+    <h:outputStylesheet library="css" name="bootstrap.min.css"/>
+    <h:outputStylesheet library="css" name="app.css"/>
+    <h:outputStylesheet library="css" name="paginator.css"/>
+    <script name="jquery/jquery.js" library="primefaces">
+
+    </script>
+    <title>Cài đặt ca làm việc</title>
+
+</h:head>
+
+<h:body>
+    <p:growl id="growl" showDetail="true"/>
+    <p:confirmDialog global="true" showEffect="fade" hideEffect="fade"
+                     closable="false">
+        <p:commandButton value="Đồng ý" type="button"
+                         styleClass="ui-confirmdialog-yes" icon="pi pi-check"/>
+        <p:commandButton value="Hủy" type="button"
+                         styleClass="ui-confirmdialog-no ui-button-secondary" icon="pi pi-times"/>
+    </p:confirmDialog>
+    <ui:include src="componentHeader.xhtml"></ui:include>
+    <div class="">
+        <div class="col-12 layout_custom">
+            <h:form id="form">
+
+                <div class="row">
+                    <div class="col col-lg-3">
+                        <div class="class_com_pad5"
+                             style="margin-left: 10px; margin-top: 5px;">
+                            <h4>Cài đặt ca làm việc</h4>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-group"></div>
+                    </div>
+                    <div class="col col-lg-2">
+                        <div class="class_com_pad5"
+                             style="margin-top: 1px; text-align: right">
+                            <p:commandButton
+                                    rendered="#{sessionController.isAllow('SHIFT_CONF_MANAGER','CREATE')}"
+                                    id="btnCreate" value="Thêm mới" icon="pi pi-plus"
+                                    update="frmDetail" immediate="true"
+                                    action="#{shiftConfManagerController.goToCreatePage(null)}"
+                                    oncomplete="PF('dlgDetailVar').show();"/>
+
+                        </div>
+                    </div>
+                </div>
+                <p:dataTable id="tblData" styleClass="tbl_custom_bt" var="item"
+                             value="#{shiftConfManagerController.dataModel}"
+                             selectionMode="single"
+                             selection="#{shiftConfManagerController.selectedItem}"
+                             rowKey="#{item.autoid}" first="0" widgetVar="tblDataVar"
+                             paginator="false" paginatorPosition="bottom"
+                             resizableColumns="true" dblClickSelect="true" resizeMode="fit"
+                             emptyMessage="Không có dữ liệu..."
+                             currentPageReportTemplate="({totalRecords} bản ghi, {currentPage} / {totalPages})"
+                             rowSelectMode="single" rowIndexVar="rowIndex">
+
+                    <p:column width="25" resizable="false" exportable="false">
+                        <f:facet name="header">
+                            <h:outputText value="#"/>
+                        </f:facet>
+                        <div style="padding: 0px; background: transparent;">
+                            <div align="center" style="width: 100%">
+                                <h:outputText escape="true" value="#{rowIndex + 1}"/>
+                            </div>
+                        </div>
+                    </p:column>
+
+                    <p:column width="150" styleClass="ui-datatable break-word"
+                              resizable="true">
+                        <f:facet name="header">
+                            <h:outputText value="Mã ca"/>
+                        </f:facet>
+                        <h:outputText style="width: 100%"
+                                      value="#{item.code}"/>
+                    </p:column>
+
+                    <p:column width="200" styleClass="ui-datatable break-word"
+                              resizable="true">
+                        <f:facet name="header">
+                            <h:outputText value="Mô tả"/>
+                        </f:facet>
+                        <h:outputText style="width: 100%"
+                                      value="#{item.name}"/>
+                    </p:column>
+
+                    <p:column width="200" styleClass="ui-datatable break-word"
+                              resizable="true">
+                        <f:facet name="header">
+                            <h:outputText value="Fulltime"/>
+                        </f:facet>
+                        <p:repeat value="#{item.shiftDetail}" var="detail" varStatus="detailStatus">
+                            <h:outputText rendered="#{detailStatus.index ==0}" value="#{detail.dayName}"/>
+                            <h:outputText rendered="#{detailStatus.index > 0}" value="; #{detail.dayName}"/>
+                        </p:repeat>
+                    </p:column>
+
+                    <p:column width="200" styleClass="ui-datatable break-word"
+                              resizable="true">
+                        <f:facet name="header">
+                            <h:outputText value="Overtime"/>
+                        </f:facet>
+                        <p:repeat value="#{item.oshiftDetail}" var="detail" varStatus="detailStatus">
+                            <h:outputText rendered="#{detailStatus.index ==0}" value="#{detail.dayName}"/>
+                            <h:outputText rendered="#{detailStatus.index > 0}" value="; #{detail.dayName}"/>
+                        </p:repeat>
+                    </p:column>
+
+
+                    <p:column width="200" styleClass="ui-datatable break-word"
+                              resizable="true">
+                        <f:facet name="header">
+                            <h:outputText value="Phòng ban áp dụng"/>
+                        </f:facet>
+                        <p:repeat value="#{item.shiftOrg}" var="detail" varStatus="detailStatus">
+                            <h:outputText rendered="#{detailStatus.index ==0}" value="#{detail.groupName}"/>
+                            <h:outputText rendered="#{detailStatus.index > 0}" value="; #{detail.groupName}"/>
+                        </p:repeat>
+                    </p:column>
+
+                    <p:column width="120" resizable="false" exportable="false"
+                              style="text-align: center;">
+                        <f:facet name="header">
+                            <h:outputText value="Hành động"/>
+                        </f:facet>
+                        <p:commandLink ajax="true"
+                                       action="#{shiftConfManagerController.changeMode(item)}"
+                                       update="frmDetail" process="@this"
+                                       oncomplete="PF('dlgDetailVar').show();" value="Chi tiết">
+                            <span title="chi tiết" class="pi pi-eye"/>
+                        </p:commandLink>
+                        <!--<h:outputText value="&#160; "/>-->
+                        <!--<h:outputText value="&#160; "/>-->
+                        <!--<p:commandLink-->
+                                <!--rendered="#{sessionController.isAllow('SHIFT_CONF_MANAGER','CREATE')}"-->
+                                <!--ajax="true"-->
+                                <!--action="#{shiftConfManagerController.goToCreatePage(item)}"-->
+                                <!--update="frmDetail" immediate="true" value="Copy"-->
+                                <!--oncomplete="PF('dlgDetailVar').show();">-->
+                            <!--<span title="copy" class="pi pi-copy"/>-->
+                        <!--</p:commandLink>-->
+
+                        <h:outputText value="&#160; "/>
+                        <h:outputText value="&#160; "/>
+                        <p:commandLink
+                                rendered="#{sessionController.isAllow('SHIFT_CONF_MANAGER','DELETE')}"
+                                ajax="true"
+                                action="#{shiftConfManagerController.delete(item)}"
+                                update="tblData growl" process="@this" value="Xóa">
+                            <span title="xóa" class="pi pi-trash" style="color: red;"/>
+                            <p:confirm header="Xác nhận"
+                                       message='Bạn có chắc chắn muốn xóa hay không ?'
+                                       icon="ui-icon-warning"/>
+                        </p:commandLink>
+                    </p:column>
+                </p:dataTable>
+
+            </h:form>
+
+            <p:dialog header="Thông tin ca làm việc" id="dlgDetail" styleClass="dlg_custom"
+                      widgetVar="dlgDetailVar" resizable="false" width="980" modal="true"
+                      closeOnEscape="true" closable="false" >
+                <h:form id="frmDetail">
+                    <p:scrollPanel widgetVar="scrollPanelVar" style="height:600px" scrollMode="native">
+                        <div class="ui-g">
+                            <div class="ui-g-12">
+                                <div class="ui-g-2 ui-g-nopad lable_margin-top_10">
+                                    Mã ca <span style="color: red;">*</span>
+                                </div>
+                                <div class="ui-g-4 ui-g-nopad" style="background: transparent;">
+                                    <p:inputText id="txtCode" required="true"
+                                                 maxlength="20"
+                                                 requiredMessage="Thông tin nhập chưa đầy đủ. Vui lòng nhập lại !"
+                                                 style="width: 100%;"
+                                                 value="#{shiftConfManagerController.selectedItem.code}">
+                                        <f:validator validatorId="shiftCodeValidator"/>
+                                    </p:inputText>
+                                    <p:message styleClass="field_message" for="txtCode"/>
+                                </div>
+
+                                <div class="ui-g-2 ui-g-nopad lable_margin-top_10" style="padding-left: 10px;">
+                                    Mô tả <span style="color: red;">*</span>
+                                </div>
+                                <div class="ui-g-4 ui-g-nopad" style="background: transparent;">
+                                    <p:inputText id="txtName" required="true"
+                                                 requiredMessage="Thông tin nhập chưa đầy đủ. Vui lòng nhập lại !"
+                                                 style="width: 100%;"
+                                                 value="#{shiftConfManagerController.selectedItem.name}">
+                                        <!--<p:ajax event="change" process="@this" update="frmDetail"/>-->
+                                    </p:inputText>
+                                    <p:message styleClass="field_message" for="txtName"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="ui-g-12">
+                                <div class="ui-g-2 ui-g-nopad lable_margin-top_10">
+
+                                </div>
+                                <div class="ui-g-4 ui-g-nopad" style="background: transparent;">
+                                    <p:selectOneMenu id="txtGroup"
+                                                     value="#{shiftConfManagerController.selectedItem.depId}"
+                                                     filter="true" filterMatchMode="contains" style="width: 100%">
+                                        <f:selectItem itemLabel="-&#45;&#45; Chọn khối -&#45;&#45;" itemValue=""/>
+                                        <f:selectItems
+                                                value="#{shiftConfManagerController.lstGroupCatg}"
+                                                var="item" itemLabel="#{item.groupName}"
+                                                itemValue="#{item.groupId}"/>
+                                        <p:ajax update="txtGroupChild" process="txtGroup"
+                                                event="itemSelect"
+                                                listener="#{shiftConfManagerController.txtGroupValueChange}"/>
+                                    </p:selectOneMenu>
+                                </div>
+
+                                <div class="ui-g-2 ui-g-nopad lable_margin-top_10" style="padding-left: 10px;">
+                                    Phòng ban
+                                </div>
+                                <div class="ui-g-4 ui-g-nopad" style="background: transparent;">
+                                    <p:selectOneMenu id="txtGroupChild"
+                                                     value="#{shiftConfManagerController.selectedItem.groupId}"
+                                                     filter="true" filterMatchMode="contains" style="width: 100%">
+                                        <f:selectItem itemLabel="-&#45;&#45; Chọn phòng ban -&#45;&#45;" itemValue=""/>
+                                        <f:selectItems
+                                                value="#{shiftConfManagerController.lstGroupCatgChild}"
+                                                var="item" itemLabel="#{item.groupName}"
+                                                itemValue="#{item.groupId}"/>
+                                        <p:ajax update="txtGroup txtGroupChild tblShiftOrg" process="txtGroupChild"
+                                                event="itemSelect"
+                                                listener="#{shiftConfManagerController.txtGroupChildValueChange}"/>
+                                    </p:selectOneMenu>
+                                </div>
+
+                                <div class="ui-g-2 ui-g-nopad lable_margin-top_10">
+                                    Phòng ban áp dụng <span style="color: red;">*</span>
+                                </div>
+                                <div class="ui-g-10 ui-g-nopad" style="background: transparent; margin-top: 3px;">
+                                    <p:dataTable id="tblShiftOrg" styleClass="tbl_custom_nopad" var="item"
+                                                 value="#{shiftConfManagerController.selectedItem.shiftOrg}"
+                                                 selectionMode="single"
+                                                 selection="#{shiftConfManagerController.shiftConfigOrgDto}"
+                                                 rowKey="#{item.groupId}" first="0" widgetVar="tblShiftOrgVar"
+                                                 paginator="false"
+                                                 resizableColumns="true" dblClickSelect="true" resizeMode="fit"
+                                                 emptyMessage="Không có dữ liệu..."
+                                                 rowSelectMode="single" rowIndexVar="rowIndex">
+                                        <p:column styleClass="ui-datatable break-word ui-g-nopad"
+                                                  resizable="true">
+                                            <f:facet name="header">
+                                                <h:outputText value="Khối"/>
+                                            </f:facet>
+                                            <div class="ui-g-12 ui-g-nopad">
+                                                #{item.orgName}
+                                            </div>
+                                        </p:column>
+
+                                        <p:column styleClass="ui-datatable break-word ui-g-nopad"
+                                                  resizable="true">
+                                            <f:facet name="header">
+                                                <h:outputText value="Phòng ban"/>
+                                            </f:facet>
+                                            <div class="ui-g-12 ui-g-nopad">
+                                                #{item.groupName}
+                                            </div>
+                                        </p:column>
+
+                                        <p:column width="30" styleClass="ui-datatable break-word ui-g-nopad"
+                                                  resizable="true">
+                                            <f:facet name="header">
+                                                <h:outputText value=""/>
+                                            </f:facet>
+                                            <div class="ui-g-12 ui-g-nopad">
+                                                <p:commandLink
+                                                        rendered="#{sessionController.isAllow('SHIFT_CONF_MANAGER','UPDATE')}"
+                                                        ajax="true"
+                                                        action="#{shiftConfManagerController.deleteShiftOrg(item)}"
+                                                        update="tblShiftOrg" process="@this" value="">
+                                                    <span title="Xóa" class="pi pi-times" style="color: red;"/>
+                                                </p:commandLink>
+                                            </div>
+                                        </p:column>
+
+                                    </p:dataTable>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="ui-g-12">
+                                <div class="ui-g-2 ui-g-nopad lable_margin-top_10">
+                                    Full time <span style="color: red;">*</span>
+                                </div>
+                                <div class="ui-g-10 ui-g-nopad" style="background: transparent;">
+                                    <p:dataTable id="tblShiftDetail" styleClass="tbl_custom_nopad" var="item"
+                                                 value="#{shiftConfManagerController.selectedItem.shiftDetail}"
+                                                 selectionMode="single"
+                                                 selection="#{shiftConfManagerController.shiftConfigDetailDto}"
+                                                 rowKey="#{item.day}" first="0" widgetVar="tblShiftDetailVar"
+                                                 paginator="false"
+                                                 resizableColumns="true" dblClickSelect="true" resizeMode="fit"
+                                                 emptyMessage="Không có dữ liệu..."
+                                                 rowSelectMode="single" rowIndexVar="rowIndex">
+
+                                        <p:column width="50" styleClass="ui-datatable break-word ui-g-nopad"
+                                                  resizable="true">
+                                            <f:facet name="header">
+                                                <h:outputText value="Thứ"/>
+                                            </f:facet>
+                                            <h:outputText
+                                                    style="width: 100% #{(not empty item.error) ? '; color: red;' : ';'}"
+                                                    value="#{item.dayName}"/>
+                                        </p:column>
+
+                                        <p:column width="150" styleClass="ui-datatable break-word ui-g-nopad"
+                                                  resizable="true">
+                                            <f:facet name="header">
+                                                <h:outputText value="Ca làm việc"/>
+                                            </f:facet>
+                                            <div class="ui-g-12 ui-g-nopad" style="width: 150px;">
+                                                <div class="ui-g-6 ui-g-nopad">
+                                                    <pe:timePicker value="#{item.workingStartTimeLT}"
+                                                                   readonlyInput="true" mode="popup"
+                                                                   startHours="00" endHours="23"
+                                                                   startMinutes="00" endMinutes="59"
+                                                                   style="width: 60px;text-align: center;">
+                                                        <p:ajax event="timeSelect" update="@this"
+                                                                listener="#{shiftConfManagerController.timeSelectListener(item)}"/>
+                                                    </pe:timePicker>
+                                                </div>
+                                                <div class="ui-g-6 ui-g-nopad">
+                                                    <pe:timePicker value="#{item.workingEndTimeLT}"
+                                                                   readonlyInput="true" mode="popup"
+                                                                   startHours="00" endHours="23"
+                                                                   startMinutes="00" endMinutes="59"
+                                                                   style="width: 60px;text-align: center;">
+                                                        <p:ajax event="timeSelect" update="@this"
+                                                                listener="#{shiftConfManagerController.timeSelectListener(item)}"/>
+                                                    </pe:timePicker>
+                                                </div>
+                                            </div>
+                                        </p:column>
+
+                                        <p:column width="150" styleClass="ui-datatable break-word ui-g-nopad"
+                                                  resizable="true">
+                                            <f:facet name="header">
+                                                <h:outputText value="Chấm công giữa ca"/>
+                                            </f:facet>
+                                            <div class="ui-g-12 ui-g-nopad" style="width: 150px;">
+                                                <div class="ui-g-6 ui-g-nopad">
+                                                    <pe:timePicker value="#{item.shiftMiddleStartLT}"
+                                                                   readonlyInput="true" mode="popup"
+                                                                   startHours="00" endHours="23"
+                                                                   startMinutes="00" endMinutes="59"
+                                                                   style="width: 60px;text-align: center;">
+                                                        <p:ajax event="timeSelect" update="@this"
+                                                                listener="#{shiftConfManagerController.timeSelectListener(item)}"/>
+                                                    </pe:timePicker>
+                                                </div>
+                                                <div class="ui-g-6 ui-g-nopad">
+                                                    <pe:timePicker value="#{item.shiftMiddleEndLT}"
+                                                                   readonlyInput="true" mode="popup"
+                                                                   startHours="00" endHours="23"
+                                                                   startMinutes="00" endMinutes="59"
+                                                                   style="width: 60px;text-align: center;">
+                                                        <p:ajax event="timeSelect" update="@this"
+                                                                listener="#{shiftConfManagerController.timeSelectListener(item)}"/>
+                                                    </pe:timePicker>
+                                                </div>
+                                            </div>
+                                        </p:column>
+
+                                        <p:column width="80" styleClass="ui-datatable break-word ui-g-nopad"
+                                                  resizable="true">
+                                            <f:facet name="header">
+                                                <h:outputText value="Overtime"/>
+                                            </f:facet>
+                                            <div class="ui-g-12 ui-g-nopad">
+                                                <p:selectBooleanCheckbox value="#{item.isOverTime}"
+                                                                         itemLabel="">
+                                                    <p:ajax update="frmDetail:tblOShiftDetail"
+                                                            listener="#{shiftConfManagerController.overTimeValueChange(item)}"/>
+                                                </p:selectBooleanCheckbox>
+                                            </div>
+                                        </p:column>
+                                        <p:column width="60" styleClass="ui-datatable break-word ui-g-nopad"
+                                                  resizable="true">
+                                            <f:facet name="header">
+                                                <h:outputText value=""/>
+                                            </f:facet>
+                                            <div class="ui-g-12 ui-g-nopad">
+                                                <p:commandLink ajax="true"
+                                                               rendered="#{item.day ne '7'}"
+                                                               actionListener="#{shiftConfManagerController.copyTimeItem(item)}"
+                                                               update="tblShiftDetail">
+                                                    <span title="Sao chép" class="pi pi-copy" style="color: #575e64;"/>
+                                                </p:commandLink>
+                                                <p:commandLink
+                                                        ajax="true"
+                                                        action="#{shiftConfManagerController.clearTimeItem(item)}"
+                                                        update="tblShiftDetail" process="@this" value="">
+                                                    <span title="Xóa" class="pi pi-times" style="color: #575e64;"/>
+                                                </p:commandLink>
+                                            </div>
+                                        </p:column>
+                                    </p:dataTable>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="ui-g-12">
+                                <div class="ui-g-2 ui-g-nopad lable_margin-top_10">
+                                    Overtime
+                                </div>
+                                <div class="ui-g-10 ui-g-nopad" style="background: transparent;">
+                                    <p:dataTable id="tblOShiftDetail" styleClass="tbl_custom_nopad" var="item"
+                                                 value="#{shiftConfManagerController.selectedItem.oshiftDetail}"
+                                                 selectionMode="single"
+                                                 selection="#{shiftConfManagerController.oshiftConfigDetailDto}"
+                                                 rowKey="#{item.day}" first="0" widgetVar="tblOShiftDetailVar"
+                                                 paginator="false"
+                                                 resizableColumns="true" dblClickSelect="true" resizeMode="fit"
+                                                 emptyMessage="Không có dữ liệu..."
+                                                 rowSelectMode="single" rowIndexVar="rowIndex">
+
+                                        <p:column width="50" styleClass="ui-datatable break-word ui-g-nopad"
+                                                  resizable="true">
+                                            <f:facet name="header">
+                                                <h:outputText value="Thứ"/>
+                                            </f:facet>
+                                            <h:outputText style="width: 100%; color: #cccccd;"
+                                                          value="#{item.dayName}"
+                                                          rendered="#{!item.isOverTime}"/>
+                                            <h:outputText
+                                                    style="width: 100% #{(not empty item.error) ? '; color: red;' : ';'}"
+                                                    value="#{item.dayName}"
+                                                    rendered="#{item.isOverTime}"/>
+                                        </p:column>
+
+                                        <p:column width="150" styleClass="ui-datatable break-word ui-g-nopad"
+                                                  resizable="true">
+                                            <f:facet name="header">
+                                                <h:outputText value="Ca làm việc"/>
+                                            </f:facet>
+                                            <div class="ui-g-12 ui-g-nopad" style="width: 150px;">
+                                                <div class="ui-g-6 ui-g-nopad">
+                                                    <pe:timePicker value="#{item.workingStartTimeLT}"
+                                                                   disabled="#{'0' eq item.isOverTime}"
+                                                                   readonlyInput="true" mode="popup"
+                                                                   startHours="00" endHours="23"
+                                                                   startMinutes="00" endMinutes="59"
+                                                                   style="width: 60px;text-align: center;">
+                                                        <p:ajax event="timeSelect" update="@this"
+                                                                listener="#{shiftConfManagerController.timeSelectListener(item)}"/>
+                                                    </pe:timePicker>
+                                                </div>
+                                                <div class="ui-g-6 ui-g-nopad">
+                                                    <pe:timePicker value="#{item.workingEndTimeLT}"
+                                                                   disabled="#{'0' eq item.isOverTime}"
+                                                                   readonlyInput="true" mode="popup"
+                                                                   startHours="00" endHours="23"
+                                                                   startMinutes="00" endMinutes="59"
+                                                                   style="width: 60px;text-align: center;">
+                                                        <p:ajax event="timeSelect" update="@this"
+                                                                listener="#{shiftConfManagerController.timeSelectListener(item)}"/>
+                                                    </pe:timePicker>
+                                                </div>
+                                            </div>
+                                        </p:column>
+
+                                        <p:column width="150" styleClass="ui-datatable break-word ui-g-nopad"
+                                                  resizable="true">
+                                            <f:facet name="header">
+                                                <h:outputText value="Chấm công giữa ca"/>
+                                            </f:facet>
+                                            <div class="ui-g-12 ui-g-nopad" style="width: 150px;">
+                                                <div class="ui-g-6 ui-g-nopad">
+                                                    <pe:timePicker value="#{item.shiftMiddleStartLT}"
+                                                                   disabled="#{'0' eq item.isOverTime}"
+                                                                   readonlyInput="true" mode="popup"
+                                                                   startHours="00" endHours="23"
+                                                                   startMinutes="00" endMinutes="59"
+                                                                   style="width: 60px;text-align: center;">
+                                                        <p:ajax event="timeSelect" update="@this"
+                                                                listener="#{shiftConfManagerController.timeSelectListener(item)}"/>
+                                                    </pe:timePicker>
+                                                </div>
+                                                <div class="ui-g-6 ui-g-nopad">
+                                                    <pe:timePicker value="#{item.shiftMiddleEndLT}"
+                                                                   disabled="#{'0' eq item.isOverTime}"
+                                                                   readonlyInput="true" mode="popup"
+                                                                   startHours="00" endHours="23"
+                                                                   startMinutes="00" endMinutes="59"
+                                                                   style="width: 60px;text-align: center;">
+                                                        <p:ajax event="timeSelect" update="@this"
+                                                                listener="#{shiftConfManagerController.timeSelectListener(item)}"/>
+                                                    </pe:timePicker>
+                                                </div>
+                                            </div>
+                                        </p:column>
+
+                                        <p:column width="150" styleClass="ui-datatable break-word ui-g-nopad"
+                                                  resizable="true">
+                                            <f:facet name="header">
+                                                <h:outputText value="Nghỉ giữa ca"/>
+                                            </f:facet>
+                                            <div class="ui-g-12 ui-g-nopad" style="width: 150px;">
+                                                <div class="ui-g-6 ui-g-nopad">
+                                                    <pe:timePicker value="#{item.breakStartTimeLT}"
+                                                                   disabled="#{'0' eq item.isOverTime}"
+                                                                   readonlyInput="true" mode="popup"
+                                                                   startHours="00" endHours="23"
+                                                                   startMinutes="00" endMinutes="59"
+                                                                   style="width: 60px;text-align: center;">
+                                                        <p:ajax event="timeSelect" update="@this"
+                                                                listener="#{shiftConfManagerController.timeSelectListener(item)}"/>
+                                                    </pe:timePicker>
+                                                </div>
+                                                <div class="ui-g-6 ui-g-nopad">
+                                                    <pe:timePicker value="#{item.breakEndTimeLT}"
+                                                                   disabled="#{'0' eq item.isOverTime}"
+                                                                   readonlyInput="true" mode="popup"
+                                                                   startHours="00" endHours="23"
+                                                                   startMinutes="00" endMinutes="59"
+                                                                   style="width: 60px;text-align: center;">
+                                                        <p:ajax event="timeSelect" update="@this"
+                                                                listener="#{shiftConfManagerController.timeSelectListener(item)}"/>
+                                                    </pe:timePicker>
+                                                </div>
+                                            </div>
+                                        </p:column>
+                                        <p:column width="60" styleClass="ui-datatable break-word ui-g-nopad"
+                                                  resizable="true">
+                                            <f:facet name="header">
+                                                <h:outputText value=""/>
+                                            </f:facet>
+                                            <div class="ui-g-12 ui-g-nopad">
+                                                <p:commandLink ajax="true"
+                                                               disabled="#{'0' eq item.isOverTime}"
+                                                               rendered="#{item.day ne '7'}"
+                                                               action="#{shiftConfManagerController.copyTimeOItem(item)}"
+                                                               update="tblOShiftDetail" process="@this">
+                                                    <span title="Sao chép" class="pi pi-copy" style="color: #575e64;"/>
+                                                </p:commandLink>
+                                                <p:commandLink
+                                                        ajax="true"
+                                                        action="#{shiftConfManagerController.clearTimeOItem(item)}"
+                                                        update="tblOShiftDetail" process="@this" value="">
+                                                    <span title="Xóa" class="pi pi-times" style="color: #575e64;"/>
+                                                </p:commandLink>
+                                            </div>
+                                        </p:column>
+                                    </p:dataTable>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div>
+                            <p:messages id="msgs" showDetail="true" autoUpdate="true"
+                                        globalOnly="true"/>
+                        </div>
+                    </p:scrollPanel>
+                    <div class="ui-g-12" align="right">
+                        <p:commandButton id="btnCancel" styleClass="ui-button-secondary"
+                                         oncomplete="PF('dlgDetailVar').hide();" value="Đóng"
+                                         icon="pi pi-reply" immediate="true">
+                        </p:commandButton>
+                        <h:outputText value="&#160; "/>
+                        <p:commandButton
+                                id="btnExecuteAdd"
+                                rendered="#{!shiftConfManagerController.updateMode and (sessionController.isAllow('SHIFT_CONF_MANAGER','CREATE'))}"
+                                value="Lưu" icon="pi pi-check"
+                                action="#{shiftConfManagerController.add()}"
+                                title="Lưu thông tin"
+                                update="frmDetail :form:tblData frmDetail:tblShiftDetail frmDetail:tblOShiftDetail"
+                                oncomplete="PF('scrollPanelVar').scrollTo(0,700);"
+                                validateClient="true">
+                        </p:commandButton>
+                        <p:commandButton
+                                id="btnExecuteUpdate"
+                                rendered="#{shiftConfManagerController.updateMode and (sessionController.isAllow('SHIFT_CONF_MANAGER','UPDATE'))}"
+                                value="Cập nhật" icon="pi pi-check"
+                                action="#{shiftConfManagerController.update()}"
+                                title="Cập nhật thông tin"
+                                update="frmDetail :form:tblData frmDetail:tblShiftDetail frmDetail:tblOShiftDetail"
+                                oncomplete="PF('scrollPanelVar').scrollTo(0,700);"
+                                validateClient="true">
+                            <p:confirm header="Xác nhận"
+                                       message="Bạn có chắc chắn muốn cập nhật hay không ?"
+                                       icon="ui-icon-warning"/>
+                        </p:commandButton>
+
+
+                    </div>
+                </h:form>
+            </p:dialog>
+
+        </div>
+    </div>
+</h:body>
+</html>

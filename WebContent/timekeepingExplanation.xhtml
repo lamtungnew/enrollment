@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="utf-8" name="viewport"
+	content="width=device-width, initial-scale=1"
+	http-equiv="X-UA-Conpatible" />
+<h:outputStylesheet library="css" name="bootstrap.min.css" />
+<h:outputStylesheet library="css" name="app.css" />
+<script name="jquery/jquery.js" library="primefaces">
+</script>
+<title>Giải trình chấm công</title>
+<style type="text/css">
+	.disable-scroll .ui-dialog-content {
+		overflow: hidden !important;
+	}
+	.alightRight{
+		text-align:right;
+	}
+	.searchTable{
+		margin-top: 10px;
+		margin-bottom: 10px;
+		width: 100%;
+	}
+</style>
+</h:head>
+<h:body>
+	<ui:include src="componentHeader.xhtml"></ui:include>
+	<p:growl id="growl" showDetail="true" />
+	<div class="row">
+		<div class="col-12">
+			<h:form enctype="multipart/form-data" id="mainForm">
+				<table class="searchTable">
+					<tr>
+						<td>Họ và tên:</td>
+						<td><p:selectOneMenu id="fullNameSearch" style="width: 210px"
+											 filter="true" filterMatchMode="contains" sortBy=""
+											 immediate="true"
+											 value="#{timekeepingExplanationController.searchTimekeepingSheet.fullName}">
+							<f:selectItem itemLabel="Họ và tên"
+										  noSelectionOption="true" />
+							<f:selectItems
+									value="#{timekeepingExplanationController.listPeopleForSearch}" var="pp"
+									itemValue="#{pp.fullName}" itemLabel="#{pp.fullName}" />
+						</p:selectOneMenu></td>
+						<td>Mã nhân viên:</td>
+						<td><p:inputText id="peopleIdSearch" placeholder="Mã nhân viên" style="width: 210px"
+										 value = "#{timekeepingExplanationController.searchTimekeepingSheet.peopleId}" /></td>
+						<td >Phòng ban:</td>
+						<td class="alightRight" style="width: 13%"><p:selectOneMenu id="groupNameSearch" style="width: 210px"
+											 filter="true" filterMatchMode="contains" sortBy=""
+											 immediate="true"
+											 value="#{timekeepingExplanationController.searchTimekeepingSheet.groupName}">
+							<f:selectItem itemLabel="Phòng ban"
+										  noSelectionOption="true" />
+							<f:selectItems
+									value="#{timekeepingExplanationController.listGroupForSearch}" var="gr"
+									itemValue="#{gr.groupName}" itemLabel="#{gr.groupName}" />
+						</p:selectOneMenu></td>
+					</tr>
+					<tr style="margin-top: 10px">
+						<td>Ngày giải trình từ:</td>
+						<td><p:calendar inputStyle="width: 210px"
+										pattern="dd/MM/yyyy" id ="fromDate" showButtonPanel="false"
+										value="#{timekeepingExplanationController.fromDate}" /></td>
+						<td>Đến:</td>
+						<td><p:calendar inputStyle="width: 210px"
+										pattern="dd/MM/yyyy" id ="toDate"
+										value="#{timekeepingExplanationController.toDate}" /></td>
+						<td >Trạng thái:</td>
+						<td class="alightRight" style="width: 13%"><p:selectOneMenu id="status" immediate="true"
+											 style="width: 210px"
+											 value="#{timekeepingExplanationController.searchTimekeepingSheet.state}">
+							<f:selectItem itemLabel="Chọn trạng thái" noSelectionOption="true" />
+							<f:selectItem itemLabel="Đã phê duyệt" itemValue="2"></f:selectItem>
+							<f:selectItem itemLabel="Chưa phê duyệt" itemValue="0"></f:selectItem>
+							<f:selectItem itemLabel="Từ chối" itemValue="3"></f:selectItem>
+						</p:selectOneMenu></td>
+					</tr>
+					<tr style="margin-top: 10px">
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="alightRight"><h:commandButton value="Tìm kiếm"
+						update="@([id$=tblListApprove])" class="btn btn-secondary" style="margin-top: 10px"
+											 actionListener="#{timekeepingExplanationController.search()}">
+							<f:param name="validateDagUploadExcelStatus" value="false" />
+							<f:param name="validateDagAddTimeKeeping" value="false" />
+							<f:param name="validateDagEditTimeKeeping" value="false" />
+						</h:commandButton></td>
+					</tr>
+				</table>
+				<div class="row">
+					<div class="col col-lg-3">
+						<div class="class_com_pad5"
+							 style="margin-top: 5px;">
+							<h4>Danh sách giải trình chấm công</h4>
+						</div>
+					</div>
+					<div class="col">
+						<div style="width: 100%" align="right">
+							<p:commandButton rendered="#{sessionController.isAllow('TIME_KEEPING_EXPLANATION','EXPORT')}" value="Xuất Excel"
+											 actionListener="#{timekeepingExplanationController.exportExcel()}"
+											 iconPos="right" ajax="false" style="margin-right: 10px"
+											 onclick="PrimeFaces.monitorDownload(start, stop);">
+								<p:fileDownload
+										value="#{timekeepingExplanationController.exportExcelContent}" />
+								<f:param name="validateDagUploadExcelStatus" value="false" />
+								<f:param name="validateDagAddTimeKeeping" value="false" />
+								<f:param name="validateDagEditTimeKeeping" value="false" />
+							</p:commandButton>
+							<p:commandButton rendered="#{sessionController.isAllow('TIME_KEEPING_EXPLANATION','IMPORT')}"
+											 value="Trình duyệt theo lô"
+											 oncomplete="PF('dagUploadExcel').show();" >
+								<f:param name="validateDagUploadExcelStatus" value="false" />
+								<f:param name="validateDagAddTimeKeeping" value="false" />
+								<f:param name="validateDagEditTimeKeeping" value="false" />
+							</p:commandButton>
+						</div>
+					</div>
+				</div>
+				<p:dataTable id="tblListApprove" var="otSheet" value="#{timekeepingExplanationController.dataModel}"
+                             rowIndexVar="rowIndex" rowKey="#{timekeepingSheet.autoid}"
+                             paginator="true" rows="10" paginatorPosition="bottom"
+							 emptyMessage="#{timekeepingExplanationController.noRecordMsg}"
+                             paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                             rowsPerPageTemplate="5,10,20,50,100" widgetVar="50"
+                             tableStyle="table-layout:auto" style="margin-top: 10px;">
+
+					<p:column headerText="#">
+						#{rowIndex+1}
+					</p:column>
+
+					<p:column headerText="autoId">
+						<h:outputText value="#{otSheet.autoid}"/>
+					</p:column>
+
+					<p:column headerText="Mã nhân viên">
+						<h:outputText value="#{otSheet.peopleId}"/>
+					</p:column>
+
+					<p:column headerText="Họ và tên">
+						<h:outputText value="#{otSheet.fullName}"/>
+					</p:column>
+
+					<p:column headerText="Số điện thoại">
+						<h:outputText value="#{otSheet.mobilePhone}"/>
+					</p:column>
+
+					<p:column headerText="Phân loại">
+						<h:outputText value="#{otSheet.cusType}"/>
+					</p:column>
+
+					<p:column headerText="Giới tính">
+						<h:outputText  value="#{otSheet.gender}"/>
+					</p:column>
+
+					<p:column headerText="Ngày sinh" style="width:8%">
+						<h:outputText value="#{otSheet.dateOfBirth}">
+							 <f:convertDateTime pattern="dd/MM/yyyy" />
+						</h:outputText>
+					</p:column>
+
+					<p:column headerText="Phòng ban">
+						<h:outputText value="#{otSheet.groupName}" />
+					</p:column>
+
+					<p:column headerText="Ngày tạo" style="width:8%">
+						<h:outputText value="#{otSheet.createdAt}">
+							<f:convertDateTime pattern="dd/MM/yyyy" />
+						</h:outputText>
+					</p:column>
+
+					<p:column headerText="Ngày giải trình" style="width:8%">
+						<h:outputText value="#{otSheet.keepingDate}">
+							<f:convertDateTime pattern="dd/MM/yyyy" />
+						</h:outputText>
+					</p:column>
+
+					<p:column headerText="Lý do giải trình" style="width:10%">
+						<h:outputText value="#{otSheet.mistake}" />
+					</p:column>
+
+					<p:column headerText="Trạng thái" style="width:8%">
+						<h:outputText value="#{otSheet.stateValue}" />
+					</p:column>
+
+					<p:column headerText="Hành động" style="width:8%">
+						<p:commandLink value="Chi tiết" 
+							actionListener="#{timekeepingExplanationController.initSelectedTimeKeepingSheet(otSheet)}"
+							update="@([id$=dagEditTimeKeeping]) @([id$=tblEditNewTimeKeepingSheet])"
+							oncomplete="PF('dagEditTimeKeeping').show();">
+							<f:param name="validateDagUploadExcelStatus" value="false" />
+							<f:param name="validateDagAddTimeKeeping" value="false" />
+							<f:param name="validateDagEditTimeKeeping" value="false" />
+						</p:commandLink>&#160;
+					</p:column>
+				</p:dataTable>
+			</h:form>
+		</div>
+	</div>
+
+	<ui:include src="timekeepingExplanation-uploadExcel.xhtml" />
+	<ui:include src="timekeepingExplanation-dagEdit.xhtml" />
+</h:body>
+</html>

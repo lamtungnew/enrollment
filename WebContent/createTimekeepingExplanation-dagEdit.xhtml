@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	<h:form id="frmEditTimeKeeping" enctype="multipart/form-data">
+		<p:dialog id="dagEditTimeKeeping" closable="true" position="center" styleClass="disable-scroll"
+				  header="Sửa đề xuất giải trình" width="1400px"
+				  widgetVar="dagEditTimeKeeping" modal="true" resizable="false">
+			<table>
+				<tr>
+					<p:messages id="messagesDagAddTimeKeeping" closable="true">
+						<p:autoUpdate />
+					</p:messages>
+				</tr>
+				<tr>
+					<td style="width:150px;height:40px">Họ và tên</td>
+					<td>
+						<p:outputLabel value="#{createTimekeepingExplanationController.updateTimeKeepingSheet.fullName}"/>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style="width:150px;height:40px">Mã nhân viên</td>
+					<td>
+						<p:outputLabel value="#{createTimekeepingExplanationController.updateTimeKeepingSheet.peopleId}"/>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style="width:150px;height:40px">Phòng ban</td>
+					<td><h:outputText id="txtEditNewGroupName" value="#{createTimekeepingExplanationController.updateTimeKeepingSheet.groupName}"/>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style="width:150px;height:40px">Người quản lý *</td>
+					<td>
+						<h:outputText rendered="#{createTimekeepingExplanationController.updateTimeKeepingSheet.state == '0' ? false : true}"
+						value="#{createTimekeepingExplanationController.updateTimeKeepingSheet.approvedBy}"/>
+						<p:selectOneMenu id="cbxEditApprovePerson" style="width: 210px"
+										 rendered="#{createTimekeepingExplanationController.updateTimeKeepingSheet.state == '0' ? true : false}"
+										 requiredMessage="Phải chọn người quản lý"
+										 filter="true" filterMatchMode="contains" sortBy="" required="#{param['validateDagEditTimeKeeping']}"
+										 immediate="true" value="#{createTimekeepingExplanationController.updateTimeKeepingSheet.approvedBy}">
+						<f:selectItem itemLabel="chọn người quản lý"
+									  noSelectionOption="true" />
+						<f:selectItems
+								value="#{createTimekeepingExplanationController.listApprovePeople}" var="manager"
+								itemValue="#{manager.peopleId}" itemLabel="#{manager.fullName}" />
+					</p:selectOneMenu></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style="width:150px;height:40px">Người theo dõi *</td>
+					<td>
+						<h:outputText rendered="#{createTimekeepingExplanationController.updateTimeKeepingSheet.state == '0' ? false : true}"
+									  value="#{createTimekeepingExplanationController.updateTimeKeepingSheet.supervisor}"/>
+						<p:selectOneMenu id="cbxEditSupervisor" style="width: 210px"
+										 required="#{param['validateDagEditTimeKeeping']}"
+										 rendered="#{createTimekeepingExplanationController.updateTimeKeepingSheet.state == '0' ? true : false}"
+										 requiredMessage="Phải chọn người theo dõi"
+										 filter="true" filterMatchMode="contains" sortBy=""
+										 immediate="true" value="#{createTimekeepingExplanationController.updateTimeKeepingSheet.supervisor}">
+						<f:selectItem itemLabel="chọn người theo dõi"
+									  noSelectionOption="true" />
+						<f:selectItems
+								value="#{createTimekeepingExplanationController.listPeopleForSearch}" var="pp"
+								itemValue="#{pp.fullName}" itemLabel="#{pp.fullName}" />
+					</p:selectOneMenu></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+			<br/>
+			<p:dataTable id="tblEditNewTimeKeepingSheet" var="timeKeepingSheet" scrollable="true" styleClass="tbl_custom_bt"
+						 value="#{createTimekeepingExplanationController.listUpdateTimeKeepingSheet}" scrollHeight="200" style="height: 300px"
+						 rowIndexVar="rowIndex" rowKey="#{timeKeepingSheet.keepingDate}" emptyMessage="Không có dữ liệu..."
+						 tableStyle="table-layout:auto">
+
+				<p:column headerText="#" style="width:10px">
+					#{rowIndex+1}
+				</p:column>
+
+				<p:column headerText="Ngày giải trình" style="width:280px; text-align: center">
+					<p:calendar style="width: 50px"
+								disabled="#{createTimekeepingExplanationController.updateTimeKeepingSheet.state == '0' ? false : true}"
+								required="#{param['validateDagEditTimeKeeping']}"
+								pattern="dd/MM/yyyy" id ="calEditKeepingDate" requiredMessage="Phải nhập ngày giải trình"
+								value="#{timeKeepingSheet.keepingDate}"/>
+				</p:column>
+
+				<p:column headerText="Lý do giải trình"  style="width:300px;" >
+						<p:selectManyCheckbox id="basic"
+											  disabled="#{createTimekeepingExplanationController.updateTimeKeepingSheet.state == '0' ? false : true}"
+											  value="#{timeKeepingSheet.timeKeepingDateCbxValues}" layout="grid" columns="1"
+											  required="#{param['validateDagEditTimeKeeping']}" requiredMessage="Phải chọn lý do giải trình">
+							<f:selectItems
+									var="timekeepingDate" value="#{createTimekeepingExplanationController.listTimekeepingDate}"
+									itemValue="#{timekeepingDate.date}" itemLabel="#{timekeepingDate.date}" />
+						</p:selectManyCheckbox>
+				</p:column>
+
+				<p:column headerText="Chi tiết lý do"  style="width:250px; text-align: center">
+					<p:inputTextarea value="#{timeKeepingSheet.description}"
+									 disabled="#{createTimekeepingExplanationController.updateTimeKeepingSheet.state == '0' ? false : true}"
+									 cols="27"></p:inputTextarea>
+				</p:column>
+
+				<p:column headerText="Hình ảnh" style="width:300px; text-align: center">
+					<a href="#{timeKeepingSheet.timeKeepingImage}"> <p:graphicImage style="width: 200px;height: 100px;margin-bottom: 5px" disabled="#{createTimekeepingExplanationController.updateTimeKeepingSheet.state == '0' ? false : true}"
+									value="#{timeKeepingSheet.timeKeepingImage}" /> </a><br/>
+					<p:fileUpload id="uploadExplanationImage" style="margin-top: 5px" required="true"
+								  requiredMessage="Phải chọn hình ảnh giải trình"
+								  value="#{timeKeepingSheet.uploadedImage}" label="Chọn file"
+								  rendered="#{createTimekeepingExplanationController.updateTimeKeepingSheet.state == '0' ? true : false}"
+								  allowTypes="/(\.|\/)(jpg|png)$/"
+								  mode="simple" />
+				</p:column>
+			</p:dataTable>
+
+			<f:facet name="footer">
+					<p:commandButton value="Quay lại" oncomplete="PF('dagEditTimeKeeping').hide();"
+									 resetValues="true" update = "@([id$=cbxEditFullName]) @([id$=cbxEditPeopleId]) @([id$=cbxEditPeopleId])
+										  @([id$=cbxEditApprovePerson]) @([id$=cbxEditSupervisor])"
+									 styleClass="btn btn-secondary" /> &#160;
+					<p:commandButton
+							value="Sửa"
+							disabled="#{createTimekeepingExplanationController.updateTimeKeepingSheet.state == '0' ? false : true}"
+							update="@([id$=tblListApprove]) @([id$=messagesDagAddTimeKeeping]) @([id$=tblEditNewTimeKeepingSheet])"
+							resetValues="true" styleClass="btn btn-secondary"
+							actionListener="#{createTimekeepingExplanationController.createOrUpdateTimeKeepingSheet('EDIT')}">
+						<f:param name="validateDagEditTimeKeeping" value="true" />
+						<f:param name="validateDagUploadExcelStatus" value="false" />
+						<f:param name="validateDagAddTimeKeeping" value="false" />
+					</p:commandButton>
+			</f:facet>
+			<p:ajax event="close" listener="#{createTimekeepingExplanationController.closeDlgAddNewTimeKeepingSheet()}"
+					update="@([id$=tblEditNewTimeKeepingSheet]) @([id$=dagEditTimeKeeping])"/>
+		</p:dialog>
+	</h:form>
+</html>

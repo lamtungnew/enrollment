@@ -1,0 +1,88 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<div>
+		<div class="row">
+			<div class="col"></div>
+			<div class="col-12" style="text-align: center">
+				<div style="max-width: 297px; float: left;">
+					<h:graphicImage library="images" width="100%" height="100%"
+						name="logo.png" />
+				</div>
+				<span
+					style="font-size: xx-large; font-weight: bold; color: darkred;"></span>
+				<div style="float: right;">
+					<h:form>
+						<span>
+                            <p:commandLink ajax="true"
+								action="#{sessionController.profileDetail()}" process="@this"
+								value="Welcome #{user.username}">
+							</p:commandLink>
+						</span>
+						<h:commandButton action="#{user.logout}" value="Logout"
+							class="btn btn-danger btnSpace" />
+					</h:form>
+				</div>
+			</div>
+
+		</div>
+		<h:form style="">
+			<p:menubar style="padding-left: 10px;">
+				<p:menuitem value="Trang chủ" url="index.xhtml" />
+				<p:menuitem
+					rendered="#{sessionController.isAllowMenu('employee-detail.xhtml')}"
+					value="Đăng ký" url="employee-detail.xhtml" />
+				<p:menuitem
+					rendered="#{sessionController.isAllowMenu('historyCapturedImages.xhtml')}"
+					value="Lịch sử ra - vào" url="historyCapturedImages.xhtml" />
+				<p:menuitem
+					rendered="#{sessionController.isAllowMenu('historySignedUp.xhtml')}"
+					value="Lịch sử chấm công" url="historySignedUp.xhtml" />
+				<p:menuitem
+					rendered="#{sessionController.isAllowMenu('employee-manager.xhtml')}"
+					value="Danh sách nhân viên" url="employee-manager.xhtml" />
+				<p:menuitem
+					rendered="#{sessionController.isAllowMenu('timekeeping.xhtml')}"
+					value="Báo cáo chấm công" url="timekeeping.xhtml" />
+				<p:submenu label="Giải trình chấm công" >
+					<p:menuitem value="Đề xuất" url="createTimekeepingExplanation.xhtml"
+								rendered="#{sessionController.isAllowMenu('createTimekeepingExplanation.xhtml')}"/>
+					<p:menuitem value="Duyệt đề xuất" url="approveTimekeepingExplanation.xhtml"
+								rendered="#{sessionController.isAllowMenu('approveTimekeepingExplanation.xhtml')}"/>
+					<p:menuitem value="Danh sách giải trình" url="timekeepingExplanation.xhtml"
+								rendered="#{sessionController.isAllowMenu('timekeepingExplanation.xhtml')}"/>
+
+				</p:submenu>
+				<p:submenu label="Đăng ký Overtime"  >
+					<p:menuitem value="Đề xuất" url="createOt.xhtml"
+								rendered="#{sessionController.isAllowMenu('createOt.xhtml')}"/>
+					<p:menuitem value="Duyệt đề xuất" url="approveOtSheet.xhtml"
+								rendered="#{sessionController.isAllowMenu('approveOtSheet.xhtml')}"/>
+					<p:menuitem value="Danh sách đề xuất" url="listOtSheet.xhtml"
+								rendered="#{sessionController.isAllowMenu('listOtSheet.xhtml')}"/>
+
+				</p:submenu>
+				<p:menuitem
+					rendered="#{sessionController.isAllowMenu('shift-manager.xhtml')}"
+					value="Đăng ký ca làm việc" url="shift-manager.xhtml" />
+				<p:submenu label="Cài đặt" icon="pi pi-fw pi-th-large">
+					<p:menuitem
+							rendered="#{sessionController.isAllowMenu('shift-conf-manager.xhtml')}"
+							value="Cài đặt ca làm việc" url="shift-conf-manager.xhtml" />
+					<p:menuitem
+						rendered="#{sessionController.isAllowMenu('approval-conf-manager.xhtml')}"
+						value="Cài đặt quy trình duyệt" url="approval-conf-manager.xhtml" />
+					<p:menuitem
+						rendered="#{sessionController.isAllowMenu('role-manager.xhtml')}"
+						value="Quản lý nhóm quyền" url="role-manager.xhtml" />
+					<p:menuitem
+						rendered="#{sessionController.isAllowMenu('permission-manager.xhtml')}"
+						value="Phân quyền sử dụng" url="permission-manager.xhtml" />
+				</p:submenu>
+			</p:menubar>
+		</h:form>
+	</div>
+</ui:composition>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<h:form id="frmExplanationDetail">
+		<p:dialog id="dagOtDetail" closable="true" position="center"
+				header="Chi tiết đề xuất giải trình" width="1500px"
+				widgetVar="dagOtDetail" modal="true" resizable="false">
+
+				<table>
+					<tr>
+						<p:messages id="messagesDagAddTimeKeeping" closable="true">
+							<p:autoUpdate />
+						</p:messages>
+					</tr>
+					<tr>
+						<td style="height:40px">Họ và tên</td><td><h:outputText value = "#{approveOtSheetController.updateOtSheet.fullName}" />
+						</td>
+					</tr>
+					<tr>
+						<td style="height:40px">Mã nhân viên</td><td><h:outputText value = "#{approveOtSheetController.updateOtSheet.peopleId}" /></td>
+					</tr>
+					<tr>
+						<td style="height:40px">Phòng ban</td><td><h:outputText value = "#{approveOtSheetController.updateOtSheet.groupName}" /></td>
+					</tr>
+					<tr>
+						<td style="width:150px;height:40px">Tổng số giờ OT</td>
+						<td>
+							<h:outputText value="#{approveOtSheetController.updateOtSheet.totalOtTime}"/>
+						</td>
+					</tr>
+					<!--<tr>
+						<td style="width:150px;height:40px">Người quản lý *</td>
+						<td><p:selectOneMenu id="cbxApprovePerson" style="width: 210px" requiredMessage="Phải chọn người quản lý"
+											 filter="true" filterMatchMode="contains" sortBy="" required="#{param['validateApproveByLevel2']}"
+											 immediate="true" value="#{approveOtSheetController.updateOtSheet.approvalByLevel2}">
+							<f:selectItem itemLabel="chọn người quản lý"
+										  noSelectionOption="true" />
+							<f:selectItems
+									value="#{approveOtSheetController.listApprovePeople}" var="pp"
+									itemValue="#{pp.peopleId}" itemLabel="#{pp.fullName}" />
+						</p:selectOneMenu></td>
+					</tr>-->
+					<tr>
+						<td style="width:150px;height:40px">Người theo dõi *</td>
+						<td>
+							<h:outputText value="#{approveOtSheetController.updateOtSheet.supervisor}"/>
+						</td>
+					</tr>
+					<tr>
+						<td style="width:150px;height:40px">Lý do làm thêm giờ</td>
+						<td>
+							<h:outputText value="#{approveOtSheetController.updateOtSheet.workingNotes}"/>
+						</td>
+					</tr>
+				</table>
+				<br/>
+				<p:dataTable id="tblEditNewTimeKeepingSheet" var="otSheet" scrollable="true" styleClass="tbl_custom_bt"
+							 value="#{approveOtSheetController.listUpdateTimeKeepingSheet}" scrollHeight="200" style="height: 250px"
+							 rowIndexVar="rowIndex" rowKey="#{otSheet.otDateTypeDate}" emptyMessage="Không có dữ liệu..."
+							 tableStyle="table-layout:auto">
+
+					<p:column headerText="#" style="width:10px">
+						#{rowIndex+1}
+					</p:column>
+
+					<p:column headerText="Ngày Ot" style="width:280px">
+						<p:calendar style="width: 50px"
+									pattern="dd/MM/yyyy" id ="calEditKeepingDate"
+									value="#{otSheet.otDateTypeDate}" />
+					</p:column>
+
+					<p:column headerText="Từ" style="width:280px">
+						<p:outputLabel value="#{otSheet.startTime}" />
+					</p:column>
+
+					<p:column headerText="Đến" style="width:280px">
+						<p:outputLabel value="#{otSheet.toTime}" />
+					</p:column>
+
+				</p:dataTable>
+
+			<f:facet name="footer">
+				<p:commandButton value="Từ chối" styleClass="btn btn-secondary"
+								 update = "@([id$=tblListApprove])"
+								 rendered="#{sessionController.isAllow('APPROVE_OT','APPROVE') ?
+								 approveOtSheetController.renderDenyButton() : false}"
+								 oncomplete="PF('dagOtDetail').hide(); PF('dagConfirmDeny').show();" >
+					<f:param name="validateApproveByLevel2" value="false" />
+				</p:commandButton>&#160;
+				<p:commandButton value="Phê duyệt" styleClass="btn btn-secondary"
+								 rendered="#{sessionController.isAllow('APPROVE_OT','APPROVE') ?
+								 approveOtSheetController.renderButton('APPROVAL') : false}"
+								 actionListener="#{approveOtSheetController.changeState('2')}"
+								 update = "@([id$=tblListApprove])">
+					<f:param name="validateApproveByLevel2" value="false" />
+				</p:commandButton>&#160;
+				<p:commandButton value="Duyệt cấp 1" styleClass="btn btn-secondary"
+								 rendered="#{sessionController.isAllow('APPROVE_OT','APPROVE') ?
+								 approveOtSheetController.renderButton('NEXT_APPROVAL') : false}"
+								 actionListener="#{approveOtSheetController.changeState('1')}"
+								 update = "@([id$=tblListApprove]) @([id$=messagesDagAddTimeKeeping])">
+					<f:param name="validateApproveByLevel2" value="true" />
+				</p:commandButton>
+			</f:facet>
+		</p:dialog>
+
+		<p:dialog id="dagConfirmDeny" closable="true" position="center"
+				  header="Xác nhận từ chối đề xuất" width="500px"
+				  widgetVar="dagConfirmDeny" modal="true" resizable="false">
+			Bạn có chắc chắn muốn từ chối đề xuất?
+			<f:facet name="footer">
+				<p:commandButton value="Hủy bỏ" styleClass="btn btn-secondary"
+								 oncomplete="PF('dagConfirmDeny').hide();" >
+				</p:commandButton>&#160;
+				<p:commandButton value="Đồng ý" styleClass="btn btn-secondary"
+								 actionListener="#{approveOtSheetController.changeState('3')}"
+								 update = "@([id$=tblListApprove]) @([id$=growl])"
+								 oncomplete="PF('dagConfirmDeny').hide();PF('dagOtDetail').hide();" >
+				</p:commandButton>
+			</f:facet>
+		</p:dialog>
+
+		<p:dialog id="dagConfirmDenyMany" closable="true" position="center"
+				  header="Xác nhận từ chối đề xuất" width="500px"
+				  widgetVar="dagConfirmDenyMany" modal="true" resizable="false">
+			Bạn có chắc chắn muốn từ chối đề xuất?
+			<f:facet name="footer">
+				<p:commandButton value="Hủy bỏ" styleClass="btn btn-secondary"
+								 oncomplete="PF('dagConfirmDenyMany').hide();" >
+				</p:commandButton>&#160;
+				<p:commandButton value="Đồng ý" styleClass="btn btn-secondary"
+								 actionListener="#{approveOtSheetController.changeStateMany('3')}"
+								 update = "@([id$=tblListApprove]) @([id$=growl])"
+								 oncomplete="PF('dagConfirmDenyMany').hide();" >
+				</p:commandButton>
+			</f:facet>
+		</p:dialog>
+	</h:form>
+	<h:form id = "frmAssignApprovalLevel2">
+		<p:dialog id="dagAssignApprovalLevel2" closable="true" position="center"
+				  header="Duyệt cấp 1" width="500px"
+				  widgetVar="dagAssignApprovalLevel2" modal="true" resizable="false">
+			<table>
+				<tr>
+					<td>Người quản lý:</td>
+					<td><p:selectOneMenu id="cbxApprovePersonForMany" style="width: 210px" requiredMessage="Phải chọn người quản lý"
+										 filter="true" filterMatchMode="contains" sortBy="" required="#{param['validateDagAssignApprovalLevel2']}"
+										 immediate="true" value="#{approveOtSheetController.updateOtSheet.approvalByLevel2}">
+						<f:selectItem itemLabel="chọn người quản lý"
+									  noSelectionOption="true" />
+						<f:selectItems
+								value="#{approveOtSheetController.listApprovePeople}" var="pp"
+								itemValue="#{pp.peopleId}" itemLabel="#{pp.fullName}" />
+					</p:selectOneMenu></td>
+				</tr>
+			</table>
+
+			<f:facet name="footer">
+				<p:commandButton value="Hủy bỏ" styleClass="btn btn-secondary"
+								 oncomplete="PF('dagAssignApprovalLevel2').hide();" >
+				</p:commandButton>&#160;
+				<p:commandButton value="Duyệt cấp 1" styleClass="btn btn-secondary"
+								 actionListener="#{approveOtSheetController.changeStateMany('1')}"
+								 update = "@([id$=tblListApprove]) @([id$=growl]) "
+								 oncomplete="PF('dagAssignApprovalLevel2').hide();" >
+					<f:param name="validateDagAssignApprovalLevel2" value="true" />
+				</p:commandButton>
+			</f:facet>
+		</p:dialog>
+	</h:form>
+</html>

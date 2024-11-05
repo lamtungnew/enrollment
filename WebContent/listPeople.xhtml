@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="utf-8" name="viewport"
+	content="width=device-width, initial-scale=1"
+	http-equiv="X-UA-Conpatible" />
+<h:outputStylesheet library="css" name="bootstrap.min.css" />
+<h:outputStylesheet library="css" name="app.css" />
+<script name="jquery/jquery.js" library="primefaces">
+</script>
+<title>Danh sách nhân viên</title>
+<style type="text/css">
+</style>
+</h:head>
+<h:body>
+	<ui:include src="componentHeader.xhtml"></ui:include>
+	<div class="row">
+		<div class="col-12">
+			<h:form>
+				<div class="row">
+					<div class="col-sm-3">
+		        		<h2>Danh sách nhân viên</h2>
+		        	</div>
+		        	<div class="col-sm-8">
+						<div class="input-group input-group-sm mb-3">
+							<div class="input-group-prepend">
+							    <p:inputText id="peopleIdSearch" value="#{peopleController.peopleIdSearch}" placeholder="Mã nhân viên" />
+			                    <p:inputText id="fullNameSearch" value="#{peopleController.fullNameSearch}" placeholder="Họ tên" />
+			                    <p:inputText id="mobilePhoneSearch" value="#{peopleController.mobilePhoneSearch}" placeholder="Số điện thoại" />
+						  	</div>
+						 	<h:commandButton update="listOfPeople" process="@this inputPeopleId fullNameSearch mobilePhoneSearch"
+					 			actionListener="#{peopleController.searchPeople}" value="Tìm kiếm" class="btn btn-secondary" />	
+						</div>	        		
+	            	</div>
+	            	<div class="col-sm-1">
+	            		<h:commandButton action="register-face.xhtml?faces-redirect=true" value="Đăng ký mới" class="btn btn-success" />
+	            	</div>
+		        </div>
+			
+				<p:dataTable id="listOfPeople" var="peoplex"
+					value="#{peopleController.peopleList}" rowIndexVar="rowIndex"
+					paginator="true" rows="10"
+					paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+					rowsPerPageTemplate="5,10,20,50,100" widgetVar="50"
+					tableStyle="table-layout:auto">
+	
+					<p:column headerText="STT">
+						#{rowIndex+1}
+					</p:column>
+	
+					<p:column headerText="Mã NV">
+						<h:outputText value="#{peoplex.peopleId}" />
+					</p:column>
+	
+					<p:column headerText="Ảnh">
+						<img src="#{peoplex.imagePath}"  onerror="this.src='../resources/images/no_image_available.png'" style="width:50px;height:50px"/>
+						<!-- <p:tooltip id="toolTipContent" for="image" position="bottom">
+							<p:graphicImage value="#{peoplex.imagePath}" width="500px" height="500px"/>
+						</p:tooltip> -->
+					</p:column>
+	
+					<p:column headerText="Họ và tên">
+						<h:outputText value="#{peoplex.fullName}" />
+					</p:column>
+					
+					<p:column headerText="Số điện thoại">
+						<h:outputText value="#{peoplex.mobilePhone}" />
+					</p:column>
+	
+					<p:column headerText="Phân loại">
+						<h:outputText value="#{peoplex.customerType}" />
+					</p:column>
+	
+					<p:column headerText="Giới tính">
+						<h:outputText value="#{peoplex.gender}" />
+					</p:column>
+	
+					<p:column headerText="Ngày sinh">
+						<h:outputText value="#{peoplex.dateOfBirth}">
+							<f:convertDateTime pattern="yyyy-mm-dd" />
+						</h:outputText>
+					</p:column>
+	
+					<p:column headerText="Phòng ban">
+						<h:outputText value="#{peoplex.groupName}" />
+					</p:column>
+	
+					<p:column headerText="Hành động">
+						<h:commandButton action="#{peopleController.getPeople(peoplex)}" 
+							value="#{peoplex.status == 1 ? 'Cập nhật' : 'Đăng ký'}" 
+							styleClass="#{peoplex.status == 1 ? 'btn btn-primary' : 'btn btn-success'}"/>
+					</p:column>
+	
+				</p:dataTable>
+			</h:form>
+		</div>
+	</div>
+</h:body>
+</html>

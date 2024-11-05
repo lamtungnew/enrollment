@@ -1,0 +1,308 @@
+2021-11-22 07:42:20 INFO ? Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-22 07:42:20 INFO ? Shutting down EhCache CacheManager
+2021-11-22 07:42:20 INFO ? Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-22 07:42:20 INFO ? HikariPool-1 - Shutdown initiated...
+2021-11-22 07:42:20 INFO ? HikariPool-1 - Shutdown completed.
+2021-11-22 23:47:20 INFO ? The Class-Path manifest attribute in /home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2021-11-22 23:47:20 INFO ? Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-11-22 23:47:20 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e7056d4f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-22 23:47:21 INFO ? Fetching config from server at : http://apiintsit.ztech.com.vn/ztech-config/v1
+2021-11-22 23:47:23 WARN ? Could not locate PropertySource: label not found
+2021-11-22 23:47:23 INFO ? The following profiles are active: ztech
+2021-11-22 23:47:24 INFO ? Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-22 23:47:24 INFO ? Finished Spring Data repository scanning in 117ms. Found 26 JPA repository interfaces.
+2021-11-22 23:47:24 INFO ? BeanFactory id=140b719e-6525-378f-94ab-2eef67f1da88
+2021-11-22 23:47:25 INFO ? Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$6f832f51] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-22 23:47:25 INFO ? Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-11-22 23:47:25 INFO ? Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-22 23:47:25 INFO ? Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-22 23:47:25 INFO ? Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-22 23:47:25 INFO ? Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@8b209c' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-22 23:47:25 INFO ? Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-22 23:47:25 INFO ? Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-22 23:47:25 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e7056d4f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-22 23:47:25 INFO ? Tomcat initialized with port(s): 9976 (http)
+2021-11-22 23:47:25 INFO ? Initializing ProtocolHandler ["http-nio-9976"]
+2021-11-22 23:47:25 INFO ? Starting service [Tomcat]
+2021-11-22 23:47:25 INFO ? Starting Servlet engine: [Apache Tomcat/9.0.30]
+2021-11-22 23:47:25 INFO ? Initializing Spring embedded WebApplicationContext
+2021-11-22 23:47:25 INFO ? Root WebApplicationContext: initialization completed in 2116 ms
+2021-11-22 23:47:25 INFO ? HikariPool-1 - Starting...
+2021-11-22 23:47:26 INFO ? HikariPool-1 - Start completed.
+2021-11-22 23:47:26 INFO ? HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-22 23:47:26 INFO ? HHH000412: Hibernate Core {5.4.10.Final}
+2021-11-22 23:47:26 INFO ? HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-11-22 23:47:26 INFO ? HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+2021-11-22 23:47:27 INFO ? HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-22 23:47:27 INFO ? Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-22 23:47:28 WARN ? spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-22 23:47:28 DEBUG ? 
+    select
+        apparam0_.autoid as autoid1_2_,
+        apparam0_.description as descript2_2_,
+        apparam0_.gr as gr3_2_,
+        apparam0_.name as name4_2_,
+        apparam0_.value as value5_2_ 
+    from
+        ap_param apparam0_
+2021-11-22 23:47:29 INFO ? ==>loadCache params [ApParam(autoid=1, group=ERROR_DEFINE, name='group_id' cannot be null, value=GROUPID IS NULL, description=Mã nhóm nhân viên không được để trống), ApParam(autoid=2, group=ERROR_DEFINE, name=fk_people, value=people_id does not exited., description=Mã nhân không tồn tại), ApParam(autoid=3, group=ERROR_DEFINE, name=fk_shift_id, value=shift_id, description=Mã ca làm việc không tồn tại.), ApParam(autoid=4, group=APPROVAL_TYPE, name=OT_APPROVAL, value=OT_APPROVAL, description=Loại duyệt OT), ApParam(autoid=5, group=APPROVAL_TYPE, name=KEEPING_APPROVAL, value=KEEPING_APPROVAL, description=Loại duyệt chấm công), ApParam(autoid=6, group=APPROVER, name=GROUP_LEADER, value=GROUP_LEADER, description=Lãnh đạo khối), ApParam(autoid=7, group=APPROVER, name=DEP_LEADER, value=DEP_LEADER, description=Lãnh đạo phòng), ApParam(autoid=8, group=APPROVER, name=ADMIN, value=ADMIN, description=Quản trị viên), ApParam(autoid=9, group=ERROR_DEFINE, name=approval_flow_unq1, value=trung ban ghi, description=Trùng bản ghi)]
+2021-11-22 23:47:29 INFO ? Clearing Cache
+2021-11-22 23:47:29 INFO ? Clear Done
+2021-11-22 23:47:29 INFO ? INIT Cache Done
+2021-11-22 23:47:30 WARN ? Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'timeKeepingSheetController': Unsatisfied dependency expressed through field 'timeKeepingSheetRepositoryCustomImpl'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'vn.ztech.enroll.repository.impl.TimeKeepingSheetRepositoryCustomImpl' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-11-22 23:47:30 INFO ? Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-22 23:47:30 INFO ? HikariPool-1 - Shutdown initiated...
+2021-11-22 23:47:30 INFO ? HikariPool-1 - Shutdown completed.
+2021-11-22 23:47:30 INFO ? Stopping service [Tomcat]
+2021-11-22 23:47:30 INFO ? 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-22 23:47:30 ERROR ? 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field timeKeepingSheetRepositoryCustomImpl in vn.ztech.enroll.controller.TimeKeepingSheetController required a bean of type 'vn.ztech.enroll.repository.impl.TimeKeepingSheetRepositoryCustomImpl' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'vn.ztech.enroll.repository.impl.TimeKeepingSheetRepositoryCustomImpl' in your configuration.
+
+2021-11-22 23:53:05 INFO ? The Class-Path manifest attribute in /home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2021-11-22 23:53:05 INFO ? Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-11-22 23:53:05 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$b8ecbb8b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-22 23:53:05 INFO ? Fetching config from server at : http://apiintsit.ztech.com.vn/ztech-config/v1
+2021-11-22 23:53:07 WARN ? Could not locate PropertySource: label not found
+2021-11-22 23:53:07 INFO ? The following profiles are active: ztech
+2021-11-22 23:53:07 INFO ? Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-22 23:53:08 INFO ? Finished Spring Data repository scanning in 101ms. Found 26 JPA repository interfaces.
+2021-11-22 23:53:08 INFO ? BeanFactory id=fefabccd-42e4-37ee-8536-b75e76b5d2da
+2021-11-22 23:53:08 INFO ? Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$416a7d8d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-22 23:53:08 INFO ? Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-11-22 23:53:08 INFO ? Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-22 23:53:08 INFO ? Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-22 23:53:08 INFO ? Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-22 23:53:08 INFO ? Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@13a1ccff' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-22 23:53:08 INFO ? Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-22 23:53:08 INFO ? Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-22 23:53:08 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$b8ecbb8b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-22 23:53:09 INFO ? Tomcat initialized with port(s): 9976 (http)
+2021-11-22 23:53:09 INFO ? Initializing ProtocolHandler ["http-nio-9976"]
+2021-11-22 23:53:09 INFO ? Starting service [Tomcat]
+2021-11-22 23:53:09 INFO ? Starting Servlet engine: [Apache Tomcat/9.0.30]
+2021-11-22 23:53:09 INFO ? Initializing Spring embedded WebApplicationContext
+2021-11-22 23:53:09 INFO ? Root WebApplicationContext: initialization completed in 1774 ms
+2021-11-22 23:53:09 INFO ? HikariPool-1 - Starting...
+2021-11-22 23:53:09 INFO ? HikariPool-1 - Start completed.
+2021-11-22 23:53:09 INFO ? HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-22 23:53:09 INFO ? HHH000412: Hibernate Core {5.4.10.Final}
+2021-11-22 23:53:10 INFO ? HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-11-22 23:53:10 INFO ? HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+2021-11-22 23:53:11 INFO ? HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-22 23:53:11 INFO ? Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-22 23:53:11 WARN ? spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-22 23:53:12 DEBUG ? 
+    select
+        apparam0_.autoid as autoid1_2_,
+        apparam0_.description as descript2_2_,
+        apparam0_.gr as gr3_2_,
+        apparam0_.name as name4_2_,
+        apparam0_.value as value5_2_ 
+    from
+        ap_param apparam0_
+2021-11-22 23:53:12 INFO ? ==>loadCache params [ApParam(autoid=1, group=ERROR_DEFINE, name='group_id' cannot be null, value=GROUPID IS NULL, description=Mã nhóm nhân viên không được để trống), ApParam(autoid=2, group=ERROR_DEFINE, name=fk_people, value=people_id does not exited., description=Mã nhân không tồn tại), ApParam(autoid=3, group=ERROR_DEFINE, name=fk_shift_id, value=shift_id, description=Mã ca làm việc không tồn tại.), ApParam(autoid=4, group=APPROVAL_TYPE, name=OT_APPROVAL, value=OT_APPROVAL, description=Loại duyệt OT), ApParam(autoid=5, group=APPROVAL_TYPE, name=KEEPING_APPROVAL, value=KEEPING_APPROVAL, description=Loại duyệt chấm công), ApParam(autoid=6, group=APPROVER, name=GROUP_LEADER, value=GROUP_LEADER, description=Lãnh đạo khối), ApParam(autoid=7, group=APPROVER, name=DEP_LEADER, value=DEP_LEADER, description=Lãnh đạo phòng), ApParam(autoid=8, group=APPROVER, name=ADMIN, value=ADMIN, description=Quản trị viên), ApParam(autoid=9, group=ERROR_DEFINE, name=approval_flow_unq1, value=trung ban ghi, description=Trùng bản ghi)]
+2021-11-22 23:53:12 INFO ? Clearing Cache
+2021-11-22 23:53:13 INFO ? Clear Done
+2021-11-22 23:53:13 INFO ? INIT Cache Done
+2021-11-22 23:53:14 INFO ? Initializing EhCache CacheManager
+2021-11-22 23:53:14 INFO ? 
+
+Using generated security password: dfea80e3-912a-464e-bcd4-19c24d47f902
+
+2021-11-22 23:53:14 INFO ? Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2021-11-22 23:53:14 INFO ? Creating filter chain: Ant [pattern='/h2-console/**'], []
+2021-11-22 23:53:14 INFO ? Creating filter chain: Ant [pattern='/swagger-ui/index.html'], []
+2021-11-22 23:53:14 INFO ? Creating filter chain: Ant [pattern='/test/**'], []
+2021-11-22 23:53:14 INFO ? Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c9fda7f, org.springframework.security.web.context.SecurityContextPersistenceFilter@4a1ece68, org.springframework.security.web.header.HeaderWriterFilter@3841b61e, org.springframework.security.web.authentication.logout.LogoutFilter@3fb9d8fb, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@43198b3, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1c6f2bf1, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2bd28770, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@b50fdd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@343949d7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6138a228, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6150bfe1, org.springframework.security.web.session.SessionManagementFilter@4e978b56, org.springframework.security.web.access.ExceptionTranslationFilter@6bc4fdd0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6389cb61]
+2021-11-22 23:53:14 INFO ? Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-11-22 23:53:14 INFO ? Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-22 23:53:14 INFO ? LiveReload server is running on port 35729
+2021-11-22 23:53:15 INFO ? Context refreshed
+2021-11-22 23:53:15 INFO ? Found 1 custom documentation plugin(s)
+2021-11-22 23:53:15 INFO ? Scanning for api listing references
+2021-11-22 23:53:15 INFO ? Generating unique operation named: deleteUsingDELETE_1
+2021-11-22 23:53:15 INFO ? Generating unique operation named: getUsingGET_1
+2021-11-22 23:53:15 INFO ? Generating unique operation named: saveUsingPOST_1
+2021-11-22 23:53:15 INFO ? Generating unique operation named: searchUsingGET_1
+2021-11-22 23:53:15 INFO ? Generating unique operation named: updateUsingPUT_1
+2021-11-22 23:53:15 INFO ? Generating unique operation named: getUsingGET_2
+2021-11-22 23:53:15 INFO ? Generating unique operation named: deleteUsingDELETE_2
+2021-11-22 23:53:15 INFO ? Generating unique operation named: getUsingGET_3
+2021-11-22 23:53:15 INFO ? Generating unique operation named: saveUsingPOST_2
+2021-11-22 23:53:15 INFO ? Generating unique operation named: searchUsingGET_2
+2021-11-22 23:53:15 INFO ? Generating unique operation named: updateUsingPUT_2
+2021-11-22 23:53:15 INFO ? Generating unique operation named: deleteUsingDELETE_3
+2021-11-22 23:53:15 INFO ? Generating unique operation named: getUsingGET_4
+2021-11-22 23:53:15 INFO ? Generating unique operation named: searchUsingGET_3
+2021-11-22 23:53:15 INFO ? Generating unique operation named: updateUsingPUT_3
+2021-11-22 23:53:15 INFO ? Generating unique operation named: deleteUsingDELETE_4
+2021-11-22 23:53:15 INFO ? Generating unique operation named: getUsingGET_5
+2021-11-22 23:53:15 INFO ? Generating unique operation named: saveUsingPOST_3
+2021-11-22 23:53:15 INFO ? Generating unique operation named: searchUsingGET_4
+2021-11-22 23:53:15 INFO ? Generating unique operation named: updateUsingPUT_4
+2021-11-22 23:53:15 INFO ? Generating unique operation named: deleteUsingDELETE_5
+2021-11-22 23:53:15 INFO ? Generating unique operation named: searchUsingGET_5
+2021-11-22 23:53:15 INFO ? Generating unique operation named: deleteUsingDELETE_6
+2021-11-22 23:53:15 INFO ? Generating unique operation named: getUsingGET_6
+2021-11-22 23:53:15 INFO ? Generating unique operation named: saveUsingPOST_4
+2021-11-22 23:53:15 INFO ? Generating unique operation named: searchUsingGET_6
+2021-11-22 23:53:15 INFO ? Generating unique operation named: updateUsingPUT_5
+2021-11-22 23:53:15 INFO ? Generating unique operation named: getUsingGET_7
+2021-11-22 23:53:15 INFO ? Generating unique operation named: searchUsingGET_7
+2021-11-22 23:53:15 INFO ? Generating unique operation named: deleteUsingDELETE_7
+2021-11-22 23:53:15 INFO ? Generating unique operation named: getUsingGET_8
+2021-11-22 23:53:15 INFO ? Generating unique operation named: saveUsingPOST_5
+2021-11-22 23:53:15 INFO ? Generating unique operation named: searchUsingGET_8
+2021-11-22 23:53:15 INFO ? Generating unique operation named: updateUsingPUT_6
+2021-11-22 23:53:15 INFO ? Generating unique operation named: deleteUsingDELETE_8
+2021-11-22 23:53:15 INFO ? Generating unique operation named: getUsingGET_9
+2021-11-22 23:53:15 INFO ? Generating unique operation named: saveUsingPOST_6
+2021-11-22 23:53:15 INFO ? Generating unique operation named: searchUsingGET_9
+2021-11-22 23:53:15 INFO ? Generating unique operation named: updateUsingPUT_7
+2021-11-22 23:53:15 INFO ? Generating unique operation named: deleteUsingDELETE_9
+2021-11-22 23:53:15 INFO ? Generating unique operation named: getUsingGET_10
+2021-11-22 23:53:15 INFO ? Generating unique operation named: saveUsingPOST_7
+2021-11-22 23:53:15 INFO ? Generating unique operation named: searchUsingGET_10
+2021-11-22 23:53:15 INFO ? Generating unique operation named: updateUsingPUT_8
+2021-11-22 23:53:15 INFO ? Generating unique operation named: deleteUsingDELETE_10
+2021-11-22 23:53:15 INFO ? Generating unique operation named: getUsingGET_11
+2021-11-22 23:53:15 INFO ? Generating unique operation named: saveUsingPOST_8
+2021-11-22 23:53:15 INFO ? Generating unique operation named: saveAllUsingPOST_1
+2021-11-22 23:53:15 INFO ? Generating unique operation named: searchUsingGET_11
+2021-11-22 23:53:15 INFO ? Generating unique operation named: updateUsingPUT_9
+2021-11-22 23:53:15 INFO ? Generating unique operation named: deleteUsingDELETE_11
+2021-11-22 23:53:15 INFO ? Generating unique operation named: getUsingGET_12
+2021-11-22 23:53:15 INFO ? Generating unique operation named: importExcelUsingPOST_1
+2021-11-22 23:53:15 INFO ? Generating unique operation named: saveUsingPOST_9
+2021-11-22 23:53:15 INFO ? Generating unique operation named: searchUsingGET_12
+2021-11-22 23:53:15 INFO ? Generating unique operation named: updateUsingPUT_10
+2021-11-22 23:53:15 INFO ? Generating unique operation named: approvalUsingPOST_1
+2021-11-22 23:53:15 INFO ? Generating unique operation named: deleteUsingDELETE_12
+2021-11-22 23:53:15 INFO ? Generating unique operation named: getUsingGET_13
+2021-11-22 23:53:15 INFO ? Generating unique operation named: importExcelUsingPOST_2
+2021-11-22 23:53:15 INFO ? Generating unique operation named: saveUsingPOST_10
+2021-11-22 23:53:15 INFO ? Generating unique operation named: searchUsingGET_13
+2021-11-22 23:53:15 INFO ? Generating unique operation named: updateUsingPUT_11
+2021-11-22 23:53:15 INFO ? Generating unique operation named: deleteUsingDELETE_13
+2021-11-22 23:53:15 INFO ? Generating unique operation named: deleteUsingDELETE_14
+2021-11-22 23:53:15 INFO ? Generating unique operation named: getUsingGET_14
+2021-11-22 23:53:15 INFO ? Generating unique operation named: saveUsingPOST_11
+2021-11-22 23:53:15 INFO ? Generating unique operation named: searchUsingGET_14
+2021-11-22 23:53:15 INFO ? Generating unique operation named: updateUsingPUT_12
+2021-11-22 23:53:15 INFO ? Starting ProtocolHandler ["http-nio-9976"]
+2021-11-22 23:53:15 INFO ? Tomcat started on port(s): 9976 (http) with context path ''
+2021-11-22 23:53:15 INFO ? Started ZtechApplication in 10.86 seconds (JVM running for 11.634)
+2021-11-22 23:59:33 INFO ? Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-22 23:59:33 INFO ? Initializing Servlet 'dispatcherServlet'
+2021-11-22 23:59:33 INFO ? Completed initialization in 10 ms
+2021-11-22 23:59:33 WARN ? Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2021-11-22 23:59:41 ERROR ? [Exception] org.springframework.http.converter.HttpMessageNotReadableException - [status] 500 - [clientIP]  - [error] Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.Object> vn.ztech.enroll.controller.TimeKeepingSheetController.searchTimekeepingSheetCustom(vn.ztech.enroll.dto.TimekeepingSheetData) throws java.lang.Exception, details:org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.Object> vn.ztech.enroll.controller.TimeKeepingSheetController.searchTimekeepingSheetCustom(vn.ztech.enroll.dto.TimekeepingSheetData) throws java.lang.Exception
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:161)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:131)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:167)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:154)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:52)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:216)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+2021-11-22 23:59:41 WARN ? Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.Object> vn.ztech.enroll.controller.TimeKeepingSheetController.searchTimekeepingSheetCustom(vn.ztech.enroll.dto.TimekeepingSheetData) throws java.lang.Exception]

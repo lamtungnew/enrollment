@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<h:form id="frmExplanationDetail">
+		<p:dialog id="dagExplanationDetail" closable="true" position="center"
+				header="Chi tiết đề xuất giải trình" width="1300px"
+				widgetVar="dagExplanationDetail" modal="true" resizable="false">
+				<table>
+					<tr>
+						<p:messages id="messagesDagAddTimeKeeping" closable="true">
+							<p:autoUpdate />
+						</p:messages>
+					</tr>
+					<tr>
+						<td style="height:40px">Họ và tên</td><td><h:outputText value = "#{approveTimekeepingExplanationController.updateTimeKeepingSheet.fullName}" />
+						</td>
+					</tr>
+					<tr>
+						<td style="height:40px">Mã nhân viên</td><td><h:outputText value = "#{approveTimekeepingExplanationController.updateTimeKeepingSheet.peopleId}" /></td>
+					</tr>
+					<tr>
+						<td style="height:40px">Phòng ban</td><td><h:outputText value = "#{approveTimekeepingExplanationController.updateTimeKeepingSheet.groupName}" /></td>
+					</tr>
+					<!--<tr>
+						<td style="width:150px;height:40px">Người quản lý *</td>
+						<td>
+							<h:outputText
+									rendered="#{approveTimekeepingExplanationController.updateTimeKeepingSheet.state == '0' ? false : true}"
+									value="#{approveTimekeepingExplanationController.updateTimeKeepingSheet.approvalByLevel2}"/>
+							<p:selectOneMenu id="cbxApprovePerson"
+											 rendered="#{approveTimekeepingExplanationController.updateTimeKeepingSheet.state == '0' ? true : false}"
+											 style="width: 210px" requiredMessage="Phải chọn người quản lý"
+											 filter="true" filterMatchMode="contains" sortBy="" required="#{param['validateApproveByLevel2']}"
+											 immediate="true" value="#{approveTimekeepingExplanationController.updateTimeKeepingSheet.approvalByLevel2}">
+								<f:selectItem itemLabel="chọn người quản lý"
+											  noSelectionOption="true" />
+								<f:selectItems
+										value="#{approveTimekeepingExplanationController.listApprovePeople}" var="pp"
+										itemValue="#{pp.peopleId}" itemLabel="#{pp.fullName}" />
+							</p:selectOneMenu>
+						</td>
+					</tr>-->
+					<tr>
+						<td style="width:150px;height:40px">Người quản lý *</td>
+						<td>
+							<h:outputText value="#{approveTimekeepingExplanationController.updateTimeKeepingSheet.approvedByName}"/>
+						</td>
+					</tr>
+					<tr>
+						<td style="width:150px;height:40px">Người theo dõi *</td>
+						<td>
+							<h:outputText value="#{approveTimekeepingExplanationController.updateTimeKeepingSheet.supervisor}"/>
+						</td>
+					</tr>
+				</table>
+				<br/>
+				<p:dataTable id="tblEditNewTimeKeepingSheet" var="timeKeepingSheet" scrollable="true" styleClass="tbl_custom_bt"
+							 value="#{approveTimekeepingExplanationController.listUpdateTimeKeepingSheet}" scrollHeight="200" style="height: 250px"
+							 rowIndexVar="rowIndex" rowKey="#{timeKeepingSheet.keepingDate}" emptyMessage="Không có dữ liệu..."
+							 tableStyle="table-layout:auto">
+
+					<p:column headerText="#" style="width:10px">
+						#{rowIndex+1}
+					</p:column>
+
+					<p:column headerText="Ngày giải trình" style="width:280px; text-align: center">
+						<p:outputLabel value="#{timeKeepingSheet.keepingDate}">
+							<f:convertDateTime pattern="dd/MM/yyyy" />
+						</p:outputLabel>
+
+					</p:column>
+
+					<p:column headerText="Giải trình lý do"  style="width:300px; text-align: center" >
+						<p:outputLabel value="#{timeKeepingSheet.mistake}"/>
+					</p:column>
+
+					<p:column headerText="Chi tiết lý do"  style="width:250px; text-align: center">
+						<p:outputLabel value="#{timeKeepingSheet.description}"/>
+					</p:column>
+
+					<p:column headerText="Hình ảnh" style="width:300px; text-align: center">
+						<a href="#{timeKeepingSheet.timeKeepingImage}"><p:graphicImage
+								style="width: 200px;height: 100px"
+								id="image"
+								value="#{timeKeepingSheet.timeKeepingImage}"/></a>
+					</p:column>
+				</p:dataTable>
+				<br/>
+				<h:outputLabel value="Trạng thái: " style="margin-right: 2px"/>
+				<h:outputText value="#{approveTimekeepingExplanationController.updateTimeKeepingSheet.stateValue}" style="#{approveTimekeepingExplanationController.updateTimeKeepingSheet.stateValue =='Đã phê duyệt' ? 'color: blue' : 'color: red'}"/>
+			<f:facet name="footer">
+				<p:commandButton value="Từ chối" styleClass="btn btn-secondary"
+								 rendered="#{sessionController.isAllow('APPROVE_TIME_KEEPING_SHEET','APPROVE')
+								 ? approveTimekeepingExplanationController.renderDenyButton() : false}"
+								 oncomplete="PF('dagExplanationDetail').hide(); PF('dagConfirmDeny').show();" >
+					<f:param name="validateApproveByLevel2" value="false" />
+					<f:param name="validateDagAssignApprovalLevel2" value="false" />
+				</p:commandButton>&#160;
+				<p:commandButton value="Phê duyệt" styleClass="btn btn-secondary"
+								 rendered="#{sessionController.isAllow('APPROVE_TIME_KEEPING_SHEET','APPROVE') ?
+								 approveTimekeepingExplanationController.renderButton('APPROVAL') : false}"
+								 actionListener="#{approveTimekeepingExplanationController.changeState('2')}"
+								 update = "@([id$=tblListApprove])"
+								 oncomplete="PF('dagExplanationDetail').hide();" >
+					<f:param name="validateApproveByLevel2" value="false" />
+					<f:param name="validateDagAssignApprovalLevel2" value="false" />
+				</p:commandButton>&#160;
+				<p:commandButton value="Duyệt cấp 1" styleClass="btn btn-secondary"
+								 rendered="#{sessionController.isAllow('APPROVE_TIME_KEEPING_SHEET','APPROVE') ?
+								 approveTimekeepingExplanationController.renderButton('NEXT_APPROVAL') : false}"
+								 actionListener="#{approveTimekeepingExplanationController.changeState('1')}"
+								 update = "@([id$=tblListApprove]) @([id$=messagesDagAddTimeKeeping])">
+					<f:param name="validateApproveByLevel2" value="true" />
+					<f:param name="validateDagAssignApprovalLevel2" value="false" />
+				</p:commandButton>
+			</f:facet>
+		</p:dialog>
+
+		<p:dialog id="dagConfirmDeny" closable="true" position="center"
+				  header="Xác nhận từ chối đề xuất" width="500px"
+				  widgetVar="dagConfirmDeny" modal="true" resizable="false">
+			Bạn có chắc chắn muốn từ chối đề xuất?
+			<f:facet name="footer">
+				<p:commandButton value="Hủy bỏ" styleClass="btn btn-secondary"
+								 oncomplete="PF('dagConfirmDeny').hide();" >
+				</p:commandButton>&#160;
+				<p:commandButton value="Đồng ý" styleClass="btn btn-secondary"
+								 actionListener="#{approveTimekeepingExplanationController.changeState('3')}"
+								 update = "@([id$=tblListApprove]) @([id$=growl])"
+								 oncomplete="PF('dagConfirmDeny').hide();PF('dagExplanationDetail').hide();" >
+				</p:commandButton>
+			</f:facet>
+		</p:dialog>
+
+		<p:dialog id="dagConfirmDenyMany" closable="true" position="center"
+				  header="Xác nhận từ chối đề xuất" width="500px"
+				  widgetVar="dagConfirmDenyMany" modal="true" resizable="false">
+			Bạn có chắc chắn muốn từ chối đề xuất?
+			<f:facet name="footer">
+				<p:commandButton value="Hủy bỏ" styleClass="btn btn-secondary"
+								 oncomplete="PF('dagConfirmDenyMany').hide();" >
+				</p:commandButton>&#160;
+				<p:commandButton value="Đồng ý" styleClass="btn btn-secondary"
+								 actionListener="#{approveTimekeepingExplanationController.approveMany('DENY')}"
+								 update = "@([id$=tblListApprove]) @([id$=growl]) "
+								 oncomplete="PF('dagConfirmDenyMany').hide();" >
+				</p:commandButton>
+			</f:facet>
+		</p:dialog>
+
+
+	</h:form>
+
+	<h:form>
+		<p:dialog id="dagAssignApprovalLevel2" closable="true" position="center"
+				  header="Duyệt cấp 1" width="500px"
+				  widgetVar="dagAssignApprovalLevel2" modal="true" resizable="false">
+			<table>
+				<tr>
+					<td>Người quản lý:</td>
+					<td><p:selectOneMenu id="cbxApprovePersonForMany" style="width: 210px" requiredMessage="Phải chọn người quản lý"
+										 filter="true" filterMatchMode="contains" sortBy="" required="#{param['validateDagAssignApprovalLevel2']}"
+										 immediate="true" value="#{approveTimekeepingExplanationController.updateTimeKeepingSheet.approvalByLevel2}">
+						<f:selectItem itemLabel="chọn người quản lý"
+									  noSelectionOption="true" />
+						<f:selectItems
+								value="#{approveTimekeepingExplanationController.listApprovePeople}" var="pp"
+								itemValue="#{pp.peopleId}" itemLabel="#{pp.fullName}" />
+					</p:selectOneMenu></td>
+				</tr>
+			</table>
+
+			<f:facet name="footer">
+				<p:commandButton value="Hủy bỏ" styleClass="btn btn-secondary"
+								 oncomplete="PF('dagAssignApprovalLevel2').hide();" >
+				</p:commandButton>&#160;
+				<p:commandButton value="Duyệt cấp 1" styleClass="btn btn-secondary"
+								 actionListener="#{approveTimekeepingExplanationController.changeStateMany('1')}"
+								 update = "@([id$=tblListApprove]) @([id$=growl]) "
+								 oncomplete="PF('dagAssignApprovalLevel2').hide();" >
+					<f:param name="validateDagAssignApprovalLevel2" value="true" />
+				</p:commandButton>
+			</f:facet>
+		</p:dialog>
+	</h:form>
+</html>

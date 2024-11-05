@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8" name="viewport"
+          content="width=device-width, initial-scale=1"
+          http-equiv="X-UA-Conpatible"/>
+    <h:outputStylesheet library="css" name="bootstrap.min.css"/>
+    <h:outputStylesheet library="css" name="app.css"/>
+    <h:outputStylesheet library="css" name="paginator.css"/>
+    <title>Chi tiết đăng ký ca</title>
+
+</h:head>
+
+<h:body>
+    <p:growl id="growl" showDetail="true"/>
+    <p:confirmDialog global="true" showEffect="fade" hideEffect="fade"
+                     closable="false">
+        <p:commandButton value="Đồng ý" type="button"
+                         styleClass="ui-confirmdialog-yes" icon="pi pi-check"/>
+        <p:commandButton value="Hủy" type="button"
+                         styleClass="ui-confirmdialog-no ui-button-secondary"
+                         icon="pi pi-times"/>
+    </p:confirmDialog>
+    <ui:include src="componentHeader.xhtml"></ui:include>
+    <div class="">
+        <div class="col-12 layout_custom">
+            <h:form id="frmDetail" enctype="multipart/form-data">
+                <div class="ui-g ui-g-nopad"
+                     style="padding-left: 150px; padding-right: 150px;">
+                    <div class="ui-g-12" style="width: 800px;">
+                        <div class="ui-g-12">
+                            <div class="ui-g-4 ui-g-nopad lable_margin-top_10">Khối<span
+                                    style="color: red;">*</span></div>
+                            <div class="ui-g-8 ui-g-nopad" style="background: transparent;">
+                                <p:inputText
+                                        rendered="#{!shiftManagerController.isEditable()}"
+                                        value="#{shiftManagerController.selectedItem.depName}"
+                                        readonly="true" style="width: 100%;"/>
+                                <p:selectOneMenu id="txtGroup" required="true"
+                                                 requiredMessage="Vui lòng chọn"
+                                                 rendered="#{shiftManagerController.isEditable()}"
+                                                 value="#{shiftManagerController.selectedItem.depId}"
+                                                 filter="true" filterMatchMode="contains"
+                                                 style="width: 100%">
+                                    <f:selectItem itemLabel="Chọn khối" itemValue=""/>
+                                    <f:selectItems value="#{shiftManagerController.lstGroupCatg}"
+                                                   var="item" itemLabel="#{item.groupName}"
+                                                   itemValue="#{item.groupId}"/>
+                                    <p:ajax update="frmDetail" process="txtGroup"
+                                            event="itemSelect"
+                                            listener="#{shiftManagerController.txtGroupValueChange}"/>
+                                </p:selectOneMenu>
+                                <p:message styleClass="field_message" for="txtGroup"/>
+                            </div>
+                        </div>
+
+                        <div class="ui-g-12">
+                            <div class="ui-g-4 ui-g-nopad lable_margin-top_10">Phòng ban</div>
+                            <div class="ui-g-8 ui-g-nopad" style="background: transparent;">
+                                <p:inputText
+                                        rendered="#{!shiftManagerController.isEditable()}"
+                                        value="#{shiftManagerController.selectedItem.groupName}"
+                                        readonly="true" style="width: 100%;"/>
+                                <p:selectOneMenu id="txtGroupChild"
+                                                 rendered="#{shiftManagerController.isEditable()}"
+                                                 value="#{shiftManagerController.selectedItem.groupId}"
+                                                 filter="true" filterMatchMode="contains"
+                                                 style="width: 100%">
+                                    <f:selectItem itemLabel="Chọn phòng ban" itemValue=""/>
+                                    <f:selectItems
+                                            value="#{shiftManagerController.lstGroupCatgChild}"
+                                            var="item" itemLabel="#{item.groupName}"
+                                            itemValue="#{item.groupId}"/>
+                                    <p:ajax update="frmDetail" process="txtGroupChild"
+                                            event="itemSelect"
+                                            listener="#{shiftManagerController.txtGroupChildValueChange}"/>
+                                </p:selectOneMenu>
+                                <p:message styleClass="field_message" for="txtGroupChild"/>
+                            </div>
+                        </div>
+                        <div class="ui-g-12">
+                            <div class="ui-g-4 ui-g-nopad lable_margin-top_10">Chọn nhân viên</div>
+                            <div class="ui-g-8 ui-g-nopad" style="background: transparent;">
+                                <p:inputText
+                                        rendered="#{!shiftManagerController.isEditable()}"
+                                        value="#{shiftManagerController.selectedItem.fullName}"
+                                        readonly="true" style="width: 100%;"/>
+                                <p:selectOneMenu id="txtFullname"
+                                                 rendered="#{shiftManagerController.isEditable()}"
+                                                 value="#{shiftManagerController.selectedItem.peopleId}"
+                                                 filter="true" filterMatchMode="contains"
+                                                 style="width: 100%">
+                                    <f:selectItem itemLabel="Chọn nhân viên" itemValue=""/>
+                                    <f:selectItems value="#{shiftManagerController.lstPeople}"
+                                                   var="item"
+                                                   itemLabel="(#{item.peopleId}) #{item.fullName}"
+                                                   itemValue="#{item.peopleId}"/>
+                                    <p:ajax update="frmDetail" process="txtFullname lblPeopleId"
+                                            event="itemSelect"
+                                            listener="#{shiftManagerController.txtPeopleValueChange}"/>
+                                </p:selectOneMenu>
+                            </div>
+                        </div>
+
+                        <div class="ui-g-12">
+                            <div class="ui-g-4 ui-g-nopad lable_margin-top_10">Mã nhân viên</div>
+                            <div class="ui-g-8 ui-g-nopad"
+                                 style="background: transparent;background: transparent; padding-top:8px;">
+                                <p:outputLabel id="lblPeopleId"
+                                               value="#{shiftManagerController.selectedItem.peopleId}"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-g-12" align="right">
+                        <p:commandButton id="btnAddShift"
+                                         rendered="#{shiftManagerController.isEditable()}"
+                                         action="#{shiftManagerController.goToAddShift(null)}"
+                                         value="Thêm ca"
+                                         icon="pi pi-plus" update="frmShift" immediate="true"
+                                         oncomplete="PF('dlgShiftVar').show();"
+                        />
+                    </div>
+
+                    <div class="ui-g-12" align="center">
+                        <p:dataTable id="tblOShiftDetail" styleClass="tbl_custom_4b" var="item"
+                                     value="#{shiftManagerController.shiftPeopleDetail.shifts}"
+                                     selectionMode="single"
+                                     selection="#{shiftManagerController.shiftPeopleDetailSelected}"
+                                     rowKey="#{item.code}" first="0" widgetVar="tblOShiftDetailVar"
+                                     paginator="false"
+                                     resizableColumns="true" dblClickSelect="true" resizeMode="fit"
+                                     emptyMessage="Không có dữ liệu..."
+                                     rowSelectMode="single" rowIndexVar="rowIndex">
+
+                            <p:column width="100" styleClass="ui-datatable break-word ui-g-nopad"
+                                      resizable="true">
+                                <f:facet name="header">
+                                    <h:outputText value="Mã ca"/>
+                                </f:facet>
+                                <h:outputText value="#{item.code}"/>
+                            </p:column>
+
+                            <p:column width="150" styleClass="ui-datatable break-word ui-g-nopad"
+                                      resizable="true">
+                                <f:facet name="header">
+                                    <h:outputText value="Tên ca"/>
+                                </f:facet>
+                                <h:outputText value="#{item.name}"/>
+                            </p:column>
+
+                            <p:column styleClass="ui-datatable break-word ui-g-nopad"
+                                      resizable="true">
+                                <f:facet name="header">
+                                    <h:outputText value="Ca làm việc"/>
+                                </f:facet>
+                                <div class="ui-g-12 ui-g-nopad">
+                                    <div class="ui-g-12">
+                                        <div class="ui-g-4 ui-g-nopad lable_margin-top_10">Lịch làm việc</div>
+                                        <div class="ui-g-8 ui-g-nopad"
+                                             style="background: transparent; padding-top:8px;">
+                                            <p:repeat id="txtShiftDetail"
+                                                      value="#{item.shiftDetail}"
+                                                      var="time">
+                                                #{time.dayName}: #{time.workingStartTime} - #{time.workingEndTime},
+                                            </p:repeat>
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12">
+                                        <div class="ui-g-4 ui-g-nopad lable_margin-top_10">Chấm giữa ca</div>
+                                        <div class="ui-g-8 ui-g-nopad"
+                                             style="background: transparent; padding-top:8px;">
+                                            <p:repeat id="txtShiftDetailO"
+                                                      value="#{item.oshiftDetail}"
+                                                      var="time">
+                                                #{time.dayName}: #{time.breakStartTime} - #{time.breakEndTime},
+                                            </p:repeat>
+                                        </div>
+                                    </div>
+                                </div>
+                            </p:column>
+
+                            <p:column width="150" styleClass="ui-datatable break-word ui-g-nopad"
+                                      resizable="true">
+                                <f:facet name="header">
+                                    <h:outputText value="Ngày đăng ký"/>
+                                </f:facet>
+                                <div class="ui-g-12 ui-g-nopad" style="width: 150px;">
+                                    <h:outputText style="width: 100%" value="#{item.startDate}">
+                                        <f:convertDateTime pattern="dd/MM/yyyy" timeZone="GMT+7"/>
+                                    </h:outputText>
+                                </div>
+                            </p:column>
+                            <p:column width="150" styleClass="ui-datatable break-word ui-g-nopad"
+                                      resizable="true">
+                                <f:facet name="header">
+                                    <h:outputText value="Ngày kết thúc"/>
+                                </f:facet>
+                                <div class="ui-g-12 ui-g-nopad" style="width: 150px;">
+                                    <h:outputText style="width: 100%" value="#{item.expireDate}">
+                                        <f:convertDateTime pattern="dd/MM/yyyy" timeZone="GMT+7"/>
+                                    </h:outputText>
+                                </div>
+                            </p:column>
+
+                            <p:column width="60" styleClass="ui-datatable break-word ui-g-nopad"
+                                      resizable="true">
+                                <f:facet name="header">
+                                    <h:outputText value=""/>
+                                </f:facet>
+                                <div class="ui-g-12 ui-g-nopad">
+                                    <p:commandLink ajax="true"
+                                                   rendered="#{shiftManagerController.isEditable()}"
+                                                   action="#{shiftManagerController.editShift(item)}"
+                                                   update="frmShift" process="@this"
+                                                   oncomplete="PF('dlgShiftVar').show();">
+                                        <span title="chi tiết" class="pi pi-pencil"/>
+                                    </p:commandLink>
+                                    <h:outputText value="&#160; "/>
+                                    <h:outputText value="&#160; "/>
+                                    <p:commandLink
+                                            ajax="true"
+                                            rendered="#{shiftManagerController.isEditable()}"
+                                            action="#{shiftManagerController.deleteShift(item)}"
+                                            update="frmDetail" process="@this">
+                                        <span title="xóa" class="pi pi-trash" style="color: red;"/>
+                                        <p:confirm header="Xác nhận"
+                                                   message='Bạn có chắc chắn muốn xóa hay không ?'
+                                                   icon="ui-icon-warning"/>
+                                    </p:commandLink>
+                                </div>
+                            </p:column>
+                        </p:dataTable>
+                    </div>
+
+                    <div class="ui-g-12">
+                        <p:messages id="msgs" showDetail="true" autoUpdate="true"
+                                    globalOnly="true"/>
+                    </div>
+
+                    <div class="ui-g-12" align="right">
+                        <p:commandButton id="btnCancel" styleClass="ui-button-secondary"
+                                         action="#{shiftManagerController.redirectPage('/shift-manager.xhtml')}"
+                                         value="Quay lại" icon="pi pi-reply" immediate="true">
+                        </p:commandButton>
+                        <h:outputText value="&#160; "/>
+                        <p:commandButton id="btnExecuteAdd"
+                                         rendered="#{shiftManagerController.createMode and !shiftManagerController.updateMode }"
+                                         value="Lưu" icon="pi pi-check"
+                                         action="#{shiftManagerController.add()}"
+                                         title="Lưu thông tin" update="frmDetail msgs"
+                                         validateClient="true">
+                        </p:commandButton>
+                        <h:outputText value="&#160; "/>
+                        <p:commandButton id="btnExecuteUpdate"
+                                         rendered="#{!shiftManagerController.updateMode and !shiftManagerController.createMode }"
+                                         value="Chỉnh sửa thông tin" icon="pi pi-pencil"
+                                         action="#{shiftManagerController.goToUpdatePage()}"
+                                         title="Chỉnh sửa thông tin" update="frmDetail msgs"
+                                         validateClient="true">
+                        </p:commandButton>
+                        <h:outputText value="&#160; "/>
+                        <p:commandButton id="btnToUpdateMode"
+                                         rendered="#{shiftManagerController.updateMode and !shiftManagerController.createMode}"
+                                         value="Lưu thông tin" icon="pi pi-check"
+                                         action="#{shiftManagerController.update()}"
+                                         title="Lưu thông tin" update="frmDetail msgs"
+                                         validateClient="true">
+                        </p:commandButton>
+
+                    </div>
+                </div>
+            </h:form>
+
+            <p:dialog header="Thông tin ca làm việc" id="dlgShift" styleClass="dlg_custom"
+                      widgetVar="dlgShiftVar" resizable="false" width="650" modal="true"
+                      closeOnEscape="true" closable="false">
+                <h:form id="frmShift">
+                    <p:focus context="dlgShift"/>
+                    <p:fieldset style="margin-bottom:1px">
+                        <div class="ui-g ui-g-nopad">
+                            <div class="ui-g-12">
+                                <div class="ui-g-12">
+                                    <div class="ui-g-4 ui-g-nopad lable_margin-top_10">Đăng ký ca làm<span
+                                            style="color: red;">*</span></div>
+                                    <div class="ui-g-8 ui-g-nopad"
+                                         style="background: transparent; padding-bottom: 15px;">
+                                        <p:inputText readonly="true"
+                                                rendered="#{shiftManagerController.shiftPeopleDetailSelected.getCode() != null}"
+                                                      value="#{shiftManagerController.shiftPeopleDetailSelected.autoid}"></p:inputText>
+                                        <p:selectOneMenu id="txtShifts" required="true"
+                                                         rendered="#{shiftManagerController.shiftPeopleDetailSelected.getCode() == null}"
+                                                         requiredMessage="Vui lòng chọn"
+                                                         value="#{shiftManagerController.shiftPeopleDetailSelected.autoid}"
+                                                         filter="true" filterMatchMode="contains"
+                                                         style="width: 100%;">
+                                            <f:selectItem itemLabel="Chọn ca" itemValue=""/>
+                                            <f:selectItems value="#{shiftManagerController.lstShiftCatg}"
+                                                           var="item"
+                                                           itemLabel="(#{item.code}) #{item.name}"
+                                                           itemValue="#{item.autoid}"/>
+                                            <p:ajax update="frmShift" process="txtShifts"
+                                                    event="itemSelect"
+                                                    listener="#{shiftManagerController.txtShiftValueChangeChildDialog}"/>
+                                        </p:selectOneMenu>
+                                        <p:message styleClass="field_message" for="txtShifts"/>
+                                    </div>
+                                </div>
+
+                                <div class="ui-g-12">
+                                    <div class="ui-g-4 ui-g-nopad lable_margin-top_10">Ngày đăng ký<span
+                                            style="color: red;">*</span></div>
+                                    <div class="ui-g-8 ui-g-nopad"
+                                         style="background: transparent; padding-bottom: 15px">
+                                        <p:datePicker id="dFrom" styleClass="" required="true"
+                                                      requiredMessage="Vui lòng chọn"
+                                                      placeholder="Chọn ngày đăng ký"
+                                                      value="#{shiftManagerController.shiftPeopleDetailSelected.startDate}"
+                                                      monthNavigator="true" yearNavigator="true"
+                                                      showIcon="true"
+                                                      mask="dd/MM/yyyy"
+                                                      pattern="dd/MM/yyyy">
+                                        </p:datePicker>
+                                        <p:message styleClass="field_message" for="dFrom"/>
+                                    </div>
+                                </div>
+                                <div class="ui-g-12">
+                                    <div class="ui-g-4 ui-g-nopad lable_margin-top_10">Ngày kết thúc<span
+                                            style="color: red;">*</span></div>
+                                    <div class="ui-g-8 ui-g-nopad"
+                                         style="background: transparent; padding-bottom: 15px">
+                                        <p:datePicker id="dTo" styleClass=""
+                                                      value="#{shiftManagerController.shiftPeopleDetailSelected.expireDate}"
+                                                      monthNavigator="true" yearNavigator="true"
+                                                      placeholder="Chọn ngày kết thúc"
+                                                      showIcon="true"
+                                                      mask="dd/MM/yyyy"
+                                                      pattern="dd/MM/yyyy">
+                                        </p:datePicker>
+                                        <p:message styleClass="field_message" for="dTo"/>
+                                    </div>
+                                </div>
+
+                                <div class="ui-g-12">
+                                    <div class="ui-g-4 ui-g-nopad lable_margin-top_10">Lịch làm việc</div>
+                                    <div class="ui-g-8 ui-g-nopad"
+                                         style="background: transparent; padding-top:8px;">
+                                        <p:repeat id="txtShiftDetail"
+                                                  value="#{shiftManagerController.shiftPeopleDetailSelected.shiftDetail}"
+                                                  var="time">
+                                            #{time.dayName}: #{time.workingStartTime} - #{time.workingEndTime},
+                                        </p:repeat>
+                                    </div>
+                                </div>
+                                <div class="ui-g-12">
+                                    <div class="ui-g-4 ui-g-nopad lable_margin-top_10">Chấm giữa ca</div>
+                                    <div class="ui-g-8 ui-g-nopad"
+                                         style="background: transparent; padding-top:8px;">
+                                        <p:repeat id="txtShiftDetailO"
+                                                  value="#{shiftManagerController.shiftPeopleDetailSelected.oshiftDetail}"
+                                                  var="time">
+                                            #{time.dayName}: #{time.breakStartTime} - #{time.breakEndTime},
+                                        </p:repeat>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p:messages id="msgs2" showDetail="true" autoUpdate="true" globalOnly="true"/>
+                        </div>
+                    </p:fieldset>
+                    <div class="ui-g-12" align="right">
+                        <p:commandButton id="btnCancelShift" styleClass="ui-button-secondary"
+                                         oncomplete="PF('dlgShiftVar').hide();" value="Đóng"
+                                         icon="pi pi-reply" immediate="true">
+                        </p:commandButton>
+                        <h:outputText value="&#160; "/>
+                        <p:commandButton id="btnSaveShift"
+                                         value="Lưu"
+                                         icon="pi pi-check" action="#{shiftManagerController.addShift()}"
+                                         title="Lưu thông tin" update="frmShift frmDetail"
+                                         validateClient="true">
+                        </p:commandButton>
+                    </div>
+                </h:form>
+            </p:dialog>
+        </div>
+    </div>
+</h:body>
+</html>

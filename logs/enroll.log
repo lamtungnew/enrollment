@@ -1,0 +1,1197 @@
+2021-12-07 15:22:48 INFO ? The Class-Path manifest attribute in /home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2021-12-07 15:22:48 INFO ? Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-07 15:22:48 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$fe38b274] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-07 15:22:49 INFO ? Fetching config from server at : http://apiintsit.ztech.com.vn/ztech-config/v1
+2021-12-07 15:22:50 WARN ? Could not locate PropertySource: label not found
+2021-12-07 15:22:50 INFO ? The following profiles are active: ztech
+2021-12-07 15:22:51 INFO ? Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-07 15:22:51 INFO ? Finished Spring Data repository scanning in 138ms. Found 26 JPA repository interfaces.
+2021-12-07 15:22:51 INFO ? BeanFactory id=3140a826-377a-38f9-a780-0e04cd0feedf
+2021-12-07 15:22:51 INFO ? Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$86b67476] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-07 15:22:51 INFO ? Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-12-07 15:22:51 INFO ? Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-07 15:22:51 INFO ? Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-07 15:22:51 INFO ? Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-07 15:22:51 INFO ? Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@67ef9978' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-07 15:22:51 INFO ? Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-07 15:22:51 INFO ? Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-07 15:22:51 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$fe38b274] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-07 15:22:52 INFO ? Tomcat initialized with port(s): 9976 (http)
+2021-12-07 15:22:52 INFO ? Initializing ProtocolHandler ["http-nio-9976"]
+2021-12-07 15:22:52 INFO ? Starting service [Tomcat]
+2021-12-07 15:22:52 INFO ? Starting Servlet engine: [Apache Tomcat/9.0.30]
+2021-12-07 15:22:52 INFO ? Initializing Spring embedded WebApplicationContext
+2021-12-07 15:22:52 INFO ? Root WebApplicationContext: initialization completed in 2095 ms
+2021-12-07 15:22:52 INFO ? HikariPool-1 - Starting...
+2021-12-07 15:22:52 INFO ? HikariPool-1 - Start completed.
+2021-12-07 15:22:52 INFO ? HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-07 15:22:53 INFO ? HHH000412: Hibernate Core {5.4.10.Final}
+2021-12-07 15:22:53 INFO ? HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-12-07 15:22:53 INFO ? HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+2021-12-07 15:22:54 INFO ? HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-07 15:22:54 INFO ? Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-07 15:22:54 WARN ? spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-07 15:22:55 DEBUG ? 
+    select
+        apparam0_.autoid as autoid1_2_,
+        apparam0_.description as descript2_2_,
+        apparam0_.gr as gr3_2_,
+        apparam0_.name as name4_2_,
+        apparam0_.value as value5_2_ 
+    from
+        ap_param apparam0_
+2021-12-07 15:22:55 INFO ? ==>loadCache params [ApParam(autoid=1, group=ERROR_DEFINE, name='group_id' cannot be null, value=GROUPID IS NULL, description=Mã nhóm nhân viên không được để trống), ApParam(autoid=2, group=ERROR_DEFINE, name=fk_people, value=people_id does not exited., description=Mã nhân không tồn tại), ApParam(autoid=3, group=ERROR_DEFINE, name=fk_shift_id, value=shift_id, description=Mã ca làm việc không tồn tại.), ApParam(autoid=4, group=APPROVAL_TYPE, name=OT_APPROVAL, value=OT_APPROVAL, description=Loại duyệt OT), ApParam(autoid=5, group=APPROVAL_TYPE, name=KEEPING_APPROVAL, value=KEEPING_APPROVAL, description=Loại duyệt chấm công), ApParam(autoid=6, group=APPROVER, name=GROUP_LEADER, value=GROUP_LEADER, description=Lãnh đạo khối), ApParam(autoid=7, group=APPROVER, name=DEP_LEADER, value=DEP_LEADER, description=Lãnh đạo phòng), ApParam(autoid=8, group=APPROVER, name=ADMIN, value=ADMIN, description=Quản trị viên), ApParam(autoid=9, group=ERROR_DEFINE, name=approval_flow_unq1, value=trung ban ghi, description=Trùng bản ghi)]
+2021-12-07 15:22:55 INFO ? Clearing Cache
+2021-12-07 15:22:55 INFO ? Clear Done
+2021-12-07 15:22:55 INFO ? INIT Cache Done
+2021-12-07 15:22:57 INFO ? Initializing EhCache CacheManager
+2021-12-07 15:22:57 INFO ? 
+
+Using generated security password: b1818601-c063-45d6-bbc3-3285e8c7e2fd
+
+2021-12-07 15:22:57 INFO ? Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2021-12-07 15:22:57 INFO ? Creating filter chain: Ant [pattern='/h2-console/**'], []
+2021-12-07 15:22:57 INFO ? Creating filter chain: Ant [pattern='/swagger-ui/index.html'], []
+2021-12-07 15:22:57 INFO ? Creating filter chain: Ant [pattern='/test/**'], []
+2021-12-07 15:22:57 INFO ? Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6199ca70, org.springframework.security.web.context.SecurityContextPersistenceFilter@3b1cbc09, org.springframework.security.web.header.HeaderWriterFilter@31a68030, org.springframework.security.web.authentication.logout.LogoutFilter@6b1bea53, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@632ee68a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3a9a2338, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7c282b78, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@59935af1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@22ae490f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5d786c74, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4cd76762, org.springframework.security.web.session.SessionManagementFilter@7b5aa18, org.springframework.security.web.access.ExceptionTranslationFilter@6105dc1e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3a5b8c9e]
+2021-12-07 15:22:57 INFO ? Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-12-07 15:22:57 INFO ? Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-07 15:22:57 INFO ? LiveReload server is running on port 35729
+2021-12-07 15:22:58 INFO ? Context refreshed
+2021-12-07 15:22:58 INFO ? Found 1 custom documentation plugin(s)
+2021-12-07 15:22:58 INFO ? Scanning for api listing references
+2021-12-07 15:22:58 INFO ? Generating unique operation named: deleteUsingDELETE_1
+2021-12-07 15:22:58 INFO ? Generating unique operation named: getUsingGET_1
+2021-12-07 15:22:58 INFO ? Generating unique operation named: saveUsingPOST_1
+2021-12-07 15:22:58 INFO ? Generating unique operation named: searchUsingGET_1
+2021-12-07 15:22:58 INFO ? Generating unique operation named: updateUsingPUT_1
+2021-12-07 15:22:58 INFO ? Generating unique operation named: getUsingGET_2
+2021-12-07 15:22:58 INFO ? Generating unique operation named: deleteUsingDELETE_2
+2021-12-07 15:22:58 INFO ? Generating unique operation named: getUsingGET_3
+2021-12-07 15:22:58 INFO ? Generating unique operation named: saveUsingPOST_2
+2021-12-07 15:22:58 INFO ? Generating unique operation named: searchUsingGET_2
+2021-12-07 15:22:58 INFO ? Generating unique operation named: updateUsingPUT_2
+2021-12-07 15:22:58 INFO ? Generating unique operation named: deleteUsingDELETE_3
+2021-12-07 15:22:58 INFO ? Generating unique operation named: getUsingGET_4
+2021-12-07 15:22:58 INFO ? Generating unique operation named: searchUsingGET_3
+2021-12-07 15:22:58 INFO ? Generating unique operation named: updateUsingPUT_3
+2021-12-07 15:22:58 INFO ? Generating unique operation named: deleteUsingDELETE_4
+2021-12-07 15:22:58 INFO ? Generating unique operation named: getUsingGET_5
+2021-12-07 15:22:58 INFO ? Generating unique operation named: saveUsingPOST_3
+2021-12-07 15:22:58 INFO ? Generating unique operation named: searchUsingGET_4
+2021-12-07 15:22:58 INFO ? Generating unique operation named: updateUsingPUT_4
+2021-12-07 15:22:58 INFO ? Generating unique operation named: deleteUsingDELETE_5
+2021-12-07 15:22:58 INFO ? Generating unique operation named: searchUsingGET_5
+2021-12-07 15:22:58 INFO ? Generating unique operation named: deleteUsingDELETE_6
+2021-12-07 15:22:58 INFO ? Generating unique operation named: getUsingGET_6
+2021-12-07 15:22:58 INFO ? Generating unique operation named: saveUsingPOST_4
+2021-12-07 15:22:58 INFO ? Generating unique operation named: searchUsingGET_6
+2021-12-07 15:22:58 INFO ? Generating unique operation named: updateUsingPUT_5
+2021-12-07 15:22:58 INFO ? Generating unique operation named: getUsingGET_7
+2021-12-07 15:22:58 INFO ? Generating unique operation named: searchUsingGET_7
+2021-12-07 15:22:58 INFO ? Generating unique operation named: deleteUsingDELETE_7
+2021-12-07 15:22:58 INFO ? Generating unique operation named: getUsingGET_8
+2021-12-07 15:22:58 INFO ? Generating unique operation named: saveUsingPOST_5
+2021-12-07 15:22:58 INFO ? Generating unique operation named: searchUsingGET_8
+2021-12-07 15:22:58 INFO ? Generating unique operation named: updateUsingPUT_6
+2021-12-07 15:22:58 INFO ? Generating unique operation named: deleteUsingDELETE_8
+2021-12-07 15:22:58 INFO ? Generating unique operation named: getUsingGET_9
+2021-12-07 15:22:58 INFO ? Generating unique operation named: saveUsingPOST_6
+2021-12-07 15:22:58 INFO ? Generating unique operation named: searchUsingGET_9
+2021-12-07 15:22:58 INFO ? Generating unique operation named: updateUsingPUT_7
+2021-12-07 15:22:58 INFO ? Generating unique operation named: deleteUsingDELETE_9
+2021-12-07 15:22:58 INFO ? Generating unique operation named: getUsingGET_10
+2021-12-07 15:22:58 INFO ? Generating unique operation named: saveUsingPOST_7
+2021-12-07 15:22:58 INFO ? Generating unique operation named: searchUsingGET_10
+2021-12-07 15:22:58 INFO ? Generating unique operation named: updateUsingPUT_8
+2021-12-07 15:22:58 INFO ? Generating unique operation named: deleteUsingDELETE_10
+2021-12-07 15:22:58 INFO ? Generating unique operation named: getUsingGET_11
+2021-12-07 15:22:58 INFO ? Generating unique operation named: saveUsingPOST_8
+2021-12-07 15:22:58 INFO ? Generating unique operation named: saveAllUsingPOST_1
+2021-12-07 15:22:58 INFO ? Generating unique operation named: searchUsingGET_11
+2021-12-07 15:22:58 INFO ? Generating unique operation named: updateUsingPUT_9
+2021-12-07 15:22:58 INFO ? Generating unique operation named: deleteUsingDELETE_11
+2021-12-07 15:22:58 INFO ? Generating unique operation named: getUsingGET_12
+2021-12-07 15:22:58 INFO ? Generating unique operation named: importExcelUsingPOST_1
+2021-12-07 15:22:58 INFO ? Generating unique operation named: saveUsingPOST_9
+2021-12-07 15:22:58 INFO ? Generating unique operation named: searchUsingGET_12
+2021-12-07 15:22:58 INFO ? Generating unique operation named: updateUsingPUT_10
+2021-12-07 15:22:58 INFO ? Generating unique operation named: approvalUsingPOST_1
+2021-12-07 15:22:58 INFO ? Generating unique operation named: deleteUsingDELETE_12
+2021-12-07 15:22:58 INFO ? Generating unique operation named: getUsingGET_13
+2021-12-07 15:22:58 INFO ? Generating unique operation named: importExcelUsingPOST_2
+2021-12-07 15:22:58 INFO ? Generating unique operation named: saveUsingPOST_10
+2021-12-07 15:22:58 INFO ? Generating unique operation named: searchUsingGET_13
+2021-12-07 15:22:58 INFO ? Generating unique operation named: searchTimekeepingSheetCustomUsingPOST_1
+2021-12-07 15:22:58 INFO ? Generating unique operation named: updateUsingPUT_11
+2021-12-07 15:22:58 INFO ? Generating unique operation named: deleteUsingDELETE_13
+2021-12-07 15:22:58 INFO ? Generating unique operation named: deleteUsingDELETE_14
+2021-12-07 15:22:58 INFO ? Generating unique operation named: getUsingGET_14
+2021-12-07 15:22:58 INFO ? Generating unique operation named: saveUsingPOST_11
+2021-12-07 15:22:58 INFO ? Generating unique operation named: searchUsingGET_14
+2021-12-07 15:22:58 INFO ? Generating unique operation named: updateUsingPUT_12
+2021-12-07 15:22:58 INFO ? Starting ProtocolHandler ["http-nio-9976"]
+2021-12-07 15:22:58 INFO ? Tomcat started on port(s): 9976 (http) with context path ''
+2021-12-07 15:22:58 INFO ? Started ZtechApplication in 11.186 seconds (JVM running for 13.018)
+2021-12-07 15:24:13 INFO ? Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-07 15:24:13 INFO ? Initializing Servlet 'dispatcherServlet'
+2021-12-07 15:24:13 INFO ? Completed initialization in 10 ms
+2021-12-07 15:24:13 INFO ? >>> [permissions] user permissions request  <<< [clientIp] = 127.0.0.1
+2021-12-07 15:24:13 DEBUG ? 
+    select
+        ROW_NUMBER() OVER (
+    ORDER BY
+        role_id asc) rownum ,
+        r.id as role_id,
+        r.name as role_code ,
+        m.id as module_id,
+        m.code as module_code,
+        m.url as module_url ,
+        amp.app_module_action_id as module_action_id,
+        ama.code as module_action_code ,
+        amp.allow 
+    from
+        roles r 
+    inner join
+        app_role_permissions amp 
+            on amp.role_id = r.id 
+    inner join
+        app_module_actions ama 
+            on ama.id = amp.app_module_action_id 
+    inner join
+        app_modules m 
+            on m.id = ama.app_module_id 
+    where
+        r.id in (
+            select
+                r.id 
+            from
+                roles r 
+            where
+                r.id in (
+                    select
+                        ur.role_id 
+                    from
+                        user_role ur 
+                    where
+                        ur.user_id in (
+                            select
+                                u.id 
+                            from
+                                users u 
+                            where
+                                u.username = ?
+                        )
+                    )
+            ) 
+        order by
+            m.ord asc 
+2021-12-07 15:24:13 TRACE ? binding parameter [1] as [VARCHAR] - [KA2]
+2021-12-07 15:24:13 INFO ? >>> [permissions] user permissions response <<< [clientIp] = 127.0.0.1
+2021-12-07 15:24:20 INFO ? >>> [getApprovalPeoples] START <<< [clientIp] = 127.0.0.1
+2021-12-07 15:24:29 DEBUG ? 
+    select
+        people0_.id as id1_14_,
+        people0_.customer_type as customer2_14_,
+        people0_.date_of_birth as date_of_3_14_,
+        people0_.email as email4_14_,
+        people0_.full_name as full_nam5_14_,
+        people0_.gender as gender6_14_,
+        people0_.group_id as group_id7_14_,
+        people0_.image_path as image_pa8_14_,
+        people0_.last_checkin_time as last_che9_14_,
+        people0_.mobile_phone as mobile_10_14_,
+        people0_.people_id as people_11_14_,
+        people0_.status as status12_14_ 
+    from
+        people people0_ 
+    where
+        people0_.people_id=?
+2021-12-07 15:24:29 TRACE ? binding parameter [1] as [VARCHAR] - [KA2]
+2021-12-07 15:27:29 WARN ? HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m28s582ms797µs14ns).
+2021-12-07 15:27:29 DEBUG ? 
+    select
+        ap.* 
+    from
+        ( select
+            g.group_id,
+            g.parent_id dep_id,
+            u.username 
+        from
+            people p 
+        inner join
+            groups g 
+                on p.group_id = g.group_id 
+        inner join
+            users u 
+                on p.people_id= u.people_id ) a 
+    inner join
+        approval_flow ap 
+            on a.dep_id = ap.dep_id 
+    where
+        a.username=? 
+        and ap.approval_type=?
+2021-12-07 15:27:29 TRACE ? binding parameter [1] as [VARCHAR] - [KA2]
+2021-12-07 15:27:29 TRACE ? binding parameter [2] as [VARCHAR] - [KEEPING_APPROVAL]
+2021-12-07 15:28:22 DEBUG ? 
+    SELECT
+        p.* 
+    FROM
+        people p 
+    INNER JOIN
+        GROUPS g 
+            ON p.group_id= g.group_id 
+    INNER JOIN
+        users u 
+            ON p.people_id= u.people_id 
+    INNER JOIN
+        user_role ur 
+            ON u.id = ur.user_id 
+    INNER JOIN
+        roles rl 
+            ON ur.role_id = rl.id 
+    WHERE
+        g.parent_id in (
+            select
+                parent_id 
+            from
+                groups a 
+            where
+                a.group_id =?
+        ) 
+        and  rl.name =?
+2021-12-07 15:28:22 TRACE ? binding parameter [1] as [VARCHAR] - [24]
+2021-12-07 15:28:22 TRACE ? binding parameter [2] as [VARCHAR] - [GROUP_LEADER]
+2021-12-07 15:44:12 WARN ? HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m7s811ms782µs314ns).
+2021-12-07 15:44:12 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-12-07 15:44:12 DEBUG ? 
+    select
+        ts.import_id,
+        ts.autoid,
+        ts.people_id,
+        ts.description,
+        DATE_FORMAT(ts.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.created_by,
+        ts.time_keeping_image,
+        ts.state,
+        ts.approved_by,
+        DATE_FORMAT(ts.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.date_type,
+        DATE_FORMAT(ts.keeping_date,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.approval_level,
+        ts.approval_by_level2,
+        DATE_FORMAT(ts.approval_at_level2,
+        '%d/%m/%Y %H:%i:%S') ,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name,
+        p.full_name,
+        ts.role_level1,
+        ts.role_level2  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and p.people_id =  'KA2'  limit ?
+2021-12-07 15:44:12 DEBUG ? 
+    select
+        count(*)  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and p.people_id =  'KA2' 
+2021-12-07 15:45:00 INFO ? Shutting down ExecutorService 'applicationTaskExecutor'
+2021-12-07 15:45:00 INFO ? Shutting down EhCache CacheManager
+2021-12-07 15:45:00 INFO ? Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-07 15:45:00 INFO ? HikariPool-1 - Shutdown initiated...
+2021-12-07 15:45:00 INFO ? HikariPool-1 - Shutdown completed.
+2021-12-07 15:45:05 INFO ? The Class-Path manifest attribute in /home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2021-12-07 15:45:05 INFO ? Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-07 15:45:05 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$374a8b87] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-07 15:45:05 INFO ? Fetching config from server at : http://apiintsit.ztech.com.vn/ztech-config/v1
+2021-12-07 15:45:06 WARN ? Could not locate PropertySource: label not found
+2021-12-07 15:45:06 INFO ? The following profiles are active: ztech
+2021-12-07 15:45:06 INFO ? Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-07 15:45:06 INFO ? Finished Spring Data repository scanning in 124ms. Found 26 JPA repository interfaces.
+2021-12-07 15:45:07 INFO ? BeanFactory id=3140a826-377a-38f9-a780-0e04cd0feedf
+2021-12-07 15:45:07 INFO ? Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$bfc84d89] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-07 15:45:07 INFO ? Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-12-07 15:45:07 INFO ? Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-07 15:45:07 INFO ? Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-07 15:45:07 INFO ? Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-07 15:45:07 INFO ? Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5e29d56a' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-07 15:45:07 INFO ? Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-07 15:45:07 INFO ? Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-07 15:45:07 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$374a8b87] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-07 15:45:08 INFO ? Tomcat initialized with port(s): 9976 (http)
+2021-12-07 15:45:08 INFO ? Initializing ProtocolHandler ["http-nio-9976"]
+2021-12-07 15:45:08 INFO ? Starting service [Tomcat]
+2021-12-07 15:45:08 INFO ? Starting Servlet engine: [Apache Tomcat/9.0.30]
+2021-12-07 15:45:08 INFO ? Initializing Spring embedded WebApplicationContext
+2021-12-07 15:45:08 INFO ? Root WebApplicationContext: initialization completed in 2169 ms
+2021-12-07 15:45:08 INFO ? HikariPool-1 - Starting...
+2021-12-07 15:45:08 INFO ? HikariPool-1 - Start completed.
+2021-12-07 15:45:08 INFO ? HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-07 15:45:08 INFO ? HHH000412: Hibernate Core {5.4.10.Final}
+2021-12-07 15:45:08 INFO ? HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-12-07 15:45:08 INFO ? HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+2021-12-07 15:45:09 INFO ? HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-07 15:45:09 INFO ? Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-07 15:45:10 WARN ? spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-07 15:45:11 DEBUG ? 
+    select
+        apparam0_.autoid as autoid1_2_,
+        apparam0_.description as descript2_2_,
+        apparam0_.gr as gr3_2_,
+        apparam0_.name as name4_2_,
+        apparam0_.value as value5_2_ 
+    from
+        ap_param apparam0_
+2021-12-07 15:45:11 INFO ? ==>loadCache params [ApParam(autoid=1, group=ERROR_DEFINE, name='group_id' cannot be null, value=GROUPID IS NULL, description=Mã nhóm nhân viên không được để trống), ApParam(autoid=2, group=ERROR_DEFINE, name=fk_people, value=people_id does not exited., description=Mã nhân không tồn tại), ApParam(autoid=3, group=ERROR_DEFINE, name=fk_shift_id, value=shift_id, description=Mã ca làm việc không tồn tại.), ApParam(autoid=4, group=APPROVAL_TYPE, name=OT_APPROVAL, value=OT_APPROVAL, description=Loại duyệt OT), ApParam(autoid=5, group=APPROVAL_TYPE, name=KEEPING_APPROVAL, value=KEEPING_APPROVAL, description=Loại duyệt chấm công), ApParam(autoid=6, group=APPROVER, name=GROUP_LEADER, value=GROUP_LEADER, description=Lãnh đạo khối), ApParam(autoid=7, group=APPROVER, name=DEP_LEADER, value=DEP_LEADER, description=Lãnh đạo phòng), ApParam(autoid=8, group=APPROVER, name=ADMIN, value=ADMIN, description=Quản trị viên), ApParam(autoid=9, group=ERROR_DEFINE, name=approval_flow_unq1, value=trung ban ghi, description=Trùng bản ghi)]
+2021-12-07 15:45:11 INFO ? Clearing Cache
+2021-12-07 15:45:11 INFO ? Clear Done
+2021-12-07 15:45:11 INFO ? INIT Cache Done
+2021-12-07 15:45:12 INFO ? Initializing EhCache CacheManager
+2021-12-07 15:45:12 INFO ? 
+
+Using generated security password: fb99a17a-e7e6-476b-8a79-0505c71251e2
+
+2021-12-07 15:45:13 INFO ? Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2021-12-07 15:45:13 INFO ? Creating filter chain: Ant [pattern='/h2-console/**'], []
+2021-12-07 15:45:13 INFO ? Creating filter chain: Ant [pattern='/swagger-ui/index.html'], []
+2021-12-07 15:45:13 INFO ? Creating filter chain: Ant [pattern='/test/**'], []
+2021-12-07 15:45:13 INFO ? Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5ca5a8a4, org.springframework.security.web.context.SecurityContextPersistenceFilter@2792cdda, org.springframework.security.web.header.HeaderWriterFilter@44a5696d, org.springframework.security.web.authentication.logout.LogoutFilter@4c629d4d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2e078e6a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@43ff3f28, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@50a22c0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1e6d53dc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2a515284, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@34772172, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@398a2821, org.springframework.security.web.session.SessionManagementFilter@78d6c49b, org.springframework.security.web.access.ExceptionTranslationFilter@20096ff, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4cb8f22d]
+2021-12-07 15:45:13 INFO ? Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-12-07 15:45:13 INFO ? Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-07 15:45:13 INFO ? LiveReload server is running on port 35729
+2021-12-07 15:45:14 INFO ? Context refreshed
+2021-12-07 15:45:14 INFO ? Found 1 custom documentation plugin(s)
+2021-12-07 15:45:14 INFO ? Scanning for api listing references
+2021-12-07 15:45:14 INFO ? Generating unique operation named: deleteUsingDELETE_1
+2021-12-07 15:45:14 INFO ? Generating unique operation named: getUsingGET_1
+2021-12-07 15:45:14 INFO ? Generating unique operation named: saveUsingPOST_1
+2021-12-07 15:45:14 INFO ? Generating unique operation named: searchUsingGET_1
+2021-12-07 15:45:14 INFO ? Generating unique operation named: updateUsingPUT_1
+2021-12-07 15:45:14 INFO ? Generating unique operation named: getUsingGET_2
+2021-12-07 15:45:14 INFO ? Generating unique operation named: deleteUsingDELETE_2
+2021-12-07 15:45:14 INFO ? Generating unique operation named: getUsingGET_3
+2021-12-07 15:45:14 INFO ? Generating unique operation named: saveUsingPOST_2
+2021-12-07 15:45:14 INFO ? Generating unique operation named: searchUsingGET_2
+2021-12-07 15:45:14 INFO ? Generating unique operation named: updateUsingPUT_2
+2021-12-07 15:45:14 INFO ? Generating unique operation named: deleteUsingDELETE_3
+2021-12-07 15:45:14 INFO ? Generating unique operation named: getUsingGET_4
+2021-12-07 15:45:14 INFO ? Generating unique operation named: searchUsingGET_3
+2021-12-07 15:45:14 INFO ? Generating unique operation named: updateUsingPUT_3
+2021-12-07 15:45:14 INFO ? Generating unique operation named: deleteUsingDELETE_4
+2021-12-07 15:45:14 INFO ? Generating unique operation named: getUsingGET_5
+2021-12-07 15:45:14 INFO ? Generating unique operation named: saveUsingPOST_3
+2021-12-07 15:45:14 INFO ? Generating unique operation named: searchUsingGET_4
+2021-12-07 15:45:14 INFO ? Generating unique operation named: updateUsingPUT_4
+2021-12-07 15:45:14 INFO ? Generating unique operation named: deleteUsingDELETE_5
+2021-12-07 15:45:14 INFO ? Generating unique operation named: searchUsingGET_5
+2021-12-07 15:45:14 INFO ? Generating unique operation named: deleteUsingDELETE_6
+2021-12-07 15:45:14 INFO ? Generating unique operation named: getUsingGET_6
+2021-12-07 15:45:14 INFO ? Generating unique operation named: saveUsingPOST_4
+2021-12-07 15:45:14 INFO ? Generating unique operation named: searchUsingGET_6
+2021-12-07 15:45:14 INFO ? Generating unique operation named: updateUsingPUT_5
+2021-12-07 15:45:14 INFO ? Generating unique operation named: getUsingGET_7
+2021-12-07 15:45:14 INFO ? Generating unique operation named: searchUsingGET_7
+2021-12-07 15:45:14 INFO ? Generating unique operation named: deleteUsingDELETE_7
+2021-12-07 15:45:14 INFO ? Generating unique operation named: getUsingGET_8
+2021-12-07 15:45:14 INFO ? Generating unique operation named: saveUsingPOST_5
+2021-12-07 15:45:14 INFO ? Generating unique operation named: searchUsingGET_8
+2021-12-07 15:45:14 INFO ? Generating unique operation named: updateUsingPUT_6
+2021-12-07 15:45:14 INFO ? Generating unique operation named: deleteUsingDELETE_8
+2021-12-07 15:45:14 INFO ? Generating unique operation named: getUsingGET_9
+2021-12-07 15:45:14 INFO ? Generating unique operation named: saveUsingPOST_6
+2021-12-07 15:45:14 INFO ? Generating unique operation named: searchUsingGET_9
+2021-12-07 15:45:14 INFO ? Generating unique operation named: updateUsingPUT_7
+2021-12-07 15:45:14 INFO ? Generating unique operation named: deleteUsingDELETE_9
+2021-12-07 15:45:14 INFO ? Generating unique operation named: getUsingGET_10
+2021-12-07 15:45:14 INFO ? Generating unique operation named: saveUsingPOST_7
+2021-12-07 15:45:14 INFO ? Generating unique operation named: searchUsingGET_10
+2021-12-07 15:45:14 INFO ? Generating unique operation named: updateUsingPUT_8
+2021-12-07 15:45:14 INFO ? Generating unique operation named: deleteUsingDELETE_10
+2021-12-07 15:45:14 INFO ? Generating unique operation named: getUsingGET_11
+2021-12-07 15:45:14 INFO ? Generating unique operation named: saveUsingPOST_8
+2021-12-07 15:45:14 INFO ? Generating unique operation named: saveAllUsingPOST_1
+2021-12-07 15:45:14 INFO ? Generating unique operation named: searchUsingGET_11
+2021-12-07 15:45:14 INFO ? Generating unique operation named: updateUsingPUT_9
+2021-12-07 15:45:14 INFO ? Generating unique operation named: deleteUsingDELETE_11
+2021-12-07 15:45:14 INFO ? Generating unique operation named: getUsingGET_12
+2021-12-07 15:45:14 INFO ? Generating unique operation named: importExcelUsingPOST_1
+2021-12-07 15:45:14 INFO ? Generating unique operation named: saveUsingPOST_9
+2021-12-07 15:45:14 INFO ? Generating unique operation named: searchUsingGET_12
+2021-12-07 15:45:14 INFO ? Generating unique operation named: updateUsingPUT_10
+2021-12-07 15:45:14 INFO ? Generating unique operation named: approvalUsingPOST_1
+2021-12-07 15:45:14 INFO ? Generating unique operation named: deleteUsingDELETE_12
+2021-12-07 15:45:14 INFO ? Generating unique operation named: getUsingGET_13
+2021-12-07 15:45:14 INFO ? Generating unique operation named: importExcelUsingPOST_2
+2021-12-07 15:45:14 INFO ? Generating unique operation named: saveUsingPOST_10
+2021-12-07 15:45:14 INFO ? Generating unique operation named: searchUsingGET_13
+2021-12-07 15:45:14 INFO ? Generating unique operation named: searchTimekeepingSheetCustomUsingPOST_1
+2021-12-07 15:45:14 INFO ? Generating unique operation named: updateUsingPUT_11
+2021-12-07 15:45:14 INFO ? Generating unique operation named: deleteUsingDELETE_13
+2021-12-07 15:45:14 INFO ? Generating unique operation named: deleteUsingDELETE_14
+2021-12-07 15:45:14 INFO ? Generating unique operation named: getUsingGET_14
+2021-12-07 15:45:14 INFO ? Generating unique operation named: saveUsingPOST_11
+2021-12-07 15:45:14 INFO ? Generating unique operation named: searchUsingGET_14
+2021-12-07 15:45:14 INFO ? Generating unique operation named: updateUsingPUT_12
+2021-12-07 15:45:14 INFO ? Starting ProtocolHandler ["http-nio-9976"]
+2021-12-07 15:45:14 INFO ? Tomcat started on port(s): 9976 (http) with context path ''
+2021-12-07 15:45:14 INFO ? Started ZtechApplication in 9.936 seconds (JVM running for 10.831)
+2021-12-07 15:46:40 INFO ? Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-07 15:46:40 INFO ? Initializing Servlet 'dispatcherServlet'
+2021-12-07 15:46:40 INFO ? Completed initialization in 10 ms
+2021-12-07 15:46:40 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-12-07 15:46:40 DEBUG ? 
+    select
+        ts.import_id,
+        ts.autoid,
+        ts.people_id,
+        ts.description,
+        DATE_FORMAT(ts.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.created_by,
+        ts.time_keeping_image,
+        ts.state,
+        ts.approved_by,
+        DATE_FORMAT(ts.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.date_type,
+        DATE_FORMAT(ts.keeping_date,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.approval_level,
+        ts.approval_by_level2,
+        DATE_FORMAT(ts.approval_at_level2,
+        '%d/%m/%Y %H:%i:%S') ,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name,
+        p.full_name,
+        ts.role_level1,
+        ts.role_level2  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and p.people_id =  'KA2'  limit ?
+2021-12-07 15:46:40 DEBUG ? 
+    select
+        count(*)  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and p.people_id =  'KA2' 
+2021-12-07 15:46:45 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-12-07 15:46:45 DEBUG ? 
+    select
+        ts.import_id,
+        ts.autoid,
+        ts.people_id,
+        ts.description,
+        DATE_FORMAT(ts.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.created_by,
+        ts.time_keeping_image,
+        ts.state,
+        ts.approved_by,
+        DATE_FORMAT(ts.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.date_type,
+        DATE_FORMAT(ts.keeping_date,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.approval_level,
+        ts.approval_by_level2,
+        DATE_FORMAT(ts.approval_at_level2,
+        '%d/%m/%Y %H:%i:%S') ,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name,
+        p.full_name,
+        ts.role_level1,
+        ts.role_level2  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and p.people_id =  'KA2'  limit ?
+2021-12-07 15:46:45 DEBUG ? 
+    select
+        count(*)  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and p.people_id =  'KA2' 
+2021-12-07 15:46:52 INFO ? >>> [permissions] user permissions request  <<< [clientIp] = 127.0.0.1
+2021-12-07 15:46:52 DEBUG ? 
+    select
+        ROW_NUMBER() OVER (
+    ORDER BY
+        role_id asc) rownum ,
+        r.id as role_id,
+        r.name as role_code ,
+        m.id as module_id,
+        m.code as module_code,
+        m.url as module_url ,
+        amp.app_module_action_id as module_action_id,
+        ama.code as module_action_code ,
+        amp.allow 
+    from
+        roles r 
+    inner join
+        app_role_permissions amp 
+            on amp.role_id = r.id 
+    inner join
+        app_module_actions ama 
+            on ama.id = amp.app_module_action_id 
+    inner join
+        app_modules m 
+            on m.id = ama.app_module_id 
+    where
+        r.id in (
+            select
+                r.id 
+            from
+                roles r 
+            where
+                r.id in (
+                    select
+                        ur.role_id 
+                    from
+                        user_role ur 
+                    where
+                        ur.user_id in (
+                            select
+                                u.id 
+                            from
+                                users u 
+                            where
+                                u.username = ?
+                        )
+                    )
+            ) 
+        order by
+            m.ord asc 
+2021-12-07 15:46:52 TRACE ? binding parameter [1] as [VARCHAR] - [KA2]
+2021-12-07 15:46:52 INFO ? >>> [permissions] user permissions response <<< [clientIp] = 127.0.0.1
+2021-12-07 15:46:54 INFO ? >>> [getApprovalPeoples] START <<< [clientIp] = 127.0.0.1
+2021-12-07 15:46:54 DEBUG ? 
+    select
+        people0_.id as id1_14_,
+        people0_.customer_type as customer2_14_,
+        people0_.date_of_birth as date_of_3_14_,
+        people0_.email as email4_14_,
+        people0_.full_name as full_nam5_14_,
+        people0_.gender as gender6_14_,
+        people0_.group_id as group_id7_14_,
+        people0_.image_path as image_pa8_14_,
+        people0_.last_checkin_time as last_che9_14_,
+        people0_.mobile_phone as mobile_10_14_,
+        people0_.people_id as people_11_14_,
+        people0_.status as status12_14_ 
+    from
+        people people0_ 
+    where
+        people0_.people_id=?
+2021-12-07 15:46:54 TRACE ? binding parameter [1] as [VARCHAR] - [KA2]
+2021-12-07 15:46:54 DEBUG ? 
+    select
+        ap.* 
+    from
+        ( select
+            g.group_id,
+            g.parent_id dep_id,
+            u.username 
+        from
+            people p 
+        inner join
+            groups g 
+                on p.group_id = g.group_id 
+        inner join
+            users u 
+                on p.people_id= u.people_id ) a 
+    inner join
+        approval_flow ap 
+            on a.dep_id = ap.dep_id 
+    where
+        a.username=? 
+        and ap.approval_type=?
+2021-12-07 15:46:54 TRACE ? binding parameter [1] as [VARCHAR] - [KA2]
+2021-12-07 15:46:54 TRACE ? binding parameter [2] as [VARCHAR] - [KEEPING_APPROVAL]
+2021-12-07 15:46:54 DEBUG ? 
+    SELECT
+        p.* 
+    FROM
+        people p 
+    INNER JOIN
+        GROUPS g 
+            ON p.group_id= g.group_id 
+    INNER JOIN
+        users u 
+            ON p.people_id= u.people_id 
+    INNER JOIN
+        user_role ur 
+            ON u.id = ur.user_id 
+    INNER JOIN
+        roles rl 
+            ON ur.role_id = rl.id 
+    WHERE
+        g.group_id in (
+            select
+                parent_id 
+            from
+                groups a 
+            where
+                a.group_id =?
+        ) 
+        and  rl.name =?
+2021-12-07 15:46:54 TRACE ? binding parameter [1] as [VARCHAR] - [24]
+2021-12-07 15:46:54 TRACE ? binding parameter [2] as [VARCHAR] - [GROUP_LEADER]
+2021-12-07 15:46:54 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-12-07 15:46:54 DEBUG ? 
+    select
+        ts.import_id,
+        ts.autoid,
+        ts.people_id,
+        ts.description,
+        DATE_FORMAT(ts.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.created_by,
+        ts.time_keeping_image,
+        ts.state,
+        ts.approved_by,
+        DATE_FORMAT(ts.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.date_type,
+        DATE_FORMAT(ts.keeping_date,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.approval_level,
+        ts.approval_by_level2,
+        DATE_FORMAT(ts.approval_at_level2,
+        '%d/%m/%Y %H:%i:%S') ,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name,
+        p.full_name,
+        ts.role_level1,
+        ts.role_level2  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and p.people_id =  'KA2'  limit ?
+2021-12-07 15:46:54 DEBUG ? 
+    select
+        count(*)  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and p.people_id =  'KA2' 
+2021-12-07 15:47:03 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-12-07 15:47:03 DEBUG ? 
+    select
+        ot.import_id,
+        ot.autoid,
+        ot.people_id,
+        ot.working_notes,
+        DATE_FORMAT(ot.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ot.created_by,
+        ot.reject_reason,
+        ot.state,
+        ot.approved_by,
+        DATE_FORMAT(ot.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ot.attachment,
+        ot.managed_by,
+        ot.approval_level,
+        ot.approval_by_level2,
+        DATE_FORMAT(ot.approval_at_level2,
+        '%d/%m/%Y %H:%i:%S') ,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name,
+        p.full_name,
+        ot.role_level1,
+        ot.role_level2,
+        ot.project  
+    from
+        ot_sheet ot 
+    left join
+        people p 
+            on ot.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and p.people_id =  'KA2'  limit ?
+2021-12-07 15:47:03 DEBUG ? 
+    select
+        count(*)  
+    from
+        ot_sheet ot 
+    left join
+        people p 
+            on ot.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and p.people_id =  'KA2' 
+2021-12-07 15:49:03 INFO ? Shutting down ExecutorService 'applicationTaskExecutor'
+2021-12-07 15:49:03 INFO ? Shutting down EhCache CacheManager
+2021-12-07 15:49:03 INFO ? Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-07 15:49:03 INFO ? HikariPool-1 - Shutdown initiated...
+2021-12-07 15:49:03 INFO ? HikariPool-1 - Shutdown completed.
+2021-12-07 15:49:04 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$374a8b87] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-07 15:49:05 INFO ? Fetching config from server at : http://apiintsit.ztech.com.vn/ztech-config/v1
+2021-12-07 15:49:06 WARN ? Could not locate PropertySource: label not found
+2021-12-07 15:49:06 INFO ? The following profiles are active: ztech
+2021-12-07 15:49:06 INFO ? Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-07 15:49:06 INFO ? Finished Spring Data repository scanning in 40ms. Found 7 JPA repository interfaces.
+2021-12-07 15:49:06 INFO ? BeanFactory id=399b114a-c4c5-3477-8cd0-993f5d560fbc
+2021-12-07 15:49:06 INFO ? Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$bfc84d89] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-07 15:49:06 INFO ? Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-12-07 15:49:06 INFO ? Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-07 15:49:06 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$374a8b87] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-07 15:49:06 INFO ? Tomcat initialized with port(s): 9976 (http)
+2021-12-07 15:49:06 INFO ? Initializing ProtocolHandler ["http-nio-9976"]
+2021-12-07 15:49:06 INFO ? Starting service [Tomcat]
+2021-12-07 15:49:06 INFO ? Starting Servlet engine: [Apache Tomcat/9.0.30]
+2021-12-07 15:49:06 INFO ? Initializing Spring embedded WebApplicationContext
+2021-12-07 15:49:06 INFO ? Root WebApplicationContext: initialization completed in 710 ms
+2021-12-07 15:49:07 INFO ? HikariPool-2 - Starting...
+2021-12-07 15:49:07 INFO ? HikariPool-2 - Start completed.
+2021-12-07 15:49:07 INFO ? HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-07 15:49:07 INFO ? HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+2021-12-07 15:49:07 INFO ? HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-07 15:49:07 INFO ? Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-07 15:49:07 WARN ? Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cacheController': Unsatisfied dependency expressed through field 'cacheService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cacheService': Unsatisfied dependency expressed through field 'apParamRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'apParamRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List vn.ztech.enroll.generic.jpa.GenericRepository.findByAttributeName(java.lang.String,java.lang.Object[])! No property attributeName found for type ApParam!
+2021-12-07 15:49:07 INFO ? Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-07 15:49:07 INFO ? HikariPool-2 - Shutdown initiated...
+2021-12-07 15:49:07 INFO ? HikariPool-2 - Shutdown completed.
+2021-12-07 15:49:07 INFO ? Stopping service [Tomcat]
+2021-12-07 15:49:07 INFO ? 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-07 15:49:07 ERROR ? Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cacheController': Unsatisfied dependency expressed through field 'cacheService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cacheService': Unsatisfied dependency expressed through field 'apParamRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'apParamRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List vn.ztech.enroll.generic.jpa.GenericRepository.findByAttributeName(java.lang.String,java.lang.Object[])! No property attributeName found for type ApParam!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at vn.ztech.enroll.ZtechApplication.main(ZtechApplication.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cacheService': Unsatisfied dependency expressed through field 'apParamRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'apParamRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List vn.ztech.enroll.generic.jpa.GenericRepository.findByAttributeName(java.lang.String,java.lang.Object[])! No property attributeName found for type ApParam!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'apParamRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List vn.ztech.enroll.generic.jpa.GenericRepository.findByAttributeName(java.lang.String,java.lang.Object[])! No property attributeName found for type ApParam!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 37 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List vn.ztech.enroll.generic.jpa.GenericRepository.findByAttributeName(java.lang.String,java.lang.Object[])! No property attributeName found for type ApParam!
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:96)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:103)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:209)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:78)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lookupQuery(RepositoryFactorySupport.java:574)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(RepositoryFactorySupport.java:567)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1054)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.mapMethodsToQuery(RepositoryFactorySupport.java:569)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$new$0(RepositoryFactorySupport.java:559)
+	at java.base/java.util.Optional.map(Optional.java:265)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:559)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:332)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:297)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:212)
+	at org.springframework.data.util.Lazy.get(Lazy.java:94)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:300)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:121)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	... 47 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property attributeName found for type ApParam!
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:94)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:382)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:358)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:311)
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:293)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:276)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:82)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:250)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:251)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:380)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:381)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:96)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:89)
+	... 73 common frames omitted
+2021-12-27 00:59:21 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$8818cb40] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-27 00:59:21 INFO ? Fetching config from server at : http://apiintsit.ztech.com.vn/ztech-config/v1
+2021-12-27 00:59:31 INFO ? Connect Timeout Exception on Url - http://apiintsit.ztech.com.vn/ztech-config/v1. Will be trying the next url if available
+2021-12-27 00:59:31 WARN ? Could not locate PropertySource: I/O error on GET request for "http://apiintsit.ztech.com.vn/ztech-config/v1/ztech/ztech/develop": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out
+2021-12-27 00:59:31 INFO ? The following profiles are active: ztech
+2021-12-27 00:59:32 INFO ? Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-27 00:59:32 INFO ? Finished Spring Data repository scanning in 84ms. Found 26 JPA repository interfaces.
+2021-12-27 00:59:32 INFO ? BeanFactory id=3140a826-377a-38f9-a780-0e04cd0feedf
+2021-12-27 00:59:32 INFO ? Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$10968d42] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-27 00:59:32 INFO ? Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-12-27 00:59:32 INFO ? Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-27 00:59:32 INFO ? Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-27 00:59:32 INFO ? Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-27 00:59:32 INFO ? Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@71250b44' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-27 00:59:32 INFO ? Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-27 00:59:32 INFO ? Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-27 00:59:32 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$8818cb40] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-27 00:59:32 INFO ? Tomcat initialized with port(s): 9976 (http)
+2021-12-27 00:59:32 INFO ? Initializing ProtocolHandler ["http-nio-9976"]
+2021-12-27 00:59:32 INFO ? Starting service [Tomcat]
+2021-12-27 00:59:32 INFO ? Starting Servlet engine: [Apache Tomcat/9.0.30]
+2021-12-27 00:59:32 INFO ? Initializing Spring embedded WebApplicationContext
+2021-12-27 00:59:32 INFO ? Root WebApplicationContext: initialization completed in 874 ms
+2021-12-27 00:59:32 INFO ? HikariPool-2 - Starting...
+2021-12-27 00:59:33 INFO ? HikariPool-2 - Start completed.
+2021-12-27 00:59:33 INFO ? HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-27 00:59:33 INFO ? HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+2021-12-27 00:59:34 INFO ? HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-27 00:59:34 INFO ? Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-27 00:59:34 WARN ? spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-27 00:59:35 DEBUG ? 
+    select
+        apparam0_.autoid as autoid1_2_,
+        apparam0_.description as descript2_2_,
+        apparam0_.gr as gr3_2_,
+        apparam0_.name as name4_2_,
+        apparam0_.value as value5_2_ 
+    from
+        ap_param apparam0_
+2021-12-27 00:59:35 INFO ? ==>loadCache params [ApParam(autoid=1, group=ERROR_DEFINE, name='group_id' cannot be null, value=GROUPID IS NULL, description=Mã nhóm nhân viên không được để trống), ApParam(autoid=2, group=ERROR_DEFINE, name=fk_people, value=people_id does not exited., description=Mã nhân không tồn tại), ApParam(autoid=3, group=ERROR_DEFINE, name=fk_shift_id, value=shift_id, description=Mã ca làm việc không tồn tại.), ApParam(autoid=4, group=APPROVAL_TYPE, name=OT_APPROVAL, value=OT_APPROVAL, description=Loại duyệt OT), ApParam(autoid=5, group=APPROVAL_TYPE, name=KEEPING_APPROVAL, value=KEEPING_APPROVAL, description=Loại duyệt chấm công), ApParam(autoid=6, group=APPROVER, name=GROUP_LEADER, value=GROUP_LEADER, description=Lãnh đạo khối), ApParam(autoid=7, group=APPROVER, name=DEP_LEADER, value=DEP_LEADER, description=Lãnh đạo phòng), ApParam(autoid=8, group=APPROVER, name=ADMIN, value=ADMIN, description=Quản trị viên), ApParam(autoid=9, group=ERROR_DEFINE, name=approval_flow_unq1, value=trung ban ghi, description=Trùng bản ghi)]
+2021-12-27 00:59:35 INFO ? Clearing Cache
+2021-12-27 00:59:35 INFO ? Clear Done
+2021-12-27 00:59:35 INFO ? INIT Cache Done
+2021-12-27 00:59:35 ERROR ? Disk Write of ERROR_DEFINE failed: 
+net.sf.ehcache.CacheException: Failed to serialize element due to ConcurrentModificationException. This is frequently the result of inappropriately sharing thread unsafe object (eg. ArrayList, HashMap, etc) between threads
+	at net.sf.ehcache.store.disk.DiskStorageFactory.serializeElement(DiskStorageFactory.java:405)
+	at net.sf.ehcache.store.disk.DiskStorageFactory.write(DiskStorageFactory.java:385)
+	at net.sf.ehcache.store.disk.DiskStorageFactory$DiskWriteTask.call(DiskStorageFactory.java:477)
+	at net.sf.ehcache.store.disk.DiskStorageFactory$PersistentDiskWriteTask.call(DiskStorageFactory.java:1071)
+	at net.sf.ehcache.store.disk.DiskStorageFactory$PersistentDiskWriteTask.call(DiskStorageFactory.java:1055)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.util.ConcurrentModificationException: null
+	at java.base/java.util.ArrayList.writeObject(ArrayList.java:901)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1145)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1497)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1433)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1179)
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1553)
+	at java.base/java.io.ObjectOutputStream.defaultWriteObject(ObjectOutputStream.java:442)
+	at net.sf.ehcache.Element.writeObject(Element.java:875)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1145)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1497)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1433)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1179)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:349)
+	at net.sf.ehcache.util.MemoryEfficientByteArrayOutputStream.serialize(MemoryEfficientByteArrayOutputStream.java:97)
+	at net.sf.ehcache.store.disk.DiskStorageFactory.serializeElement(DiskStorageFactory.java:403)
+	... 10 common frames omitted
+2021-12-27 00:59:37 INFO ? Initializing EhCache CacheManager
+2021-12-27 00:59:37 INFO ? 
+
+Using generated security password: dd65b297-b6fe-45ac-b06c-e0c8ef840fc0
+
+2021-12-27 00:59:37 INFO ? Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2021-12-27 00:59:37 INFO ? Creating filter chain: Ant [pattern='/h2-console/**'], []
+2021-12-27 00:59:37 INFO ? Creating filter chain: Ant [pattern='/swagger-ui/index.html'], []
+2021-12-27 00:59:37 INFO ? Creating filter chain: Ant [pattern='/test/**'], []
+2021-12-27 00:59:37 INFO ? Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e41fcbe, org.springframework.security.web.context.SecurityContextPersistenceFilter@7bbc6c31, org.springframework.security.web.header.HeaderWriterFilter@253052, org.springframework.security.web.authentication.logout.LogoutFilter@6494701, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1ba2500d, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@796dd467, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6875d3b9, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3284db8c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@377a1f84, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1e741e99, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@615ec482, org.springframework.security.web.session.SessionManagementFilter@53069f17, org.springframework.security.web.access.ExceptionTranslationFilter@163b5634, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@45727215]
+2021-12-27 00:59:37 INFO ? Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-12-27 00:59:37 INFO ? Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-27 00:59:37 INFO ? LiveReload server is running on port 35729
+2021-12-27 00:59:37 INFO ? Context refreshed
+2021-12-27 00:59:37 INFO ? Found 1 custom documentation plugin(s)
+2021-12-27 00:59:37 INFO ? Scanning for api listing references
+2021-12-27 00:59:37 INFO ? Generating unique operation named: deleteUsingDELETE_1
+2021-12-27 00:59:37 INFO ? Generating unique operation named: getUsingGET_1
+2021-12-27 00:59:37 INFO ? Generating unique operation named: saveUsingPOST_1
+2021-12-27 00:59:37 INFO ? Generating unique operation named: searchUsingGET_1
+2021-12-27 00:59:37 INFO ? Generating unique operation named: updateUsingPUT_1
+2021-12-27 00:59:37 INFO ? Generating unique operation named: getUsingGET_2
+2021-12-27 00:59:37 INFO ? Generating unique operation named: deleteUsingDELETE_2
+2021-12-27 00:59:37 INFO ? Generating unique operation named: getUsingGET_3
+2021-12-27 00:59:37 INFO ? Generating unique operation named: saveUsingPOST_2
+2021-12-27 00:59:37 INFO ? Generating unique operation named: searchUsingGET_2
+2021-12-27 00:59:37 INFO ? Generating unique operation named: updateUsingPUT_2
+2021-12-27 00:59:37 INFO ? Generating unique operation named: deleteUsingDELETE_3
+2021-12-27 00:59:37 INFO ? Generating unique operation named: getUsingGET_4
+2021-12-27 00:59:37 INFO ? Generating unique operation named: searchUsingGET_3
+2021-12-27 00:59:37 INFO ? Generating unique operation named: updateUsingPUT_3
+2021-12-27 00:59:37 INFO ? Generating unique operation named: deleteUsingDELETE_4
+2021-12-27 00:59:37 INFO ? Generating unique operation named: getUsingGET_5
+2021-12-27 00:59:37 INFO ? Generating unique operation named: saveUsingPOST_3
+2021-12-27 00:59:37 INFO ? Generating unique operation named: searchUsingGET_4
+2021-12-27 00:59:37 INFO ? Generating unique operation named: updateUsingPUT_4
+2021-12-27 00:59:37 INFO ? Generating unique operation named: deleteUsingDELETE_5
+2021-12-27 00:59:37 INFO ? Generating unique operation named: searchUsingGET_5
+2021-12-27 00:59:37 INFO ? Generating unique operation named: deleteUsingDELETE_6
+2021-12-27 00:59:37 INFO ? Generating unique operation named: getUsingGET_6
+2021-12-27 00:59:37 INFO ? Generating unique operation named: saveUsingPOST_4
+2021-12-27 00:59:37 INFO ? Generating unique operation named: searchUsingGET_6
+2021-12-27 00:59:37 INFO ? Generating unique operation named: updateUsingPUT_5
+2021-12-27 00:59:37 INFO ? Generating unique operation named: getUsingGET_7
+2021-12-27 00:59:37 INFO ? Generating unique operation named: searchUsingGET_7
+2021-12-27 00:59:37 INFO ? Generating unique operation named: deleteUsingDELETE_7
+2021-12-27 00:59:37 INFO ? Generating unique operation named: getUsingGET_8
+2021-12-27 00:59:37 INFO ? Generating unique operation named: saveUsingPOST_5
+2021-12-27 00:59:37 INFO ? Generating unique operation named: searchUsingGET_8
+2021-12-27 00:59:37 INFO ? Generating unique operation named: updateUsingPUT_6
+2021-12-27 00:59:37 INFO ? Generating unique operation named: deleteUsingDELETE_8
+2021-12-27 00:59:37 INFO ? Generating unique operation named: getUsingGET_9
+2021-12-27 00:59:37 INFO ? Generating unique operation named: saveUsingPOST_6
+2021-12-27 00:59:37 INFO ? Generating unique operation named: searchUsingGET_9
+2021-12-27 00:59:37 INFO ? Generating unique operation named: updateUsingPUT_7
+2021-12-27 00:59:37 INFO ? Generating unique operation named: deleteUsingDELETE_9
+2021-12-27 00:59:37 INFO ? Generating unique operation named: getUsingGET_10
+2021-12-27 00:59:37 INFO ? Generating unique operation named: saveUsingPOST_7
+2021-12-27 00:59:37 INFO ? Generating unique operation named: searchUsingGET_10
+2021-12-27 00:59:37 INFO ? Generating unique operation named: updateUsingPUT_8
+2021-12-27 00:59:37 INFO ? Generating unique operation named: deleteUsingDELETE_10
+2021-12-27 00:59:37 INFO ? Generating unique operation named: getUsingGET_11
+2021-12-27 00:59:37 INFO ? Generating unique operation named: saveUsingPOST_8
+2021-12-27 00:59:37 INFO ? Generating unique operation named: saveAllUsingPOST_1
+2021-12-27 00:59:37 INFO ? Generating unique operation named: searchUsingGET_11
+2021-12-27 00:59:37 INFO ? Generating unique operation named: updateUsingPUT_9
+2021-12-27 00:59:37 INFO ? Generating unique operation named: deleteUsingDELETE_11
+2021-12-27 00:59:37 INFO ? Generating unique operation named: getUsingGET_12
+2021-12-27 00:59:37 INFO ? Generating unique operation named: importExcelUsingPOST_1
+2021-12-27 00:59:37 INFO ? Generating unique operation named: saveUsingPOST_9
+2021-12-27 00:59:37 INFO ? Generating unique operation named: searchUsingGET_12
+2021-12-27 00:59:37 INFO ? Generating unique operation named: updateUsingPUT_10
+2021-12-27 00:59:37 INFO ? Generating unique operation named: approvalUsingPOST_1
+2021-12-27 00:59:37 INFO ? Generating unique operation named: deleteUsingDELETE_12
+2021-12-27 00:59:37 INFO ? Generating unique operation named: getUsingGET_13
+2021-12-27 00:59:37 INFO ? Generating unique operation named: importExcelUsingPOST_2
+2021-12-27 00:59:37 INFO ? Generating unique operation named: saveUsingPOST_10
+2021-12-27 00:59:37 INFO ? Generating unique operation named: searchUsingGET_13
+2021-12-27 00:59:37 INFO ? Generating unique operation named: searchTimekeepingSheetCustomUsingPOST_1
+2021-12-27 00:59:37 INFO ? Generating unique operation named: updateUsingPUT_11
+2021-12-27 00:59:37 INFO ? Generating unique operation named: deleteUsingDELETE_13
+2021-12-27 00:59:37 INFO ? Generating unique operation named: deleteUsingDELETE_14
+2021-12-27 00:59:37 INFO ? Generating unique operation named: getUsingGET_14
+2021-12-27 00:59:37 INFO ? Generating unique operation named: saveUsingPOST_11
+2021-12-27 00:59:37 INFO ? Generating unique operation named: searchUsingGET_14
+2021-12-27 00:59:37 INFO ? Generating unique operation named: updateUsingPUT_12
+2021-12-27 00:59:37 INFO ? Starting ProtocolHandler ["http-nio-9976"]
+2021-12-27 00:59:37 INFO ? Tomcat started on port(s): 9976 (http) with context path ''
+2021-12-27 00:59:37 INFO ? Started ZtechApplication in 16.402 seconds (JVM running for 1328.231)
+2021-12-27 00:59:37 INFO ? Condition evaluation unchanged
+2021-12-27 01:14:55 INFO ? Shutting down ExecutorService 'applicationTaskExecutor'
+2021-12-27 01:14:55 INFO ? Shutting down EhCache CacheManager
+2021-12-27 01:14:55 INFO ? Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-27 01:14:55 INFO ? HikariPool-2 - Shutdown initiated...
+2021-12-27 01:14:55 INFO ? HikariPool-2 - Shutdown completed.

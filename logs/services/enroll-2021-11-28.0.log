@@ -1,0 +1,2790 @@
+2021-11-28 10:48:37 INFO ? The Class-Path manifest attribute in /home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2021-11-28 10:48:37 INFO ? Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-11-28 10:48:38 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$5ef3da9e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-28 10:48:38 INFO ? Fetching config from server at : http://apiintsit.ztech.com.vn/ztech-config/v1
+2021-11-28 10:48:38 WARN ? Could not locate PropertySource: label not found
+2021-11-28 10:48:38 INFO ? The following profiles are active: ztech
+2021-11-28 10:48:39 INFO ? Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-28 10:48:39 INFO ? Finished Spring Data repository scanning in 111ms. Found 26 JPA repository interfaces.
+2021-11-28 10:48:40 INFO ? BeanFactory id=fefabccd-42e4-37ee-8536-b75e76b5d2da
+2021-11-28 10:48:40 INFO ? Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$e7719ca0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-28 10:48:40 INFO ? Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-11-28 10:48:40 INFO ? Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-28 10:48:40 INFO ? Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-28 10:48:40 INFO ? Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-28 10:48:40 INFO ? Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@471d7d0d' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-28 10:48:40 INFO ? Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-28 10:48:40 INFO ? Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-28 10:48:40 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$5ef3da9e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-28 10:48:40 INFO ? Tomcat initialized with port(s): 9976 (http)
+2021-11-28 10:48:40 INFO ? Initializing ProtocolHandler ["http-nio-9976"]
+2021-11-28 10:48:40 INFO ? Starting service [Tomcat]
+2021-11-28 10:48:40 INFO ? Starting Servlet engine: [Apache Tomcat/9.0.30]
+2021-11-28 10:48:40 INFO ? Initializing Spring embedded WebApplicationContext
+2021-11-28 10:48:40 INFO ? Root WebApplicationContext: initialization completed in 1832 ms
+2021-11-28 10:48:40 INFO ? HikariPool-1 - Starting...
+2021-11-28 10:48:41 INFO ? HikariPool-1 - Start completed.
+2021-11-28 10:48:41 INFO ? HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-28 10:48:41 INFO ? HHH000412: Hibernate Core {5.4.10.Final}
+2021-11-28 10:48:41 INFO ? HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-11-28 10:48:41 INFO ? HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+2021-11-28 10:48:42 INFO ? HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-28 10:48:42 INFO ? Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-28 10:48:43 WARN ? spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-28 10:48:44 DEBUG ? 
+    select
+        apparam0_.autoid as autoid1_2_,
+        apparam0_.description as descript2_2_,
+        apparam0_.gr as gr3_2_,
+        apparam0_.name as name4_2_,
+        apparam0_.value as value5_2_ 
+    from
+        ap_param apparam0_
+2021-11-28 10:48:44 INFO ? ==>loadCache params [ApParam(autoid=1, group=ERROR_DEFINE, name='group_id' cannot be null, value=GROUPID IS NULL, description=Mã nhóm nhân viên không được để trống), ApParam(autoid=2, group=ERROR_DEFINE, name=fk_people, value=people_id does not exited., description=Mã nhân không tồn tại), ApParam(autoid=3, group=ERROR_DEFINE, name=fk_shift_id, value=shift_id, description=Mã ca làm việc không tồn tại.), ApParam(autoid=4, group=APPROVAL_TYPE, name=OT_APPROVAL, value=OT_APPROVAL, description=Loại duyệt OT), ApParam(autoid=5, group=APPROVAL_TYPE, name=KEEPING_APPROVAL, value=KEEPING_APPROVAL, description=Loại duyệt chấm công), ApParam(autoid=6, group=APPROVER, name=GROUP_LEADER, value=GROUP_LEADER, description=Lãnh đạo khối), ApParam(autoid=7, group=APPROVER, name=DEP_LEADER, value=DEP_LEADER, description=Lãnh đạo phòng), ApParam(autoid=8, group=APPROVER, name=ADMIN, value=ADMIN, description=Quản trị viên), ApParam(autoid=9, group=ERROR_DEFINE, name=approval_flow_unq1, value=trung ban ghi, description=Trùng bản ghi)]
+2021-11-28 10:48:44 INFO ? Clearing Cache
+2021-11-28 10:48:44 INFO ? Clear Done
+2021-11-28 10:48:44 INFO ? INIT Cache Done
+2021-11-28 10:48:46 INFO ? Initializing EhCache CacheManager
+2021-11-28 10:48:46 INFO ? 
+
+Using generated security password: d4f4d9c3-99d3-401d-bd18-126a72dc99a8
+
+2021-11-28 10:48:46 INFO ? Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2021-11-28 10:48:46 INFO ? Creating filter chain: Ant [pattern='/h2-console/**'], []
+2021-11-28 10:48:46 INFO ? Creating filter chain: Ant [pattern='/swagger-ui/index.html'], []
+2021-11-28 10:48:46 INFO ? Creating filter chain: Ant [pattern='/test/**'], []
+2021-11-28 10:48:46 INFO ? Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@14f74cda, org.springframework.security.web.context.SecurityContextPersistenceFilter@5c8975fb, org.springframework.security.web.header.HeaderWriterFilter@4fb03757, org.springframework.security.web.authentication.logout.LogoutFilter@39763028, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4e6be6a2, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@67e79eeb, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@65b87dc7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@62255210, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@50b7e1cb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6cb99878, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@84a0fc5, org.springframework.security.web.session.SessionManagementFilter@32da851a, org.springframework.security.web.access.ExceptionTranslationFilter@5bb6361e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6c1265b6]
+2021-11-28 10:48:46 INFO ? Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-11-28 10:48:46 INFO ? Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-28 10:48:46 INFO ? LiveReload server is running on port 35729
+2021-11-28 10:48:47 INFO ? Context refreshed
+2021-11-28 10:48:47 INFO ? Found 1 custom documentation plugin(s)
+2021-11-28 10:48:47 INFO ? Scanning for api listing references
+2021-11-28 10:48:47 INFO ? Generating unique operation named: deleteUsingDELETE_1
+2021-11-28 10:48:47 INFO ? Generating unique operation named: getUsingGET_1
+2021-11-28 10:48:47 INFO ? Generating unique operation named: saveUsingPOST_1
+2021-11-28 10:48:47 INFO ? Generating unique operation named: searchUsingGET_1
+2021-11-28 10:48:47 INFO ? Generating unique operation named: updateUsingPUT_1
+2021-11-28 10:48:47 INFO ? Generating unique operation named: getUsingGET_2
+2021-11-28 10:48:47 INFO ? Generating unique operation named: deleteUsingDELETE_2
+2021-11-28 10:48:47 INFO ? Generating unique operation named: getUsingGET_3
+2021-11-28 10:48:47 INFO ? Generating unique operation named: saveUsingPOST_2
+2021-11-28 10:48:47 INFO ? Generating unique operation named: searchUsingGET_2
+2021-11-28 10:48:47 INFO ? Generating unique operation named: updateUsingPUT_2
+2021-11-28 10:48:47 INFO ? Generating unique operation named: deleteUsingDELETE_3
+2021-11-28 10:48:47 INFO ? Generating unique operation named: getUsingGET_4
+2021-11-28 10:48:47 INFO ? Generating unique operation named: searchUsingGET_3
+2021-11-28 10:48:47 INFO ? Generating unique operation named: updateUsingPUT_3
+2021-11-28 10:48:47 INFO ? Generating unique operation named: deleteUsingDELETE_4
+2021-11-28 10:48:47 INFO ? Generating unique operation named: getUsingGET_5
+2021-11-28 10:48:47 INFO ? Generating unique operation named: saveUsingPOST_3
+2021-11-28 10:48:47 INFO ? Generating unique operation named: searchUsingGET_4
+2021-11-28 10:48:47 INFO ? Generating unique operation named: updateUsingPUT_4
+2021-11-28 10:48:47 INFO ? Generating unique operation named: deleteUsingDELETE_5
+2021-11-28 10:48:47 INFO ? Generating unique operation named: searchUsingGET_5
+2021-11-28 10:48:47 INFO ? Generating unique operation named: deleteUsingDELETE_6
+2021-11-28 10:48:47 INFO ? Generating unique operation named: getUsingGET_6
+2021-11-28 10:48:47 INFO ? Generating unique operation named: saveUsingPOST_4
+2021-11-28 10:48:47 INFO ? Generating unique operation named: searchUsingGET_6
+2021-11-28 10:48:47 INFO ? Generating unique operation named: updateUsingPUT_5
+2021-11-28 10:48:47 INFO ? Generating unique operation named: getUsingGET_7
+2021-11-28 10:48:47 INFO ? Generating unique operation named: searchUsingGET_7
+2021-11-28 10:48:47 INFO ? Generating unique operation named: deleteUsingDELETE_7
+2021-11-28 10:48:47 INFO ? Generating unique operation named: getUsingGET_8
+2021-11-28 10:48:47 INFO ? Generating unique operation named: saveUsingPOST_5
+2021-11-28 10:48:47 INFO ? Generating unique operation named: searchUsingGET_8
+2021-11-28 10:48:47 INFO ? Generating unique operation named: updateUsingPUT_6
+2021-11-28 10:48:47 INFO ? Generating unique operation named: deleteUsingDELETE_8
+2021-11-28 10:48:47 INFO ? Generating unique operation named: getUsingGET_9
+2021-11-28 10:48:47 INFO ? Generating unique operation named: saveUsingPOST_6
+2021-11-28 10:48:47 INFO ? Generating unique operation named: searchUsingGET_9
+2021-11-28 10:48:47 INFO ? Generating unique operation named: updateUsingPUT_7
+2021-11-28 10:48:47 INFO ? Generating unique operation named: deleteUsingDELETE_9
+2021-11-28 10:48:47 INFO ? Generating unique operation named: getUsingGET_10
+2021-11-28 10:48:47 INFO ? Generating unique operation named: saveUsingPOST_7
+2021-11-28 10:48:47 INFO ? Generating unique operation named: searchUsingGET_10
+2021-11-28 10:48:47 INFO ? Generating unique operation named: updateUsingPUT_8
+2021-11-28 10:48:47 INFO ? Generating unique operation named: deleteUsingDELETE_10
+2021-11-28 10:48:47 INFO ? Generating unique operation named: getUsingGET_11
+2021-11-28 10:48:47 INFO ? Generating unique operation named: saveUsingPOST_8
+2021-11-28 10:48:47 INFO ? Generating unique operation named: saveAllUsingPOST_1
+2021-11-28 10:48:47 INFO ? Generating unique operation named: searchUsingGET_11
+2021-11-28 10:48:47 INFO ? Generating unique operation named: updateUsingPUT_9
+2021-11-28 10:48:47 INFO ? Generating unique operation named: deleteUsingDELETE_11
+2021-11-28 10:48:47 INFO ? Generating unique operation named: getUsingGET_12
+2021-11-28 10:48:47 INFO ? Generating unique operation named: importExcelUsingPOST_1
+2021-11-28 10:48:47 INFO ? Generating unique operation named: saveUsingPOST_9
+2021-11-28 10:48:47 INFO ? Generating unique operation named: searchUsingGET_12
+2021-11-28 10:48:47 INFO ? Generating unique operation named: updateUsingPUT_10
+2021-11-28 10:48:47 INFO ? Generating unique operation named: approvalUsingPOST_1
+2021-11-28 10:48:47 INFO ? Generating unique operation named: deleteUsingDELETE_12
+2021-11-28 10:48:47 INFO ? Generating unique operation named: getUsingGET_13
+2021-11-28 10:48:47 INFO ? Generating unique operation named: importExcelUsingPOST_2
+2021-11-28 10:48:47 INFO ? Generating unique operation named: saveUsingPOST_10
+2021-11-28 10:48:47 INFO ? Generating unique operation named: searchUsingGET_13
+2021-11-28 10:48:47 INFO ? Generating unique operation named: updateUsingPUT_11
+2021-11-28 10:48:47 INFO ? Generating unique operation named: deleteUsingDELETE_13
+2021-11-28 10:48:47 INFO ? Generating unique operation named: deleteUsingDELETE_14
+2021-11-28 10:48:47 INFO ? Generating unique operation named: getUsingGET_14
+2021-11-28 10:48:47 INFO ? Generating unique operation named: saveUsingPOST_11
+2021-11-28 10:48:47 INFO ? Generating unique operation named: searchUsingGET_14
+2021-11-28 10:48:47 INFO ? Generating unique operation named: updateUsingPUT_12
+2021-11-28 10:48:47 INFO ? Starting ProtocolHandler ["http-nio-9976"]
+2021-11-28 10:48:47 INFO ? Tomcat started on port(s): 9976 (http) with context path ''
+2021-11-28 10:48:47 INFO ? Started ZtechApplication in 10.061 seconds (JVM running for 11.96)
+2021-11-28 10:53:48 INFO ? Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-28 10:53:48 INFO ? Initializing Servlet 'dispatcherServlet'
+2021-11-28 10:53:48 INFO ? Completed initialization in 9 ms
+2021-11-28 10:53:48 INFO ? >>> [permissions] user permissions request  <<< [clientIp] = 127.0.0.1
+2021-11-28 10:53:48 DEBUG ? 
+    select
+        ROW_NUMBER() OVER (
+    ORDER BY
+        role_id asc) rownum ,
+        r.id as role_id,
+        r.name as role_code ,
+        m.id as module_id,
+        m.code as module_code,
+        m.url as module_url ,
+        amp.app_module_action_id as module_action_id,
+        ama.code as module_action_code ,
+        amp.allow 
+    from
+        roles r 
+    inner join
+        app_role_permissions amp 
+            on amp.role_id = r.id 
+    inner join
+        app_module_actions ama 
+            on ama.id = amp.app_module_action_id 
+    inner join
+        app_modules m 
+            on m.id = ama.app_module_id 
+    where
+        r.id in (
+            select
+                r.id 
+            from
+                roles r 
+            where
+                r.id in (
+                    select
+                        ur.role_id 
+                    from
+                        user_role ur 
+                    where
+                        ur.user_id in (
+                            select
+                                u.id 
+                            from
+                                users u 
+                            where
+                                u.username = ?
+                        )
+                    )
+            ) 
+        order by
+            m.ord asc 
+2021-11-28 10:53:48 TRACE ? binding parameter [1] as [VARCHAR] - [LDKSP2]
+2021-11-28 10:53:48 INFO ? >>> [permissions] user permissions response <<< [clientIp] = 127.0.0.1
+2021-11-28 10:54:03 INFO ? >>> [getApprovalPeoples] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:54:03 DEBUG ? 
+    select
+        people0_.id as id1_14_,
+        people0_.customer_type as customer2_14_,
+        people0_.date_of_birth as date_of_3_14_,
+        people0_.email as email4_14_,
+        people0_.full_name as full_nam5_14_,
+        people0_.gender as gender6_14_,
+        people0_.group_id as group_id7_14_,
+        people0_.image_path as image_pa8_14_,
+        people0_.last_checkin_time as last_che9_14_,
+        people0_.mobile_phone as mobile_10_14_,
+        people0_.people_id as people_11_14_,
+        people0_.status as status12_14_ 
+    from
+        people people0_ 
+    where
+        people0_.people_id=?
+2021-11-28 10:54:03 TRACE ? binding parameter [1] as [VARCHAR] - [LDKSP2]
+2021-11-28 10:54:03 DEBUG ? 
+    select
+        ap.* 
+    from
+        ( select
+            g.group_id,
+            g.parent_id dep_id,
+            u.username 
+        from
+            people p 
+        inner join
+            groups g 
+                on p.group_id = g.group_id 
+        inner join
+            users u 
+                on p.people_id= u.people_id ) a 
+    inner join
+        approval_flow ap 
+            on a.dep_id = ap.dep_id 
+    where
+        a.username=? 
+        and ap.approval_type=?
+2021-11-28 10:54:03 TRACE ? binding parameter [1] as [VARCHAR] - [LDKSP2]
+2021-11-28 10:54:03 TRACE ? binding parameter [2] as [VARCHAR] - [KEEPING_APPROVAL]
+2021-11-28 10:54:03 DEBUG ? 
+    SELECT
+        p.* 
+    FROM
+        people p 
+    INNER JOIN
+        GROUPS g 
+            ON p.group_id= g.group_id 
+    INNER JOIN
+        users u 
+            ON p.people_id= u.people_id 
+    INNER JOIN
+        user_role ur 
+            ON u.id = ur.user_id 
+    INNER JOIN
+        roles rl 
+            ON ur.role_id = rl.id 
+    WHERE
+        g.parent_id in (
+            select
+                parent_id 
+            from
+                groups a 
+            where
+                a.group_id =?
+        ) 
+        and  rl.name =?
+2021-11-28 10:54:03 TRACE ? binding parameter [1] as [VARCHAR] - [19]
+2021-11-28 10:54:03 TRACE ? binding parameter [2] as [VARCHAR] - [DEP_LEADER]
+2021-11-28 10:54:04 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:54:04 DEBUG ? 
+    select
+        ts.import_id,
+        ts.autoid,
+        ts.people_id,
+        ts.description,
+        DATE_FORMAT(ts.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.created_by,
+        ts.time_keeping_image,
+        ts.state,
+        ts.approved_by,
+        DATE_FORMAT(ts.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.date_type,
+        DATE_FORMAT(ts.keeping_date,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.approval_level,
+        ts.approval_by_level2,
+        DATE_FORMAT(ts.approval_at_level2,
+        '%d/%m/%Y %H:%i:%S') ,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name,
+        p.full_name,
+        ts.role_level1,
+        ts.role_level2  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        )  limit ?
+2021-11-28 10:54:04 DEBUG ? 
+    select
+        count(*)  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        ) 
+2021-11-28 10:54:04 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:54:04 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:54:04 TRACE ? binding parameter [1] as [BIGINT] - [377]
+2021-11-28 10:54:05 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:54:05 TRACE ? binding parameter [1] as [BIGINT] - [377]
+2021-11-28 10:54:05 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:54:05 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:54:05 TRACE ? binding parameter [1] as [BIGINT] - [378]
+2021-11-28 10:54:06 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:54:06 TRACE ? binding parameter [1] as [BIGINT] - [378]
+2021-11-28 10:54:06 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:54:06 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:54:06 TRACE ? binding parameter [1] as [BIGINT] - [379]
+2021-11-28 10:54:06 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:54:06 TRACE ? binding parameter [1] as [BIGINT] - [379]
+2021-11-28 10:54:10 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:54:10 DEBUG ? 
+    select
+        ts.import_id,
+        ts.autoid,
+        ts.people_id,
+        ts.description,
+        DATE_FORMAT(ts.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.created_by,
+        ts.time_keeping_image,
+        ts.state,
+        ts.approved_by,
+        DATE_FORMAT(ts.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.date_type,
+        DATE_FORMAT(ts.keeping_date,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.approval_level,
+        ts.approval_by_level2,
+        DATE_FORMAT(ts.approval_at_level2,
+        '%d/%m/%Y %H:%i:%S') ,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name,
+        p.full_name,
+        ts.role_level1,
+        ts.role_level2  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        )  limit ?
+2021-11-28 10:54:11 DEBUG ? 
+    select
+        count(*)  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        ) 
+2021-11-28 10:54:11 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:54:12 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:54:12 TRACE ? binding parameter [1] as [BIGINT] - [377]
+2021-11-28 10:54:12 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:54:12 TRACE ? binding parameter [1] as [BIGINT] - [377]
+2021-11-28 10:54:12 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:54:12 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:54:12 TRACE ? binding parameter [1] as [BIGINT] - [378]
+2021-11-28 10:54:13 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:54:13 TRACE ? binding parameter [1] as [BIGINT] - [378]
+2021-11-28 10:54:13 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:54:13 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:54:13 TRACE ? binding parameter [1] as [BIGINT] - [379]
+2021-11-28 10:54:13 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:54:13 TRACE ? binding parameter [1] as [BIGINT] - [379]
+2021-11-28 10:54:16 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:54:16 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:54:16 TRACE ? binding parameter [1] as [BIGINT] - [379]
+2021-11-28 10:54:16 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:54:16 TRACE ? binding parameter [1] as [BIGINT] - [379]
+2021-11-28 10:54:24 INFO ? >>> [getApprovalPeoples] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:54:24 DEBUG ? 
+    select
+        people0_.id as id1_14_,
+        people0_.customer_type as customer2_14_,
+        people0_.date_of_birth as date_of_3_14_,
+        people0_.email as email4_14_,
+        people0_.full_name as full_nam5_14_,
+        people0_.gender as gender6_14_,
+        people0_.group_id as group_id7_14_,
+        people0_.image_path as image_pa8_14_,
+        people0_.last_checkin_time as last_che9_14_,
+        people0_.mobile_phone as mobile_10_14_,
+        people0_.people_id as people_11_14_,
+        people0_.status as status12_14_ 
+    from
+        people people0_ 
+    where
+        people0_.people_id=?
+2021-11-28 10:54:24 TRACE ? binding parameter [1] as [VARCHAR] - [LDKSP2]
+2021-11-28 10:54:24 DEBUG ? 
+    select
+        ap.* 
+    from
+        ( select
+            g.group_id,
+            g.parent_id dep_id,
+            u.username 
+        from
+            people p 
+        inner join
+            groups g 
+                on p.group_id = g.group_id 
+        inner join
+            users u 
+                on p.people_id= u.people_id ) a 
+    inner join
+        approval_flow ap 
+            on a.dep_id = ap.dep_id 
+    where
+        a.username=? 
+        and ap.approval_type=?
+2021-11-28 10:54:24 TRACE ? binding parameter [1] as [VARCHAR] - [LDKSP2]
+2021-11-28 10:54:24 TRACE ? binding parameter [2] as [VARCHAR] - [KEEPING_APPROVAL]
+2021-11-28 10:54:24 DEBUG ? 
+    SELECT
+        p.* 
+    FROM
+        people p 
+    INNER JOIN
+        GROUPS g 
+            ON p.group_id= g.group_id 
+    INNER JOIN
+        users u 
+            ON p.people_id= u.people_id 
+    INNER JOIN
+        user_role ur 
+            ON u.id = ur.user_id 
+    INNER JOIN
+        roles rl 
+            ON ur.role_id = rl.id 
+    WHERE
+        g.parent_id in (
+            select
+                parent_id 
+            from
+                groups a 
+            where
+                a.group_id =?
+        ) 
+        and  rl.name =?
+2021-11-28 10:54:24 TRACE ? binding parameter [1] as [VARCHAR] - [19]
+2021-11-28 10:54:24 TRACE ? binding parameter [2] as [VARCHAR] - [GROUP_LEADER]
+2021-11-28 10:54:25 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:54:25 DEBUG ? 
+    select
+        ts.import_id,
+        ts.autoid,
+        ts.people_id,
+        ts.description,
+        DATE_FORMAT(ts.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.created_by,
+        ts.time_keeping_image,
+        ts.state,
+        ts.approved_by,
+        DATE_FORMAT(ts.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.date_type,
+        DATE_FORMAT(ts.keeping_date,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.approval_level,
+        ts.approval_by_level2,
+        DATE_FORMAT(ts.approval_at_level2,
+        '%d/%m/%Y %H:%i:%S') ,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name,
+        p.full_name,
+        ts.role_level1,
+        ts.role_level2  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and p.people_id =  'LDKSP2'  limit ?
+2021-11-28 10:54:25 DEBUG ? 
+    select
+        count(*)  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and p.people_id =  'LDKSP2' 
+2021-11-28 10:54:28 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:54:28 DEBUG ? 
+    select
+        ts.import_id,
+        ts.autoid,
+        ts.people_id,
+        ts.description,
+        DATE_FORMAT(ts.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.created_by,
+        ts.time_keeping_image,
+        ts.state,
+        ts.approved_by,
+        DATE_FORMAT(ts.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.date_type,
+        DATE_FORMAT(ts.keeping_date,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.approval_level,
+        ts.approval_by_level2,
+        DATE_FORMAT(ts.approval_at_level2,
+        '%d/%m/%Y %H:%i:%S') ,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name,
+        p.full_name,
+        ts.role_level1,
+        ts.role_level2  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        )  limit ?
+2021-11-28 10:54:28 DEBUG ? 
+    select
+        count(*)  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        ) 
+2021-11-28 10:54:29 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:54:29 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:54:29 TRACE ? binding parameter [1] as [BIGINT] - [377]
+2021-11-28 10:54:29 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:54:29 TRACE ? binding parameter [1] as [BIGINT] - [377]
+2021-11-28 10:54:29 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:54:30 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:54:30 TRACE ? binding parameter [1] as [BIGINT] - [378]
+2021-11-28 10:54:30 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:54:30 TRACE ? binding parameter [1] as [BIGINT] - [378]
+2021-11-28 10:54:30 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:54:30 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:54:30 TRACE ? binding parameter [1] as [BIGINT] - [379]
+2021-11-28 10:54:31 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:54:31 TRACE ? binding parameter [1] as [BIGINT] - [379]
+2021-11-28 10:54:40 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:54:40 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:54:40 TRACE ? binding parameter [1] as [BIGINT] - [378]
+2021-11-28 10:54:40 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:54:40 TRACE ? binding parameter [1] as [BIGINT] - [378]
+2021-11-28 10:54:45 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:54:45 DEBUG ? 
+    select
+        ts.import_id,
+        ts.autoid,
+        ts.people_id,
+        ts.description,
+        DATE_FORMAT(ts.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.created_by,
+        ts.time_keeping_image,
+        ts.state,
+        ts.approved_by,
+        DATE_FORMAT(ts.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.date_type,
+        DATE_FORMAT(ts.keeping_date,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.approval_level,
+        ts.approval_by_level2,
+        DATE_FORMAT(ts.approval_at_level2,
+        '%d/%m/%Y %H:%i:%S') ,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name,
+        p.full_name,
+        ts.role_level1,
+        ts.role_level2  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        )  limit ?
+2021-11-28 10:54:45 DEBUG ? 
+    select
+        count(*)  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        ) 
+2021-11-28 10:54:46 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:54:46 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:54:46 TRACE ? binding parameter [1] as [BIGINT] - [377]
+2021-11-28 10:54:46 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:54:46 TRACE ? binding parameter [1] as [BIGINT] - [377]
+2021-11-28 10:54:47 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:54:47 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:54:47 TRACE ? binding parameter [1] as [BIGINT] - [378]
+2021-11-28 10:54:47 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:54:47 TRACE ? binding parameter [1] as [BIGINT] - [378]
+2021-11-28 10:54:47 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:54:47 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:54:47 TRACE ? binding parameter [1] as [BIGINT] - [379]
+2021-11-28 10:54:48 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:54:48 TRACE ? binding parameter [1] as [BIGINT] - [379]
+2021-11-28 10:54:51 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:54:52 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:54:52 TRACE ? binding parameter [1] as [BIGINT] - [379]
+2021-11-28 10:54:52 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:54:52 TRACE ? binding parameter [1] as [BIGINT] - [379]
+2021-11-28 10:54:52 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:54:52 DEBUG ? 
+    select
+        groups0_.group_id as group_id1_9_0_,
+        groups0_.group_code as group_co2_9_0_,
+        groups0_.group_description as group_de3_9_0_,
+        groups0_.group_name as group_na4_9_0_,
+        groups0_.manager as manager5_9_0_,
+        groups0_.parent_id as parent_i6_9_0_,
+        groups0_.root_id as root_id7_9_0_,
+        groups0_.status as status8_9_0_ 
+    from
+        groups groups0_ 
+    where
+        groups0_.group_id=?
+2021-11-28 10:54:52 TRACE ? binding parameter [1] as [BIGINT] - [19]
+2021-11-28 10:54:58 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:54:58 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:54:58 TRACE ? binding parameter [1] as [BIGINT] - [378]
+2021-11-28 10:54:58 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:54:58 TRACE ? binding parameter [1] as [BIGINT] - [378]
+2021-11-28 10:54:58 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:54:59 DEBUG ? 
+    select
+        groups0_.group_id as group_id1_9_0_,
+        groups0_.group_code as group_co2_9_0_,
+        groups0_.group_description as group_de3_9_0_,
+        groups0_.group_name as group_na4_9_0_,
+        groups0_.manager as manager5_9_0_,
+        groups0_.parent_id as parent_i6_9_0_,
+        groups0_.root_id as root_id7_9_0_,
+        groups0_.status as status8_9_0_ 
+    from
+        groups groups0_ 
+    where
+        groups0_.group_id=?
+2021-11-28 10:54:59 TRACE ? binding parameter [1] as [BIGINT] - [18]
+2021-11-28 10:55:03 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:55:03 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:55:03 TRACE ? binding parameter [1] as [BIGINT] - [377]
+2021-11-28 10:55:03 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:55:03 TRACE ? binding parameter [1] as [BIGINT] - [377]
+2021-11-28 10:55:03 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:55:03 DEBUG ? 
+    select
+        groups0_.group_id as group_id1_9_0_,
+        groups0_.group_code as group_co2_9_0_,
+        groups0_.group_description as group_de3_9_0_,
+        groups0_.group_name as group_na4_9_0_,
+        groups0_.manager as manager5_9_0_,
+        groups0_.parent_id as parent_i6_9_0_,
+        groups0_.root_id as root_id7_9_0_,
+        groups0_.status as status8_9_0_ 
+    from
+        groups groups0_ 
+    where
+        groups0_.group_id=?
+2021-11-28 10:55:03 TRACE ? binding parameter [1] as [BIGINT] - [18]
+2021-11-28 10:55:09 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:55:09 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:55:09 TRACE ? binding parameter [1] as [BIGINT] - [378]
+2021-11-28 10:55:09 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:55:09 TRACE ? binding parameter [1] as [BIGINT] - [378]
+2021-11-28 10:55:09 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:55:09 DEBUG ? 
+    select
+        groups0_.group_id as group_id1_9_0_,
+        groups0_.group_code as group_co2_9_0_,
+        groups0_.group_description as group_de3_9_0_,
+        groups0_.group_name as group_na4_9_0_,
+        groups0_.manager as manager5_9_0_,
+        groups0_.parent_id as parent_i6_9_0_,
+        groups0_.root_id as root_id7_9_0_,
+        groups0_.status as status8_9_0_ 
+    from
+        groups groups0_ 
+    where
+        groups0_.group_id=?
+2021-11-28 10:55:09 TRACE ? binding parameter [1] as [BIGINT] - [18]
+2021-11-28 10:56:28 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:56:28 DEBUG ? 
+    select
+        ts.import_id,
+        ts.autoid,
+        ts.people_id,
+        ts.description,
+        DATE_FORMAT(ts.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.created_by,
+        ts.time_keeping_image,
+        ts.state,
+        ts.approved_by,
+        DATE_FORMAT(ts.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.date_type,
+        DATE_FORMAT(ts.keeping_date,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.approval_level,
+        ts.approval_by_level2,
+        DATE_FORMAT(ts.approval_at_level2,
+        '%d/%m/%Y %H:%i:%S') ,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name,
+        p.full_name,
+        ts.role_level1,
+        ts.role_level2  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        )  limit ?
+2021-11-28 10:56:28 DEBUG ? 
+    select
+        count(*)  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        ) 
+2021-11-28 10:56:28 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:56:28 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:56:28 TRACE ? binding parameter [1] as [BIGINT] - [377]
+2021-11-28 10:56:29 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:56:29 TRACE ? binding parameter [1] as [BIGINT] - [377]
+2021-11-28 10:56:29 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:56:29 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:56:29 TRACE ? binding parameter [1] as [BIGINT] - [378]
+2021-11-28 10:56:29 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:56:29 TRACE ? binding parameter [1] as [BIGINT] - [378]
+2021-11-28 10:56:30 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:56:30 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:56:30 TRACE ? binding parameter [1] as [BIGINT] - [379]
+2021-11-28 10:56:30 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:56:30 TRACE ? binding parameter [1] as [BIGINT] - [379]
+2021-11-28 10:56:35 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:56:35 DEBUG ? 
+    select
+        ts.import_id,
+        ts.autoid,
+        ts.people_id,
+        ts.description,
+        DATE_FORMAT(ts.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.created_by,
+        ts.time_keeping_image,
+        ts.state,
+        ts.approved_by,
+        DATE_FORMAT(ts.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.date_type,
+        DATE_FORMAT(ts.keeping_date,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.approval_level,
+        ts.approval_by_level2,
+        DATE_FORMAT(ts.approval_at_level2,
+        '%d/%m/%Y %H:%i:%S') ,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name,
+        p.full_name,
+        ts.role_level1,
+        ts.role_level2  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        )  limit ?
+2021-11-28 10:56:35 DEBUG ? 
+    select
+        count(*)  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        ) 
+2021-11-28 10:56:35 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:56:35 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:56:35 TRACE ? binding parameter [1] as [BIGINT] - [377]
+2021-11-28 10:56:36 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:56:36 TRACE ? binding parameter [1] as [BIGINT] - [377]
+2021-11-28 10:56:36 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:56:36 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:56:36 TRACE ? binding parameter [1] as [BIGINT] - [378]
+2021-11-28 10:56:37 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:56:37 TRACE ? binding parameter [1] as [BIGINT] - [378]
+2021-11-28 10:56:37 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:56:37 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:56:37 TRACE ? binding parameter [1] as [BIGINT] - [379]
+2021-11-28 10:56:37 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:56:37 TRACE ? binding parameter [1] as [BIGINT] - [379]
+2021-11-28 10:56:50 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:56:50 DEBUG ? 
+    select
+        ts.import_id,
+        ts.autoid,
+        ts.people_id,
+        ts.description,
+        DATE_FORMAT(ts.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.created_by,
+        ts.time_keeping_image,
+        ts.state,
+        ts.approved_by,
+        DATE_FORMAT(ts.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.date_type,
+        DATE_FORMAT(ts.keeping_date,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.approval_level,
+        ts.approval_by_level2,
+        DATE_FORMAT(ts.approval_at_level2,
+        '%d/%m/%Y %H:%i:%S') ,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name,
+        p.full_name,
+        ts.role_level1,
+        ts.role_level2  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and STR_TO_DATE(DATE_FORMAT(ts.keeping_date,'%d/%m/%Y'),'%d/%m/%Y') >= STR_TO_DATE('17/11/2021','%d/%m/%Y')  
+        and STR_TO_DATE(DATE_FORMAT(ts.keeping_date,'%d/%m/%Y'),'%d/%m/%Y') <= STR_TO_DATE('17/11/2021','%d/%m/%Y')  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        )  limit ?
+2021-11-28 10:56:50 DEBUG ? 
+    select
+        count(*)  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and STR_TO_DATE(DATE_FORMAT(ts.keeping_date,'%d/%m/%Y'),'%d/%m/%Y') >= STR_TO_DATE('17/11/2021','%d/%m/%Y')  
+        and STR_TO_DATE(DATE_FORMAT(ts.keeping_date,'%d/%m/%Y'),'%d/%m/%Y') <= STR_TO_DATE('17/11/2021','%d/%m/%Y')  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        ) 
+2021-11-28 10:56:51 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:56:51 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:56:51 TRACE ? binding parameter [1] as [BIGINT] - [377]
+2021-11-28 10:56:51 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:56:51 TRACE ? binding parameter [1] as [BIGINT] - [377]
+2021-11-28 10:57:00 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:57:00 DEBUG ? 
+    select
+        ts.import_id,
+        ts.autoid,
+        ts.people_id,
+        ts.description,
+        DATE_FORMAT(ts.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.created_by,
+        ts.time_keeping_image,
+        ts.state,
+        ts.approved_by,
+        DATE_FORMAT(ts.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.date_type,
+        DATE_FORMAT(ts.keeping_date,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.approval_level,
+        ts.approval_by_level2,
+        DATE_FORMAT(ts.approval_at_level2,
+        '%d/%m/%Y %H:%i:%S') ,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name,
+        p.full_name,
+        ts.role_level1,
+        ts.role_level2  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        )  limit ?
+2021-11-28 10:57:00 DEBUG ? 
+    select
+        count(*)  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        ) 
+2021-11-28 10:57:01 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:57:01 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:57:01 TRACE ? binding parameter [1] as [BIGINT] - [377]
+2021-11-28 10:57:01 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:57:01 TRACE ? binding parameter [1] as [BIGINT] - [377]
+2021-11-28 10:57:01 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:57:01 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:57:01 TRACE ? binding parameter [1] as [BIGINT] - [378]
+2021-11-28 10:57:02 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:57:02 TRACE ? binding parameter [1] as [BIGINT] - [378]
+2021-11-28 10:57:02 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:57:02 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:57:02 TRACE ? binding parameter [1] as [BIGINT] - [379]
+2021-11-28 10:57:02 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:57:02 TRACE ? binding parameter [1] as [BIGINT] - [379]
+2021-11-28 10:57:10 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:57:10 DEBUG ? 
+    select
+        ts.import_id,
+        ts.autoid,
+        ts.people_id,
+        ts.description,
+        DATE_FORMAT(ts.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.created_by,
+        ts.time_keeping_image,
+        ts.state,
+        ts.approved_by,
+        DATE_FORMAT(ts.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.date_type,
+        DATE_FORMAT(ts.keeping_date,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.approval_level,
+        ts.approval_by_level2,
+        DATE_FORMAT(ts.approval_at_level2,
+        '%d/%m/%Y %H:%i:%S') ,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name,
+        p.full_name,
+        ts.role_level1,
+        ts.role_level2  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        )  limit ?
+2021-11-28 10:57:10 DEBUG ? 
+    select
+        count(*)  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        ) 
+2021-11-28 10:57:11 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:57:11 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:57:11 TRACE ? binding parameter [1] as [BIGINT] - [377]
+2021-11-28 10:57:11 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:57:11 TRACE ? binding parameter [1] as [BIGINT] - [377]
+2021-11-28 10:57:11 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:57:12 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:57:12 TRACE ? binding parameter [1] as [BIGINT] - [378]
+2021-11-28 10:57:12 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:57:12 TRACE ? binding parameter [1] as [BIGINT] - [378]
+2021-11-28 10:57:12 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:57:12 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:57:12 TRACE ? binding parameter [1] as [BIGINT] - [379]
+2021-11-28 10:57:12 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:57:12 TRACE ? binding parameter [1] as [BIGINT] - [379]
+2021-11-28 10:57:13 INFO ? >>> [search] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:57:13 DEBUG ? 
+    select
+        ts.import_id,
+        ts.autoid,
+        ts.people_id,
+        ts.description,
+        DATE_FORMAT(ts.created_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.created_by,
+        ts.time_keeping_image,
+        ts.state,
+        ts.approved_by,
+        DATE_FORMAT(ts.approved_at,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.date_type,
+        DATE_FORMAT(ts.keeping_date,
+        '%d/%m/%Y %H:%i:%S'),
+        ts.approval_level,
+        ts.approval_by_level2,
+        DATE_FORMAT(ts.approval_at_level2,
+        '%d/%m/%Y %H:%i:%S') ,
+        p.date_of_birth,
+        p.gender,
+        p.registered_branch,
+        p.group_id,
+        p.image_path,
+        p.status,
+        p.mobile_phone,
+        g.group_name,
+        p.customer_type,
+        g.parent_id as orgId,
+        ct.name,
+        p.full_name,
+        ts.role_level1,
+        ts.role_level2  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        )  limit ?
+2021-11-28 10:57:13 DEBUG ? 
+    select
+        count(*)  
+    from
+        timekeeping_sheet ts 
+    left join
+        people p 
+            on ts.people_id = p.people_id  
+    left join
+        customertype ct 
+            on p.customer_type = ct.id  
+    left join
+        groups g 
+            on p.group_id = g.group_id  
+    where
+        1=1  
+        and g.parent_id =  17  
+        and (
+            ts.approved_by= 'LDKSP2' 
+            or ts.role_level2 = 'GROUP_LEADER'
+        ) 
+2021-11-28 10:57:13 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:57:13 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:57:13 TRACE ? binding parameter [1] as [BIGINT] - [377]
+2021-11-28 10:57:13 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:57:13 TRACE ? binding parameter [1] as [BIGINT] - [377]
+2021-11-28 10:57:14 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:57:14 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:57:14 TRACE ? binding parameter [1] as [BIGINT] - [378]
+2021-11-28 10:57:14 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:57:14 TRACE ? binding parameter [1] as [BIGINT] - [378]
+2021-11-28 10:57:14 INFO ? >>> [get] START <<< [clientIp] = 127.0.0.1
+2021-11-28 10:57:14 DEBUG ? 
+    select
+        timekeepin0_.autoid as autoid1_21_0_,
+        timekeepin0_.approval_at_level2 as approval2_21_0_,
+        timekeepin0_.approval_by_level2 as approval3_21_0_,
+        timekeepin0_.approval_level as approval4_21_0_,
+        timekeepin0_.approved_at as approved5_21_0_,
+        timekeepin0_.approved_by as approved6_21_0_,
+        timekeepin0_.created_at as created_7_21_0_,
+        timekeepin0_.created_by as created_8_21_0_,
+        timekeepin0_.date_type as date_typ9_21_0_,
+        timekeepin0_.description as descrip10_21_0_,
+        timekeepin0_.import_id as import_11_21_0_,
+        timekeepin0_.keeping_date as keeping12_21_0_,
+        timekeepin0_.people_id as people_13_21_0_,
+        timekeepin0_.role_level1 as role_le14_21_0_,
+        timekeepin0_.role_level2 as role_le15_21_0_,
+        timekeepin0_.rule_id as rule_id16_21_0_,
+        timekeepin0_.state as state17_21_0_,
+        timekeepin0_.supervisor as supervi18_21_0_,
+        timekeepin0_.time_keeping_image as time_ke19_21_0_ 
+    from
+        timekeeping_sheet timekeepin0_ 
+    where
+        timekeepin0_.autoid=?
+2021-11-28 10:57:14 TRACE ? binding parameter [1] as [BIGINT] - [379]
+2021-11-28 10:57:15 DEBUG ? 
+    SELECT
+        a.* 
+    FROM
+        timekeeping_date a 
+    INNER JOIN
+        timekeeping_sheet_date b 
+            ON a.autoid=b.date_id 
+    WHERE
+        b.sheet_id=?
+2021-11-28 10:57:15 TRACE ? binding parameter [1] as [BIGINT] - [379]
+2021-11-28 16:26:54 INFO ? Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-28 16:26:54 INFO ? Shutting down EhCache CacheManager
+2021-11-28 16:26:54 INFO ? Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-28 16:26:54 INFO ? HikariPool-1 - Shutdown initiated...
+2021-11-28 16:26:55 INFO ? HikariPool-1 - Shutdown completed.
+2021-11-28 18:02:13 INFO ? The Class-Path manifest attribute in /home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2021-11-28 18:02:13 INFO ? Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-11-28 18:02:13 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a99a7215] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-28 18:02:13 INFO ? Fetching config from server at : http://apiintsit.ztech.com.vn/ztech-config/v1
+2021-11-28 18:02:17 WARN ? Could not locate PropertySource: label not found
+2021-11-28 18:02:17 INFO ? The following profiles are active: ztech
+2021-11-28 18:02:18 INFO ? Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-28 18:02:18 INFO ? Finished Spring Data repository scanning in 92ms. Found 26 JPA repository interfaces.
+2021-11-28 18:02:18 INFO ? BeanFactory id=3140a826-377a-38f9-a780-0e04cd0feedf
+2021-11-28 18:02:18 INFO ? Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$32183417] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-28 18:02:18 INFO ? Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-11-28 18:02:18 INFO ? Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-28 18:02:18 INFO ? Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-28 18:02:18 INFO ? Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-28 18:02:18 INFO ? Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@2c260692' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-28 18:02:18 INFO ? Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-28 18:02:18 INFO ? Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-28 18:02:18 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a99a7215] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-28 18:02:19 INFO ? Tomcat initialized with port(s): 9976 (http)
+2021-11-28 18:02:19 INFO ? Initializing ProtocolHandler ["http-nio-9976"]
+2021-11-28 18:02:19 INFO ? Starting service [Tomcat]
+2021-11-28 18:02:19 INFO ? Starting Servlet engine: [Apache Tomcat/9.0.30]
+2021-11-28 18:02:19 INFO ? Initializing Spring embedded WebApplicationContext
+2021-11-28 18:02:19 INFO ? Root WebApplicationContext: initialization completed in 1782 ms
+2021-11-28 18:02:19 INFO ? HikariPool-1 - Starting...
+2021-11-28 18:02:19 INFO ? HikariPool-1 - Start completed.
+2021-11-28 18:02:19 INFO ? HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-28 18:02:19 INFO ? HHH000412: Hibernate Core {5.4.10.Final}
+2021-11-28 18:02:19 INFO ? HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-11-28 18:02:19 INFO ? HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+2021-11-28 18:02:20 INFO ? HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-28 18:02:20 INFO ? Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-28 18:02:21 WARN ? spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-28 18:02:21 DEBUG ? 
+    select
+        apparam0_.autoid as autoid1_2_,
+        apparam0_.description as descript2_2_,
+        apparam0_.gr as gr3_2_,
+        apparam0_.name as name4_2_,
+        apparam0_.value as value5_2_ 
+    from
+        ap_param apparam0_
+2021-11-28 18:02:22 INFO ? ==>loadCache params [ApParam(autoid=1, group=ERROR_DEFINE, name='group_id' cannot be null, value=GROUPID IS NULL, description=Mã nhóm nhân viên không được để trống), ApParam(autoid=2, group=ERROR_DEFINE, name=fk_people, value=people_id does not exited., description=Mã nhân không tồn tại), ApParam(autoid=3, group=ERROR_DEFINE, name=fk_shift_id, value=shift_id, description=Mã ca làm việc không tồn tại.), ApParam(autoid=4, group=APPROVAL_TYPE, name=OT_APPROVAL, value=OT_APPROVAL, description=Loại duyệt OT), ApParam(autoid=5, group=APPROVAL_TYPE, name=KEEPING_APPROVAL, value=KEEPING_APPROVAL, description=Loại duyệt chấm công), ApParam(autoid=6, group=APPROVER, name=GROUP_LEADER, value=GROUP_LEADER, description=Lãnh đạo khối), ApParam(autoid=7, group=APPROVER, name=DEP_LEADER, value=DEP_LEADER, description=Lãnh đạo phòng), ApParam(autoid=8, group=APPROVER, name=ADMIN, value=ADMIN, description=Quản trị viên), ApParam(autoid=9, group=ERROR_DEFINE, name=approval_flow_unq1, value=trung ban ghi, description=Trùng bản ghi)]
+2021-11-28 18:02:22 INFO ? Clearing Cache
+2021-11-28 18:02:22 INFO ? Clear Done
+2021-11-28 18:02:22 INFO ? INIT Cache Done
+2021-11-28 18:02:23 INFO ? Initializing EhCache CacheManager
+2021-11-28 18:02:23 INFO ? 
+
+Using generated security password: 8da2b7f6-1762-4c6b-b6f6-76500fe1ff11
+
+2021-11-28 18:02:23 INFO ? Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2021-11-28 18:02:23 INFO ? Creating filter chain: Ant [pattern='/h2-console/**'], []
+2021-11-28 18:02:23 INFO ? Creating filter chain: Ant [pattern='/swagger-ui/index.html'], []
+2021-11-28 18:02:23 INFO ? Creating filter chain: Ant [pattern='/test/**'], []
+2021-11-28 18:02:23 INFO ? Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@44923b27, org.springframework.security.web.context.SecurityContextPersistenceFilter@604e1402, org.springframework.security.web.header.HeaderWriterFilter@2c5e7034, org.springframework.security.web.authentication.logout.LogoutFilter@37788c23, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2f66ad47, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1a869635, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2e0ec79e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@54ba1294, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2872f003, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@444098dc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5bd23a34, org.springframework.security.web.session.SessionManagementFilter@1ea7559c, org.springframework.security.web.access.ExceptionTranslationFilter@25b5c4c5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6acc76b2]
+2021-11-28 18:02:23 INFO ? Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-11-28 18:02:23 INFO ? Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-28 18:02:23 INFO ? LiveReload server is running on port 35729
+2021-11-28 18:02:24 INFO ? Context refreshed
+2021-11-28 18:02:24 INFO ? Found 1 custom documentation plugin(s)
+2021-11-28 18:02:24 INFO ? Scanning for api listing references
+2021-11-28 18:02:24 INFO ? Generating unique operation named: deleteUsingDELETE_1
+2021-11-28 18:02:24 INFO ? Generating unique operation named: getUsingGET_1
+2021-11-28 18:02:24 INFO ? Generating unique operation named: saveUsingPOST_1
+2021-11-28 18:02:24 INFO ? Generating unique operation named: searchUsingGET_1
+2021-11-28 18:02:24 INFO ? Generating unique operation named: updateUsingPUT_1
+2021-11-28 18:02:24 INFO ? Generating unique operation named: getUsingGET_2
+2021-11-28 18:02:24 INFO ? Generating unique operation named: deleteUsingDELETE_2
+2021-11-28 18:02:24 INFO ? Generating unique operation named: getUsingGET_3
+2021-11-28 18:02:24 INFO ? Generating unique operation named: saveUsingPOST_2
+2021-11-28 18:02:24 INFO ? Generating unique operation named: searchUsingGET_2
+2021-11-28 18:02:24 INFO ? Generating unique operation named: updateUsingPUT_2
+2021-11-28 18:02:24 INFO ? Generating unique operation named: deleteUsingDELETE_3
+2021-11-28 18:02:24 INFO ? Generating unique operation named: getUsingGET_4
+2021-11-28 18:02:24 INFO ? Generating unique operation named: searchUsingGET_3
+2021-11-28 18:02:24 INFO ? Generating unique operation named: updateUsingPUT_3
+2021-11-28 18:02:24 INFO ? Generating unique operation named: deleteUsingDELETE_4
+2021-11-28 18:02:24 INFO ? Generating unique operation named: getUsingGET_5
+2021-11-28 18:02:24 INFO ? Generating unique operation named: saveUsingPOST_3
+2021-11-28 18:02:24 INFO ? Generating unique operation named: searchUsingGET_4
+2021-11-28 18:02:24 INFO ? Generating unique operation named: updateUsingPUT_4
+2021-11-28 18:02:24 INFO ? Generating unique operation named: deleteUsingDELETE_5
+2021-11-28 18:02:24 INFO ? Generating unique operation named: searchUsingGET_5
+2021-11-28 18:02:24 INFO ? Generating unique operation named: deleteUsingDELETE_6
+2021-11-28 18:02:24 INFO ? Generating unique operation named: getUsingGET_6
+2021-11-28 18:02:24 INFO ? Generating unique operation named: saveUsingPOST_4
+2021-11-28 18:02:24 INFO ? Generating unique operation named: searchUsingGET_6
+2021-11-28 18:02:24 INFO ? Generating unique operation named: updateUsingPUT_5
+2021-11-28 18:02:24 INFO ? Generating unique operation named: getUsingGET_7
+2021-11-28 18:02:24 INFO ? Generating unique operation named: searchUsingGET_7
+2021-11-28 18:02:24 INFO ? Generating unique operation named: deleteUsingDELETE_7
+2021-11-28 18:02:24 INFO ? Generating unique operation named: getUsingGET_8
+2021-11-28 18:02:24 INFO ? Generating unique operation named: saveUsingPOST_5
+2021-11-28 18:02:24 INFO ? Generating unique operation named: searchUsingGET_8
+2021-11-28 18:02:24 INFO ? Generating unique operation named: updateUsingPUT_6
+2021-11-28 18:02:24 INFO ? Generating unique operation named: deleteUsingDELETE_8
+2021-11-28 18:02:24 INFO ? Generating unique operation named: getUsingGET_9
+2021-11-28 18:02:24 INFO ? Generating unique operation named: saveUsingPOST_6
+2021-11-28 18:02:24 INFO ? Generating unique operation named: searchUsingGET_9
+2021-11-28 18:02:24 INFO ? Generating unique operation named: updateUsingPUT_7
+2021-11-28 18:02:24 INFO ? Generating unique operation named: deleteUsingDELETE_9
+2021-11-28 18:02:24 INFO ? Generating unique operation named: getUsingGET_10
+2021-11-28 18:02:24 INFO ? Generating unique operation named: saveUsingPOST_7
+2021-11-28 18:02:24 INFO ? Generating unique operation named: searchUsingGET_10
+2021-11-28 18:02:24 INFO ? Generating unique operation named: updateUsingPUT_8
+2021-11-28 18:02:24 INFO ? Generating unique operation named: deleteUsingDELETE_10
+2021-11-28 18:02:24 INFO ? Generating unique operation named: getUsingGET_11
+2021-11-28 18:02:24 INFO ? Generating unique operation named: saveUsingPOST_8
+2021-11-28 18:02:24 INFO ? Generating unique operation named: saveAllUsingPOST_1
+2021-11-28 18:02:24 INFO ? Generating unique operation named: searchUsingGET_11
+2021-11-28 18:02:24 INFO ? Generating unique operation named: updateUsingPUT_9
+2021-11-28 18:02:24 INFO ? Generating unique operation named: deleteUsingDELETE_11
+2021-11-28 18:02:24 INFO ? Generating unique operation named: getUsingGET_12
+2021-11-28 18:02:24 INFO ? Generating unique operation named: importExcelUsingPOST_1
+2021-11-28 18:02:24 INFO ? Generating unique operation named: saveUsingPOST_9
+2021-11-28 18:02:24 INFO ? Generating unique operation named: searchUsingGET_12
+2021-11-28 18:02:24 INFO ? Generating unique operation named: updateUsingPUT_10
+2021-11-28 18:02:24 INFO ? Generating unique operation named: approvalUsingPOST_1
+2021-11-28 18:02:24 INFO ? Generating unique operation named: deleteUsingDELETE_12
+2021-11-28 18:02:24 INFO ? Generating unique operation named: getUsingGET_13
+2021-11-28 18:02:24 INFO ? Generating unique operation named: importExcelUsingPOST_2
+2021-11-28 18:02:24 INFO ? Generating unique operation named: saveUsingPOST_10
+2021-11-28 18:02:24 INFO ? Generating unique operation named: searchUsingGET_13
+2021-11-28 18:02:24 INFO ? Generating unique operation named: updateUsingPUT_11
+2021-11-28 18:02:24 INFO ? Generating unique operation named: deleteUsingDELETE_13
+2021-11-28 18:02:24 INFO ? Generating unique operation named: deleteUsingDELETE_14
+2021-11-28 18:02:24 INFO ? Generating unique operation named: getUsingGET_14
+2021-11-28 18:02:24 INFO ? Generating unique operation named: saveUsingPOST_11
+2021-11-28 18:02:24 INFO ? Generating unique operation named: searchUsingGET_14
+2021-11-28 18:02:24 INFO ? Generating unique operation named: updateUsingPUT_12
+2021-11-28 18:02:24 INFO ? Starting ProtocolHandler ["http-nio-9976"]
+2021-11-28 18:02:24 INFO ? Tomcat started on port(s): 9976 (http) with context path ''
+2021-11-28 18:02:24 INFO ? Started ZtechApplication in 12.296 seconds (JVM running for 14.27)
+2021-11-28 18:07:30 INFO ? Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-28 18:07:30 INFO ? Shutting down EhCache CacheManager
+2021-11-28 18:07:30 INFO ? Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-28 18:07:30 INFO ? HikariPool-1 - Shutdown initiated...
+2021-11-28 18:07:30 INFO ? HikariPool-1 - Shutdown completed.
+2021-11-28 22:58:05 INFO ? The Class-Path manifest attribute in /home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/tunglam/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2021-11-28 22:58:05 INFO ? Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-11-28 22:58:05 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$8954cd51] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-28 22:58:06 INFO ? Fetching config from server at : http://apiintsit.ztech.com.vn/ztech-config/v1
+2021-11-28 22:58:06 WARN ? Could not locate PropertySource: label not found
+2021-11-28 22:58:06 INFO ? The following profiles are active: ztech
+2021-11-28 22:58:07 INFO ? Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-28 22:58:07 INFO ? Finished Spring Data repository scanning in 99ms. Found 26 JPA repository interfaces.
+2021-11-28 22:58:07 INFO ? BeanFactory id=3140a826-377a-38f9-a780-0e04cd0feedf
+2021-11-28 22:58:08 INFO ? Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$11d28f53] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-28 22:58:08 INFO ? Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-11-28 22:58:08 INFO ? Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-28 22:58:08 INFO ? Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-28 22:58:08 INFO ? Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-28 22:58:08 INFO ? Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6c454a25' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-28 22:58:08 INFO ? Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-28 22:58:08 INFO ? Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-28 22:58:08 INFO ? Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$8954cd51] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-28 22:58:08 INFO ? Tomcat initialized with port(s): 9976 (http)
+2021-11-28 22:58:08 INFO ? Initializing ProtocolHandler ["http-nio-9976"]
+2021-11-28 22:58:08 INFO ? Starting service [Tomcat]
+2021-11-28 22:58:08 INFO ? Starting Servlet engine: [Apache Tomcat/9.0.30]
+2021-11-28 22:58:08 INFO ? Initializing Spring embedded WebApplicationContext
+2021-11-28 22:58:08 INFO ? Root WebApplicationContext: initialization completed in 1734 ms
+2021-11-28 22:58:08 INFO ? HikariPool-1 - Starting...
+2021-11-28 22:58:09 INFO ? HikariPool-1 - Start completed.
+2021-11-28 22:58:09 INFO ? HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-28 22:58:09 INFO ? HHH000412: Hibernate Core {5.4.10.Final}
+2021-11-28 22:58:09 INFO ? HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-11-28 22:58:09 INFO ? HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+2021-11-28 22:58:10 INFO ? HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-28 22:58:10 INFO ? Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-28 22:58:11 WARN ? spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-28 22:58:12 DEBUG ? 
+    select
+        apparam0_.autoid as autoid1_2_,
+        apparam0_.description as descript2_2_,
+        apparam0_.gr as gr3_2_,
+        apparam0_.name as name4_2_,
+        apparam0_.value as value5_2_ 
+    from
+        ap_param apparam0_
+2021-11-28 22:58:12 INFO ? ==>loadCache params [ApParam(autoid=1, group=ERROR_DEFINE, name='group_id' cannot be null, value=GROUPID IS NULL, description=Mã nhóm nhân viên không được để trống), ApParam(autoid=2, group=ERROR_DEFINE, name=fk_people, value=people_id does not exited., description=Mã nhân không tồn tại), ApParam(autoid=3, group=ERROR_DEFINE, name=fk_shift_id, value=shift_id, description=Mã ca làm việc không tồn tại.), ApParam(autoid=4, group=APPROVAL_TYPE, name=OT_APPROVAL, value=OT_APPROVAL, description=Loại duyệt OT), ApParam(autoid=5, group=APPROVAL_TYPE, name=KEEPING_APPROVAL, value=KEEPING_APPROVAL, description=Loại duyệt chấm công), ApParam(autoid=6, group=APPROVER, name=GROUP_LEADER, value=GROUP_LEADER, description=Lãnh đạo khối), ApParam(autoid=7, group=APPROVER, name=DEP_LEADER, value=DEP_LEADER, description=Lãnh đạo phòng), ApParam(autoid=8, group=APPROVER, name=ADMIN, value=ADMIN, description=Quản trị viên), ApParam(autoid=9, group=ERROR_DEFINE, name=approval_flow_unq1, value=trung ban ghi, description=Trùng bản ghi)]
+2021-11-28 22:58:12 INFO ? Clearing Cache
+2021-11-28 22:58:12 INFO ? Clear Done
+2021-11-28 22:58:12 INFO ? INIT Cache Done
+2021-11-28 22:58:14 INFO ? Initializing EhCache CacheManager
+2021-11-28 22:58:14 INFO ? 
+
+Using generated security password: 1a1778e6-2364-4c17-95df-b44d0da09053
+
+2021-11-28 22:58:14 INFO ? Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2021-11-28 22:58:14 INFO ? Creating filter chain: Ant [pattern='/h2-console/**'], []
+2021-11-28 22:58:14 INFO ? Creating filter chain: Ant [pattern='/swagger-ui/index.html'], []
+2021-11-28 22:58:14 INFO ? Creating filter chain: Ant [pattern='/test/**'], []
+2021-11-28 22:58:14 INFO ? Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@74f468af, org.springframework.security.web.context.SecurityContextPersistenceFilter@1b4562ec, org.springframework.security.web.header.HeaderWriterFilter@483ed9ca, org.springframework.security.web.authentication.logout.LogoutFilter@5785cbe3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@f5f5faf, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@367162de, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3d86b9c3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@69f2c171, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4a5e5c10, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@60e48739, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3c097f28, org.springframework.security.web.session.SessionManagementFilter@17aa08d0, org.springframework.security.web.access.ExceptionTranslationFilter@57203fd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@301b927c]
+2021-11-28 22:58:14 INFO ? Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-11-28 22:58:14 INFO ? Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-28 22:58:14 INFO ? LiveReload server is running on port 35729
+2021-11-28 22:58:15 INFO ? Context refreshed
+2021-11-28 22:58:15 INFO ? Found 1 custom documentation plugin(s)
+2021-11-28 22:58:15 INFO ? Scanning for api listing references
+2021-11-28 22:58:15 INFO ? Generating unique operation named: deleteUsingDELETE_1
+2021-11-28 22:58:15 INFO ? Generating unique operation named: getUsingGET_1
+2021-11-28 22:58:15 INFO ? Generating unique operation named: saveUsingPOST_1
+2021-11-28 22:58:15 INFO ? Generating unique operation named: searchUsingGET_1
+2021-11-28 22:58:15 INFO ? Generating unique operation named: updateUsingPUT_1
+2021-11-28 22:58:15 INFO ? Generating unique operation named: getUsingGET_2
+2021-11-28 22:58:15 INFO ? Generating unique operation named: deleteUsingDELETE_2
+2021-11-28 22:58:15 INFO ? Generating unique operation named: getUsingGET_3
+2021-11-28 22:58:15 INFO ? Generating unique operation named: saveUsingPOST_2
+2021-11-28 22:58:15 INFO ? Generating unique operation named: searchUsingGET_2
+2021-11-28 22:58:15 INFO ? Generating unique operation named: updateUsingPUT_2
+2021-11-28 22:58:15 INFO ? Generating unique operation named: deleteUsingDELETE_3
+2021-11-28 22:58:15 INFO ? Generating unique operation named: getUsingGET_4
+2021-11-28 22:58:15 INFO ? Generating unique operation named: searchUsingGET_3
+2021-11-28 22:58:15 INFO ? Generating unique operation named: updateUsingPUT_3
+2021-11-28 22:58:15 INFO ? Generating unique operation named: deleteUsingDELETE_4
+2021-11-28 22:58:15 INFO ? Generating unique operation named: getUsingGET_5
+2021-11-28 22:58:15 INFO ? Generating unique operation named: saveUsingPOST_3
+2021-11-28 22:58:15 INFO ? Generating unique operation named: searchUsingGET_4
+2021-11-28 22:58:15 INFO ? Generating unique operation named: updateUsingPUT_4
+2021-11-28 22:58:15 INFO ? Generating unique operation named: deleteUsingDELETE_5
+2021-11-28 22:58:15 INFO ? Generating unique operation named: searchUsingGET_5
+2021-11-28 22:58:15 INFO ? Generating unique operation named: deleteUsingDELETE_6
+2021-11-28 22:58:15 INFO ? Generating unique operation named: getUsingGET_6
+2021-11-28 22:58:15 INFO ? Generating unique operation named: saveUsingPOST_4
+2021-11-28 22:58:15 INFO ? Generating unique operation named: searchUsingGET_6
+2021-11-28 22:58:15 INFO ? Generating unique operation named: updateUsingPUT_5
+2021-11-28 22:58:15 INFO ? Generating unique operation named: getUsingGET_7
+2021-11-28 22:58:15 INFO ? Generating unique operation named: searchUsingGET_7
+2021-11-28 22:58:15 INFO ? Generating unique operation named: deleteUsingDELETE_7
+2021-11-28 22:58:15 INFO ? Generating unique operation named: getUsingGET_8
+2021-11-28 22:58:15 INFO ? Generating unique operation named: saveUsingPOST_5
+2021-11-28 22:58:15 INFO ? Generating unique operation named: searchUsingGET_8
+2021-11-28 22:58:15 INFO ? Generating unique operation named: updateUsingPUT_6
+2021-11-28 22:58:15 INFO ? Generating unique operation named: deleteUsingDELETE_8
+2021-11-28 22:58:15 INFO ? Generating unique operation named: getUsingGET_9
+2021-11-28 22:58:15 INFO ? Generating unique operation named: saveUsingPOST_6
+2021-11-28 22:58:15 INFO ? Generating unique operation named: searchUsingGET_9
+2021-11-28 22:58:15 INFO ? Generating unique operation named: updateUsingPUT_7
+2021-11-28 22:58:15 INFO ? Generating unique operation named: deleteUsingDELETE_9
+2021-11-28 22:58:15 INFO ? Generating unique operation named: getUsingGET_10
+2021-11-28 22:58:15 INFO ? Generating unique operation named: saveUsingPOST_7
+2021-11-28 22:58:15 INFO ? Generating unique operation named: searchUsingGET_10
+2021-11-28 22:58:15 INFO ? Generating unique operation named: updateUsingPUT_8
+2021-11-28 22:58:15 INFO ? Generating unique operation named: deleteUsingDELETE_10
+2021-11-28 22:58:15 INFO ? Generating unique operation named: getUsingGET_11
+2021-11-28 22:58:15 INFO ? Generating unique operation named: saveUsingPOST_8
+2021-11-28 22:58:15 INFO ? Generating unique operation named: saveAllUsingPOST_1
+2021-11-28 22:58:15 INFO ? Generating unique operation named: searchUsingGET_11
+2021-11-28 22:58:15 INFO ? Generating unique operation named: updateUsingPUT_9
+2021-11-28 22:58:15 INFO ? Generating unique operation named: deleteUsingDELETE_11
+2021-11-28 22:58:15 INFO ? Generating unique operation named: getUsingGET_12
+2021-11-28 22:58:15 INFO ? Generating unique operation named: importExcelUsingPOST_1
+2021-11-28 22:58:15 INFO ? Generating unique operation named: saveUsingPOST_9
+2021-11-28 22:58:15 INFO ? Generating unique operation named: searchUsingGET_12
+2021-11-28 22:58:15 INFO ? Generating unique operation named: updateUsingPUT_10
+2021-11-28 22:58:15 INFO ? Generating unique operation named: approvalUsingPOST_1
+2021-11-28 22:58:15 INFO ? Generating unique operation named: deleteUsingDELETE_12
+2021-11-28 22:58:15 INFO ? Generating unique operation named: getUsingGET_13
+2021-11-28 22:58:15 INFO ? Generating unique operation named: importExcelUsingPOST_2
+2021-11-28 22:58:15 INFO ? Generating unique operation named: saveUsingPOST_10
+2021-11-28 22:58:15 INFO ? Generating unique operation named: searchUsingGET_13
+2021-11-28 22:58:15 INFO ? Generating unique operation named: updateUsingPUT_11
+2021-11-28 22:58:15 INFO ? Generating unique operation named: deleteUsingDELETE_13
+2021-11-28 22:58:15 INFO ? Generating unique operation named: deleteUsingDELETE_14
+2021-11-28 22:58:15 INFO ? Generating unique operation named: getUsingGET_14
+2021-11-28 22:58:15 INFO ? Generating unique operation named: saveUsingPOST_11
+2021-11-28 22:58:15 INFO ? Generating unique operation named: searchUsingGET_14
+2021-11-28 22:58:15 INFO ? Generating unique operation named: updateUsingPUT_12
+2021-11-28 22:58:15 INFO ? Starting ProtocolHandler ["http-nio-9976"]
+2021-11-28 22:58:15 INFO ? Tomcat started on port(s): 9976 (http) with context path ''
+2021-11-28 22:58:15 INFO ? Started ZtechApplication in 11.412 seconds (JVM running for 12.161)

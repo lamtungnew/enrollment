@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="utf-8" name="viewport"
+	content="width=device-width, initial-scale=1"
+	http-equiv="X-UA-Conpatible" />
+<h:outputStylesheet library="css" name="bootstrap.min.css" />
+<h:outputStylesheet library="css" name="app.css" />
+<script name="jquery/jquery.js" library="primefaces">
+</script>
+<title>Giải trình chấm công</title>
+<style type="text/css">
+	.disable-scroll .ui-dialog-content {
+		overflow: hidden !important;
+	}
+	.alightRight{
+		text-align:right;
+	}
+	.searchTable{
+		margin-top: 10px;
+		margin-bottom: 10px;
+		width: 100%;
+	}
+</style>
+</h:head>
+<h:body>
+	<ui:include src="componentHeader.xhtml"></ui:include>
+	<p:growl id="growl" showDetail="true" />
+	<div class="row">
+		<div class="col-12">
+			<h:form enctype="multipart/form-data" id="mainForm">
+				<table class="searchTable">
+					<tr style="margin-top: 10px">
+						<td><h4>Đề xuất giải trình chấm công</h4></td>
+						<td>Ngày giải trình từ:</td>
+						<td><p:calendar inputStyle="width: 210px"
+										pattern="dd/MM/yyyy" id ="fromDate" showButtonPanel="false"
+										value="#{createTimekeepingExplanationController.fromDate}" /></td>
+						<td>Đến:</td>
+						<td><p:calendar inputStyle="width: 210px"
+										pattern="dd/MM/yyyy" id ="toDate"
+										value="#{createTimekeepingExplanationController.toDate}" /></td>
+						<td >Trạng thái:</td>
+						<td class="alightRight" style="width: 13%"><p:selectOneMenu id="status" immediate="true"
+											 style="width: 210px"
+											 value="#{createTimekeepingExplanationController.searchTimekeepingSheet.state}">
+							<f:selectItem itemLabel="Chọn trạng thái" noSelectionOption="true" />
+							<f:selectItem itemLabel="Đã phê duyệt" itemValue="2"></f:selectItem>
+							<f:selectItem itemLabel="Chưa phê duyệt" itemValue="0"></f:selectItem>
+							<f:selectItem itemLabel="Từ chối" itemValue="3"></f:selectItem>
+						</p:selectOneMenu></td>
+						<td class="alightRight">
+							<h:commandButton value="Tìm kiếm"
+																 update="@([id$=tblListApprove])" class="btn btn-secondary" style="margin-right: 10px"
+																 actionListener="#{createTimekeepingExplanationController.search()}">
+								<f:param name="validateDagUploadExcelStatus" value="false" />
+								<f:param name="validateDagAddTimeKeeping" value="false" />
+								<f:param name="validateDagEditTimeKeeping" value="false" />
+							</h:commandButton>
+							<p:commandButton value="Tạo đề xuất"
+											 update="@([id$=dagAddTimeKeeping])"
+											 rendered="#{sessionController.isAllow('CREATE_TIME_KEEPING_SHEET','CREATE')}"
+											 actionListener="#{createTimekeepingExplanationController.initAddNewTimeKeepingSheet()}"
+											 oncomplete="PF('dagAddTimeKeeping').show();">
+							</p:commandButton>
+						</td>
+
+					</tr>
+				</table>
+
+				<p:dataTable id="tblListApprove" var="timekeepingSheet" value="#{createTimekeepingExplanationController.dataModel}"
+                             rowIndexVar="rowIndex" rowKey="#{timekeepingSheet.autoid}"
+							 emptyMessage="không có dữ liệu..."
+                             paginator="true" rows="10" paginatorPosition="bottom"
+                             paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                             rowsPerPageTemplate="5,10,20,50,100" widgetVar="50"
+                             tableStyle="table-layout:auto" style="margin-top: 10px;">
+
+					<p:column headerText="#">
+						#{rowIndex+1}
+					</p:column>
+
+					<p:column headerText="Ngày tạo" style="width:8%">
+						<h:outputText value="#{timekeepingSheet.createdAt}">
+							<f:convertDateTime pattern="dd/MM/yyyy" />
+						</h:outputText>
+					</p:column>
+
+					<p:column headerText="Ngày giải trình" >
+						<h:outputText value="#{timekeepingSheet.keepingDate}">
+							<f:convertDateTime pattern="dd/MM/yyyy" />
+						</h:outputText>
+					</p:column>
+
+					<p:column headerText="Lý do giải trình">
+						<h:outputText value="#{timekeepingSheet.mistake}" />
+					</p:column>
+
+					<p:column headerText="Trạng thái" >
+						<h:outputText value="#{timekeepingSheet.stateValue}" />
+					</p:column>
+
+					<p:column headerText="Người duyệt" >
+						<h:outputText value="#{
+						timekeepingSheet.state == '3' and timekeepingSheet.approvalLevel == 2 ?
+						timekeepingSheet.approvedByName :
+						(timekeepingSheet.approvalLevel == 2 ?
+						timekeepingSheet.approvalByLevel2Name :
+						timekeepingSheet.approvedByName) }" />
+					</p:column>
+
+					<p:column headerText="Hành động" >
+						<p:commandButton value="Chi tiết"
+							actionListener="#{createTimekeepingExplanationController.initSelectedTimeKeepingSheet(timekeepingSheet)}"
+							update="@([id$=dagEditTimeKeeping])"
+							oncomplete="PF('dagEditTimeKeeping').show();">
+							<f:param name="validateDagUploadExcelStatus" value="false" />
+							<f:param name="validateDagAddTimeKeeping" value="false" />
+							<f:param name="validateDagEditTimeKeeping" value="false" />
+						</p:commandButton>&#160;
+
+						<p:commandButton value="Xóa" rendered="#{sessionController.isAllow('CREATE_TIME_KEEPING_SHEET','DELETE')
+						? (timekeepingSheet.state == '0' ? true: false) : false}"
+										 update="@([id$=dagEditTimeKeeping])" style="background-color: red;border-color: red"
+										 actionListener="#{createTimekeepingExplanationController.grantDeleteObject(timekeepingSheet)}"
+										 oncomplete="PF('dagConfirmDelete').show();">
+							<f:param name="validateDagUploadExcelStatus" value="false" />
+							<f:param name="validateDagAddTimeKeeping" value="false" />
+							<f:param name="validateDagEditTimeKeeping" value="false" />
+						</p:commandButton>
+					</p:column>
+				</p:dataTable>
+			</h:form>
+		</div>
+	</div>
+
+	<p:dialog id="dagConfirmDelete" closable="true" position="center"
+			  header="Xác nhận xóa đề xuất" width="500px"
+			  widgetVar="dagConfirmDelete" modal="true" resizable="false">
+		Bạn có chắc chắn muốn xóa đề xuất?
+		<f:facet name="footer">
+			<p:commandButton value="Hủy bỏ" styleClass="btn btn-secondary"
+							 oncomplete="PF('dagConfirmDelete').hide();" >
+			</p:commandButton>&#160;
+			<p:commandButton value="Đồng ý" styleClass="btn btn-secondary"
+							 actionListener="#{createTimekeepingExplanationController.delete()}"
+							 update = "@([id$=tblListApprove])"
+							 oncomplete="PF('dagConfirmDelete').hide();" >
+			</p:commandButton>
+		</f:facet>
+	</p:dialog>
+
+	<ui:include src="timekeepingExplanation-dagAddNew.xhtml" />
+	<ui:include src="createTimekeepingExplanation-dagEdit.xhtml" />
+</h:body>
+</html>

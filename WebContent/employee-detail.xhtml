@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8" name="viewport"
+          content="width=device-width, initial-scale=1"
+          http-equiv="X-UA-Conpatible"/>
+    <h:outputStylesheet library="css" name="bootstrap.min.css"/>
+    <h:outputStylesheet library="css" name="app.css"/>
+    <h:outputStylesheet library="css" name="paginator.css"/>
+    <script name="jquery/jquery.js" library="primefaces"/>
+    <h:outputScript name="webcams.js" library="js"/>
+    <title>Danh sách nhân viên</title>
+
+</h:head>
+
+<script type="text/javascript">
+    //<![CDATA[
+    var numberImagePerSnapshot = 10;
+    var delayTime = 100;//ms
+    $(document)
+        .ready(
+            function () {
+                Webcams.init();
+                var cam1 = Webcams.create('', '100%', 'auto');
+                cam1.attach('cam');
+
+                $("#snap")
+                    .click(
+                        function () {
+                            var images = '';
+                            for (var i = 0; i < numberImagePerSnapshot; i++) {
+                                setTimeout(
+                                    function () {
+                                        cam1
+                                            .snapshot(
+                                                function (
+                                                    base64) {
+                                                    if (base64 != undefined) {
+                                                        images = images
+                                                            + ";"
+                                                            + base64;
+                                                        console
+                                                            .log('ok');
+                                                    }
+                                                },
+                                                800,
+                                                600);
+                                    }, i * delayTime);
+                            }
+                            setTimeout(
+                                function () {
+                                    if (images.length > 0) {
+                                        images = images
+                                            .slice(1);
+                                    }
+                                    document
+                                        .getElementById("frmDetail:tab:facesnapshot").value = images;
+                                    //console.log(images);
+                                    addFace();
+                                },
+                                delayTime
+                                * (numberImagePerSnapshot + 1));
+                        });
+            });
+    //]]>
+</script>
+
+<h:body>
+    <p:growl id="growl" showDetail="true"/>
+    <p:confirmDialog global="true" showEffect="fade" hideEffect="fade"
+                     closable="false">
+        <p:commandButton value="Đồng ý" type="button"
+                         styleClass="ui-confirmdialog-yes" icon="pi pi-check"/>
+        <p:commandButton value="Hủy" type="button"
+                         styleClass="ui-confirmdialog-no ui-button-secondary"
+                         icon="pi pi-times"/>
+    </p:confirmDialog>
+    <ui:include src="componentHeader.xhtml"></ui:include>
+    <div class="">
+        <div class="col-12 layout_custom">
+            <h:form id="frmDetail" enctype="multipart/form-data">
+                <div class="ui-g ui-g-nopad"
+                     style="padding-left: 150px; padding-right: 150px;">
+                    <div class="ui-g-12">
+                        <div class="ui-g-6">
+                            <p:tabView style="width: 100%;">
+                                <p:tab title="Thông tin nhân viên:">
+
+                                    <div class="ui-g-12 ui-g-nopad">
+                                        <div class="ui-g-3 ui-g-nopad lable_margin-top_10 lpad10">
+                                            Mã nhân viên <p:outputLabel
+                                                rendered="#{employeeManagerController.createMode}" value="*"
+                                                style="color: red;"/>
+                                        </div>
+                                        <div class="ui-g-7 ui-g-nopad"
+                                             style="background: transparent;">
+                                            <p:inputText
+                                                    rendered="#{!employeeManagerController.createMode}"
+                                                    maxlength="20"
+                                                    value="#{employeeManagerController.selectedItem.peopleId}"
+                                                    readonly="true" style="width: 100%;"/>
+                                            <p:inputText id="txtPeopleId"
+                                                         rendered="#{employeeManagerController.createMode}"
+                                                         required="true"
+                                                         msglabel="Mã nhân viên"
+                                                         requiredMessage="Thông tin nhập chưa đầy đủ. Vui lòng nhập lại !"
+                                                         style="width: 100%;"
+                                                         value="#{employeeManagerController.selectedItem.peopleId}">
+                                                <f:validator validatorId="employeeValidator"/>
+                                            </p:inputText>
+                                            <p:message styleClass="field_message" for="txtPeopleId"/>
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12 ui-g-nopad">
+                                        <div class="ui-g-3 ui-g-nopad lable_margin-top_10 lpad10">
+                                            Họ tên <span style="color: red;">*</span>
+                                        </div>
+                                        <div class="ui-g-7 ui-g-nopad"
+                                             style="background: transparent;">
+                                            <p:inputText
+                                                    rendered="#{!employeeManagerController.isEditable()}"
+                                                    value="#{employeeManagerController.selectedItem.fullName}"
+                                                    readonly="true" style="width: 100%;"/>
+                                            <p:inputText id="txtFullName"
+                                                         rendered="#{employeeManagerController.isEditable()}"
+                                                         required="true"
+                                                         requiredMessage="Thông tin nhập chưa đầy đủ. Vui lòng nhập lại !"
+                                                         style="width: 100%;"
+                                                         value="#{employeeManagerController.selectedItem.fullName}"/>
+                                            <p:message styleClass="field_message" for="txtFullName"
+                                                       showSummary="false"/>
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12 ui-g-nopad">
+                                        <div class="ui-g-3 ui-g-nopad lable_margin-top_10 lpad10">
+                                            Số điện thoại <span style="color: red;">*</span>
+                                        </div>
+                                        <div class="ui-g-7 ui-g-nopad"
+                                             style="background: transparent;">
+                                            <p:inputText
+                                                    rendered="#{!employeeManagerController.isEditable()}"
+                                                    value="#{employeeManagerController.selectedItem.mobilePhone}"
+                                                    readonly="true" style="width: 100%;"/>
+                                            <p:inputText id="txtMobilePhone"
+                                                         rendered="#{employeeManagerController.isEditable()}"
+                                                         required="true"
+                                                         requiredMessage="Thông tin nhập chưa đầy đủ. Vui lòng nhập lại !"
+                                                         style="width: 100%;"
+                                                         value="#{employeeManagerController.selectedItem.mobilePhone}">
+                                                <f:validator validatorId="phoneValidator"/>
+                                            </p:inputText>
+                                            <p:message styleClass="field_message" for="txtMobilePhone"
+                                                       showSummary="false"/>
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12 ui-g-nopad">
+                                        <div class="ui-g-3 ui-g-nopad lable_margin-top_10 lpad10">
+                                            Email <span style="color: red;">*</span>
+                                        </div>
+                                        <div class="ui-g-7 ui-g-nopad"
+                                             style="background: transparent;">
+                                            <p:inputText
+                                                    rendered="#{!employeeManagerController.isEditable()}"
+                                                    value="#{employeeManagerController.selectedItem.email}"
+                                                    readonly="true" style="width: 100%;"/>
+                                            <p:inputText id="txtEmail"
+                                                         rendered="#{employeeManagerController.isEditable()}"
+                                                         required="true"
+                                                         requiredMessage="Thông tin nhập chưa đầy đủ. Vui lòng nhập lại !"
+                                                         style="width: 100%;"
+                                                         value="#{employeeManagerController.selectedItem.email}">
+                                                <f:validator validatorId="emailValidator"/>
+                                            </p:inputText>
+                                            <p:message styleClass="field_message" for="txtEmail"
+                                                       showSummary="false"/>
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12 ui-g-nopad">
+                                        <div class="ui-g-3 ui-g-nopad lable_margin-top_10 lpad10">
+                                            Ngày sinh <span style="color: red;">*</span>
+                                        </div>
+                                        <div class="ui-g-7 ui-g-nopad"
+                                             style="background: transparent;">
+                                            <p:inputText
+                                                    rendered="#{!employeeManagerController.isEditable()}"
+                                                    value="#{employeeManagerController.selectedItem.dateOfBirth}"
+                                                    readonly="true" style="width: 100%;">
+                                                <f:convertDateTime pattern="dd/MM/yyyy"/>
+                                            </p:inputText>
+                                            <p:datePicker id="txtDateOfBirth" styleClass="custom_dp"
+                                                          rendered="#{employeeManagerController.isEditable()}"
+                                                          style="width: 100%" required="true"
+                                                          requiredMessage="Thông tin nhập chưa đầy đủ. Vui lòng nhập lại !"
+                                                          placeholder="Chọn ngày sinh"
+                                                          value="#{employeeManagerController.selectedItem.dateOfBirth}"
+                                                          monthNavigator="true" yearNavigator="true" showIcon="true"
+                                                          pattern="dd/MM/yyyy">
+                                            </p:datePicker>
+                                            <p:message styleClass="field_message" for="txtDateOfBirth"
+                                                       showSummary=" false"/>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="ui-g-12 ui-g-nopad">
+                                        <div class="ui-g-3 ui-g-nopad lable_margin-top_10 lpad10">
+                                            Giới tính <span style="color: red;">*</span>
+                                        </div>
+                                        <div class="ui-g-7 ui-g-nopad"
+                                             style="background: transparent;">
+                                            <p:inputText
+                                                    rendered="#{!employeeManagerController.isEditable()}"
+                                                    value="#{employeeManagerController.selectedItem.gender}"
+                                                    readonly="true" style="width: 100%;"/>
+                                            <p:selectOneMenu id="txtGender"
+                                                             rendered="#{employeeManagerController.isEditable()}"
+                                                             style="width: 100%"
+                                                             value="#{employeeManagerController.selectedItem.gender}">
+                                                <f:selectItem itemLabel="Nam" itemValue="Nam"/>
+                                                <f:selectItem itemLabel="Nữ" itemValue="Nữ"/>
+                                                <p:ajax process="txtGender" event="itemSelect"
+                                                        listener="#{employeeManagerController.txtGenderValueChange}"/>
+                                            </p:selectOneMenu>
+                                            <p:message styleClass="field_message" for="txtGender"
+                                                       showSummary="false"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="ui-g-12 ui-g-nopad">
+                                        <div class="ui-g-3 ui-g-nopad lable_margin-top_10 lpad10">
+                                            User
+                                            <p:outputLabel
+                                                    rendered="#{employeeManagerController.isEditable()}" value="*"
+                                                    style="color: red;"/>
+                                        </div>
+                                        <div class="ui-g-7 ui-g-nopad"
+                                             style="background: transparent;">
+                                            <p:inputText
+                                                    rendered="#{!employeeManagerController.isEditable()}"
+                                                    value="#{employeeManagerController.selectedItem.userName}"
+                                                    readonly="true" style="width: 100%;"/>
+                                            <p:inputText id="txtUserName"
+                                                         rendered="#{employeeManagerController.isEditable()}"
+                                                         required="#{employeeManagerController.createMode}"
+                                                         requiredMessage="Thông tin nhập chưa đầy đủ. Vui lòng nhập lại !"
+                                                         style="width: 100%;"
+                                                         value="#{employeeManagerController.selectedItem.userName}"
+                                                         autocomplete="off">
+                                                <f:validator validatorId="usernameValidator"/>
+                                            </p:inputText>
+                                            <p:message styleClass="field_message" for="txtUserName"
+                                                       showSummary="false"/>
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12 ui-g-nopad">
+                                        <div class="ui-g-3 ui-g-nopad lable_margin-top_10 lpad10">
+                                            Mật khẩu
+                                            <p:outputLabel
+                                                    rendered="#{employeeManagerController.createMode}" value="*"
+                                                    style="color: red;"/>
+                                        </div>
+                                        <div class="ui-g-7 ui-g-nopad"
+                                             style="background: transparent;">
+                                            <p:inputText type="password"
+                                                         rendered="#{!employeeManagerController.createMode}"
+                                                         value="******" readonly="true" style="width: 100%;"/>
+                                            <p:inputText id="txtPassword"
+                                                         rendered="#{employeeManagerController.createMode and !employeeManagerController.updateMode}"
+                                                         required="#{employeeManagerController.createMode}"
+                                                         type="password"
+                                                         requiredMessage="Thông tin nhập chưa đầy đủ. Vui lòng nhập lại !"
+                                                         style="width: 100%;"
+                                                         value="#{employeeManagerController.selectedItem.password}"
+                                                         autocomplete="off">
+                                                <f:validator validatorId="passwordValidator"/>
+                                            </p:inputText>
+                                            <p:message styleClass="field_message" for="txtPassword"
+                                                       showSummary="false"/>
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12 ui-g-nopad">
+                                        <div class="ui-g-3 ui-g-nopad lable_margin-top_10 lpad10">
+                                            Nhóm quyền <span style="color: red;">*</span>
+                                        </div>
+                                        <div class="ui-g-7 ui-g-nopad"
+                                             style="background: transparent;">
+                                            <p:inputText
+                                                    rendered="#{!employeeManagerController.isEditable()}"
+                                                    value="#{employeeManagerController.selectedItem.roleDescription}"
+                                                    readonly="true" style="width: 100%;"/>
+                                            <p:selectOneMenu id="txtRole"
+                                                             rendered="#{employeeManagerController.isEditable()}"
+                                                             required="true"
+                                                             requiredMessage="Thông tin nhập chưa đầy đủ. Vui lòng nhập lại !"
+                                                             value="#{employeeManagerController.selectedItem.role}"
+                                                             filter="true" filterMatchMode="contains"
+                                                             style="width: 100%">
+                                                <f:selectItem itemLabel="Chọn nhóm quyền"
+                                                              itemValue=""/>
+                                                <f:selectItems value="#{employeeManagerController.lstRole}"
+                                                               var="item" itemLabel="#{item.description}"
+                                                               itemValue="#{item.name}"/>
+                                                <p:ajax process="txtRole" event="itemSelect"
+                                                        update="txtGroupChild txtGroupChildLbl"
+                                                        listener="#{employeeManagerController.txtRoleValueChange}"/>
+                                            </p:selectOneMenu>
+                                            <p:message styleClass="field_message" for="txtRole"/>
+                                        </div>
+                                        <div class="ui-g-3 ui-g-nopad lable_margin-top_10"></div>
+                                        <div class="ui-g-7 ui-g-nopad"
+                                             style="background: transparent;"></div>
+                                    </div>
+
+                                    <div class="ui-g-12 ui-g-nopad">
+                                        <div class="ui-g-3 ui-g-nopad lable_margin-top_10 lpad10">
+                                            Khối <p:outputLabel id="txtGroupLbl"
+                                                value="*"
+                                                style="color: red;"/>
+                                        </div>
+                                        <div class="ui-g-7 ui-g-nopad"
+                                             style="background: transparent;">
+                                            <p:inputText
+                                                    rendered="#{!employeeManagerController.isEditable()}"
+                                                    value="#{employeeManagerController.selectedItem.depName}"
+                                                    readonly="true" style="width: 100%;"/>
+                                            <p:selectOneMenu id="txtGroup"
+                                                             rendered="#{employeeManagerController.isEditable()}"
+                                                             required="true" requiredMessage="Vui lòng chọn khối"
+                                                             value="#{employeeManagerController.selectedItem.depId}"
+                                                             filter="true" filterMatchMode="contains"
+                                                             style="width: 100%">
+                                                <f:selectItem itemLabel="Chọn khối" itemValue=""/>
+                                                <f:selectItems
+                                                        value="#{employeeManagerController.lstGroupCatg}"
+                                                        var="item" itemLabel="#{item.groupName}"
+                                                        itemValue="#{item.groupId}"/>
+                                                <p:ajax update="txtGroupChild" process="txtGroup"
+                                                        event="itemSelect"
+                                                        listener="#{employeeManagerController.txtGroupValueChange}"/>
+                                            </p:selectOneMenu>
+                                            <p:message styleClass="field_message" for="txtGroup"/>
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12 ui-g-nopad">
+                                        <div class="ui-g-3 ui-g-nopad lable_margin-top_10 lpad10">
+                                            Phòng ban <p:outputLabel id="txtGroupChildLbl"
+                                                rendered="#{'GROUP_LEADER' != employeeManagerController.selectedItem.role}"
+                                                value="*"
+                                                style="color: red;"/>
+                                        </div>
+                                        <div class="ui-g-7 ui-g-nopad"
+                                             style="background: transparent;">
+                                            <p:inputText
+                                                    rendered="#{!employeeManagerController.isEditable()}"
+                                                    value="#{employeeManagerController.selectedItem.groupName}"
+                                                    readonly="true" style="width: 100%;"/>
+
+                                            <p:selectOneMenu id="txtGroupChild"
+                                                             rendered="#{employeeManagerController.isEditable()}"
+                                                             disabled="#{'GROUP_LEADER' eq employeeManagerController.selectedItem.role}"
+                                                             required="true" requiredMessage="Vui lòng chọn phòng ban"
+                                                             value="#{employeeManagerController.selectedItem.groupId}"
+                                                             filter="true" filterMatchMode="contains"
+                                                             style="width: 100%">
+                                                <f:selectItem itemLabel="Chọn phòng ban"
+                                                              itemValue=""/>
+                                                <f:selectItems
+                                                        value="#{employeeManagerController.lstGroupCatgChild}"
+                                                        var="item" itemLabel="#{item.groupName}"
+                                                        itemValue="#{item.groupId}"/>
+                                                <p:ajax process="txtGroupChild" event="itemSelect"
+                                                        listener="#{employeeManagerController.txtGroupChildValueChange}"/>
+                                            </p:selectOneMenu>
+                                            <p:message styleClass="field_message" for="txtGroupChild"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="ui-g-12 ui-g-nopad">
+                                        <div class="ui-g-3 ui-g-nopad lable_margin-top_10 lpad10">
+                                            Trạng thái <span style="color: red;">*</span>
+                                        </div>
+                                        <div class="ui-g-7 ui-g-nopad"
+                                             style="background: transparent;">
+                                            <p:inputText
+                                                    rendered="#{!employeeManagerController.isEditable()}"
+                                                    value="#{employeeManagerController.geetEmployeeStatusName(employeeManagerController.selectedItem.status)}"
+                                                    readonly="true" style="width: 100%;"/>
+                                            <p:selectOneMenu id="txtStatus"
+                                                             rendered="#{employeeManagerController.isEditable()}"
+                                                             style="width: 100%"
+                                                             value="#{employeeManagerController.selectedItem.status}">
+                                                <f:selectItem itemLabel="Hoạt động" itemValue="1"/>
+                                                <f:selectItem itemLabel="Khóa" itemValue="2"/>
+                                                <f:selectItem itemLabel="Đóng" itemValue="3"/>
+                                                <p:ajax process="txtStatus" event="itemSelect"/>
+                                            </p:selectOneMenu>
+                                            <p:message styleClass="field_message" for="txtStatus"
+                                                       showSummary="false"/>
+                                        </div>
+                                    </div>
+                                </p:tab>
+                            </p:tabView>
+                        </div>
+                        <div class="ui-g-6">
+                            <div class="col-12">
+                                <p:tabView id="tab" style="width: 100%;"
+                                           activeIndex="#{employeeManagerController.tabIndex}">
+                                    <p:ajax event="tabChange"
+                                            listener="#{employeeManagerController.onTabChange}"/>
+                                    <p:tab title="Tải ảnh lên">
+                                        <div class="form-group">
+                                            <div class="ui-g-12 class_com_pad5" align="center">
+                                                <p:graphicImage id="fileUploadFaceView"
+                                                                value="#{(employeeManagerController.imageRootUrlPeople).concat(employeeManagerController.selectedItem.imagePath)}"
+                                                                width="500px;" style="max-height: 700px;"/>
+                                            </div>
+                                            <div class="ui-g-12 class_com_pad5" align="center">
+                                                <p:fileUpload id="fileUploadFace"
+                                                              rendered="#{employeeManagerController.updateMode or employeeManagerController.createMode}"
+                                                              value="#{employeeManagerController.fileUploadFace}"
+                                                              label="Chọn ảnh" mode="simple" skinSimple="true"
+                                                              allowTypes="/(\.|\/)(jpg|png|jpeg)$/"
+                                                              auto="true" process="@this"
+                                                              update="fileUploadFace fileUploadFaceView"
+                                                              listener="#{employeeManagerController.fileUploadFaceHandle}"/>
+                                                <p:message for="fileUploadFace"/>
+                                            </div>
+                                        </div>
+                                    </p:tab>
+                                    <p:tab title="Chụp ảnh khuôn mặt">
+                                        <h:inputHidden id="facesnapshot"
+                                                       value="#{employeeManagerController.face}"/>
+                                        <p:remoteCommand name="addFace" update="frmDetail:tab:faces"
+                                                         process="@this facesnapshot"
+                                                         action="#{employeeManagerController.addFace}"/>
+                                        <div id="cam"
+                                             style="width: 500px; height: 282px; margin: 0 auto; border: 1px solid #ccc"/>
+                                        <div align="center" style="padding-top: 10px">
+                                            <input id="snap" type="button" value="Chụp"/>
+                                        </div>
+
+                                        <p:outputPanel id="faces">
+                                            <div style="padding-top: 10px">
+                                                <span><b>Ảnh đã chụp</b></span>
+                                            </div>
+                                            <div
+                                                    style="margin-top: 5px; padding: 5px; border: 1px solid #ccc">
+                                                <ui:repeat var="f" value="#{employeeManagerController.faces}"
+                                                           varStatus="i">
+                                                    <div
+                                                            style="display: inline-block; margin: 5px 0; position: relative;">
+                                                        <img src="data:image/jpeg;base64,#{f.get(0)}"
+                                                             style="width: 100px"/>
+                                                        <p:commandLink styleClass="close-face" process="@this"
+                                                                       update="frmDetail:tab:faces" value="X"
+                                                                       actionListener="#{employeeManagerController.removeFace(i.index)}"/>
+                                                    </div>
+                                                </ui:repeat>
+                                            </div>
+                                        </p:outputPanel>
+                                    </p:tab>
+                                </p:tabView>
+                            </div>
+                        </div>
+
+                        <div class="ui-g-12">
+                            <p:messages id="msgs" showDetail="true" autoUpdate="true"
+                                        globalOnly="true"/>
+                        </div>
+                        <div class="ui-g-12" align="right">
+                            <p:commandButton id="btnCancel" styleClass="ui-button-secondary"
+                                             action="#{employeeManagerController.redirectPage('/employee-manager.xhtml')}"
+                                             value="Quay lại" icon="pi pi-reply" immediate="true">
+                            </p:commandButton>
+                            <h:outputText value="&#160; "/>
+                            <p:commandButton id="btnExecuteAdd"
+                                             rendered="#{employeeManagerController.createMode and !employeeManagerController.updateMode and (sessionController.isAllow('EMPLOYEE_MANAGER','UPDATE'))}"
+                                             value="Lưu" icon="pi pi-check"
+                                             action="#{employeeManagerController.add()}"
+                                             title="Lưu thông tin" update="frmDetail msgs"
+                                             validateClient="true">
+                            </p:commandButton>
+                            <h:outputText value="&#160; "/>
+                            <p:commandButton id="btnExecuteUpdate"
+                                             rendered="#{!employeeManagerController.updateMode and !employeeManagerController.createMode and (sessionController.isAllow('EMPLOYEE_MANAGER','UPDATE'))}"
+                                             value="Chỉnh sửa thông tin" icon="pi pi-pencil"
+                                             action="#{employeeManagerController.goToUpdatePage()}"
+                                             title="Chỉnh sửa thông tin" update="frmDetail msgs"
+                                             validateClient="true">
+                            </p:commandButton>
+                            <h:outputText value="&#160; "/>
+                            <p:commandButton id="btnToUpdateMode"
+                                             rendered="#{employeeManagerController.updateMode and !employeeManagerController.createMode and (sessionController.isAllow('EMPLOYEE_MANAGER','UPDATE'))}"
+                                             value="Lưu thông tin" icon="pi pi-check"
+                                             action="#{employeeManagerController.update()}"
+                                             title="Lưu thông tin" update="frmDetail msgs"
+                                             validateClient="true">
+                            </p:commandButton>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </h:form>
+        </div>
+    </div>
+</h:body>
+</html>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="utf-8" name="viewport"
+	content="width=device-width, initial-scale=1"
+	http-equiv="X-UA-Conpatible" />
+<h:outputStylesheet library="css" name="bootstrap.min.css" />
+<h:outputStylesheet library="css" name="app.css" />
+<title>#{historyCapturedImagesController.title}</title>
+<style type="text/css">
+</style>
+</h:head>
+<h:body>
+	<ui:include src="componentHeader.xhtml"></ui:include>
+	<div class="container">
+		<h:form entctype="multipart/form-data">
+			<div class="row pt-3">
+				<div class="col-6">
+					<h2>#{historyCapturedImagesController.title}</h2>
+					<hr style="border-top: 2px solid black;" />
+						<div class="ui-fluid">
+							<div class="form-group">
+								<p:messages id="msg" showDetail="true" closable="true">
+									<p:autoUpdate/>
+								</p:messages>
+							</div>
+							<div class="form-group">
+								<p:outputLabel styleClass="input-label" value="Khu vực" />
+								<p:selectOneMenu value="#{historyCapturedImagesController.zoneSelected}">
+									<f:selectItem itemLabel="Chọn khu vực" itemValue="" />
+									<f:selectItems value="#{historyCapturedImagesController.zone}" var="item" itemLabel="#{item.groupName}" itemValue="#{item.groupId}"/>
+								</p:selectOneMenu>
+							</div>
+							<div class="form-group">
+								<p:focus for="inputPeopleId"/>
+								<p:outputLabel value="Mã nhân viên" />
+								<div class="ui-inputgroup">
+					                <p:inputText id="inputPeopleId" placeholder="Nhập hoặc chọn mã nhân viên" readonly="#{historyCapturedImagesController.formUpdate}"
+					                			value="#{historyCapturedImagesController.capturedImages.peopleId}" autofocus="true"/>
+					                <p:commandButton styleClass="btn btn-default" id="peopleBtn" icon="pi pi-search" disabled="#{historyCapturedImagesController.formUpdate}"
+					                				update="tbPeople" process="@this inputPeopleId" actionListener="#{historyCapturedImagesController.getPeopleListByPeopleId}"/>
+								</div>
+						        <p:dialog header="Thông tin tìm kiếm" minHeight="500" width="700" showEffect="fade" widgetVar="peoplePicker">
+						            <p:dataTable id="tbPeople" var="item" value="#{historyCapturedImagesController.peopleList}" 
+						            	scrollable="true" scrollHeight="500" selectionMode="single"
+						                selection="#{historyCapturedImagesController.peopleSelected}" rowKey="#{item.peopleId}">
+						                <p:ajax event="rowSelect" listener="#{historyCapturedImagesController.onRowSelect}" update="@form"/>
+						
+						                <p:column headerText="Mã nhân viên">
+						                    <h:outputText value="#{item.peopleId}"/>
+						                </p:column>
+						                <p:column headerText="Họ tên">
+						                    <h:outputText value="#{item.fullName}"/>
+						                </p:column>
+						                <p:column headerText="Số điện thoại">
+						                    <h:outputText value="#{item.mobilePhone}"/>
+						                </p:column>
+						            </p:dataTable>
+						        </p:dialog>
+							</div>
+							<div class="form-group">
+								<p:outputLabel value="Họ và tên" />
+								<div class="ui-inputgroup">
+					                <p:inputText id="inputFullName" value="#{historyCapturedImagesController.capturedImages.fullName}"/>
+					                <p:commandButton styleClass="btn btn-default" id="fullNameBtn" update="tbPeople" disabled="#{historyCapturedImagesController.formUpdate}"
+					                	process="@this inputFullName" icon="pi pi-search" actionListener="#{historyCapturedImagesController.getPeopleListByFullName}"/>
+								</div>
+							</div>
+							<div class="form-group">
+								<p:outputLabel value="Số điện thoại" />
+								<div class="ui-inputgroup">
+					                <p:inputText id="inputMobilePhone" value="#{historyCapturedImagesController.capturedImages.mobilePhone}"/>
+					                <p:commandButton styleClass="btn btn-default" id="mobilePhoneBtn" update="tbPeople" disabled="#{historyCapturedImagesController.formUpdate}"
+					                	process="@this inputMobilePhone" icon="pi pi-search" actionListener="#{historyCapturedImagesController.getPeopleListByMobilePhone}"/>
+								</div>
+							</div>
+							<div class="form-group">
+								<p:outputLabel value="Ngày sinh" />
+								<!-- <p:inputText value="#{historyCapturedImagesController.capturedImages.dateOfBirth}" type="date"/> -->
+                                <p:datePicker value="#{historyCapturedImagesController.capturedImages.birthday}" monthNavigator="true" yearNavigator="true" pattern="dd/MM/yyyy" yearRange="1930:2010" showIcon="true"/>
+							</div>
+							<div class="form-group">
+								<p:outputLabel value="Giới tính" />
+								<p:selectOneMenu id="gender" value="#{historyCapturedImagesController.capturedImages.gender}">
+									<f:selectItem itemLabel="Chọn giới tính" itemValue="" />
+									<f:selectItem itemLabel="Nam" itemValue="Nam" />
+									<f:selectItem itemLabel="Nữ" itemValue="Nữ" />
+									<f:selectItem itemLabel="Không xác định" itemValue="Không xác định" />
+								</p:selectOneMenu>
+							</div>
+							<div class="form-group">
+								<p:outputLabel value="Phân loại" />
+								<p:selectOneMenu value="#{historyCapturedImagesController.customerTypeSelected}">
+									<f:selectItem itemLabel="Chọn phân loại" itemValue="" />
+									<f:selectItems value="#{historyCapturedImagesController.customerTypeList}" var="item" itemLabel="#{item.customerTypeName}" itemValue="#{item.customerTypeId}"/>
+								</p:selectOneMenu>
+							</div>
+						</div>
+						<br />
+						<div align="center">
+							<h:commandButton update="confirmReg" styleClass="#{historyCapturedImagesController.formUpdate ? 'btn btn-primary' : 'btn btn-success'}"
+								value="#{historyCapturedImagesController.formUpdate ? 'Cập nhật' : 'Đăng ký'}" ajax="false" 
+								action="#{historyCapturedImagesController.action(people, capturedImages)}"/>
+							<p:dialog widgetVar="confirmReg" width="500px" modal="true" header="Xác nhận" resizable="false">
+								<div style="text-align:left;">Mã nhân viên đã được đăng ký. Bạn có chắc chắn muốn đăng ký lại không?</div>
+								<p:commandButton value="Xác nhận" actionListener="#{historyCapturedImagesController.reRegister}" styleClass="btn btn-secondary btn-sm"/>
+								<p:commandButton value="Bỏ qua" onclick="PF('confirmReg').hide()" styleClass="btn btn-secondary btn-sm"/>
+							</p:dialog>
+						</div>
+				</div>
+				<div class="col-6">
+					<p:graphicImage id="image" value="#{historyCapturedImagesController.capturedImages.capturedImagePath}" 
+						width="250px" height="250px"/>
+					<p:tooltip id="toolTipContent" for="image" position="bottom">
+						<p:graphicImage value="#{historyCapturedImagesController.capturedImages.capturedImagePath}" />
+					</p:tooltip>
+				</div>
+			</div>
+		</h:form>
+	</div>
+</h:body>
+</html>

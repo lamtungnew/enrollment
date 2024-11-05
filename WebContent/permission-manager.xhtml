@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta charset="utf-8" name="viewport"
+		content="width=device-width, initial-scale=1"
+		http-equiv="X-UA-Conpatible" />
+	<h:outputStylesheet library="css" name="bootstrap.min.css" />
+	<h:outputStylesheet library="css" name="app.css" />
+	<h:outputStylesheet library="css" name="paginator.css" />
+	<script name="jquery/jquery.js" library="primefaces">
+		
+	</script>
+	<title>Phân quyền sử dụng</title>
+	<style type="text/css">
+.layout_custom {
+	border: 1px solid #dee2e6;
+	margin-top: 10px;
+	padding: 0px;
+}
+
+.tbl_custom_bt {
+	border-top: 1px solid #dee2e6;
+}
+
+.dFrom input {
+	width: 120px !important;
+}
+
+.dTo input {
+	width: 120px !important;
+}
+
+.class_text_center {
+	text-align: center !important;
+	vertical-align: middle !important;
+}
+
+.class_com_pad5 {
+	padding: 5px !important;
+}
+
+.tbl_custom_bt .ui-chkbox .ui-chkbox-box .ui-chkbox-icon.ui-icon-check {
+	margin-top: -10px;
+}
+
+.tbl_custom_bt .ui-state-default {
+	text-align: center;
+}
+</style>
+</h:head>
+
+<h:body>
+	<p:growl id="growl" showDetail="true" />
+	<p:confirmDialog global="true" showEffect="fade" hideEffect="fade" closable="false" >
+		<p:commandButton value="Đồng ý" type="button"
+			styleClass="ui-confirmdialog-yes" icon="pi pi-check" />
+		<p:commandButton value="Hủy" type="button"
+			styleClass="ui-confirmdialog-no" icon="pi pi-times" />
+	</p:confirmDialog>
+	<ui:include src="componentHeader.xhtml"></ui:include>
+	<div class="">
+		<div class="col-12 layout_custom">
+			<h:form id="form">
+
+				<div class="row">
+					<div class="col col-lg-2">
+						<div class="class_com_pad5"
+							style="margin-left: 10px; margin-top: 5px;">
+							<h4>Phân quyền sử dụng</h4>
+						</div>
+					</div>
+					<div class="col">
+						<div class="input-group"></div>
+					</div>
+					<div class="col col-lg-2">
+						<div class="class_com_pad5"
+							style="margin-top: 1px; text-align: right">
+							<p:commandButton id="btnUpdatePermissions" value="Lưu thay đổi"
+								icon="pi pi-check"
+								action="#{permissionManagerController.updatePermissions()}"
+								title="Lưu thay đổi" update="form growl" validateClient="false"
+								rendered="#{sessionController.isAllow('CONFIG_PERMISSION','UPDATE')}">
+								<p:confirm header="Xác nhận"
+									message="Bạn có chắc chắn muốn cập nhật hay không ?" icon="ui-icon-warning" />
+							</p:commandButton>
+						</div>
+					</div>
+				</div>
+
+				<p:dataTable id="tblDataPerm" widgetVar="tblDataPermVar"
+					styleClass="tbl_custom_bt" var="item"
+					value="#{permissionManagerController.permissions}"
+					scrollable="true">
+
+					<p:columns value="#{permissionManagerController.columns}"
+						var="column" columnIndexVar="columnIndexVar">
+						<f:facet name="header" style="text-align: center;">
+							<h:outputText rendered="#{column.property == 'module'}"
+								value="#{column.header} \ Quyền" />
+							<h:outputText rendered="#{column.property != 'module'}"
+								value="#{column.header}"/>
+						</f:facet>
+						<div>
+							<div class="row">
+								<p:repeat value="#{item[column.property]}" var="action">
+									<div class="col col-lg-12" style="text-align: left;">
+										<h:outputText rendered="#{column.property == 'module'}"
+											style="font-weight: bold;" value="#{action}" />
+										<p:selectBooleanCheckbox style="margin-top: 5px;"
+											rendered="#{column.property != 'module'}"
+											disabled="#{sessionController.isAllow('CONFIG_PERMISSION','UPDATE') == false}"
+											value="#{permissionManagerController.getAction(column.property, action).allow}"
+											itemLabel="#{permissionManagerController.getAction(column.property, action).moduleActionName}"
+											title="#{permissionManagerController.getAction(column.property, action).moduleActionCode}">
+
+											<p:ajax update="form:tblDataPerm"
+												listener="#{permissionManagerController.changeAllow(column.property, action)}" />
+
+										</p:selectBooleanCheckbox>
+									</div>
+								</p:repeat>
+							</div>
+						</div>
+					</p:columns>
+
+				</p:dataTable>
+
+			</h:form>
+
+		</div>
+	</div>
+</h:body>
+</html>

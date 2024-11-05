@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8" name="viewport"
+          content="width=device-width, initial-scale=1"
+          http-equiv="X-UA-Conpatible"/>
+    <h:outputStylesheet library="css" name="bootstrap.min.css"/>
+    <h:outputStylesheet library="css" name="app.css"/>
+    <h:outputStylesheet library="css" name="paginator.css"/>
+    <script name="jquery/jquery.js" library="primefaces"/>
+    <h:outputScript name="webcams.js" library="js"/>
+    <title>Danh sách nhân viên</title>
+
+</h:head>
+
+<h:body>
+    <p:growl id="growl" showDetail="true" globalOnly="true"/>
+    <p:confirmDialog global="true" showEffect="fade" hideEffect="fade"
+                     closable="false">
+        <p:commandButton value="Đồng ý" type="button"
+                         styleClass="ui-confirmdialog-yes" icon="pi pi-check"/>
+        <p:commandButton value="Hủy" type="button"
+                         styleClass="ui-confirmdialog-no ui-button-secondary"
+                         icon="pi pi-times"/>
+    </p:confirmDialog>
+    <ui:include src="componentHeader.xhtml"></ui:include>
+    <div class="">
+        <div class="col-12 layout_custom">
+            <h:form id="frmDetail" enctype="multipart/form-data">
+                <div class="ui-g ui-g-nopad"
+                     style="padding-left: 150px; padding-right: 150px;">
+                    <div class="ui-g-12">
+                        <div class="ui-g-6">
+                            <p:tabView styleClass="tabReadOnly" style="width: 100%;">
+                                <p:tab title="Thông tin nhân viên:">
+
+                                    <div class="ui-g-12 ui-g-nopad">
+                                        <div class="ui-g-3 ui-g-nopad lable_margin-top_10 lpad10">
+                                            Mã nhân viên
+                                        </div>
+                                        <div class="ui-g-7 ui-g-nopad"
+                                             style="background: transparent;">
+                                            <p:inputText
+                                                    value="#{profileController.selectedItem.peopleId}"
+                                                    readonly="true" style="width: 100%;"/>
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12 ui-g-nopad">
+                                        <div class="ui-g-3 ui-g-nopad lable_margin-top_10 lpad10">
+                                            Họ tên
+                                        </div>
+                                        <div class="ui-g-7 ui-g-nopad"
+                                             style="background: transparent;">
+                                            <p:inputText rendered="#{!profileController.isEditable()}"
+                                                         value="#{profileController.selectedItem.fullName}"
+                                                         readonly="true" style="width: 100%;"/>
+                                            <p:inputText id="txtFullName"
+                                                         rendered="#{profileController.isEditable()}" required="true"
+                                                         requiredMessage="Thông tin nhập chưa đầy đủ. Vui lòng nhập lại !"
+                                                         style="width: 100%;"
+                                                         value="#{profileController.selectedItem.fullName}"/>
+                                            <p:message styleClass="field_message" for="txtFullName"
+                                                       showSummary="false"/>
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12 ui-g-nopad">
+                                        <div class="ui-g-3 ui-g-nopad lable_margin-top_10 lpad10">
+                                            Số điện thoại
+                                        </div>
+                                        <div class="ui-g-7 ui-g-nopad"
+                                             style="background: transparent;">
+                                            <p:inputText rendered="#{!profileController.isEditable()}"
+                                                         value="#{profileController.selectedItem.mobilePhone}"
+                                                         readonly="true" style="width: 100%;"/>
+                                            <p:inputText id="txtMobilePhone"
+                                                         rendered="#{profileController.isEditable()}" required="true"
+                                                         requiredMessage="Thông tin nhập chưa đầy đủ. Vui lòng nhập lại !"
+                                                         style="width: 100%;"
+                                                         value="#{profileController.selectedItem.mobilePhone}">
+                                                <f:validator validatorId="phoneValidator"/>
+                                            </p:inputText>
+                                            <p:message styleClass="field_message" for="txtMobilePhone"
+                                                       showSummary="false"/>
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12 ui-g-nopad">
+                                        <div class="ui-g-3 ui-g-nopad lable_margin-top_10 lpad10">
+                                            Email
+                                        </div>
+                                        <div class="ui-g-7 ui-g-nopad"
+                                             style="background: transparent;">
+                                            <p:inputText rendered="#{!profileController.isEditable()}"
+                                                         value="#{profileController.selectedItem.email}"
+                                                         readonly="true" style="width: 100%;"/>
+                                            <p:inputText id="txtEmail"
+                                                         rendered="#{profileController.isEditable()}" required="true"
+                                                         requiredMessage="Thông tin nhập chưa đầy đủ. Vui lòng nhập lại !"
+                                                         style="width: 100%;"
+                                                         value="#{profileController.selectedItem.email}">
+                                                <f:validator validatorId="emailValidator"/>
+                                            </p:inputText>
+                                            <p:message styleClass="field_message" for="txtEmail"
+                                                       showSummary="false"/>
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12 ui-g-nopad">
+                                        <div class="ui-g-3 ui-g-nopad lable_margin-top_10 lpad10">
+                                            Ngày sinh
+                                        </div>
+                                        <div class="ui-g-7 ui-g-nopad"
+                                             style="background: transparent;">
+                                            <p:inputText rendered="#{!profileController.isEditable()}"
+                                                         value="#{profileController.selectedItem.dateOfBirth}"
+                                                         readonly="true" style="width: 100%;">
+                                                <f:convertDateTime pattern="dd/MM/yyyy"/>
+                                            </p:inputText>
+                                            <p:datePicker id="txtDateOfBirth"
+                                                          rendered="#{profileController.isEditable()}"
+                                                          styleClass="dFrom" style="width: 100%" required="true"
+                                                          requiredMessage="Thông tin nhập chưa đầy đủ. Vui lòng nhập lại !"
+                                                          placeholder="Chọn ngày sinh"
+                                                          value="#{profileController.selectedItem.dateOfBirth}"
+                                                          monthNavigator="true" yearNavigator="true" showIcon="true"
+                                                          pattern="dd/MM/yyyy">
+                                            </p:datePicker>
+                                            <p:message styleClass="field_message" for="txtDateOfBirth"
+                                                       showSummary=" false"/>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="ui-g-12 ui-g-nopad">
+                                        <div class="ui-g-3 ui-g-nopad lable_margin-top_10 lpad10">
+                                            Giới tính
+                                        </div>
+                                        <div class="ui-g-7 ui-g-nopad"
+                                             style="background: transparent;">
+                                            <p:inputText rendered="#{!profileController.isEditable()}"
+                                                         value="#{profileController.selectedItem.gender}"
+                                                         readonly="true" style="width: 100%;"/>
+                                            <p:selectOneMenu id="txtGender"
+                                                             rendered="#{profileController.isEditable()}"
+                                                             style="width: 100%"
+                                                             value="#{profileController.selectedItem.gender}">
+                                                <f:selectItem itemLabel="Nam" itemValue="Nam"/>
+                                                <f:selectItem itemLabel="Nữ" itemValue="Nữ"/>
+                                                <p:ajax process="txtGender" event="itemSelect"
+                                                        listener="#{profileController.txtGenderValueChange}"/>
+                                            </p:selectOneMenu>
+                                            <p:message styleClass="field_message" for="txtGender"
+                                                       showSummary="false"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="ui-g-12 ui-g-nopad">
+                                        <div class="ui-g-3 ui-g-nopad lable_margin-top_10 lpad10">
+                                            User
+                                        </div>
+                                        <div class="ui-g-7 ui-g-nopad"
+                                             style="background: transparent;">
+                                            <p:inputText
+                                                    value="#{profileController.selectedItem.userName}"
+                                                    readonly="true" style="width: 100%;"/>
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12 ui-g-nopad">
+                                        <div class="ui-g-3 ui-g-nopad lable_margin-top_10 lpad10">
+                                            Mật khẩu
+                                        </div>
+                                        <div class="ui-g-7 ui-g-nopad"
+                                             style="background: transparent;">
+                                            <p:inputText
+                                                    value="******"
+                                                    readonly="true" style="width: 100%;"/>
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12 ui-g-nopad">
+                                        <div class="ui-g-3 ui-g-nopad lable_margin-top_10 lpad10">
+                                            Nhóm quyền
+                                        </div>
+                                        <div class="ui-g-7 ui-g-nopad"
+                                             style="background: transparent;">
+                                            <p:inputText
+                                                    value="#{profileController.selectedItem.roleDescription}"
+                                                    readonly="true" style="width: 100%;"/>
+
+                                        </div>
+                                        <div class="ui-g-3 ui-g-nopad lable_margin-top_10"></div>
+                                        <div class="ui-g-7 ui-g-nopad"
+                                             style="background: transparent;"></div>
+                                    </div>
+                                    <div class="ui-g-12 ui-g-nopad">
+                                        <div class="ui-g-3 ui-g-nopad lable_margin-top_10 lpad10">
+                                            Khối
+                                        </div>
+                                        <div class="ui-g-7 ui-g-nopad"
+                                             style="background: transparent;">
+                                            <p:inputText
+                                                    value="#{profileController.selectedItem.depName}"
+                                                    readonly="true" style="width: 100%;"/>
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12 ui-g-nopad">
+                                        <div class="ui-g-3 ui-g-nopad lable_margin-top_10 lpad10">
+                                            Phòng ban
+                                        </div>
+                                        <div class="ui-g-7 ui-g-nopad"
+                                             style="background: transparent;">
+                                            <p:inputText
+                                                    value="#{profileController.selectedItem.groupName}"
+                                                    readonly="true" style="width: 100%;"/>
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12 ui-g-nopad">
+                                        <div class="ui-g-3 ui-g-nopad lable_margin-top_10 lpad10">
+                                            Trạng thái
+                                        </div>
+                                        <div class="ui-g-7 ui-g-nopad"
+                                             style="background: transparent;">
+                                            <p:inputText
+                                                    rendered="#{!profileController.isEditable()}"
+                                                    value="#{profileController.geetEmployeeStatusName(profileController.selectedItem.status)}"
+                                                    readonly="true" style="width: 100%;"/>
+                                            <p:selectOneMenu id="txtStatus"
+                                                             rendered="#{profileController.isEditable()}"
+                                                             style="width: 100%"
+                                                             value="#{profileController.selectedItem.status}">
+                                                <f:selectItem itemLabel="Hoạt động" itemValue="1"/>
+                                                <f:selectItem itemLabel="Khóa" itemValue="2"/>
+                                                <f:selectItem itemLabel="Đóng" itemValue="3"/>
+                                                <p:ajax process="txtStatus" event="itemSelect"/>
+                                            </p:selectOneMenu>
+                                            <p:message styleClass="field_message" for="txtStatus"
+                                                       showSummary="false"/>
+                                        </div>
+                                    </div>
+
+                                </p:tab>
+                            </p:tabView>
+                            <div class="ui-g-12 ui-g-nopad">
+                                <div class="ui-g-3 ui-g-nopad lable_margin-top_10 lpad10">
+                                </div>
+                                <div class="ui-g-7 ui-g-nopad"
+                                     style="background: transparent;">
+                                    <div class="ui-g-12" align="right">
+                                        <!--<p:commandButton id="btnExecuteAdd"
+                                            rendered="#{profileController.createMode and !profileController.updateMode}"
+                                            value="Lưu" icon="pi pi-check"
+                                            action="#{profileController.add()}" title="Lưu thông tin"
+                                            update="frmDetail msgs" validateClient="true">
+                                        </p:commandButton>
+                                        <h:outputText value="&#160; " />
+                                        <p:commandButton id="btnExecuteUpdate"
+                                            rendered="#{!profileController.updateMode and !profileController.createMode}"
+                                            value="Chỉnh sửa thông tin" icon="pi pi-pencil"
+                                            action="#{profileController.goToUpdatePage()}"
+                                            title="Chỉnh sửa thông tin" update="frmDetail msgs"
+                                            validateClient="true">
+                                        </p:commandButton>
+                                        <h:outputText value="&#160; " />
+                                        <p:commandButton id="btnToUpdateMode"
+                                            rendered="#{profileController.updateMode and !profileController.createMode}"
+                                            value="Lưu thông tin" icon="pi pi-check"
+                                            action="#{profileController.update()}" title="Lưu thông tin"
+                                            update="frmDetail msgs" validateClient="true">
+                                        </p:commandButton>
+                                        <h:outputText value="&#160; " />-->
+                                        <p:commandButton id="btnToChangePass"
+                                                         styleClass="ui-button-secondary"
+                                                         action="#{profileController.preChangePass()}"
+                                                         oncomplete="PF('dlgChangePassVar').show();"
+                                                         update="frmChangePass"
+                                                         value="Đổi mật khẩu"
+                                                         icon="pi pi-key" immediate="true">
+                                        </p:commandButton>
+                                    </div>
+
+                                </div>
+                                <div class="ui-g-3 ui-g-nopad lable_margin-top_10"></div>
+                                <div class="ui-g-7 ui-g-nopad"
+                                     style="background: transparent;"></div>
+                            </div>
+
+                        </div>
+                        <div class="ui-g-6">
+                            <div class="row col-12">
+                                <p:tabView id="tab" styleClass="tabReadOnly"
+                                           style="width: 100%;"
+                                           activeIndex="#{profileController.tabIndex}">
+                                    <p:ajax event="tabChange"
+                                            listener="#{profileController.onTabChange}"/>
+                                    <p:tab title="Ảnh:">
+                                        <div class="form-group">
+                                            <div class="ui-g-12 class_com_pad5" align="center">
+                                                <p:graphicImage id="fileUploadFaceView"
+                                                                value="#{(profileController.imageRootUrlPeople).concat(profileController.selectedItem.imagePath)}"
+                                                                width="500"/>
+                                            </div>
+                                            <!--<div class="ui-g-12 class_com_pad5" align="center">-->
+                                                <!--<p:fileUpload id="fileUploadFace"-->
+                                                              <!--value="#{profileController.fileUploadFace}"-->
+                                                              <!--label="Tải lại ảnh" mode="simple" skinSimple="true"-->
+                                                              <!--auto="true" process="@this"-->
+                                                              <!--update="frmDetail fileUploadFace fileUploadFaceView"-->
+                                                              <!--listener="#{profileController.fileUploadFaceHandle}"/>-->
+                                                <!--<p:message for="fileUploadFace"/>-->
+                                            <!--</div>-->
+                                        </div>
+                                    </p:tab>
+                                </p:tabView>
+                            </div>
+                            <div class="row">
+                                <p:tabView styleClass="tabReadOnly" style="width: 100%;">
+                                    <p:tab title="Ca làm việc:">
+                                        <div class="ui-g-12 ui-g-nopad">
+                                            <div class="ui-g-3 ui-g-nopad lable_margin-top_10 lpad10">
+                                                Mã ca đăng ký:
+                                            </div>
+                                            <div class="ui-g-7 ui-g-nopad">
+                                                <p:repeat
+                                                        value="#{profileController.profileShift.shiftDetail}"
+                                                        var="time">
+                                                    <div class="ui-g-12">
+                                                        <div class="ui-g-3 ui-g-nopad">#{profileController.profileShift.code}</div>
+                                                        <div class="ui-g-7 ui-g-nopad"></div>
+                                                    </div>
+                                                </p:repeat>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                        <div class="ui-g-12 ui-g-nopad">
+                                            <div class="ui-g-3 ui-g-nopad lable_margin-top_10 lpad10">
+                                                Thời gian làm việc:
+                                            </div>
+                                            <div class="ui-g-7 ui-g-nopad">
+                                                <p:repeat
+                                                        value="#{profileController.profileShift.shiftDetail}"
+                                                        var="time">
+                                                    <div class="ui-g-12">
+                                                        <div class="ui-g-3 ui-g-nopad">#{time.dayName}</div>
+                                                        <div class="ui-g-7 ui-g-nopad">#{time.workingStartTime}
+                                                            - #{time.workingEndTime}</div>
+                                                    </div>
+                                                </p:repeat>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                        <div class="ui-g-12 ui-g-nopad">
+                                            <div class="ui-g-3 ui-g-nopad  lable_margin-top_10 lpad10">Chấm
+                                                công giữa ca:
+                                            </div>
+                                            <div class="ui-g-7 ui-g-nopad">
+                                                <p:repeat
+                                                        value="#{profileController.profileShift.shiftDetail}"
+                                                        var="time">
+                                                    <div class="ui-g-12">
+                                                        <div class="ui-g-3 ui-g-nopad">#{time.dayName}</div>
+                                                        <div class="ui-g-7 ui-g-nopad">#{time.breakStartTime}
+                                                            - #{time.breakEndTime}</div>
+                                                    </div>
+                                                </p:repeat>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </p:tab>
+                                </p:tabView>
+                            </div>
+                        </div>
+
+                        <div class="ui-g-12">
+                            <p:messages id="msgs" showDetail="true" autoUpdate="true"/>
+                        </div>
+
+                    </div>
+                </div>
+            </h:form>
+        </div>
+
+        <p:dialog header="Đổi mật khẩu" id="dlgChangePass" styleClass="dlg_custom"
+                  widgetVar="dlgChangePassVar" resizable="false" width="650"
+                  modal="true" closeOnEscape="true" closable="false">
+            <h:form id="frmChangePass">
+                <p:fieldset style="margin-bottom:1px">
+                    <div class="ui-g ui-g-nopad">
+                        <div class="ui-g-12">
+                            <div class="ui-g-4 ui-g-nopad lable_margin-top_10">
+                                Mật khẩu cũ
+                            </div>
+                            <div class="ui-g-8 ui-g-nopad" style="background: transparent;">
+                                <p:password id="txtOldPass" maxlength="20"
+                                            style="width: 100%;"
+                                            value="#{profileController.changePassworDto.password}"
+                                            toggleMask="true" redisplay="true">
+                                    <f:validator validatorId="requiredValidator"/>
+                                    <f:validator validatorId="passwordValidator"/>
+                                </p:password>
+                                <p:message id="txtOldPassMsg" styleClass="field_message" for="txtOldPass"
+                                           showSummary="false"/>
+                            </div>
+                        </div>
+
+                        <div class="ui-g-12">
+                            <div class="ui-g-4 ui-g-nopad lable_margin-top_10">
+                                Mật khẩu mới
+                            </div>
+                            <div class="ui-g-8 ui-g-nopad" style="background: transparent;">
+                                <p:password id="txtNewPass" maxlength="20"
+                                            style="width: 100%;"
+                                            value="#{profileController.changePassworDto.newPassword}"
+                                            toggleMask="true" redisplay="true">
+                                    <f:validator validatorId="requiredValidator"/>
+                                    <f:validator validatorId="passwordValidator"/>
+                                </p:password>
+                                <p:message styleClass="field_message" for="txtNewPass"
+                                           showSummary="false"/>
+                            </div>
+                        </div>
+
+                        <div class="ui-g-12">
+                            <div class="ui-g-4 ui-g-nopad lable_margin-top_10">
+                                Xác nhận mật khẩu mới
+                            </div>
+                            <div class="ui-g-8 ui-g-nopad" style="background: transparent;">
+                                <p:password id="txtNewPassCf" maxlength="20"
+                                            style="width: 100%;"
+                                            value="#{profileController.changePassworDto.newPasswordCf}"
+                                            toggleMask="true" redisplay="true">
+                                    <f:validator validatorId="requiredValidator"/>
+                                    <f:validator validatorId="passwordValidator"/>
+                                </p:password>
+                                <p:message styleClass="field_message" for="txtNewPassCf"
+                                           showSummary="false"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p:messages id="msgs" showDetail="true" autoUpdate="true" globalOnly="true"/>
+                    </div>
+                </p:fieldset>
+                <div class="ui-g-12" align="right">
+                    <p:commandButton id="btnChangePass" value="Cập nhật"
+                                     icon="pi pi-check" action="#{profileController.changePass()}"
+                                     title="Cập nhật thông tin" update="frmChangePass"
+                                     validateClient="true">
+                        <p:confirm header="Xác nhận"
+                                   message="Bạn có chắc chắn muốn cập nhật hay không ?"
+                                   icon="ui-icon-warning"/>
+                    </p:commandButton>
+                    <h:outputText value="&#160; "/>
+                    <p:commandButton id="btnCancel" styleClass="ui-button-secondary"
+                                     oncomplete="PF('dlgChangePassVar').hide();" value="Đóng"
+                                     icon="pi pi-reply" immediate="true">
+                    </p:commandButton>
+                </div>
+            </h:form>
+        </p:dialog>
+
+        <p:dialog header="Thông báo" id="dlgRelogin" styleClass="dlg_custom"
+                  widgetVar="dlgReloginVar" resizable="false" width="650"
+                  modal="true" closeOnEscape="true" closable="false">
+            <h:form id="frmRelogin">
+                <p:fieldset style="margin-bottom:1px">
+                    Đổi mật khẩu thành công, vui lòng đăng nhập lại!
+                </p:fieldset>
+                <div class="ui-g-12" align="right">
+                    <p:commandButton id="btnRelogin" value="Đăng nhập lại" styleClass="ui-button-secondary"
+                                     icon="pi pi-reply" action="#{profileController.reLogin()}"
+                                     title="Đăng nhập lại" update="frmRelogin"
+                                     validateClient="true">
+                    </p:commandButton>
+                </div>
+            </h:form>
+        </p:dialog>
+
+    </div>
+</h:body>
+</html>

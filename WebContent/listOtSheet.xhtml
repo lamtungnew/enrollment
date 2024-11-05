@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="utf-8" name="viewport"
+	content="width=device-width, initial-scale=1"
+	http-equiv="X-UA-Conpatible" />
+<h:outputStylesheet library="css" name="bootstrap.min.css" />
+<h:outputStylesheet library="css" name="app.css" />
+<script name="jquery/jquery.js" library="primefaces">
+</script>
+<title>Danh sách đề xuất OT</title>
+<style type="text/css">
+	.disable-scroll .ui-dialog-content {
+		overflow: hidden !important;
+	}
+	.alightRight{
+		text-align:right;
+	}
+	.searchTable{
+		margin-top: 10px;
+		margin-bottom: 10px;
+		width: 100%;
+	}
+</style>
+</h:head>
+<h:body>
+	<ui:include src="componentHeader.xhtml"></ui:include>
+	<p:growl id="growl" showDetail="true" />
+	<div class="row">
+		<div class="col-12">
+			<h:form enctype="multipart/form-data" id="mainForm">
+				<table class="searchTable">
+					<tr style="margin-top: 10px">
+						<td>Ngày tạo từ:</td>
+						<td><p:calendar inputStyle="width: 210px"
+										pattern="dd/MM/yyyy" id ="fromDate" showButtonPanel="false"
+										value="#{listOtSheetController.fromDate}" /></td>
+						<td>Đến:</td>
+						<td><p:calendar inputStyle="width: 210px"
+										pattern="dd/MM/yyyy" id ="toDate"
+										value="#{listOtSheetController.toDate}" /></td>
+						<td >Trạng thái:</td>
+						<td class="alightRight" style="width: 13%"><p:selectOneMenu id="status" immediate="true"
+																					style="width: 210px"
+																					value="#{listOtSheetController.searchOtSheet.state}">
+							<f:selectItem itemLabel="Chọn trạng thái" noSelectionOption="true" />
+							<f:selectItem itemLabel="Đã phê duyệt" itemValue="2"></f:selectItem>
+							<f:selectItem itemLabel="Chưa phê duyệt" itemValue="0"></f:selectItem>
+							<f:selectItem itemLabel="Từ chối" itemValue="3"></f:selectItem>
+						</p:selectOneMenu></td>
+					</tr>
+					<tr>
+						<td>Người tạo:</td>
+						<td><p:selectOneMenu id="fullNameSearch" style="width: 210px"
+											 filter="true" filterMatchMode="contains" sortBy=""
+											 immediate="true"
+											 value="#{listOtSheetController.searchOtSheet.fullName}">
+							<f:selectItem itemLabel="Họ và tên"
+										  noSelectionOption="true" />
+							<f:selectItems
+									value="#{listOtSheetController.listPeopleForSearch}" var="pp"
+									itemValue="#{pp.fullName}" itemLabel="#{pp.fullName}" />
+						</p:selectOneMenu></td>
+						<td></td>
+						<td></td>
+
+						<td ></td>
+						<td class="alightRight" style="width: 13%">
+							<h:commandButton value="Tìm kiếm"
+											 update="@([id$=tblListApprove])" class="btn btn-secondary" style="margin-top: 10px"
+											 actionListener="#{listOtSheetController.search()}">
+								<f:param name="validateDagUploadExcelStatus" value="false" />
+								<f:param name="validateDagAddTimeKeeping" value="false" />
+								<f:param name="validateDagEditTimeKeeping" value="false" />
+							</h:commandButton>
+						</td>
+					</tr>
+				</table>
+				<div class="row">
+					<div class="col col-lg-2">
+						<div class="class_com_pad6"
+							 style="margin-top: 5px;">
+							<h4>Danh sách đề xuất OT</h4>
+						</div>
+					</div>
+					<div class="col">
+						<div style="width: 100%" align="right">
+							<p:commandButton rendered="#{sessionController.isAllow('APPROVE_LIST_OT','EXPORT')}"
+											 value="Xuất Excel"
+											 actionListener="#{listOtSheetController.exportExcel()}"
+											 iconPos="right" ajax="false" style="margin-right: 10px"
+											 onclick="PrimeFaces.monitorDownload(start, stop);">
+								<p:fileDownload
+										value="#{listOtSheetController.exportExcelContent}" />
+								<f:param name="validateDagUploadExcelStatus" value="false" />
+								<f:param name="validateDagAddTimeKeeping" value="false" />
+								<f:param name="validateDagEditTimeKeeping" value="false" />
+							</p:commandButton>
+							<p:commandButton
+									rendered="#{sessionController.isAllow('APPROVE_LIST_OT','IMPORT')}"
+									value="Trình duyệt theo lô"
+									oncomplete="PF('dagUploadExcel').show();" >
+								<f:param name="validateDagUploadExcelStatus" value="false" />
+								<f:param name="validateDagAddTimeKeeping" value="false" />
+								<f:param name="validateDagEditTimeKeeping" value="false" />
+							</p:commandButton>
+						</div>
+					</div>
+				</div>
+
+				<p:dataTable id="tblListApprove" var="otSheet" value="#{listOtSheetController.dataModel}"
+							 rowIndexVar="rowIndex" rowKey="#{timekeepingSheet.autoid}"
+							 paginator="true" rows="10" paginatorPosition="bottom"
+							 emptyMessage="#{approveTimekeepingExplanationController.noRecordMsg}"
+							 paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+							 rowsPerPageTemplate="5,10,20,50,100" widgetVar="50"
+							 tableStyle="table-layout:auto" style="margin-top: 10px;">
+
+					<p:column headerText="#" style="width:3%">
+						#{rowIndex+1}
+					</p:column>
+
+					<p:column headerText="Trạng thái" style="width:15%">
+						<h:outputText value="#{otSheet.stateValue}" />
+					</p:column>
+
+					<p:column headerText="Người tạo" style="width:10%">
+						<h:outputText value="#{otSheet.fullName}"/>
+					</p:column>
+
+					<p:column headerText="Ngày tạo" style="width:8%">
+						<h:outputText value="#{otSheet.createdAt}">
+							<f:convertDateTime pattern="dd/MM/yyyy" />
+						</h:outputText>
+					</p:column>
+
+					<p:column headerText="Ngày đăng ký OT" style="width:20%">
+						<h:outputText value="#{otSheet.otSheetDateValues}">
+							<f:convertDateTime pattern="dd/MM/yyyy" />
+						</h:outputText>
+					</p:column>
+
+					<p:column headerText="Tổng số giờ" style="width:8%">
+						<h:outputText value="#{otSheet.totalOtTime}">
+						</h:outputText>
+					</p:column>
+
+					<p:column headerText="Người duyệt" >
+						<h:outputText value="#{
+						otSheet.state == '3' and otSheet.approvalLevel == 2 ?
+						otSheet.approvedByName :
+						(otSheet.approvalLevel == 2 ?
+						otSheet.approvalByLevel2Name :
+						otSheet.approvedByName)}" />
+					</p:column>
+
+					<p:column headerText="Chi tiết" style="width:8%">
+						<p:commandLink value="Chi tiết"
+									   actionListener="#{listOtSheetController.initSelectedOtSheet(otSheet)}"
+									   update="@([id$=dagOtDetail])"
+									   oncomplete="PF('dagOtDetail').show();">
+							<f:param name="validateDagUploadExcelStatus" value="false" />
+							<f:param name="validateDagAddTimeKeeping" value="false" />
+							<f:param name="validateDagEditTimeKeeping" value="false" />
+						</p:commandLink>
+					</p:column>
+				</p:dataTable>
+			</h:form>
+		</div>
+	</div>
+	<ui:include src="listOtSheet-detail.xhtml" />
+	<ui:include src="listOtSheet-uploadExcel.xhtml" />
+</h:body>
+</html>

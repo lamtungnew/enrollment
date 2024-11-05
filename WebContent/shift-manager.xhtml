@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8" name="viewport"
+          content="width=device-width, initial-scale=1"
+          http-equiv="X-UA-Conpatible"/>
+    <h:outputStylesheet library="css" name="bootstrap.min.css"/>
+    <h:outputStylesheet library="css" name="app.css"/>
+    <h:outputStylesheet library="css" name="paginator.css"/>
+    <script name="jquery/jquery.js" library="primefaces">
+
+    </script>
+    <title>Đăng ký ca làm việc</title>
+
+</h:head>
+
+<h:body>
+    <p:growl id="growl" showDetail="true"/>
+    <p:confirmDialog global="true" showEffect="fade" hideEffect="fade" closable="false">
+        <p:commandButton value="Đồng ý" type="button"
+                         styleClass="ui-confirmdialog-yes" icon="pi pi-check"/>
+        <p:commandButton value="Hủy" type="button"
+                         styleClass="ui-confirmdialog-no ui-button-secondary" icon="pi pi-times"/>
+    </p:confirmDialog>
+    <ui:include src="componentHeader.xhtml"></ui:include>
+    <div class="">
+        <div class="col-12 layout_custom">
+            <h:form id="form">
+
+                <div class="row">
+                    <div class="col col-lg-2">
+                        <div class="class_com_pad5"
+                             style="margin-left: 10px; margin-top: 5px;">
+                            <h4>Đăng ký ca làm việc</h4>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-group">
+                            <div class="input-group-prepend class_com_pad5">
+                                <p:inputText id="ftxtPeopleCode"
+                                             value="#{shiftManagerController.searchData.peopleId}"
+                                             placeholder="Mã nhân viên"/>
+                            </div>
+
+                            <div class="input-group-prepend class_com_pad5">
+                                <p:inputText id="ftxtPeopleName"
+                                             value="#{shiftManagerController.searchData.fullName}"
+                                             placeholder="Họ và tên"/>
+                            </div>
+
+                            <div class="input-group-prepend class_com_pad5">
+                                <p:selectOneMenu id="ftxtGroup"
+                                                 value="#{shiftManagerController.searchData.depId}"
+                                                 filter="true" filterMatchMode="contains" style="width: 200px;">
+                                    <f:selectItem itemLabel="Tất cả khối" itemValue=""/>
+                                    <f:selectItems value="#{shiftManagerController.lstGroupCatg}"
+                                                   var="item" itemLabel="#{item.groupName}"
+                                                   itemValue="#{item.groupId}"/>
+                                    <p:ajax update="form" process="ftxtGroup"
+                                            event="itemSelect"
+                                            listener="#{shiftManagerController.ftxtGroupValueChange}"/>
+                                </p:selectOneMenu>
+                            </div>
+
+                            <div class="input-group-prepend class_com_pad5">
+                                <p:selectOneMenu id="ftxtGroupChild"
+                                                 value="#{shiftManagerController.searchData.groupId}"
+                                                 style="width: 200px;">
+                                    filter="true" filterMatchMode="contains">
+                                    <f:selectItem itemLabel="Tất cả phòng ban" itemValue=""/>
+                                    <f:selectItems value="#{shiftManagerController.lstGroupCatgChild}"
+                                                   var="item" itemLabel="#{item.groupName}"
+                                                   itemValue="#{item.groupId}"/>
+                                    <p:ajax update="form" process="ftxtGroupChild" event="itemSelect"
+                                            listener="#{shiftManagerController.ftxtGroupChildValueChange}"/>
+                                </p:selectOneMenu>
+                            </div>
+
+
+                            <div class="class_com_pad5" style="margin-top: 1px">
+                                <h:commandButton update="tblData"
+                                                 process="@this ftxtPeopleCode ftxtPeopleName ftxtGroupName"
+                                                 actionListener="#{shiftManagerController.search()}"
+                                                 value="Tìm kiếm" class="btn btn-secondary"/>
+                            </div>
+
+                            <div class="class_com_pad5" style="margin-top: 1px">
+                                <p:commandButton id="btnCreate" value="Thêm mới"
+                                                 icon="pi pi-plus" update="frmDetail" immediate="true"
+                                                 action="#{shiftManagerController.goToCreatePage(null)}"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-lg-2">
+                        <div class="input-group input-group-sm">
+                            <div class="class_com_pad5"
+                                 style="margin-top: 1px; text-align: right">
+                                <p:commandButton value="Nhập excel" update="frmImport"
+                                                 action="#{shiftManagerController.closeDlgUploadStatus()}"
+                                                 oncomplete="PF('dlgImportVar').show();">
+                                </p:commandButton>
+                            </div>
+
+                            <div class="class_com_pad5"
+                                 style="margin-top: 1px; text-align: right">
+                                <p:commandButton value="Xuất Excel"
+                                                 actionListener="#{shiftManagerController.exportExcel()}"
+                                                 iconPos="right" ajax="false"
+                                                 onclick="PrimeFaces.monitorDownload(start, stop);">
+                                    <p:fileDownload
+                                            value="#{shiftManagerController.exportExcelContent}"/>
+                                    <f:param name="validateDagUploadExcelStatus" value="false"/>
+                                </p:commandButton>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <p:dataTable id="tblData" styleClass="tbl_custom_bt" var="item"
+                             value="#{shiftManagerController.dataModel}" selectionMode="single"
+                             selection="#{shiftManagerController.selectedItem}"
+                             rowKey="#{item.autoId}" first="0" widgetVar="tblDataVar"
+                             paginator="true" paginatorPosition="bottom" rows="10"
+                             resizableColumns="true" dblClickSelect="true" resizeMode="fit"
+                             paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown} {Exporters}"
+                             rowsPerPageTemplate="1,10,20,50,100,200,300,500"
+                             emptyMessage="Không có dữ liệu..."
+                             currentPageReportTemplate="({totalRecords} bản ghi, {currentPage} / {totalPages})"
+                             rowSelectMode="single" rowIndexVar="rowIndex">
+
+                    <p:column width="25" resizable="false" exportable="false">
+                        <f:facet name="header">
+                            <h:outputText value="#"/>
+                        </f:facet>
+                        <div style="padding: 0px; background: transparent;">
+                            <div align="center" style="width: 100%">
+                                <h:outputText escape="true" value="#{rowIndex + 1}"/>
+                            </div>
+                        </div>
+                    </p:column>
+                    <p:column resizable="false" filterable="false"
+                              filterBy="#{item.peopleId}">
+                        <f:facet name="header">
+                            <h:outputText value="Mã nhân viên"/>
+                        </f:facet>
+                        <h:outputText style="width: 100%" value="#{item.peopleId}"/>
+                    </p:column>
+                    <p:column styleClass="ui-datatable break-word"
+                              resizable="true">
+                        <f:facet name="header">
+                            <h:outputText value="Họ và tên"/>
+                        </f:facet>
+                        <h:outputText style="width: 100%" value="#{item.fullName}"/>
+                    </p:column>
+                    <p:column width="150" styleClass="ui-datatable break-word"
+                              resizable="true">
+                        <f:facet name="header">
+                            <h:outputText value="Số điện thoại"/>
+                        </f:facet>
+                        <h:outputText style="width: 100%" value="#{item.mobilePhone}"/>
+                    </p:column>
+
+                    <p:column width="80" styleClass="ui-datatable break-word"
+                              resizable="true">
+                        <f:facet name="header">
+                            <h:outputText value="Giới tính"/>
+                        </f:facet>
+                        <h:outputText style="width: 100%" value="#{item.gender}"/>
+                    </p:column>
+
+                    <p:column width="120" styleClass="ui-datatable"
+                              style="text-align: right;">
+                        <f:facet name="header">
+                            <h:outputText styleClass="break-word" value="Ngày sinh"/>
+                        </f:facet>
+                        <h:outputText style="width: 100%" value="#{item.dateOfBirth}">
+                            <f:convertDateTime pattern="dd/MM/yyyy" timeZone="GMT+7"/>
+                        </h:outputText>
+                    </p:column>
+
+                    <p:column styleClass="ui-datatable break-word" resizable="true">
+                        <f:facet name="header">
+                            <h:outputText value="Khối"/>
+                        </f:facet>
+                        <h:outputText style="width: 100%" value="#{item.depName}" title="#{item.depName}"/>
+                    </p:column>
+
+                    <p:column styleClass="ui-datatable break-word"
+                              resizable="true">
+                        <f:facet name="header">
+                            <h:outputText value="Phòng ban"/>
+                        </f:facet>
+                        <h:outputText style="width: 100%" value="#{item.groupName}"/>
+                    </p:column>
+
+                    <p:column width="150" styleClass="ui-datatable break-word"
+                              resizable="true">
+                        <f:facet name="header">
+                            <h:outputText value="Ca đăng ký"/>
+                        </f:facet>
+                        <h:outputText style="width: 100%" value="#{item.shiftCode}"/>
+                    </p:column>
+
+                    <p:column width="120" styleClass="ui-datatable"
+                              style="text-align: right;">
+                        <f:facet name="header">
+                            <h:outputText styleClass="break-word" value="Ngày bắt đầu"/>
+                        </f:facet>
+                        <h:outputText style="width: 100%" value="#{item.startDate}">
+                            <f:convertDateTime pattern="dd/MM/yyyy" timeZone="GMT+7"/>
+                        </h:outputText>
+                    </p:column>
+
+                    <p:column width="120" styleClass="ui-datatable"
+                              style="text-align: right;">
+                        <f:facet name="header">
+                            <h:outputText styleClass="break-word" value="Ngày kết thúc"/>
+                        </f:facet>
+                        <h:outputText style="width: 100%" value="#{item.expireDate}">
+                            <f:convertDateTime pattern="dd/MM/yyyy" timeZone="GMT+7"/>
+                        </h:outputText>
+                    </p:column>
+
+                    <p:column width="120" resizable="false" exportable="false"
+                              style="text-align: center;">
+                        <f:facet name="header">
+                            <h:outputText value="Hành động"/>
+                        </f:facet>
+                        <p:commandLink ajax="true"
+                                       action="#{shiftManagerController.changeMode(item, false)}"
+                                       update="frmDetail" process="@this" value="Chi tiết">
+                            <span title="chi tiết" class="pi pi-eye"/>
+                        </p:commandLink>
+                        <h:outputText value="&#160; "/>
+                        <h:outputText value="&#160; "/>
+                        <p:commandLink ajax="true"
+                                       action="#{shiftManagerController.delete(item)}" update="tblData"
+                                       process="@this" value="Xóa">
+                            <span title="xóa" class="pi pi-trash" style="color: red;"/>
+                            <p:confirm header="Xác nhận"
+                                       message='Bạn có chắc chắn muốn xóa "[#{item.peopleId}] #{item.fullName}" hay không ?'
+                                       icon="ui-icon-warning"/>
+                        </p:commandLink>
+                    </p:column>
+                </p:dataTable>
+            </h:form>
+
+            <p:dialog header="Thông tin ca làm việc" id="dlgDetail" styleClass="dlg_custom"
+                      widgetVar="dlgDetailVar" resizable="false" width="950" modal="true"
+                      closeOnEscape="true" closable="false">
+                <h:form id="frmDetail">
+                    <p:fieldset style="margin-bottom:1px">
+                        <div class="ui-g ui-g-nopad">
+                            <div class="ui-g-12">
+                                <div class="ui-g-6">
+                                    <div class="ui-g-12">
+                                        <div class="ui-g-4 ui-g-nopad lable_margin-top_10">Khối<span
+                                                style="color: red;">*</span></div>
+                                        <div class="ui-g-8 ui-g-nopad" style="background: transparent;">
+                                            <p:selectOneMenu id="txtGroup" required="true"
+                                                             requiredMessage="Vui lòng chọn"
+                                                             value="#{shiftManagerController.selectedItem.depId}"
+                                                             filter="true" filterMatchMode="contains"
+                                                             style="width: 100%">
+                                                <f:selectItem itemLabel="Chọn khối" itemValue=""/>
+                                                <f:selectItems value="#{shiftManagerController.lstGroupCatg}"
+                                                               var="item" itemLabel="#{item.groupName}"
+                                                               itemValue="#{item.groupId}"/>
+                                                <p:ajax update="frmDetail" process="txtGroup"
+                                                        event="itemSelect"
+                                                        listener="#{shiftManagerController.txtGroupValueChange}"/>
+                                            </p:selectOneMenu>
+                                            <p:message styleClass="field_message" for="txtGroup"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="ui-g-12">
+                                        <div class="ui-g-4 ui-g-nopad lable_margin-top_10">Phòng ban</div>
+                                        <div class="ui-g-8 ui-g-nopad" style="background: transparent;">
+                                            <p:selectOneMenu id="txtGroupChild"
+                                                             value="#{shiftManagerController.selectedItem.groupId}"
+                                                             filter="true" filterMatchMode="contains"
+                                                             style="width: 100%">
+                                                <f:selectItem itemLabel="Chọn phòng ban" itemValue=""/>
+                                                <f:selectItems
+                                                        value="#{shiftManagerController.lstGroupCatgChild}"
+                                                        var="item" itemLabel="#{item.groupName}"
+                                                        itemValue="#{item.groupId}"/>
+                                                <p:ajax update="frmDetail" process="txtGroupChild"
+                                                        event="itemSelect"
+                                                        listener="#{shiftManagerController.txtGroupChildValueChange}"/>
+                                            </p:selectOneMenu>
+                                            <p:message styleClass="field_message" for="txtGroupChild"/>
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12">
+                                        <div class="ui-g-4 ui-g-nopad lable_margin-top_10">Chọn nhân viên</div>
+                                        <div class="ui-g-8 ui-g-nopad" style="background: transparent;">
+                                            <p:selectOneMenu id="txtFullname"
+                                                             value="#{shiftManagerController.selectedItem.peopleId}"
+                                                             filter="true" filterMatchMode="contains"
+                                                             style="width: 100%">
+                                                <f:selectItem itemLabel="Chọn nhân viên" itemValue=""/>
+                                                <f:selectItems value="#{shiftManagerController.lstPeople}"
+                                                               var="item"
+                                                               itemLabel="(#{item.peopleId}) #{item.fullName}"
+                                                               itemValue="#{item.peopleId}"/>
+                                                <p:ajax update="frmDetail" process="txtFullname lblPeopleId"
+                                                        event="itemSelect"
+                                                        listener="#{shiftManagerController.txtPeopleValueChange}"/>
+                                            </p:selectOneMenu>
+                                        </div>
+                                    </div>
+
+                                    <div class="ui-g-12">
+                                        <div class="ui-g-4 ui-g-nopad lable_margin-top_10">Mã nhân viên</div>
+                                        <div class="ui-g-8 ui-g-nopad"
+                                             style="background: transparent;background: transparent; padding-top:8px;">
+                                            <p:outputLabel id="lblPeopleId"
+                                                           value="#{shiftManagerController.selectedItem.peopleId}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ui-g-6">
+                                    <div class="ui-g-12">
+                                        <div class="ui-g-4 ui-g-nopad lable_margin-top_10">Ngày đăng ký<span
+                                                style="color: red;">*</span></div>
+                                        <div class="ui-g-8 ui-g-nopad"
+                                             style="background: transparent; padding-bottom: 15px">
+                                            <p:datePicker id="dFrom" styleClass="" required="true"
+                                                          requiredMessage="Vui lòng chọn"
+                                                          placeholder="Chọn ngày đăng ký"
+                                                          value="#{shiftManagerController.selectedItem.startDate}"
+                                                          monthNavigator="true" yearNavigator="true"
+                                                          showIcon="true"
+                                                          mask="dd/MM/yyyy"
+                                                          pattern="dd/MM/yyyy">
+                                                <p:ajax update="frmDetail" process="dFrom"/>
+                                            </p:datePicker>
+                                            <p:message styleClass="field_message" for="dFrom"/>
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12">
+                                        <div class="ui-g-4 ui-g-nopad lable_margin-top_10">Ngày kết thúc<span
+                                                style="color: red;">*</span></div>
+                                        <div class="ui-g-8 ui-g-nopad"
+                                             style="background: transparent; padding-bottom: 15px">
+                                            <p:datePicker id="dTo" styleClass=""
+                                                          value="#{shiftManagerController.selectedItem.expireDate}"
+                                                          monthNavigator="true" yearNavigator="true"
+                                                          placeholder="Chọn ngày kết thúc"
+                                                          showIcon="true"
+                                                          mask="dd/MM/yyyy"
+                                                          pattern="dd/MM/yyyy">
+                                                <p:ajax update="frmDetail" process="dTo"/>
+                                            </p:datePicker>
+                                            <p:message styleClass="field_message" for="dTo"/>
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12">
+                                        <div class="ui-g-4 ui-g-nopad lable_margin-top_10">Đăng ký ca làm<span
+                                                style="color: red;">*</span></div>
+                                        <div class="ui-g-8 ui-g-nopad"
+                                             style="background: transparent; padding-bottom: 15px;">
+                                            <p:selectOneMenu id="txtShifts" required="true"
+                                                             requiredMessage="Vui lòng chọn"
+                                                             value="#{shiftManagerController.selectedItem.shiftId}"
+                                                             filter="true" filterMatchMode="contains"
+                                                             style="width: 100%;">
+                                                <f:selectItem itemLabel="Chọn ca" itemValue=""/>
+                                                <f:selectItems value="#{shiftManagerController.lstShiftCatg}"
+                                                               var="item"
+                                                               itemLabel="(#{item.code}) #{item.name}"
+                                                               itemValue="#{item.autoid}"/>
+                                                <p:ajax update="frmDetail" process="txtShifts"
+                                                        event="itemSelect"
+                                                        listener="#{shiftManagerController.txtShiftValueChange}"/>
+                                            </p:selectOneMenu>
+                                            <p:message styleClass="field_message" for="txtShifts"/>
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12">
+                                        <div class="ui-g-4 ui-g-nopad lable_margin-top_10">Lịch làm việc</div>
+                                        <div class="ui-g-8 ui-g-nopad"
+                                             style="background: transparent; padding-top:8px;">
+                                            <p:repeat id="txtShiftDetail"
+                                                      value="#{shiftManagerController.selectedItem.shiftConfig.shiftDetail}"
+                                                      var="time">
+                                                #{time.dayName}: #{time.workingStartTime} - #{time.workingEndTime},
+                                            </p:repeat>
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12">
+                                        <div class="ui-g-4 ui-g-nopad lable_margin-top_10">Chấm giữa ca</div>
+                                        <div class="ui-g-8 ui-g-nopad"
+                                             style="background: transparent; padding-top:8px;">
+                                            <p:repeat id="txtShiftDetailO"
+                                                      value="#{shiftManagerController.selectedItem.shiftConfig.oshiftDetail}"
+                                                      var="time">
+                                                #{time.dayName}: #{time.breakStartTime} - #{time.breakEndTime},
+                                            </p:repeat>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p:messages id="msgs" showDetail="true" autoUpdate="true" globalOnly="true"/>
+                        </div>
+                    </p:fieldset>
+                    <div class="ui-g-12" align="right">
+                        <p:commandButton id="btnCancel" styleClass="ui-button-secondary"
+                                         value="Đóng"
+                                         icon="pi pi-reply" immediate="true">
+                        </p:commandButton>
+                        <h:outputText value="&#160; "/>
+                        <p:commandButton id="btnExecuteAdd"
+                                         rendered="#{!shiftManagerController.updateMode}" value="Lưu"
+                                         icon="pi pi-check" action="#{shiftManagerController.add()}"
+                                         title="Lưu thông tin" update="frmDetail :form:tblData"
+                                         validateClient="true">
+                        </p:commandButton>
+                        <p:commandButton id="btnExecuteUpdate"
+                                         rendered="#{shiftManagerController.updateMode}" value="Cập nhật"
+                                         icon="pi pi-check" action="#{shiftManagerController.update()}"
+                                         title="Cập nhật thông tin" update="frmDetail :form:tblData"
+                                         validateClient="true">
+                        </p:commandButton>
+                    </div>
+                </h:form>
+            </p:dialog>
+
+
+            <p:dialog header="Nhập dữ liệu" id="dlgImport" styleClass="dlg_custom"
+                      widgetVar="dlgImportVar" resizable="false" width="650" modal="true"
+                      closeOnEscape="true" closable="false">
+                <h:form id="frmImport" enctype="multipart/form-data">
+                    <p:fieldset style="margin-bottom:1px">
+                        <div class="ui-g ui-g-nopad">
+                            <div class="ui-g-8 ui-g-nopad" style="background: transparent;">
+                                <p:commandLink id="btnDownloadExampleFile"
+                                               value="Tải file excel mẫu"
+                                               style="text-decoration-line: underline;"
+                                               actionListener="#{shiftManagerController.downloadExampleFile()}"
+                                               update="frmImport" validateClient="false"
+                                               immediate="true">
+                                    <p:fileDownload value="#{shiftManagerController.importFileExamplecontent}"/>
+                                </p:commandLink>
+                            </div>
+                            <div class="ui-g-12">
+                                <div class="ui-g-4 ui-g-nopad lable_margin-top_10">Tiêu đề</div>
+                                <div class="ui-g-8 ui-g-nopad" style="background: transparent;">
+                                    <p:inputText required="true" style="width: 100%;"
+                                                 requiredMessage="Vui lòng nhập tiêu đề" id="txtTitleImport"
+                                                 value="#{shiftManagerController.importTitle}"
+                                                 placeholder="Nhập mô tả"/>
+                                </div>
+                            </div>
+
+                            <div class="ui-g-12">
+                                <div class="ui-g-4 ui-g-nopad">File
+                                    excel
+                                </div>
+                                <div class="ui-g-8 ui-g-nopad" style="background: transparent;">
+                                    <p:fileUpload id="uploadExcel" label="Chọn file" mode="simple"
+                                                  required="true" requiredMessage="Phải chọn file excel"
+                                                  value="#{shiftManagerController.uploadedExcel}"/>
+                                </div>
+                            </div>
+                            <!--<div class="ui-g-12">-->
+                            <!--<div class="ui-g-4 ui-g-nopad">Hình-->
+                            <!--ảnh đính kèm-->
+                            <!--</div>-->
+                            <!--<div class="ui-g-8 ui-g-nopad" style="background: transparent;">-->
+                            <!--<p:fileUpload id="uploadImage" label="Chọn file" mode="simple"-->
+                            <!--value="#{shiftManagerController.uploadedImage}"/>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                        </div>
+                        <div>
+                            <p:messages id="msgsImport" showDetail="false" autoUpdate="true"/>
+                        </div>
+                        <div>
+                            <h:outputLabel id="txtErrorSummary"
+                                           value="#{shiftManagerController.errorSummary}" escape="false"
+                                           style="color: red"/>
+                        </div>
+                        <div></div>
+                    </p:fieldset>
+                    <div class="ui-g-12" align="right">
+                        <div class="ui-g-5" align="left">
+                            <p:commandLink id="btnExecuteDownloadError2"
+                                           value="Download file chi tiết lỗi" icon="pi pi-check"
+                                           style="text-decoration-line: underline;"
+                                           rendered="#{!shiftManagerController.disableErrorLink}"
+                                           actionListener="#{shiftManagerController.downloadFile()}"
+                                           title="Nhập dữ liệu" update="frmImport" validateClient="false"
+                                           immediate="true">
+                                <p:fileDownload value="#{shiftManagerController.content}"/>
+                            </p:commandLink>
+                        </div>
+                        <div class="ui-g-7" align="right">
+                            <h:outputText value="&#160; "/>
+                            <p:commandButton id="btnCancelImport" styleClass="ui-button-secondary"
+                                             oncomplete="PF('dlgImportVar').hide();" value="Đóng"
+                                             icon="pi pi-reply" immediate="true">
+                            </p:commandButton>
+                            <h:outputText value="&#160; "/>
+                            <p:commandButton id="btnExecuteImport" value="Lưu"
+                                             icon="pi pi-check"
+                                             actionListener="#{shiftManagerController.uploadExcelFile()}"
+                                             title="Nhập dữ liệu" update="frmImport form:tblData" validateClient="true">
+                            </p:commandButton>
+                        </div>
+                    </div>
+                </h:form>
+                <p:ajax event="close"
+                        listener="#{shiftManagerController.closeDlgUploadStatus()}"/>
+            </p:dialog>
+        </div>
+    </div>
+</h:body>
+</html>

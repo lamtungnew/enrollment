@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8" name="viewport"
+          content="width=device-width, initial-scale=1"
+          http-equiv="X-UA-Conpatible"/>
+    <h:outputStylesheet library="css" name="bootstrap.min.css"/>
+    <h:outputStylesheet library="css" name="app.css"/>
+    <h:outputStylesheet library="css" name="paginator.css"/>
+    <script name="jquery/jquery.js" library="primefaces">
+
+    </script>
+    <title>Danh sách nhân viên</title>
+
+</h:head>
+
+<h:body>
+    <p:growl id="growl" showDetail="true" globalOnly="true"/>
+    <p:blockUI id="block">
+        <i class="pi pi-spin pi-spinner" style="font-size: 3rem"></i>
+    </p:blockUI>
+    <p:confirmDialog global="true" showEffect="fade" hideEffect="fade"
+                     closable="false">
+        <p:commandButton value="Đồng ý" type="button"
+                         styleClass="ui-confirmdialog-yes" icon="pi pi-check"/>
+        <p:commandButton value="Hủy" type="button"
+                         styleClass="ui-confirmdialog-no ui-button-secondary"
+                         icon="pi pi-times"/>
+    </p:confirmDialog>
+    <ui:include src="componentHeader.xhtml"></ui:include>
+    <div class="">
+        <div class="col-12 layout_custom">
+            <h:form id="form">
+
+                <div class="row">
+                    <div class="col col-lg-2">
+                        <div class="class_com_pad5"
+                             style="margin-left: 10px; margin-top: 5px;">
+                            <h4>Danh sách nhân viên</h4>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-group">
+                            <div class="input-group-prepend class_com_pad5">
+                                <p:inputText id="ftxtPeopleCode" style="width: 150px;"
+                                             value="#{employeeManagerController.searchData.peopleId}"
+                                             placeholder="Mã nhân viên"/>
+                            </div>
+
+                            <div class="input-group-prepend class_com_pad5">
+                                <p:inputText id="ftxtPeopleName" style="width: 150px;"
+                                             value="#{employeeManagerController.searchData.fullName}"
+                                             placeholder="Họ và tên"/>
+                            </div>
+
+                            <div class="input-group-prepend class_com_pad5">
+                                <p:inputText id="ftxtMobilePhone" style="width: 150px;"
+                                             value="#{employeeManagerController.searchData.mobilePhone}"
+                                             placeholder="Số điện thoại"/>
+                            </div>
+
+
+                            <div class="input-group-prepend class_com_pad5">
+                                <p:selectOneMenu id="ftxtImage" style="width: 150px;"
+                                                 value="#{employeeManagerController.searchData.imagePath}"
+                                                 filter="true" filterMatchMode="contains">
+                                    <f:selectItem itemLabel="-- Ảnh --" itemValue=""/>
+                                    <f:selectItem itemLabel="Có ảnh" itemValue="1"/>
+                                    <f:selectItem itemLabel="Chưa có ảnh" itemValue="0"/>
+                                </p:selectOneMenu>
+                            </div>
+
+
+                            <div class="class_com_pad5" style="margin-top: 1px">
+                                <h:commandButton update="tblData"
+                                                 process="@this ftxtPeopleCode ftxtPeopleName ftxtGroupName"
+                                                 actionListener="#{employeeManagerController.search()}"
+                                                 value="Tìm kiếm" class="btn btn-secondary"/>
+                            </div>
+
+                            <div class="class_com_pad5" style="margin-top: 1px">
+                                <p:commandButton id="btnCreate"
+                                                 rendered="#{sessionController.isAllow('EMPLOYEE_MANAGER','CREATE')}"
+                                                 value="Thêm mới" icon="pi pi-plus" immediate="true"
+                                                 action="#{employeeManagerController.goToCreatePage(null)}"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-lg-2">
+
+                        <div class="input-group input-group-sm">
+                            <div class="class_com_pad5"
+                                 style="margin-top: 1px; text-align: right">
+                                <p:commandButton value="Nhập excel"
+                                                 rendered="#{sessionController.isAllow('EMPLOYEE_MANAGER','IMPORT')}"
+                                                 update="frmImport"
+                                                 action="#{employeeManagerController.closeDlgUploadStatus()}"
+                                                 oncomplete="PF('dlgImportVar').show();">
+                                </p:commandButton>
+                            </div>
+
+                            <div class="class_com_pad5"
+                                 style="margin-top: 1px; text-align: right">
+                                <p:commandButton value="Xuất Excel"
+                                                 rendered="#{sessionController.isAllow('EMPLOYEE_MANAGER','EXPORT')}"
+                                                 actionListener="#{employeeManagerController.exportExcel()}"
+                                                 iconPos="right" ajax="false"
+                                                 onclick="PrimeFaces.monitorDownload(start, stop);">
+                                    <p:fileDownload
+                                            value="#{employeeManagerController.exportExcelContent}"/>
+                                    <f:param name="validateDagUploadExcelStatus" value="false"/>
+                                </p:commandButton>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <p:dataTable id="tblData" styleClass="tbl_custom_bt" var="item"
+                             value="#{employeeManagerController.dataModel}"
+                             selectionMode="single"
+                             selection="#{employeeManagerController.selectedItem}"
+                             rowKey="#{item.id}" first="0" widgetVar="tblDataVar"
+                             paginator="true" paginatorPosition="bottom" rows="10"
+                             resizableColumns="true" dblClickSelect="true" resizeMode="fit"
+                             paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown} {Exporters}"
+                             rowsPerPageTemplate="1,10,20,50,100,200,300,500"
+                             emptyMessage="Không có dữ liệu..."
+                             currentPageReportTemplate="({totalRecords} bản ghi, {currentPage} / {totalPages})"
+                             rowSelectMode="single" rowIndexVar="rowIndex">
+
+                    <p:column width="25" resizable="false" exportable="false">
+                        <f:facet name="header">
+                            <h:outputText value="#"/>
+                        </f:facet>
+                        <div style="padding: 0px; background: transparent;">
+                            <div align="center" style="width: 100%">
+                                <h:outputText escape="true" value="#{rowIndex + 1}"/>
+                            </div>
+                        </div>
+                    </p:column>
+                    <p:column width="100" resizable="false" filterable="false"
+                              filterBy="#{item.peopleId}">
+                        <f:facet name="header">
+                            <h:outputText value="Mã nhân viên"/>
+                        </f:facet>
+                        <h:outputText style="width: 100%" value="#{item.peopleId}"/>
+                    </p:column>
+                    <p:column width="80" resizable="false" filterable="false">
+                        <f:facet name="header">
+                            <h:outputText value="Ảnh"/>
+                        </f:facet>
+                        <p:graphicImage
+                                value="#{(profileController.imageRootUrlPeople).concat(item.imagePath)}"
+                                width="100%"/>
+                    </p:column>
+                    <p:column styleClass="ui-datatable break-word" resizable="true">
+                        <f:facet name="header">
+                            <h:outputText value="Họ và tên"/>
+                        </f:facet>
+                        <h:outputText style="width: 100%" value="#{item.fullName}"/>
+                    </p:column>
+                    <p:column styleClass="ui-datatable break-word" resizable="true">
+                        <f:facet name="header">
+                            <h:outputText value="User"/>
+                        </f:facet>
+                        <h:outputText style="width: 100%" value="#{item.userName}"/>
+                    </p:column>
+                    <p:column width="150" styleClass="ui-datatable break-word"
+                              resizable="true">
+                        <f:facet name="header">
+                            <h:outputText value="Nhóm quyền"/>
+                        </f:facet>
+                        <h:outputText style="width: 100%" value="#{item.roleDescription}"/>
+                    </p:column>
+                    <p:column width="150" styleClass="ui-datatable break-word"
+                              resizable="true">
+                        <f:facet name="header">
+                            <h:outputText value="Số điện thoại"/>
+                        </f:facet>
+                        <h:outputText style="width: 100%" value="#{item.mobilePhone}"/>
+                    </p:column>
+
+                    <p:column width="60" styleClass="ui-datatable break-word"
+                              resizable="true">
+                        <f:facet name="header">
+                            <h:outputText value="Giới tính"/>
+                        </f:facet>
+                        <h:outputText style="width: 100%" value="#{item.gender}"/>
+                    </p:column>
+
+                    <p:column width="120" styleClass="ui-datatable"
+                              style="text-align: right;">
+                        <f:facet name="header">
+                            <h:outputText styleClass="break-word" value="Ngày sinh"/>
+                        </f:facet>
+                        <h:outputText style="width: 100%" value="#{item.dateOfBirth}">
+                            <f:convertDateTime pattern="dd/MM/yyyy" timeZone="GMT+7"/>
+                        </h:outputText>
+                    </p:column>
+
+                    <p:column styleClass="ui-datatable break-word" resizable="true">
+                        <f:facet name="header">
+                            <h:outputText value="Khối"/>
+                        </f:facet>
+                        <h:outputText style="width: 100%" value="#{item.depName}" title="#{item.depName}"/>
+                    </p:column>
+
+                    <p:column styleClass="ui-datatable break-word" resizable="true">
+                        <f:facet name="header">
+                            <h:outputText value="Phòng ban"/>
+                        </f:facet>
+                        <h:outputText style="width: 100%" value="#{item.groupName}" title="#{item.groupName}"/>
+                    </p:column>
+
+                    <p:column width="60" styleClass="ui-datatable break-word"
+                              resizable="true">
+                        <f:facet name="header">
+                            <h:outputText value="Trạng thái"/>
+                        </f:facet>
+                        <h:outputText style="width: 100%"
+                                      value="#{employeeManagerController.geetEmployeeStatusName(item.status)}"/>
+                    </p:column>
+
+                    <p:column width="100" resizable="false" exportable="false"
+                              style="text-align: center;">
+                        <f:facet name="header">
+                            <h:outputText value="Hành động"/>
+                        </f:facet>
+                        <p:commandLink ajax="true"
+                                       action="#{employeeManagerController.changeMode(item, true)}"
+                                       process="@this" value="">
+                            <span title="Chỉnh sửa" class="pi pi-pencil"/>
+                        </p:commandLink>
+                        <h:outputText value="&#160; "/>
+                        <h:outputText value="&#160; "/>
+
+                        <p:commandLink ajax="true"
+                                       rendered="#{sessionController.isAllow('EMPLOYEE_MANAGER','UPDATE')}"
+                                       action="#{employeeManagerController.showResetPass(item)}"
+                                       oncomplete="PF('dlgResetPassVar').show();" update="frmResetPass"
+                                       process="@this" value="">
+                            <span title="Reset mật khẩu" class="pi pi-key"/>
+                        </p:commandLink>
+
+                        <!-- 			<p:commandLink id="btnMenu">
+                            <span title="Hành động khác" class="pi pi-bars" />
+                        </p:commandLink> -->
+
+                        <!-- <p:slideMenu overlay="true" trigger="btnMenu" my="left top"
+                            at="left bottom" style="hight: 50px">
+                            <p:menuitem ajax="true"
+                                actionListener="#{employeeManagerController.delete(item)}"
+                                update="tblData growl" process="@this" value="Xóa"
+                                icon="pi pi-times" style="color: red;">
+                                <p:confirm header="Xác nhận"
+                                    message='Bạn có chắc chắn muốn xóa "[#{item.peopleId}] #{item.fullName}" hay không ?'
+                                    icon="ui-icon-warning" />
+                            </p:menuitem>
+                            <p:divider />
+                            <p:menuitem ajax="true"
+                                action="#{employeeManagerController.showResetPass(item)}"
+                                oncomplete="PF('dlgResetPassVar').show();" update="frmResetPass"
+                                process="@this" value="Reset mật khẩu" icon="pi pi-key">
+                            </p:menuitem>
+                        </p:slideMenu> -->
+                    </p:column>
+                </p:dataTable>
+            </h:form>
+
+
+            <p:dialog header="Nhập danh sách nhân viên" id="dlgImport" styleClass="dlg_custom"
+                      widgetVar="dlgImportVar" resizable="false" width="750" modal="true"
+                      closeOnEscape="true" closable="false">
+                <h:form id="frmImport" enctype="multipart/form-data">
+                    <p:fieldset style="margin-bottom:1px">
+                        <div class="ui-g ui-g-nopad">
+                            <div class="ui-g-12">
+                                <div class="ui-g-4 ui-g-nopad"></div>
+                                <div class="ui-g-8 ui-g-nopad" style="background: transparent;">
+                                    <p:commandLink id="btnDownloadExampleFile"
+                                                   value="Tải file excel mẫu"
+                                                   style="text-decoration-line: underline;"
+                                                   actionListener="#{employeeManagerController.downloadExampleFile()}"
+                                                   update="frmImport" validateClient="false"
+                                                   immediate="true">
+                                        <p:fileDownload value="#{employeeManagerController.importFileExamplecontent}"/>
+                                    </p:commandLink>
+                                </div>
+                            </div>
+                            <div class="ui-g-12">
+                                <div class="ui-g-4 ui-g-nopad">File excel data</div>
+                                <div class="ui-g-8 ui-g-nopad" style="background: transparent;">
+                                    <p:fileUpload id="uploadExcel" label="Chọn file" mode="simple"
+                                                  required="true" requiredMessage="Phải chọn file excel (xls/xlsx)"
+                                                  allowTypes="/(\.|\/)(xls|xlsx)$/"
+                                                  value="#{employeeManagerController.uploadedExcel}"/>
+                                    <p:message styleClass="field_message" for="uploadExcel"
+                                               showSummary="false"/>
+                                </div>
+                            </div>
+                            <div class="ui-g-12">
+                                <div class="ui-g-4 ui-g-nopad">Hình ảnh đính kèm (Rar/Zip)</div>
+                                <div class="ui-g-8 ui-g-nopad" style="background: transparent;">
+                                    <p:fileUpload id="uploadImage" label="Chọn file" mode="simple"
+                                                  required="true"
+                                                  requiredMessage="Phải chọn file hình ảnh (Rar/Zip)"
+                                                  allowTypes="/(\.|\/)(zip|rar)$/"
+                                                  value="#{employeeManagerController.uploadedImage}"/>
+                                    <p:message styleClass="field_message" for="uploadImage"
+                                               showSummary="false"/>
+                                    <p:tooltip id="uploadImageTooltip" for="uploadImage">
+                                        <span>Vui lòng nén tất cả ảnh vào 1 file định dạng Rar/Zip với tên ảnh là Mã nhân viên!</span>
+                                    </p:tooltip>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p:messages id="msgsImport" showDetail="false" autoUpdate="true" globalOnly="true"/>
+                        </div>
+                        <div>
+                            <h:outputLabel id="txtErrorSummary"
+                                           value="#{employeeManagerController.errorSummary}" escape="false"
+                                           style="color: red"/>
+                        </div>
+                        <div></div>
+                    </p:fieldset>
+                    <div class="ui-g-12" align="right">
+                        <div class="ui-g-5" align="left">
+                            <p:commandLink id="btnExecuteDownloadError2"
+                                           value="Download file chi tiết lỗi" icon="pi pi-check"
+                                           style="text-decoration-line: underline;"
+                                           rendered="#{!employeeManagerController.disableErrorLink}"
+                                           actionListener="#{employeeManagerController.downloadFile()}"
+                                           title="Nhập dữ liệu" update="frmImport" validateClient="false"
+                                           immediate="true">
+                                <p:fileDownload value="#{employeeManagerController.content}"/>
+                            </p:commandLink>
+                        </div>
+                        <div class="ui-g-7" align="right">
+                            <h:outputText value="&#160; "/>
+                            <p:commandButton id="btnCancelImport"
+                                             styleClass="ui-button-secondary"
+                                             oncomplete="PF('dlgImportVar').hide();" value="Đóng"
+                                             icon="pi pi-reply" immediate="true">
+                            </p:commandButton>
+                            <h:outputText value="&#160; "/>
+                            <p:commandButton id="btnExecuteImport"
+                                             rendered="#{sessionController.isAllow('EMPLOYEE_MANAGER','IMPORT')}"
+                                             value="Cập nhật" icon="pi pi-check"
+                                             actionListener="#{employeeManagerController.uploadExcelFile()}"
+                                             title="Nhập dữ liệu" update="frmImport form:tblData" validateClient="true">
+                            </p:commandButton>
+                        </div>
+                    </div>
+                </h:form>
+                <p:ajax event="close"
+                        listener="#{employeeManagerController.closeDlgUploadStatus()}"/>
+            </p:dialog>
+
+            <p:dialog header="Cấp lại mật khẩu" id="dlgResetPass" styleClass="dlg_custom"
+                      widgetVar="dlgResetPassVar" resizable="false" width="500"
+                      modal="true" closeOnEscape="true" closable="false">
+                <h:form id="frmResetPass">
+                    <p:fieldset style="margin-bottom:1px">
+                        <div class="ui-g ui-g-nopad">
+                            <div class="ui-g-12">
+                                <div class="ui-g-4 ui-g-nopad lable_margin-top_10">Mật
+                                    khẩu mới:
+                                </div>
+                                <div class="ui-g-8 ui-g-nopad" style="background: transparent;">
+                                    <p:inputText required="true" requiredMessage="Nhập mật khẩu"
+                                                 style="width: 100%;" id="txtNewPassword" maxlength="20"
+                                                 value="#{employeeManagerController.changePassworDto.newPassword}">
+                                        <f:validator validatorId="passwordValidator"/>
+                                    </p:inputText>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p:messages id="msgsResetPass" showDetail="true"
+                                        autoUpdate="true"/>
+                        </div>
+                    </p:fieldset>
+                    <div class="ui-g-12" align="right">
+                        <p:commandButton id="btnResetPass" value="Đồng ý"
+                                         rendered="#{sessionController.isAllow('EMPLOYEE_MANAGER','UPDATE')}"
+                                         icon="pi pi-check"
+                                         actionListener="#{employeeManagerController.resetPass()}"
+                                         title="Đồng ý" update="frmResetPass" validateClient="true">
+                        </p:commandButton>
+                        <h:outputText value="&#160; "/>
+                        <p:commandButton id="btnCancelResetPass"
+                                         styleClass="ui-button-secondary"
+                                         oncomplete="PF('dlgResetPassVar').hide();" value="Đóng"
+                                         icon="pi pi-reply" immediate="true">
+                        </p:commandButton>
+                    </div>
+                </h:form>
+            </p:dialog>
+
+            <!--<p:dialog widgetVar="loadingVar" modal="true" draggable="false" closable="false" resizable="false" showHeader="false">-->
+            <!--<div class="p-text-center">-->
+            <!--<i class="pi pi-spin pi-spinner loading-icon" aria-hidden="true"></i>-->
+            <!--</div>-->
+            <!--</p:dialog>-->
+        </div>
+    </div>
+</h:body>
+</html>

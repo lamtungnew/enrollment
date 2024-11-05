@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	<h:form id="frmUploadExcel" enctype="multipart/form-data">
+		<p:dialog id="dagUploadExcel" closable="true" position="center"
+				  header="Nhập excel"
+				  widgetVar="dagUploadExcel" modal="true" resizable="false">
+			<table>
+				<tr>
+					<td style="width:150px;height:40px">Tiêu đề</td>
+					<td><h:inputText id ="txtTitle" style="width:250px"
+									 required="#{param['validateDagUploadExcelStatus']}"
+									 requiredMessage="Phải nhập tiêu đề" value ="#{timekeepingExplanationController.title}"/></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style="width:150px;height:40px">File excel</td>
+					<td><p:fileUpload id="uploadExcel" label="Chọn file" skinSimple="true"
+									  mode="simple" required="#{param['validateDagUploadExcelStatus']}" requiredMessage="Phải chọn file excel"
+									  value="#{timekeepingExplanationController.uploadedExcel}"/></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style="width:150px;height:40px">File đã ký</td>
+					<td><p:fileUpload id="uploadSignedFile" label="Chọn file" skinSimple="true"
+									  mode="simple" required="true" requiredMessage="Phải chọn file đã ký"
+									  value="#{timekeepingExplanationController.signedFile}"/></td>
+				</tr>
+				<tr>
+					<p:messages id="messages" closable="true">
+						<p:autoUpdate />
+					</p:messages>
+				</tr>
+				<tr>
+					<td style="width:150px;height:70px"></td>
+					<td><p:commandButton value="Đóng" oncomplete="PF('dagUploadExcel').hide();"
+										 resetValues="true" update = "@([id$=txtTitle]) @([id$=uploadExcel])"
+										 styleClass="btn btn-secondary" /> &#160;
+						<p:commandButton
+								value="Cập nhật"
+								update="@([id$=tblListApprove]) @([id$=dagUploadExcelStatus])"
+								resetValues="true" styleClass="btn btn-secondary"
+								actionListener="#{timekeepingExplanationController.uploadExcelFile()}">
+							<f:param name="validateDagUploadExcelStatus" value="true" />
+							<f:param name="validateDagAddTimeKeeping" value="false" />
+							<f:param name="validateDagEditTimeKeeping" value="false" />
+						</p:commandButton></td>
+				</tr>
+			</table>
+			<p:ajax event="close" listener="#{timekeepingExplanationController.closeDlgUploadStatus()}" update="@([id$=dagUploadExcel])"/>
+		</p:dialog>
+		<p:dialog id="dagUploadExcelStatus" closable="true" position="center" header="Nhập excel"  width="480px" widgetVar="dagUploadExcelStatus"
+				  modal="true" resizable="false">
+			<table>
+				<tr>
+					<td><h:outputLabel id = "txtUploadExcelStatus"
+									   value = "#{timekeepingExplanationController.uploadExcelStatus}"/></td>
+				</tr>
+				<tr>
+					<td><h:outputLabel id = "txtErrorSummary" value = "#{timekeepingExplanationController.errorSummary}" escape="false"/></td>
+				</tr>
+				<tr>
+					<td><p:commandButton value = "Download file chi tiết lỗi" actionListener="#{timekeepingExplanationController.downloadFile()}"
+										 icon="pi pi-file-excel" iconPos="right" rendered ="#{timekeepingExplanationController.disableErrorLink}"
+										 ajax="false"
+										 onclick="PrimeFaces.monitorDownload(start, stop);" >
+						<p:fileDownload value="#{timekeepingExplanationController.content}" />
+					</p:commandButton></td>
+				</tr>
+				<tr>
+					<td><p:commandButton value="Thoát" resetValues="true" update = "@([id$=txtTitle]) @([id$=uploadExcel])"
+										 styleClass="btn btn-secondary" oncomplete="PF('dagUploadExcelStatus').hide();"/></td>
+				</tr>
+			</table>
+			<p:ajax event="close" listener="#{timekeepingExplanationController.closeDlgUploadStatus()}" update="@([id$=dagUploadExcelStatus])"/>
+		</p:dialog>
+	</h:form>
+</html>

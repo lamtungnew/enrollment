@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	<h:form id="frmEditTimeKeeping" enctype="multipart/form-data">
+		<p:dialog id="dagEditTimeKeeping" closable="true" position="center" styleClass="disable-scroll"
+				  header="Sửa đề xuất giải trình" width="1500px"
+				  widgetVar="dagEditTimeKeeping" modal="true" resizable="false">
+			<table>
+				<tr>
+					<p:messages id="messagesDagAddTimeKeeping" closable="true">
+						<p:autoUpdate />
+					</p:messages>
+				</tr>
+				<tr>
+					<td style="width:150px;height:40px">Họ và tên</td>
+					<td>
+						<p:outputLabel value="#{createOtController.updateOtSheet.fullName}"/>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style="width:150px;height:40px">Mã nhân viên</td>
+					<td>
+						<p:outputLabel value="#{createOtController.updateOtSheet.peopleId}"/>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style="width:150px;height:40px">Khối</td>
+					<td>
+						<h:outputText id="txtEditNewOrgName" value="#{createOtController.updateOtSheet.orgName}"/>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style="width:150px;height:40px">Phòng ban</td>
+					<td><h:outputText id="txtEditNewGroupName" value="#{createOtController.updateOtSheet.groupName}"/>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style="width:150px;height:40px">Ngày</td>
+					<td>
+						<h:outputText id="txtEditOrgCreatedDate" value="#{createOtController.updateOtSheet.createdAt}">
+							<f:convertDateTime pattern="dd/MM/yyyy" />
+						</h:outputText>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style="width:150px;height:40px">Tổng số giờ OT</td>
+					<td>
+						<h:outputText id="txtEditOrgTotalOt" value="#{createOtController.updateOtSheet.totalOtTime}"/>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style="width:150px;height:40px">Người quản lý *</td>
+					<td>
+						<h:outputText rendered="#{createOtController.updateOtSheet.state == '0' ? false : true}"
+									  value="#{createOtController.updateOtSheet.approvedBy}"/>
+						<p:selectOneMenu id="cbxEditApprovePerson" style="width: 210px" requiredMessage="Phải chọn người quản lý"
+										 rendered="#{createOtController.updateOtSheet.state == '0' ? true : false}"
+										 filter="true" filterMatchMode="contains" sortBy="" required="#{param['validateDagEditTimeKeeping']}"
+										 immediate="true" value="#{createOtController.updateOtSheet.approvedBy}">
+						<f:selectItem itemLabel="chọn người quản lý"
+									  noSelectionOption="true" />
+						<f:selectItems
+								value="#{createOtController.listApprovePeople}" var="manager"
+								itemValue="#{manager.peopleId}" itemLabel="#{manager.fullName}" />
+					</p:selectOneMenu></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style="width:150px;height:40px">Người theo dõi *</td>
+					<td>
+						<h:outputText rendered="#{createOtController.updateOtSheet.state == '0' ? false : true}"
+									  value="#{createOtController.updateOtSheet.supervisor}"/>
+						<p:selectOneMenu id="cbxEditSupervisor" style="width: 210px"
+										 required="#{param['validateDagEditTimeKeeping']}"
+										 rendered="#{createOtController.updateOtSheet.state == '0' ? true : false}"
+										 requiredMessage="Phải chọn người theo dõi"
+										 filter="true" filterMatchMode="contains" sortBy =""
+										 immediate="true" value="#{createOtController.updateOtSheet.supervisor}">
+						<f:selectItem itemLabel="chọn người theo dõi"
+									  noSelectionOption="true" />
+						<f:selectItems
+								value="#{createOtController.listPeopleForSearch}" var="pp"
+								itemValue="#{pp.fullName}" itemLabel="#{pp.fullName}" />
+					</p:selectOneMenu></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style="width:150px;height:40px">Lý do làm thêm giờ</td>
+					<td><p:inputTextarea value="#{createOtController.updateOtSheet.workingNotes}" cols="19"/></td>
+				</tr>
+			</table>
+			<br/>
+			<!--<p:commandButton value="Thêm Ngày" actionListener="#{createOtController.initListUpdateOtSheet('ADD')}" update="@([id$=tblEditNewOtSheet])">
+				<f:param name="validateDagAddTimeKeeping" value="false" />
+				<f:param name="validateDagUploadExcelStatus" value="false" />
+			</p:commandButton>-->
+			<p:dataTable id="tblEditNewOtSheet" var="otSheet" scrollable="true" styleClass="tbl_custom_bt"
+						 value="#{createOtController.listUpdateOtSheetDate}" scrollHeight="200" style="height: 300px"
+						 rowIndexVar="rowIndex" rowKey="#{timeKeepingSheet.keepingDate}" emptyMessage="Không có dữ liệu..."
+						 tableStyle="table-layout:auto">
+
+				<p:column headerText="#" style="width:10px">
+					#{rowIndex+1}
+				</p:column>
+
+				<p:column headerText="Ngày Ot" style="width:280px">
+					<p:calendar style="width: 50px"
+								disabled="#{createOtController.updateOtSheet.state == '0' ? false : true}"
+								required="#{param['validateDagAddTimeKeeping']}"
+								pattern="dd/MM/yyyy" id ="calKeepingDate" requiredMessage="Phải nhập ngày Ot"
+								value="#{otSheet.otDateTypeDate}" />
+				</p:column>
+
+				<p:column headerText="Từ" style="width:280px">
+					<p:inputText disabled="#{createOtController.updateOtSheet.state == '0' ? false : true}" value="#{otSheet.startTime}" />
+				</p:column>
+
+				<p:column headerText="Đến" style="width:280px">
+					<p:inputText disabled="#{createOtController.updateOtSheet.state == '0' ? false : true}" value="#{otSheet.toTime}" />
+				</p:column>
+			</p:dataTable>
+
+			<f:facet name="footer">
+				<p:commandButton value="Quay lại" oncomplete="PF('dagEditTimeKeeping').hide();"
+								 resetValues="true" update = "@([id$=cbxEditFullName]) @([id$=cbxEditPeopleId]) @([id$=cbxEditPeopleId])
+									  @([id$=cbxEditApprovePerson]) @([id$=cbxEditSupervisor])"
+								 styleClass="btn btn-secondary" /> &#160;
+				<p:commandButton
+						value="Sửa"
+						disabled="#{createOtController.updateOtSheet.state == '0' ? false : true}"
+						update="@([id$=tblListApprove]) @([id$=messagesDagAddTimeKeeping]) @([id$=tblEditNewOtSheet]) @([id$=growl])"
+						resetValues="true" styleClass="btn btn-secondary"
+						actionListener="#{createOtController.createOrUpdateOtSheet('EDIT')}">
+					<f:param name="validateDagEditTimeKeeping" value="true" />
+					<f:param name="validateDagUploadExcelStatus" value="false" />
+					<f:param name="validateDagAddTimeKeeping" value="false" />
+				</p:commandButton>
+			</f:facet>
+			<p:ajax event="close" listener="#{createOtController.closeDlgAddNewOtSheet()}"
+					update="@([id$=tblEditNewOtSheet]) @([id$=dagEditTimeKeeping])"/>
+		</p:dialog>
+	</h:form>
+</html>

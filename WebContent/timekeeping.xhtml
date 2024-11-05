@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta charset="utf-8" name="viewport"
+      content="width=device-width, initial-scale=1"
+      http-equiv="X-UA-Conpatible"/>
+<h:outputStylesheet library="css" name="bootstrap.min.css"/>
+<h:outputStylesheet library="css" name="app.css" />
+<title>Báo cáo chấm công</title>
+<style type="text/css">
+.decription 
+{
+    background-color: #ffc107 !important;
+    background-image: none !important;
+    color: black !important;
+}
+</style>
+</h:head>
+<h:body>
+    <ui:include src="componentHeader.xhtml"></ui:include>
+    <div class="row">
+        <div class="col-12">
+            <h2>Báo cáo chấm công</h2>
+            <h:form id="peopleForm" class="form-horizontal">
+            	<div class="form-group">
+					<p:messages id="msg" showDetail="true" closable="true">
+						<p:autoUpdate/>
+					</p:messages>
+				</div>
+            	<div class="form-group">
+            		<div class="row">
+    					<div class="col-sm-1">
+			        		<label>Mã nhân viên</label>
+			        	</div>
+			        	<div class="col-sm-3">
+			        		<div class="ui-inputgroup">
+			            		<p:inputText id="inputPeopleId" value="#{timekeepingController.peopleIdSearch}"/>
+				            	<p:commandButton id="peopleBtn" icon="pi pi-search" 
+						                				update="tbPeople" process="@this inputPeopleId" actionListener="#{timekeepingController.getPeopleListByPeopleId}"/>
+               				</div>
+			            	<p:dialog header="Thông tin tìm kiếm" minHeight="500" width="700" showEffect="fade" widgetVar="peoplePicker">
+					            <p:dataTable id="tbPeople" var="item" value="#{timekeepingController.peopleList}" 
+					            	scrollable="true" scrollHeight="500" selectionMode="single"
+					                selection="#{timekeepingController.peopleSelected}" rowKey="#{item.peopleId}">
+					                <p:ajax event="rowSelect" listener="#{timekeepingController.onRowSelect}" update="@form"/>
+					
+					                <p:column headerText="Mã nhân viên">
+					                    <h:outputText value="#{item.peopleId}"/>
+					                </p:column>
+					                <p:column headerText="Họ tên">
+					                    <h:outputText value="#{item.fullName}"/>
+					                </p:column>
+					                <p:column headerText="Số điện thoại">
+					                    <h:outputText value="#{item.mobilePhone}"/>
+					                </p:column>
+					            </p:dataTable>
+					        </p:dialog>
+		            	</div>
+		            	<div class="col-sm-1">
+			        		<label>Phòng ban</label>
+			        	</div>
+			        	<div class="col-sm-3">
+			            	<p:selectOneMenu value="#{timekeepingController.groupSelected}" style="width:230px">
+								<f:selectItem itemLabel="Chọn khu vực" itemValue="" />
+								<f:selectItems value="#{timekeepingController.groups}" var="item" itemLabel="#{item.groupName}" itemValue="#{item.groupId}"/>
+							</p:selectOneMenu>
+		            	</div>
+		            	<div class="col-sm-4">
+			            	<p:selectBooleanCheckbox value="#{timekeepingController.flagLate}" itemLabel="Đi muộn"/>
+			        	</div>
+			        </div>
+			        <div class="row">
+    					<div class="col-sm-1">
+			        		<label>Từ ngày</label>
+			        	</div>
+			        	<div class="col-sm-3">
+			        		<div class="ui-inputgroup">
+				            	<p:calendar value="#{timekeepingController.fromDate}" showOn="button" pattern="dd/MM/yyyy" mask="true">
+			                        <f:convertDateTime type="date" dateStyle="short" pattern="dd/MM/yyyy"/>
+			                    </p:calendar>
+		                    </div>
+		            	</div>
+		            	<div class="col-sm-1">
+			        		<label>Đến ngày</label>
+			        	</div>
+			        	<div class="col-sm-3">
+			        		<div class="ui-inputgroup">
+				            	<p:calendar value="#{timekeepingController.toDate}" showOn="button" pattern="dd/MM/yyyy" mask="true">
+				                    <f:convertDateTime type="date" dateStyle="short" pattern="dd/MM/yyyy"/>
+				                </p:calendar>
+			                </div>
+		            	</div>
+		            	<div class="col-sm-4">
+			            	<p:selectBooleanCheckbox value="#{timekeepingController.flagNoSignUp}" itemLabel="Không chấm công"/>
+			        	</div>
+			        </div>
+			        <br/>
+			        <div class="row">
+    					<div class="col-sm-4">
+    						<p:commandButton action="#{timekeepingController.getListTimekeepingOfPeople()}"
+	                                 update="@([id$=dataTable])" ajax="true"
+	                                 icon="pi pi-search" iconPos="right" value="Tìm kiếm"
+	                                 style="float:right"/>
+    						
+		            	</div>
+		            	<div class="col-sm-3">
+		                    <p:commandButton actionListener="#{timekeepingController.exportExcell()}"
+		                    				 icon="pi pi-file-excel" iconPos="right"
+			                                 value="Xuất Excel" ajax="false"
+			                                 onclick="PrimeFaces.monitorDownload(start, stop);">
+			                	<p:fileDownload value="#{timekeepingController.content}"/>
+			                </p:commandButton>
+		            	</div>
+			        </div>
+			    </div>
+			</h:form>
+			<p:dataTable id="dataTable" var="data"
+			             value="#{timekeepingController.timekeepingList}" rowIndexVar="rowIndex"
+			             paginator="true" rows="10"
+			             paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+			             rowsPerPageTemplate="5,10,20,50,100" widgetVar="50"
+			             tableStyle="table-layout:auto">
+			
+			    <p:column headerText="STT">
+			        #{rowIndex+1}
+			    </p:column>
+			
+			    <p:column headerText="Mã nhân viên">
+			        <h:outputText value="#{data.peopleId}"/>
+			    </p:column>
+			
+			    <p:column headerText="Ảnh">
+			        <p:graphicImage id="image" value="#{data.imagePath}" width="50px" height="50px"/>
+			        <p:tooltip id="toolTipContent" for="image" position="bottom">
+			            <p:graphicImage value="#{data.imagePath}" width="500px" height="500px"/>
+			        </p:tooltip>
+			    </p:column>
+			
+			    <p:column headerText="Họ và tên">
+			        <h:outputText value="#{data.fullName}"/>
+			    </p:column>
+			
+			    <p:column headerText="Giờ vào">
+			        <h:outputText value="#{data.checkIn}"/>
+			    </p:column>
+			    
+			    <p:column headerText="Giờ trưa">
+			        <h:outputText value="#{data.noonTime}"/>
+			    </p:column>
+			
+			    <p:column headerText="Giờ về">
+			        <h:outputText value="#{data.checkOut}"/>
+			    </p:column>
+			
+			    <p:column headerText="Ngày chấm công">
+			        <h:outputText value="#{data.dateTimeKeeping}">
+			            <f:convertDateTime pattern="yyyy-MM-dd"/>
+			        </h:outputText>
+			    </p:column>
+			    
+			    <p:column headerText="Phòng ban">
+			        <h:outputText value="#{data.groupName}"/>
+			    </p:column>
+			
+			    <p:column headerText="Tổng giờ">
+			        <h:outputText value="#{data.totalWork}"/>
+			    </p:column>
+			    
+			    <p:column headerText="Đi muộn">
+			        <h:outputText value="#{data.morningLate}"/>
+			    </p:column>
+			    
+			    <p:column headerText="Về sớm">
+			        <h:outputText value="#{data.earlyLeave}"/>
+			    </p:column>
+			    
+			    <p:column headerText="Ghi chú">
+			        <h:outputText value="#{data.decription}"/>
+			    </p:column>
+			</p:dataTable>
+        </div>
+    </div>
+</h:body>
+</html>

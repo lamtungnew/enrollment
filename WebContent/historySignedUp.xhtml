@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="utf-8" name="viewport"
+	content="width=device-width, initial-scale=1"
+	http-equiv="X-UA-Conpatible" />
+<h:outputStylesheet library="css" name="bootstrap.min.css" />
+<h:outputStylesheet library="css" name="app.css" />
+<script name="jquery/jquery.js" library="primefaces"></script>
+<title>History</title>
+<style type="text/css">
+.false 
+{
+    background-color: #dc3545 !important;
+    background-image: none !important;
+    color: black !important;
+}
+.suspicious 
+{
+    background-color: #ffc107 !important;
+    background-image: none !important;
+    color: black !important;
+}
+.link a
+{
+	text-decoration: none
+}
+</style>
+</h:head>
+<h:body>
+	<ui:include src="componentHeader.xhtml"></ui:include>
+	<div class="row">
+		<div class="col-12">
+			<h:form>
+				<div class="row">
+					<div class="col-sm-3">
+		        		<h2>Lịch sử chấm công</h2>
+		        	</div>
+		        	<div class="col-sm-9">
+						<div class="input-group input-group-sm mb-3">
+							<div class="input-group-prepend">
+							    <p:inputText id="peopleIdSearch" value="#{historySignedUpController.peopleIdSearch}" style="width:10rem" placeholder="Mã nhân viên" />
+							    <p:selectOneMenu id="statusSearch" value="#{historySignedUpController.statusSearch}">
+									<f:selectItem itemLabel="Chọn trạng thái" itemValue="" />
+									<f:selectItem itemLabel="Bình thường" itemValue="TRUE" />
+									<f:selectItem itemLabel="Nghi ngờ" itemValue="SUSP" />
+									<f:selectItem itemLabel="Không thành công" itemValue="FALSE" />
+								</p:selectOneMenu>
+			                    <p:calendar id="fromDate" value="#{historySignedUpController.fromDate}" pattern="dd/MM/yyyy" mask="true" placeholder="Từ ngày">
+				                    <f:convertDateTime type="date" pattern="dd/MM/yyyy"/>
+				                </p:calendar>
+			                    <p:calendar id="toDate" value="#{historySignedUpController.toDate}" pattern="dd/MM/yyyy" mask="true" placeholder="Đến ngày">
+				                    <f:convertDateTime type="date" pattern="dd/MM/yyyy"/>
+				                </p:calendar>
+						  	</div>
+						 	<h:commandButton update="historyPeopleDetection" process="@this peopleIdSearch statusSearch fromDate toDate"
+						 		actionListener="#{historySignedUpController.searchDetectionList}" value="Tìm kiếm" class="btn btn-secondary" />	
+						</div>	        		
+	            	</div>
+		        </div>
+	        </h:form>
+			
+			<h:form>
+				<p:dataTable id="historyPeopleDetection" var="detection"
+					value="#{historySignedUpController.detectionList}"
+					rowIndexVar="rowIndex" paginator="true" rows="10"
+					paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+					rowsPerPageTemplate="5,10,20,50,100" widgetVar="50"
+					rowStyleClass="#{detection.livenessStatus eq 'SUSP' ? 'suspicious' :
+									 detection.livenessStatus eq 'FALSE' ? 'false' : null}"
+					tableStyle="table-layout:auto">
+
+					<p:column headerText="STT">
+						#{rowIndex+1}
+					</p:column>
+
+					<p:column headerText="Mã NV">
+						<h:outputText value="#{detection.peopleId}" />
+					</p:column>
+
+					<p:column headerText="Ảnh">
+						<p:graphicImage id="image" value="#{detection.capturedImagePath}"
+							width="50px" height="50px" />
+						<p:tooltip id="toolTipContent" for="image" position="bottom">
+							<p:graphicImage value="#{detection.capturedImagePath}" />
+						</p:tooltip>
+					</p:column>
+
+					<p:column headerText="Họ và tên">
+						<h:outputText value="#{detection.fullNameMark}" />
+					</p:column>
+
+					<p:column headerText="Giới tính">
+						<h:outputText value="#{detection.gender}" />
+					</p:column>
+					
+					<p:column headerText="Phòng ban">
+						<h:outputText value="#{detection.groupName}" />
+					</p:column>
+					
+					<p:column headerText="Phân loại">
+						<h:outputText value="#{detection.customerType}" />
+					</p:column>
+
+					<!-- <p:column headerText="Ngày sinh">
+						<h:outputText value="#{detection.dateOfBirth}">
+							<f:convertDateTime pattern="yyyy-mm-dd" />
+						</h:outputText>
+					</p:column> -->
+
+					<p:column headerText="Giờ ghi nhận">
+						<h:outputText value="#{detection.createdTime}" />
+					</p:column>
+					
+					<p:column headerText="Giờ sáng">
+						<h:outputText value="#{detection.dayFirstTime}" />
+					</p:column>
+					
+					<p:column headerText="Giờ trưa">
+						<h:outputText value="#{detection.dayNoonTime}" />
+					</p:column>
+
+					<p:column headerText="Khu vực">
+						<h:outputText value="#{detection.cameraName}" />
+					</p:column>
+
+					<p:column headerText="Hành động">
+						<div class="link">
+							<p:linkButton outcome="updatePeopleSignedUp" value="Cập nhật" style="background-color: #007bff; border-color: #007bff">
+								<f:param name="detectionId" value="#{detection.id}" />
+							</p:linkButton>
+						</div>
+					</p:column>
+
+				</p:dataTable>
+				<p:poll interval="5" listener="#{historySignedUpController.searchDetectionList()}" update="historyPeopleDetection" />
+			</h:form>
+		</div>
+	</div>
+</h:body>
+</html>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="utf-8" name="viewport"
+	content="width=device-width, initial-scale=1"
+	http-equiv="X-UA-Conpatible" />
+<h:outputStylesheet library="css" name="bootstrap.min.css" />
+<h:outputStylesheet library="css" name="app.css" />
+<title>Cập nhật</title>
+</h:head>
+<h:body>
+	<ui:include src="componentHeader.xhtml"></ui:include>
+	<div class="container">
+		<h:form entctype="multipart/form-data">
+			<div class="row pt-3">
+				<div class="col-6">
+					<h2>Cập nhật</h2>
+					<hr style="border-top: 2px solid black;" />
+						<div class="ui-fluid">
+							<div class="form-group">
+								<p:messages id="msg" showDetail="true" closable="true">
+									<p:autoUpdate/>
+								</p:messages>
+							</div>
+							<div class="form-group">
+								<p:outputLabel styleClass="input-label" value="Khu vực" />
+								<p:selectOneMenu value="#{historySignedUpController.zoneSelected}">
+									<f:selectItem itemLabel="Chọn khu vực" itemValue="" />
+									<f:selectItems value="#{historySignedUpController.zone}" var="item" itemLabel="#{item.groupName}" itemValue="#{item.groupId}"/>
+								</p:selectOneMenu>
+							</div>
+							<div class="form-group">
+								<p:outputLabel value="Mã nhân viên" />
+				                <p:inputText readonly="true" value="#{historySignedUpController.detection.peopleId}"/>
+							</div>
+							<div class="form-group">
+								<p:outputLabel value="Họ và tên" />
+								<p:inputText id="FullName" value="#{historySignedUpController.detection.fullName}"/>
+							</div>
+							<div class="form-group">
+								<p:outputLabel value="Số điện thoại" />
+				                <p:inputText id="inputMobilePhone" value="#{historySignedUpController.detection.mobilePhone}"/>
+							</div>
+							<div class="form-group">
+								<p:outputLabel value="Ngày sinh" />
+								<!-- <p:inputText value="#{historySignedUpController.detection.dateOfBirth}" type="date"/> -->
+                                <p:datePicker value="#{historySignedUpController.detection.birthday}" monthNavigator="true" yearNavigator="true" pattern="dd/MM/yyyy"  yearRange="1930:2010" showIcon="true"/>
+							</div>
+							<div class="form-group">
+								<p:outputLabel value="Giới tính" />
+								<p:selectOneMenu id="gender" value="#{historySignedUpController.detection.gender}">
+									<f:selectItem itemLabel="Chọn giới tính" itemValue="" />
+									<f:selectItem itemLabel="Nam" itemValue="Nam" />
+									<f:selectItem itemLabel="Nữ" itemValue="Nữ" />
+									<f:selectItem itemLabel="Không xác định" itemValue="Không xác định" />
+								</p:selectOneMenu>
+							</div>
+							<div class="form-group">
+								<p:outputLabel value="Phân loại" />
+								<p:selectOneMenu value="#{historySignedUpController.customerTypeSelected}">
+									<f:selectItem itemLabel="Chọn phân loại" itemValue="" />
+									<f:selectItems value="#{historySignedUpController.customerTypeList}" var="item" itemLabel="#{item.customerTypeName}" itemValue="#{item.customerTypeId}"/>
+								</p:selectOneMenu>
+							</div>
+						</div>
+						<br/>
+						<div align="center">
+							<h:commandButton class="btn btn-primary" value="Cập nhật" ajax="false" action="#{historySignedUpController.updatePeople(people)}"/>
+						</div>
+				</div>
+				<div class="col-6">
+					<p:graphicImage id="image" value="#{historySignedUpController.detection.capturedImagePath}" 
+						width="250px" height="250px"/>
+					<p:tooltip id="toolTipContent" for="image" position="bottom">
+						<p:graphicImage value="#{historySignedUpController.detection.capturedImagePath}" />
+					</p:tooltip>
+				</div>
+			</div>
+		</h:form>
+	</div>
+</h:body>
+</html>

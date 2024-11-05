@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+<meta charset="utf-8" name="viewport"
+	content="width=device-width, initial-scale=1"
+	http-equiv="X-UA-Conpatible" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<h:outputStylesheet library="css" name="bootstrap.min.css" />
+<h:outputStylesheet library="css" name="app.css" />
+<title>#{peopleController.people.status == 1 ? 'Cập nhật' : 'Đăng ký'}</title>
+</h:head>
+<h:body>
+	<ui:include src="componentHeader.xhtml"></ui:include>
+	<div class="container">
+		<h:form entctype="multipart/form-data">
+			<div class="row pt-3">
+				<div class="col-6">
+					<h2>#{peopleController.people.status == 1 ? 'Cập nhật' : 'Đăng ký'}</h2>
+					<hr style="border-top: 2px solid black;" />
+						<div class="ui-fluid">
+							<div class="form-group">
+								<p:messages id="msg" closable="true">
+									<p:autoUpdate/>
+								</p:messages>
+							</div>
+							<div class="form-group">
+								<p:outputLabel styleClass="input-label" value="Khu vực" />
+								<p:selectOneMenu value="#{peopleController.zoneSelected}">
+									<f:selectItem itemLabel="Chọn khu vực" itemValue="" />
+									<f:selectItems value="#{peopleController.zone}" var="item" itemLabel="#{item.groupName}" itemValue="#{item.groupId}"/>
+								</p:selectOneMenu>
+							</div>
+							<div class="form-group">
+								<p:outputLabel value="Mã nhân viên" />
+				                <p:inputText readonly="true" value="#{peopleController.people.peopleId}"/>
+							</div>
+							<div class="form-group">
+								<p:outputLabel value="Họ và tên" />
+								<p:inputText id="FullName" value="#{peopleController.people.fullName}"/>
+							</div>
+							<div class="form-group">
+								<p:outputLabel value="Số điện thoại" />
+				                <p:inputText id="inputMobilePhone" value="#{peopleController.people.mobilePhone}"/>
+							</div>
+							<div class="form-group">
+								<p:outputLabel value="Ngày sinh" />
+								<!-- <p:inputText value="#{peopleController.people.dateOfBirth}" type="date"/> -->
+                                <p:datePicker id="dtBirthday" value="#{peopleController.people.birthday}" monthNavigator="true"  yearRange="1930:2010" yearNavigator="true" pattern="dd/MM/yyyy" showIcon="true"/>
+							</div>
+							<div class="form-group">
+								<p:outputLabel value="Giới tính" />
+								<p:selectOneMenu id="gender" value="#{peopleController.people.gender}">
+									<f:selectItem itemLabel="Chọn giới tính" itemValue="" />
+									<f:selectItem itemLabel="Nam" itemValue="Nam" />
+									<f:selectItem itemLabel="Nữ" itemValue="Nữ" />
+									<f:selectItem itemLabel="Không xác định" itemValue="Không xác định" />
+								</p:selectOneMenu>
+							</div>
+							<div class="form-group">
+								<p:outputLabel value="Phân loại" />
+								<p:selectOneMenu value="#{peopleController.customerTypeSelected}">
+									<f:selectItem itemLabel="Chọn phân loại" itemValue="" />
+									<f:selectItems value="#{peopleController.customerTypeList}" var="item" itemLabel="#{item.customerTypeName}" itemValue="#{item.customerTypeId}"/>
+								</p:selectOneMenu>
+							</div>
+						</div>
+						<br/>
+						<div align="center">
+							<h:commandButton value="#{peopleController.people.status == 1 ? 'Cập nhật' : 'Đăng ký'}" 
+											styleClass="#{peopleController.people.status == 1 ? 'btn btn-primary' : 'btn btn-success'}" ajax="false" 
+											actionListener="#{peopleController.updatePeople}"/>
+						</div>
+				</div>
+				<div class="col-6">
+					<p:graphicImage id="image" value="#{peopleController.people.imagePath}" 
+						width="250px" height="250px"/>
+					<p:tooltip id="toolTipContent" for="image" position="bottom">
+						<p:graphicImage value="#{peopleController.people.imagePath}" width="250px" height="250px"/>
+					</p:tooltip>
+					<div style="width: 300px;">
+				        <p:dataTable var="item" value="#{peopleController.imageList}" selectionMode="single"
+                     				selection="#{item}" rowKey="#{item}">
+				        	<p:ajax event="rowSelect" listener="#{peopleController.onRowSelect}"/>
+					        <p:column headerText="5 Lần chấm công gần nhất">
+								<p:graphicImage id="image" value="#{item}" width="70px" height="70px"/>
+								<p:tooltip id="toolTipContent" for="image" position="bottom">
+									<p:graphicImage value="#{item}" width="250px" height="250px"/>
+								</p:tooltip>
+							</p:column>
+				        </p:dataTable>
+				    </div>
+				</div>
+			</div>
+		</h:form>
+	</div>
+</h:body>
+</html>

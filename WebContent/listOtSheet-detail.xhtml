@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<h:form id="frmExplanationDetail">
+		<p:dialog id="dagOtDetail" closable="true" position="center"
+				header="Chi tiết đề xuất làm thêm giờ" width="1500px"
+				widgetVar="dagOtDetail" modal="true" resizable="false">
+
+			<table>
+				<tr>
+					<p:messages id="messagesDagAddTimeKeeping" closable="true">
+						<p:autoUpdate />
+					</p:messages>
+				</tr>
+				<tr>
+					<td style="height:40px">Họ và tên:</td><td><h:outputText value = "#{listOtSheetController.updateOtSheet.fullName}" />
+				</td>
+				</tr>
+				<tr>
+					<td style="height:40px">Mã nhân viên:</td><td><h:outputText value = "#{listOtSheetController.updateOtSheet.peopleId}" /></td>
+				</tr>
+				<tr>
+					<td style="height:40px">Khối:</td><td><h:outputText value = "#{listOtSheetController.updateOtSheet.orgName}" /></td>
+				</tr>
+				<tr>
+					<td style="height:40px">Phòng ban:</td><td><h:outputText value = "#{listOtSheetController.updateOtSheet.groupName}" /></td>
+				</tr>
+				<tr>
+					<td style="height:40px">Ngày:</td>
+					<td>
+						<h:outputText value="#{listOtSheetController.updateOtSheet.createdAt}">
+							<f:convertDateTime pattern="dd/MM/yyyy"/>
+						</h:outputText>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:150px;height:40px">Tổng số giờ OT:</td>
+					<td>
+						<h:outputText value="#{listOtSheetController.updateOtSheet.totalOtTime}"/>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:150px;height:40px">Người duyệt *:</td>
+					<td><h:outputText value="#{listOtSheetController.updateOtSheet.approvalByLevel2Name}"/></td>
+				</tr>
+				<tr>
+					<td style="width:150px;height:40px">Người theo dõi *:</td>
+					<td>
+						<h:outputText value="#{listOtSheetController.updateOtSheet.supervisor}"/>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:150px;height:40px">Lý do làm thêm giờ:</td>
+					<td>
+						<h:outputText value="#{listOtSheetController.updateOtSheet.workingNotes}"/>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:150px;height:40px">Người duyệt cấp 1*:</td>
+					<td><h:outputText value="#{listOtSheetController.updateOtSheet.approvedByName}"/></td>
+				</tr>
+			</table>
+			<br/>
+			<p:dataTable id="tblEditNewTimeKeepingSheet" var="otSheet" scrollable="true" styleClass="tbl_custom_bt"
+						 value="#{listOtSheetController.listOtSheet}" scrollHeight="200" style="height: 250px"
+						 rowIndexVar="rowIndex" rowKey="#{otSheet.otDateTypeDate}" emptyMessage="Không có dữ liệu..."
+						 tableStyle="table-layout:auto">
+
+				<p:column headerText="#" style="width:10px">
+					#{rowIndex+1}
+				</p:column>
+
+				<p:column headerText="Ngày Ot" style="width:280px">
+					<p:calendar style="width: 50px"
+								pattern="dd/MM/yyyy" id ="calEditKeepingDate"
+								value="#{otSheet.otDateTypeDate}" />
+				</p:column>
+
+				<p:column headerText="Từ" style="width:280px">
+					<p:outputLabel value="#{otSheet.startTime}" />
+				</p:column>
+
+				<p:column headerText="Đến" style="width:280px">
+					<p:outputLabel value="#{otSheet.toTime}" />
+				</p:column>
+
+			</p:dataTable>
+			<br/>
+			<h:outputLabel value="Trạng thái: " style="margin-right: 2px"/><h:outputText value="#{listOtSheetController.updateOtSheet.stateValue}"
+						  style="#{timekeepingExplanationController.updateTimeKeepingSheet.stateValue =='Đã phê duyệt' ? 'color: blue' : 'color: red'}"/>
+			<f:facet name="footer">
+				<p:commandButton value="Quay lại" oncomplete="PF('dagOtDetail').hide();"
+								 resetValues="true" update = ""
+								 styleClass="btn btn-secondary" />
+			</f:facet>
+		</p:dialog>
+	</h:form>
+</html>
